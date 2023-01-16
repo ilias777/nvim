@@ -76,7 +76,13 @@ return {
                     },
                 },
             },
-            highlights = require('catppuccin.groups.integrations.bufferline').get(),
+            highlights = require('catppuccin.groups.integrations.bufferline').get({
+                custom = {
+                    all = {
+                        fill = { bg = 'NONE' },
+                    },
+                },
+            }),
             -- highlights = require('rose-pine.plugins.bufferline'),
         })
     end,
