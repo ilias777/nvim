@@ -1,0 +1,312 @@
+## cheatsheet
+Yank the cheatcode | <C-Y>
+
+## buffers
+Go to left buffer  | <S-Left>
+Go to right buffer | <S-Right>
+Move buffer left   | <Leader>b<Left>
+Move buffer right  | <Leader>b<Right>
+Buffer delete      | <Space>b
+
+## split-panes
+Go left pane            | <Space>h
+Go right pane           | <Space>l
+Go up pane              | <Space>k
+Go down pane            | <Space>j
+Resize split pane up    | <M-Up>
+Resize split pane down  | <M-Down>
+Resize split pane left  | <M-Left>
+Resize split pane right | <M-Right>
+
+## move-lines
+Move line up   | <C-k>
+Move line down | <C-j>
+
+## move-multilines
+Move visual lines up   | <C-k>
+Move visual lines down | <C-j>
+
+## nvim-Tree
+Toggle Nvim-Tree                                          | <Space>e
+cd in the directory                                       | <CR> or o
+Close current opened directory or parent                  | <BS>
+cd in the directory under the cursor                      | <C-]>
+Add a file                                                | a
+Add a directory                                           | a<foldername>/
+Rename                                                    | r
+Rename a file and omit the filename on input              | <C-r>
+Add/remove file/directory to cut clipboard                | x
+Add/remove file/directory to copy clipboard               | c
+Copy name to system clipboard                             | y
+Copy relative path to system clipboard                    | Y
+Copy absolute path to system clipboard                    | gy
+Paste from clipboard                                      | p
+Delete a file                                             | d
+Trash a file (configured in setup())                      | D
+Go to next git item                                       | ]c
+Go to prev git item                                       | [c
+Navigate up                                               | -
+Open a file with default system application               | s
+Open a directory with default file manager                | s
+Open the file in a vertical split                         | <C-v>
+Open the file in a horizontal split                       | <C-x>
+Open the file in a new tab                                | <C-t>
+Open the file as a preview (keeps the cursor in the tree) | <Tab>
+Toggle visibility of hidden folders / files               | I
+Toggle visibility of dotfiles                             | H
+Refresh the tree                                          | R
+
+## Telescope
+Find files in telescope    | <Leader>ff
+Grep in telescope          | <Leader>fg
+Find buffers in telescope  | <Leader>fb
+Find help in telescope     | <Leader>fh
+Browser in telescope       | <Leader>fe
+Find commands in telescope | <Leader>fc
+Find yanks in telescope    | <Leader>fv
+Find symbols               | <Leader>fs
+Find emoji                 | <Leader>fj
+Find diagnostics           | <Leader>fd
+
+## Telescope-File-Browser
+Create file/folder                                  | c
+Create and open file/folder                         | <S-CR>
+Rename multi-selected files/folders                 | r
+Move multi-selected files/folders to current path   | m
+Copy (multi-)selected files/folders to current path | y
+Delete (multi-)selected files/folders               | d
+Open file/folder with default system application    | o
+Go to parent directory                              | g
+Go to home directory                                | e
+Go to current working directory (cwd)               | w
+Change nvim's cwd to selected folder/file(parent)   | t
+Toggle between file and folder browser              | f
+Toggle hidden files/folders                         | h
+Toggle all entries ignoring ./ and ../              | s
+
+## peekup-Registers
+Open peekup window          | ""
+Close peekup window         | <Esc>
+Scroll peekup window up     | <C-k>
+Scroll peekup window down   | <C-j>
+Move to next registers up   | <Up>
+Move to next registers down | <Down>
+
+## toggleterm
+Toggle terminal | <Space>te
+
+## lsp
+Go to declaration              | gD
+Go to definition               | gd
+Go to implementation           | gI
+Information on Hover           | K
+Sygnature help                 | <Leader>k
+Add workspace folder           | <Leader>wa
+Remove workspace folder        | <Leader>wr
+List workspace folders         | <Leader>wl
+Type Definition                | <Space>D
+Rename with lsp                | <Space>rn
+Code action                    | <Space>ca
+Go to reference                | gr
+Open diagnostics on hover      | <Space>d
+Go to previous diagnostic      | <Space><Left>
+Go to next diagnostic          | <Space><Right>
+Send diagnostics to local list | <Space>q
+Formatting with lsp            | <Space>f
+
+## hop
+Hop to charecter in line forwards  | f
+Hop to charecter in line backwards | F
+Hop to Word                        | <Leader>a
+Hop to Line                        | <Leader>hl
+Hop to one charecter               | <Leader>h1
+Hop to two charecters              | <Leader>h2
+Hop to Pattern                     | <Leader>hp
+Hop Anywhere                       | <Leader>ha
+Hop Vertical                       | <Leader>hv
+
+## trouble-lsp
+Toggle Trouble list                  | <Leader>xx
+Toggle Trouble workspace diagnostics | <Leader>xw
+Toggle Trouble document diagnostics  | <Leader>xd
+Toggle Trouble Location-List         | <Leader>xl
+Toggle Trouble Quickfix-List         | <Leader>xq
+Trouble LSP-Reference                | gR
+
+## neoclip
+See all yanks                                 | <Leader>fv
+To select a yank from Telescope (insert-mode) | <C-p>
+To select a yank from Telescope (normal-mode) | p
+
+## comment
+Line-comment toggle            | gcc
+Block-comment toggle           | gbc
+Line-comment visual select     | gc
+Block-comment visual select    | gb
+Add comment on the line above  | gcO
+Add comment on the line below  | gco
+Add comment at the end of line | gcA
+Comment motion                 | gc{motion}
+Line-comment word              | gciw
+Block-comment word             | gbiw
+Line-comment in lines          | gc<num>j or gc<num>k
+Block-comment in lines         | gb<num>j or gb<num>k
+Line-comment paragraph         | gcip or gcap
+Block-comment paragraph        | gbip or gbip
+Line-comment brackets          | gci{ or gci}
+
+## comment-frame
+Single line comment | <Leader>cf
+Multi line comment  | <Leader>cm
+
+## table-mode
+Enable table mode         | <Leader>tm
+Disable table mode        | <Leader>tm
+Formatting existing table | <Leader>tt
+Moving left               | [|
+Moving right              | ]|
+Moving up                 | {|
+Moving down               | }|
+Cell inner Text Object    | i|
+Cell around Text Objekt   | a|
+Delete Row                | <Leader>tdd
+Delete Column             | <Leader>tdc
+Insert Column             | <Leader>tic
+
+## surround
+Normal Mode              | sa{motion}{char}
+Visual Mode              | s<char>
+Replace Surrounding      | sr<from><to>
+Delete Surrounding       | sd<char>
+Toggle Surround Brackets | stb
+Toggle Surround Quotes   | stq
+
+## todo-comments
+Todo Keyword fix         | FIX{:}
+Todo Keyword fixme       | FIXME{:}
+Todo Keyword bug         | BUG{:}
+Todo Keyword fixit       | FIXIT{:}
+Todo Keyword issue       | ISSUE{:}
+Todo Keyword todo        | TODO{:}
+Todo Keyword hack        | HACK{:}
+Todo Keyword warn        | WARN{:}
+Todo Keyword note        | NOTE{:}
+Todo Keyword perf        | PERF{:}
+Todo Keyword optim       | OPTIM{:}
+Todo Keyword performance | PERFORMANCE{:}
+Todo Keyword optimize    | OPTIMIZE{:}
+
+## vimtex
+Start compiling                          | \ll
+Stop compiling                           | \lk
+Clear auxiliary files                    | \lc
+Forward serch in PDF                     | \lv
+Toggle quickfix-list                     | \le
+Toggle table of contents                 | \lt
+Insert new command                       | <F7>
+Move between section backwards           | [[
+Move between section forwards            | ]]
+Move between environment backwards       | [m
+Move between environment forwards        | ]m
+Move between math environment backwards  | [n
+Move between math environment forwards   | ]n
+Move between frame environment backwards | [r
+Move between frame environment forwards  | ]r
+Move between comments backward           | [*
+Move between comments forwards           | ]*
+Move between matching delimiters         | %
+
+## gitsigns
+Stage buffer       | <Leader>hS
+Reset buffer index | <Leader>hU
+
+## diffview
+Open the diff for the next file                    | <Tab>
+Open the diff for the previous file                | <S-Tab>
+Open the file in a new split in previous tabpage   | gf
+Open the file in a new split                       | <C-w><C-f>
+Open the file in a new tabpage                     | <C-w>gf
+Bring focus to the files panel                     | <Leader>e
+Toggle the files panel                             | <Leader>b
+Bring the cursor to the next file entry            | j or <DOWN>
+Bring the cursor to the previous file entry        | k or <UP>
+Open the diff for the selected entry               | <CR> or o
+Stage / unstage the selected entry                 | -
+Stage all entries                                  | S
+Unstage all entries                                | U
+Restore entry to the state on the left side        | X
+Update stats and entries in the file list          | R
+Toggle between 'list' and 'tree' views             | i
+Flatten empty subdirectories in tree listing style | f
+Open the option panel                              | g!
+Open the entry under the cursor in a diffview      | <C-A-d>
+Copy the commit hash of the entry under the cursor | y
+Open all folds                                     | zR
+Close all folds                                    | zM
+Close                                              | q
+
+## venn-comment
+Enable venn in visual block | :VBox
+Move cursor everywhere      | :set virtualedit=all
+
+## Tagbar
+Toggle Tagbar | <Leader>tb
+
+## Packer
+Packer Sync    | <Leader>ps
+Packer Install | <Leader>pi
+Packer Clean   | <Leader>pc
+
+## Symbols-Outline
+Symbols Outline Toggle | <Leader>o
+
+## Pounce
+Pounce Insert Mode   | S
+Pounce Visual Select | S
+
+## Dap
+Add Breakpoint             | <Leader>db
+Add Conditional Breakpoint | <Leader>dB
+Dap Continue               | <Leader>dc
+Dap Step Into              | <Leader>di
+Dap Step Over              | <Leader>do
+Dap Step Out               | <Leader>ds
+Dap Terminate              | <Leader>dt
+Dap Show Log               | <Leader>dl
+Dap Toggle Repl            | <Leader>dr
+Dap UI Toggle              | <Leader>du
+
+## Toggle-Word
+Toggle Word | <Leader>w
+
+## Align
+Aligns to 1 chars, looking left                         | aa
+Aligns to 2 chars, looking left and with previews       | as
+Aligns to a string, looking left and with previews      | aw
+Aligns to a Lua pattern, looking left and with previews | ar
+
+## CCC-Color-Picker
+Complete               | <CR>
+Quit                   | q
+Cancel                 | :q
+Toggle input mode      | i
+Toggle alpha           | a
+Toggle previous colors | g
+Go next                | w
+Go previous            | b
+Go to tail             | W
+Go to head             | B
+Increase               | l/d/, (1/5/10)
+Decrease               | h/s/m (1/5/10)
+Set precentage         | H/M/L (0/5/10) 1-9 (10%-90%)
+
+## Codewindow-Minimap
+Open minimap            | <Leader>mo
+Close minimap           | <Leader>mc
+Focus / Unfocus minimap | <Leader>mf
+Toggle minimap          | <Leader>mm
+
+## Git
+Neogit | <Leader>gg
+Diffview open | <Leader>gd
+Diffview close | <Leader>gc
