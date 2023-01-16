@@ -10,7 +10,7 @@ require('mason').setup({
 require('mason-lspconfig').setup()
 local lspconfig = require('lspconfig')
 
-local navic = require('nvim-navic')
+-- local navic = require('nvim-navic')
 
 -- CMP LSP
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -53,7 +53,7 @@ local on_attach = function(client, bufnr)
         vim.lsp.buf.format({ async = true })
     end, bufopts('Formatting'))
     vim.keymap.set('v', '<space>1f', vim.lsp.buf.format, bufopts('Range Fromatting'))
-    navic.attach(client, bufnr)
+    -- navic.attach(client, bufnr)
 end
 
 -- Keymaps

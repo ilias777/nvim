@@ -34,16 +34,16 @@ return {
             require('plugins.lspconf.lsp-config')
         end,
     },
-    {
-        'SmiteshP/nvim-navic',
-        dependencies = 'neovim/nvim-lspconfig',
-        config = function()
-            require('nvim-navic').setup({
-                highlight = true,
-            })
-            vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-        end,
-    },
+    -- {
+    --     'SmiteshP/nvim-navic',
+    --     dependencies = 'neovim/nvim-lspconfig',
+    --     config = function()
+    --         require('nvim-navic').setup({
+    --             highlight = true,
+    --         })
+    --         vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+    --     end,
+    -- },
     {
         'folke/trouble.nvim',
         keys = {
