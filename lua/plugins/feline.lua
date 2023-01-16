@@ -1,5 +1,6 @@
 return {
     'feline-nvim/feline.nvim',
+    event = 'BufReadPre',
     config = function()
         local ctp_feline = require('catppuccin.groups.integrations.feline')
         local clrs = require('catppuccin.palettes').get_palette()
@@ -10,21 +11,21 @@ return {
                 right_separator = '',
                 bar = '█',
                 mode_icon = '',
-                dir = '  ',
-                file = '   ',
+                dir = ' ',
+                file = '',
                 lsp = {
-                    server = ' 力',
-                    error = '  ',
-                    warning = '  ',
-                    info = '  ',
-                    hint = '  ',
+                    server = '力',
+                    error = ' ',
+                    warning = ' ',
+                    info = ' ',
+                    hint = ' ',
                 },
                 git = {
                     -- icons:   
-                    branch = '  ',
-                    added = '  ',
-                    changed = '  ',
-                    removed = '  ',
+                    branch = ' ',
+                    added = ' ',
+                    changed = ' ',
+                    removed = ' ',
                 },
             },
             mode_colors = {
