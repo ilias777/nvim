@@ -2,14 +2,15 @@ return {
     'feline-nvim/feline.nvim',
     event = 'BufReadPre',
     config = function()
+        local macchiato = require('catppuccin.palettes').get_palette('macchiato')
         local ctp_feline = require('catppuccin.groups.integrations.feline')
         local clrs = require('catppuccin.palettes').get_palette()
+        local U = require('catppuccin.utils.colors')
 
         ctp_feline.setup({
             assets = {
                 left_separator = '',
                 right_separator = '',
-                bar = '█',
                 mode_icon = '',
                 dir = ' ',
                 file = '',
