@@ -4,6 +4,9 @@
 # .DSStore Mac file
 .DS_Store
 
+# Lazy log file
+lazy-lock.json
+
 # Some dummy folders
 test/
 test2/
