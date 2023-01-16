@@ -80,6 +80,9 @@ return {
                 custom = {
                     all = {
                         fill = { bg = 'NONE' },
+                        background = { bg = 'NONE' },
+                        separator = { bg = 'NONE' },
+                        close_button = { bg = 'NONE' },
                     },
                 },
             }),
