@@ -1,5 +1,9 @@
 return {
     'mxsdev/nvim-dap-vscode-js',
+    ft = '.js',
+    keys = {
+        { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
+    },
     dependencies = 'mfussenegger/nvim-dap',
     config = function()
         require('dap-vscode-js').setup({

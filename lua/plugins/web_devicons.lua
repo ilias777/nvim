@@ -1,5 +1,6 @@
 return {
     'nvim-tree/nvim-web-devicons',
+    event = 'BufEnter',
     config = function()
         require('nvim-web-devicons').set_icon({
             toc = {

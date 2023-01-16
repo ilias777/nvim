@@ -1,5 +1,11 @@
 return {
     'Vonr/align.nvim',
+    keys = {
+        { 'aa', mode = { 'v' } },
+        { 'as', mode = { 'v' } },
+        { 'aw', mode = { 'v' } },
+        { 'ar', mode = { 'v' } },
+    },
     config = function()
         local NS = { noremap = true, silent = true }
 

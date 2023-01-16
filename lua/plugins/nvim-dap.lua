@@ -1,5 +1,8 @@
 return {
     'mfussenegger/nvim-dap',
+    keys = {
+        { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
+    },
     config = function()
         local sign = vim.fn.sign_define
         -- 

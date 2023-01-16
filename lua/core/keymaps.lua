@@ -53,21 +53,21 @@ vim.keymap.set('n', '<S-Left>', '<cmd>BufferLineCyclePrev<cr>', { desc = 'Buffer
 vim.keymap.set('n', '<S-Right>', '<cmd>BufferLineCycleNext<cr>', { desc = 'Buffer Next' })
 
 -- Swich split panes with Focus
-vim.keymap.set('n', '<Space>h', '<cmd>FocusSplitLeft<CR>', { desc = 'Focus Split Left' })
-vim.keymap.set('n', '<Space>j', '<cmd>FocusSplitDown<CR>', { desc = 'Focus Split Down' })
-vim.keymap.set('n', '<Space>k', '<cmd>FocusSplitUp<CR>', { desc = 'Focus Split Up' })
-vim.keymap.set('n', '<Space>l', '<cmd>FocusSplitRight<CR>', { desc = 'Focus Split Right' })
-vim.keymap.set('n', '<Space>m', '<cmd>FocusMaxOrEqual<CR>', { desc = 'Maximaze or Equalises Split' })
+-- vim.keymap.set('n', '<Space>h', '<cmd>FocusSplitLeft<CR>', { desc = 'Focus Split Left' })
+-- vim.keymap.set('n', '<Space>j', '<cmd>FocusSplitDown<CR>', { desc = 'Focus Split Down' })
+-- vim.keymap.set('n', '<Space>k', '<cmd>FocusSplitUp<CR>', { desc = 'Focus Split Up' })
+-- vim.keymap.set('n', '<Space>l', '<cmd>FocusSplitRight<CR>', { desc = 'Focus Split Right' })
+-- vim.keymap.set('n', '<Space>m', '<cmd>FocusMaxOrEqual<CR>', { desc = 'Maximaze or Equalises Split' })
 
 -- NVIM TREE
 vim.keymap.set('n', '<Space>e', '<cmd>NvimTreeToggle<cr>', { desc = 'File Browser' })
 
 -- Trouble LSP
-vim.keymap.set('n', 'gr', '<cmd>TroubleToggle lsp_references<cr>')
+-- vim.keymap.set('n', 'gr', '<cmd>TroubleToggle lsp_references<cr>')
 
 -- Pounce
-vim.keymap.set('n', 'S', '<cmd>Pounce<CR>')
-vim.keymap.set('v', 'S', '<cmd>Pounce<CR>')
+-- vim.keymap.set('n', 'S', '<cmd>Pounce<CR>')
+-- vim.keymap.set('v', 'S', '<cmd>Pounce<CR>')
 
 -- Lazy nvim
 vim.keymap.set('n', '<Leader><Leader>l', '<cmd>Lazy<cr>')

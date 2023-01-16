@@ -1,7 +1,15 @@
 return {
     'nvim-telescope/telescope.nvim',
-    version = '0.1.x',
-    dependencies = 'nvim-lua/plenary.nvim',
+    keys = {
+        { '<leader>ff', '<cmd>Telescope find_files<cr>' },
+    },
+    branch = '0.1.x',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope-file-browser.nvim',
+        'nvim-telescope/telescope-symbols.nvim',
+        'xiyaowong/telescope-emoji.nvim',
+    },
     config = function()
         local trouble = require('trouble.providers.telescope')
         local fb_actions = require('telescope').extensions.file_browser.actions

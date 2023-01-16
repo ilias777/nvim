@@ -26,14 +26,20 @@ return {
     -- LSP
     {
         'neovim/nvim-lspconfig',
+        dependencies = {
+            'williamboman/mason.nvim',
+            'williamboman/mason-lspconfig.nvim',
+        },
         config = function()
             require('plugins.lspconf.lsp-config')
         end,
     },
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
     {
         'folke/trouble.nvim',
+        keys = {
+            { '<leader>xx', '<cmd>TroubleToggle<cr>', desc = 'Trouble Toggle' },
+            { 'gr', '<cmd>TroubleToggle lsp_references<cr>' },
+        },
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
             require('trouble').setup()
@@ -44,19 +50,21 @@ return {
     {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
+        dependencies = {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'saadparwaiz1/cmp_luasnip',
+            'ray-x/cmp-treesitter',
+            'hrsh7th/cmp-nvim-lsp-signature-help',
+            'hrsh7th/cmp-nvim-lua',
+            'f3fora/cmp-spell',
+            'hrsh7th/cmp-path',
+        },
         config = function()
             require('plugins.lspconf.cmp')
         end,
     },
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
-    'saadparwaiz1/cmp_luasnip',
-    'ray-x/cmp-treesitter',
-    'hrsh7th/cmp-nvim-lsp-signature-help',
-    'hrsh7th/cmp-nvim-lua',
-    'f3fora/cmp-spell',
 
     -- SYMBOLS OUTLINE LSP
     {
@@ -76,9 +84,30 @@ return {
     },
 
     -- TELESCOPE
-    'nvim-telescope/telescope-file-browser.nvim',
-    'nvim-telescope/telescope-symbols.nvim',
-    'xiyaowong/telescope-emoji.nvim',
+    -- {
+    --     'nvim-telescope/telescope-file-browser.nvim',
+    --     keys = {
+    --         { '<leader>fe', '<cmd>Telescope file_browser<cr>', decs = 'Browse Files' },
+    --     },
+    -- },
+    -- {
+    --     'nvim-telescope/telescope-symbols.nvim',
+    --     keys = {
+    --         { '<leader>fs', '<cmd>Telescope symbols<cr>', decs = 'Find Symbols' },
+    --     },
+    -- },
+    -- {
+    --     'xiyaowong/telescope-emoji.nvim',
+    --     keys = {
+    --         { '<leader>fj', '<cmd>Telescope emoji<cr>', decs = 'Find Emoji' },
+    --     },
+    -- },
+    {
+        'sudormrfbin/cheatsheet.nvim',
+        keys = {
+            { '<leader>ö', '<cmd>Cheatsheet<cr>', desc = 'Cheatsheet' },
+        },
+    },
 
     -- TREESITTER
     {
@@ -92,22 +121,45 @@ return {
     },
     {
         'nvim-treesitter/nvim-treesitter-context',
+        event = 'BufReadPre',
         config = function()
             require('treesitter-context').setup()
         end,
     },
-    'nvim-treesitter/playground',
+    {
+        'nvim-treesitter/playground',
+        cmd = 'TSPlaygroundToggle',
+    },
 
     -- COMMENTS
     {
         'numToStr/Comment.nvim',
+        keys = {
+            { 'gc', mode = 'v' },
+            { 'gb', mode = 'v' },
+            { 'gcc' },
+            { 'gbc' },
+            { 'gco' },
+            { 'gcO' },
+            { 'gcA' },
+        },
         config = function()
             require('Comment').setup()
         end,
     },
-    'LudoPinelli/comment-box.nvim',
+    {
+        'LudoPinelli/comment-box.nvim',
+        cmd = { 'CBcatalog', 'CBcbox' },
+        keys = {
+            { '<leader>cbc', '<cmd>CBcbox<cr>', desc = 'Comment Box' },
+        },
+    },
     {
         's1n7ax/nvim-comment-frame',
+        keys = {
+            { '<leader>cf', desc = 'Single Comment Frame' },
+            { '<leader>cm', desc = 'Multi Comment Frame' },
+        },
         dependencies = 'nvim-treesitter',
         config = function()
             require('nvim-comment-frame').setup()
@@ -116,10 +168,17 @@ return {
 
     -- UTILS
     'nvim-lua/plenary.nvim',
-    'L3MON4D3/LuaSnip',
-    'rafamadriz/friendly-snippets',
+    {
+        'L3MON4D3/LuaSnip',
+        event = 'InsertEnter',
+    },
+    {
+        'rafamadriz/friendly-snippets',
+        event = 'InsertEnter',
+    },
     {
         'smjonas/live-command.nvim',
+        event = 'CmdlineEnter',
         config = function()
             require('live-command').setup({
                 commands = {
@@ -130,6 +189,9 @@ return {
     },
     {
         'nguyenvukhang/nvim-toggler',
+        keys = {
+            { '<leader>w', desc = 'Toggle Word' },
+        },
         config = function()
             require('nvim-toggler').setup({
                 remove_default_keybinds = true,
@@ -139,22 +201,34 @@ return {
     },
     {
         'ur4ltz/surround.nvim',
+        keys = {
+            { 's', mode = { 'n', 'v' } },
+        },
         config = function()
             require('surround').setup({
                 mappings_style = 'sandwich',
             })
         end,
     },
-    'mg979/vim-visual-multi',
+    {
+        'mg979/vim-visual-multi',
+        keys = {
+            { '<C-n>' },
+            { '<C-UP>' },
+            { '<C-DOWN>' },
+        },
+    },
     {
         'Pocco81/true-zen.nvim',
+        cmd = { 'TZFocus', 'TZNarrow', 'TZAtaraxis', 'TZMinimalist' },
         config = function()
             require('true-zen').setup()
         end,
     },
-    'famiu/bufdelete.nvim',
-
-    -- STATUSLINES
+    {
+        'famiu/bufdelete.nvim',
+        event = 'BufEnter',
+    },
 
     -- VIMTEX
     {
@@ -165,6 +239,7 @@ return {
     -- COLORS
     {
         'norcalli/nvim-colorizer.lua',
+        event = 'BufReadPre',
         config = function()
             require('colorizer').setup()
         end,
@@ -173,16 +248,25 @@ return {
     -- MOTION
     {
         'phaazon/hop.nvim',
-        version = 'v2',
+        keys = {
+            { '<leader>a', '<cmd>HopWord<cr>', desc = 'Hop Word' },
+        },
+        branch = 'v2',
         config = function()
             require('hop').setup()
         end,
     },
-    'rlane/pounce.nvim',
+    {
+        'rlane/pounce.nvim',
+        keys = {
+            { 'S', '<cmd>Pounce<CR>', mode = { 'n', 'v' } },
+        },
+    },
 
     -- GIT
     {
         'sindrets/diffview.nvim',
+        cmd = { 'DiffviewOpen', 'DiffviewClose', 'DiffviewToggleFiles', 'DiffviewFocusFiles' },
         dependencies = 'nvim-lua/plenary.nvim',
         config = function()
             require('diffview').setup()
@@ -190,6 +274,7 @@ return {
     },
     {
         'lewis6991/gitsigns.nvim',
+        event = 'BufEnter',
         dependencies = 'nvim-lua/plenary.nvim',
         config = function()
             require('gitsigns').setup()
@@ -197,6 +282,9 @@ return {
     },
     {
         'TimUntersberger/neogit',
+        keys = {
+            { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Neogit' },
+        },
         dependencies = 'nvim-lua/plenary.nvim',
         config = function()
             require('neogit').setup({
@@ -211,6 +299,9 @@ return {
     -- DAP
     {
         'rcarriga/nvim-dap-ui',
+        keys = {
+            { '<leader>du', '<cmd>lua require("dapui").toggle()<CR>', desc = 'DAP UI Toggle' },
+        },
         dependencies = 'mfussenegger/nvim-dap',
         config = function()
             require('dapui').setup()
@@ -218,11 +309,19 @@ return {
     },
     {
         'theHamsta/nvim-dap-virtual-text',
+        keys = {
+            { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
+        },
         config = function()
             require('nvim-dap-virtual-text').setup()
         end,
     },
 
     -- JAVA
-    'mfussenegger/nvim-jdtls',
+    {
+        'mfussenegger/nvim-jdtls',
+        keys = {
+            { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
+        },
+    },
 }
