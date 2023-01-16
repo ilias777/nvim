@@ -1,0 +1,14 @@
+# Ignore Logs
+*.log
+
+# .DSStore Mac file
+.DS_Store
+
+# Some dummy folders
+test/
+test2/
+
+# Java Degug folders
+vscode-java-test/
+java-debug/
+js-debug/
