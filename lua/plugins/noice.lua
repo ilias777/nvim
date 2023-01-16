@@ -7,7 +7,6 @@ return {
         dependencies = {
             'MunifTanjim/nui.nvim',
             'rcarriga/nvim-notify',
-            'j-hui/fidget.nvim',
         },
         config = function()
             require('noice').setup({
@@ -21,7 +20,7 @@ return {
                 },
                 lsp = {
                     progress = {
-                        enabled = true,
+                        enabled = false,
                     },
                     signature = {
                         enabled = false,
@@ -61,11 +60,11 @@ return {
             })
         end,
     },
-    {
-        'j-hui/fidget.nvim',
-        lazy = true,
-        config = function()
-            require('fidget').setup()
-        end,
-    },
+    -- {
+    --     'j-hui/fidget.nvim',
+    --     lazy = true,
+    --     config = function()
+    --         require('fidget').setup()
+    --     end,
+    -- },
 }
