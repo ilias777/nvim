@@ -252,13 +252,8 @@ Move cursor everywhere      | :set virtualedit=all
 ## Tagbar
 Toggle Tagbar | <Leader>tb
 
-## Packer
-Packer Sync    | <Leader>ps
-Packer Install | <Leader>pi
-Packer Clean   | <Leader>pc
-
-## Symbols-Outline
-Symbols Outline Toggle | <Leader>o
+## Lazy.nvim
+Open Lazy.nvim | <Leader><Leader>l
 
 ## Pounce
 Pounce Insert Mode   | S
@@ -307,6 +302,17 @@ Focus / Unfocus minimap | <Leader>mf
 Toggle minimap          | <Leader>mm
 
 ## Git
-Neogit | <Leader>gg
-Diffview open | <Leader>gd
+Neogit         | <Leader>gg
+Diffview open  | <Leader>gd
 Diffview close | <Leader>gc
+
+## Search
+Search in Visual Selection | <Leader>/
+
+## Search-Replace
+Search and replace in visual selection | <Space>/
+Search and replace under the cursor    | <Leader>r
+
+## Add-Blank-Lines
+Add blank lines below | <Leader>o
+Add blank lines above | <Leader>O

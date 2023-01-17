@@ -63,7 +63,7 @@ return {
             -- ['<leader>tb'] = { '<cmd>Tagbar<cr>', 'Tagbar Toggle' },
 
             -- Symbols Outline
-            ['<leader>o'] = { '<cmd>SymbolsOutline<cr>', 'Symbols Outline Toggle' },
+            -- ['<leader>o'] = { '<cmd>SymbolsOutline<cr>', 'Symbols Outline Toggle' },
 
             -- Trouble
             ['<leader>x'] = { name = '+Trouble' },
