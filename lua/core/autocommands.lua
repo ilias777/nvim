@@ -6,11 +6,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
         })
     end,
 })
-
-vim.api.nvim_create_autocmd('BufWritePost', {
-    pattern = 'packer_init.lua',
-    callback = function ()
-        vim.cmd('luafile %')
-        vim.cmd('lua vim.notify("Packer Source", "info")')
-    end,
-})
+--
+-- vim.api.nvim_create_autocmd('BufWritePost', {
+--     pattern = 'packer_init.lua',
+--     callback = function ()
+--         vim.cmd('luafile %')
+--         vim.cmd('lua vim.notify("Packer Source", "info")')
+--     end,
+-- })
