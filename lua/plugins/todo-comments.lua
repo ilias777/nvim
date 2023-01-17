@@ -1,6 +1,6 @@
 return {
     'folke/todo-comments.nvim',
-    event = 'BufEnter',
+    event = 'InsertEnter',
     dependencies = 'nvim-lua/plenary.nvim',
     config = function()
         require('todo-comments').setup({

@@ -1,6 +1,6 @@
 return {
     'lukas-reineke/indent-blankline.nvim',
-    event = 'BufEnter',
+    event = 'BufReadPre',
     config = function()
         vim.cmd([[highlight IndentBlanklineIndent1 guifg=#f0c6c6 gui=nocombine]])
         vim.cmd([[highlight IndentBlanklineIndent2 guifg=#c6a0f6 gui=nocombine]])

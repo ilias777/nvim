@@ -184,7 +184,7 @@ return {
     },
     {
         'rafamadriz/friendly-snippets',
-        event = 'InsertEnter',
+        event = 'BufReadPre',
     },
     {
         'smjonas/live-command.nvim',
@@ -289,7 +289,7 @@ return {
     },
     {
         'lewis6991/gitsigns.nvim',
-        event = 'BufEnter',
+        event = 'BufReadPre',
         dependencies = 'nvim-lua/plenary.nvim',
         config = function()
             require('gitsigns').setup()
