@@ -84,7 +84,6 @@ return {
 
             -- Bufferline
             ['<space>b'] = { name = '+Buffer' },
-            ['<space>bd'] = { '<cmd>Bdelete<cr>', 'Delete Buffer' },
             ['<space>bp'] = { '<cmd>BufferLineTogglePin<cr>', 'Pin Buffer' },
             ['<space>bk'] = { '<cmd>BufferLinePick<cr>', 'Pick Buffer' },
             ['<space>b<left>'] = { '<cmd>BufferLineMovePrev<cr>', 'Move Buffer to the left' },
@@ -98,6 +97,7 @@ return {
             ['<space>b7'] = { '<cmd>BufferLineGoToBuffer 7<cr>', 'Go to Buffer 7' },
             ['<space>b8'] = { '<cmd>BufferLineGoToBuffer 8<cr>', 'Go to Buffer 8' },
             ['<space>b9'] = { '<cmd>BufferLineGoToBuffer 9<cr>', 'Go to Buffer 9' },
+            -- ['<space>bd'] = { '<cmd>Bdelete<cr>', 'Delete Buffer' },
 
             -- Code Actions with LSP
             ['<space>c'] = { name = '+Code actions with LSP' },

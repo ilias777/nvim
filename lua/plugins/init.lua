@@ -231,13 +231,19 @@ return {
     {
         'Pocco81/true-zen.nvim',
         cmd = { 'TZFocus', 'TZNarrow', 'TZAtaraxis', 'TZMinimalist' },
+        keys = {
+            { '<leader>z', '<cmd>TZAtaraxis<cr>', desc = 'Zen Mode' },
+        },
         config = function()
             require('true-zen').setup()
         end,
     },
     {
         'famiu/bufdelete.nvim',
-        event = 'BufEnter',
+        cmd = { 'Bdelete', 'Bdelete! %d' },
+        keys = {
+            { '<space>bd', '<cmd>Bdelete<cr>', desc = 'Delete Buffer' },
+        },
     },
 
     -- VIMTEX
