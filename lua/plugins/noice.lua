@@ -1,8 +1,5 @@
 return {
     'folke/noice.nvim',
-    -- keys = {
-    --     { ':' },
-    -- },
     event = 'VeryLazy',
     dependencies = {
         'MunifTanjim/nui.nvim',
@@ -47,15 +44,23 @@ return {
                 },
             },
             routes = {
-                {
-                    view = 'mini',
-                    filter = {
-                        event = {
-                            'msg_showmode',
-                            -- 'msg_showcmd',
-                        },
-                    },
-                },
+                -- {
+                --     view = 'mini',
+                --     filter = {
+                --         event = {
+                --             'msg_showmode',
+                --             -- 'msg_showcmd',
+                --         },
+                --     },
+                -- },
+                -- {
+                --     filter = {
+                --         event = 'msg_showmode',
+                --         kind = '',
+                --         find = 'visuell',
+                --     },
+                --     opts = { skip = true },
+                -- },
             },
         })
     end,
