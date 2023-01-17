@@ -34,16 +34,6 @@ return {
             require('plugins.lspconf.lsp-config')
         end,
     },
-    -- {
-    --     'SmiteshP/nvim-navic',
-    --     dependencies = 'neovim/nvim-lspconfig',
-    --     config = function()
-    --         require('nvim-navic').setup({
-    --             highlight = true,
-    --         })
-    --         vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-    --     end,
-    -- },
     {
         'folke/trouble.nvim',
         keys = {
@@ -61,6 +51,7 @@ return {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
         dependencies = {
+            'hrsh7th/cmp-cmdline',
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-buffer',
             'saadparwaiz1/cmp_luasnip',
@@ -74,7 +65,6 @@ return {
             require('plugins.lspconf.cmp')
         end,
     },
-    'hrsh7th/cmp-cmdline',
 
     -- SYMBOLS OUTLINE LSP
     {
@@ -177,7 +167,7 @@ return {
     },
 
     -- UTILS
-    'nvim-lua/plenary.nvim',
+    -- 'nvim-lua/plenary.nvim',
     {
         'L3MON4D3/LuaSnip',
         event = 'InsertEnter',
@@ -222,11 +212,7 @@ return {
     },
     {
         'mg979/vim-visual-multi',
-        keys = {
-            { '<C-n>' },
-            { '<C-UP>' },
-            { '<C-DOWN>' },
-        },
+        event = 'BufReadPost',
     },
     {
         'Pocco81/true-zen.nvim',
