@@ -15,7 +15,6 @@ return {
 
             -- Dap
             ['<leader>d'] = { name = '+Debug' },
-            -- ['<leader>db'] = { '<cmd>DapToggleBreakpoint<CR>', 'Add Breakpoint' },
             ['<leader>dB'] = { '<cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', 'Add Conditional Breakpoint' },
             ['<leader>dc'] = { '<cmd>DapContinue<CR>', 'Dap Continue' },
             ['<leader>di'] = { '<cmd>DapStepInto<CR>', 'Dap Step Into' },
@@ -24,29 +23,30 @@ return {
             ['<leader>dt'] = { '<cmd>DapTerminate<CR>', 'Dap Terminate' },
             ['<leader>dl'] = { '<cmd>DapShowLog<CR>', 'Dap Show Log' },
             ['<leader>dr'] = { '<cmd>DapToggleRepl<CR>', 'Dap Toggle Repl' },
+            -- ['<leader>db'] = { '<cmd>DapToggleBreakpoint<CR>', 'Add Breakpoint' },
             -- ['<leader>du'] = { '<cmd>lua require("dapui").toggle()<CR>', 'Dap UI Toggle' },
 
             -- Telescope
             ['<leader>f'] = { name = '+File' },
-            ['<leader>fb'] = { '<cmd>Telescope buffers<cr>', 'Find Buffers' },
             ['<leader>fc'] = { ":lua require'telescope.builtin'.commands{}<cr>", 'List Commands' },
             ['<leader>fd'] = { '<cmd>Telescope diagnostics<cr>', 'List Diagnostics' },
-            ['<leader>fe'] = { '<cmd>Telescope file_browser<cr>', 'Browse Files' },
-            -- ['<leader>ff'] = { '<cmd>Telescope find_files<cr>', 'Find File' },
-            ['<leader>fg'] = { '<cmd>Telescope live_grep<cr>', 'Find Word' },
-            ['<leader>fh'] = { '<cmd>Telescope help_tags<cr>', 'Find Help' },
             ['<leader>fj'] = { '<cmd>Telescope emoji<cr>', 'Find emoji' },
             ['<leader>fk'] = { '<cmd>Telescope keymaps<cr>', 'Find keymap' },
             ['<leader>fn'] = { '<cmd>Noice telescope<cr>', 'List Noice notifications' },
             ['<leader>fo'] = { '<cmd>Telescope oldfiles<cr>', 'Recently opened files' },
             ['<leader>fs'] = { '<cmd>Telescope symbols<cr>', 'Find Symbols' },
             ['<leader>fr'] = { ':lua require"telescope.builtin".registers{}<cr>', 'List Registers' },
+            -- ['<leader>fb'] = { '<cmd>Telescope buffers<cr>', 'Find Buffers' },
+            -- ['<leader>fe'] = { '<cmd>Telescope file_browser<cr>', 'Browse Files' },
+            -- ['<leader>ff'] = { '<cmd>Telescope find_files<cr>', 'Find File' },
+            -- ['<leader>fg'] = { '<cmd>Telescope live_grep<cr>', 'Find Word' },
+            -- ['<leader>fh'] = { '<cmd>Telescope help_tags<cr>', 'Find Help' },
 
             -- Git
             ['<leader>g'] = { name = '+Git' },
-            -- ['<leader>gg'] = { '<cmd>Neogit<cr>', 'Neogit' },
             ['<leader>gd'] = { '<cmd>DiffviewOpen<cr>', 'Open Diffview' },
             ['<leader>gc'] = { '<cmd>DiffviewClose<cr>', 'Close Diffview' },
+            -- ['<leader>gg'] = { '<cmd>Neogit<cr>', 'Neogit' },
 
             -- Hop
             ['<leader>h'] = { name = '+Hop' },
@@ -54,8 +54,8 @@ return {
             ['<leader>h1'] = { '<cmd>HopChar1<cr>', 'Hop 1 Char' },
             ['<leader>h2'] = { '<cmd>HopChar2<cr>', 'Hop 2 Chars' },
             ['<leader>hp'] = { '<cmd>HopPattern<cr>', 'Hop Pattern' },
-            ['<leader>ha'] = { '<cmd>HopAnywhere<cr>', 'Hop Anywhere' },
             ['<leader>hv'] = { '<cmd>HopVertical<cr>', 'Hop Vertical' },
+            -- ['<leader>ha'] = { '<cmd>HopAnywhere<cr>', 'Hop Anywhere' },
             -- ['<leader>a'] = { '<cmd>HopWord<cr>', 'Hop Word' },
 
             -- Tagbar
@@ -67,11 +67,11 @@ return {
 
             -- Trouble
             ['<leader>x'] = { name = '+Trouble' },
-            ['<leader>xx'] = { '<cmd>TroubleToggle<cr>', 'Trouble Toggle' },
             ['<leader>xw'] = { '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>', 'Trouble Workspace Diagnostics' },
             ['<leader>xd'] = { '<cmd>TroubleToggle lsp_document_diagnostics<cr>', 'Trouble Document Diagnostics' },
             ['<leader>xl'] = { '<cmd>TroubleToggle loclist<cr>', 'Trouble Location List' },
             ['<leader>xq'] = { '<cmd>TroubleToggle quickfix<cr>', 'Trouble Quickfix' },
+            -- ['<leader>xx'] = { '<cmd>TroubleToggle<cr>', 'Trouble Toggle' },
 
             -- Zen mode (True-Zen)
             -- ['<leader>z'] = { name = '+Zen Mode' },

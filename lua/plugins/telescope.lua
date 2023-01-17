@@ -1,7 +1,11 @@
 return {
     'nvim-telescope/telescope.nvim',
     keys = {
-        { '<leader>ff', '<cmd>Telescope find_files<cr>' },
+        { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },
+        { '<leader>fe', '<cmd>Telescope file_browser<cr>', desc = 'File Browser' },
+        { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Find Word' },
+        { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Find Help' },
+        { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
     },
     branch = '0.1.x',
     dependencies = {
