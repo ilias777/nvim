@@ -54,6 +54,10 @@ vim.keymap.set('x', '<space>/', [[:s/\%V]])
 vim.keymap.set('n', '<leader>o', 'o<Esc>')
 vim.keymap.set('n', '<leader>O', 'O<Esc>')
 
+-- Delete word with backspace
+vim.keymap.set('n', '<BS>', 'ge')
+vim.keymap.set('n', '<C-BS>', 'a<C-w><Esc>')
+
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                 PLUGINS RELATED KEYMAPS                  │
 --  ╰──────────────────────────────────────────────────────────╯
