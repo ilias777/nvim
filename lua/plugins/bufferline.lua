@@ -84,6 +84,7 @@ return {
                         separator = { bg = 'NONE' },
                         close_button = { bg = 'NONE' },
                         duplicate = { bg = 'NONE' },
+                        modified = { bg = 'NONE' },
                     },
                 },
             }),
