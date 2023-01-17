@@ -30,8 +30,8 @@ vim.keymap.set('v', '<c-K>', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', '<c-J>', ":m '>+1<CR>gv=gv")
 
 -- Indent lines
-vim.api.nvim_set_keymap('v', '<', '<gv', {})
-vim.api.nvim_set_keymap('v', '>', '>gv', {})
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
 
 -- Paste
 vim.keymap.set('v', 'p', '"_dP')
