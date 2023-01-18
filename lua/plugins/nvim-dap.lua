@@ -4,17 +4,18 @@ return {
         { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
     },
     config = function()
+        -- Signs
         local sign = vim.fn.sign_define
         -- 
         sign('DapBreakpoint', { text = ' ', texthl = 'DapBreakpoint', linehl = '', numhl = '' })
-        -- sign('DapBreakpoint', {text='ﴫ ', texthl='DapBreakpoint', linehl='', numhl=''})
-        -- sign('DapBreakpoint', { text = '●', texthl = 'DapBreakpoint', linehl = '', numhl = '' })
         sign('DapBreakpointCondition', { text = '●', texthl = 'DapBreakpointCondition', linehl = '', numhl = '' })
         sign('DapLogPoint', { text = '◆', texthl = 'DapLogPoint', linehl = '', numhl = '' })
 
         local dap = require('dap')
 
-        -- PYTHON
+        --  ╭──────────────────────────────────────────────────────────╮
+        --  │                       PYTHON DEBUG                       │
+        --  ╰──────────────────────────────────────────────────────────╯
         dap.adapters.python = {
             type = 'executable',
             command = '/opt/homebrew/lib/python3.10/site-packages/debugpy/bin/python3',
@@ -43,6 +44,42 @@ return {
                         return '/opt/homebrew/lib/python3.10/site-packages/debugpy/bin/python3'
                     end
                 end,
+            },
+        }
+        --  ╭──────────────────────────────────────────────────────────╮
+        --  │                        RUST DEBUG                        │
+        --  ╰──────────────────────────────────────────────────────────╯
+        dap.adapters.lldb = {
+            type = 'executable',
+            command = '/opt/homebrew/opt/llvm/bin/lldb-vscode', -- adjust as needed, must be absolute path
+            name = 'lldb',
+        }
+        dap.configurations.rust = {
+            {
+                name = 'Launch',
+                type = 'lldb',
+                request = 'launch',
+                program = function()
+                    return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/' .. 'file')
+                end,
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+                args = {},
+
+                -- 💀
+                -- if you change `runInTerminal` to true, you might need to change the yama/ptrace_scope setting:
+                --
+                --    echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+                --
+                -- Otherwise you might get the following error:
+                --
+                --    Error on launch: Failed to attach to the target process
+                --
+                -- But you should be aware of the implications:
+                -- https://www.kernel.org/doc/html/latest/admin-guide/LSM/Yama.html
+                -- runInTerminal = false,
+                showDisassembly = 'never',
+                -- vim.fn.jobstart('cargo build'),
             },
         }
     end,
