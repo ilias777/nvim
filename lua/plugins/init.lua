@@ -113,9 +113,26 @@ return {
     {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
+        dependencies = {
+            'mrjones2014/nvim-ts-rainbow',
+        },
         config = function()
             require('nvim-treesitter.configs').setup({
                 ensure_installed = { 'bibtex', 'comment', 'cpp', 'css', 'html', 'java', 'javascript', 'jsdoc', 'json', 'json5', 'latex', 'lua', 'markdown', 'markdown_inline', 'make', 'php', 'python', 'regex', 'rust', 'scss', 'toml', 'vim', 'vue', 'yaml' },
+                rainbow = {
+                    enable = true,
+                    extended_mode = true,
+                    max_file_lines = nil,
+                    colors = {
+                        '#C678DD',
+                        '#98C379',
+                        '#E06C75',
+                        '#E5C07B',
+                        '#56B6C2',
+                        '#61AFEF',
+                        '#E06C75',
+                    }, -- table of hex strings
+                },
             })
         end,
     },
