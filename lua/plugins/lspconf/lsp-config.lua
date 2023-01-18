@@ -210,11 +210,11 @@ lspconfig.cssls.setup({
 })
 
 -- Tailwind Server
-lspconfig.tailwindcss.setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    -- handlers = handlers,
-})
+-- lspconfig.tailwindcss.setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+--     -- handlers = handlers,
+-- })
 
 -- Volar Vue Server
 lspconfig.volar.setup({
