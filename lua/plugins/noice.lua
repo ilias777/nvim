@@ -44,6 +44,18 @@ return {
                 },
             },
             routes = {
+                {
+                    view = 'mini',
+                    filter = {
+                        -- event = {
+                        --     'msg_showmode',
+                        --     -- 'msg_showcmd',
+                        -- },
+                        event = 'msg_show',
+                        kind = '',
+                        find = 'geschrieben',
+                    },
+                },
                 -- {
                 --     view = 'mini',
                 --     filter = {
@@ -52,14 +64,6 @@ return {
                 --             -- 'msg_showcmd',
                 --         },
                 --     },
-                -- },
-                -- {
-                --     filter = {
-                --         event = 'msg_showmode',
-                --         kind = '',
-                --         find = 'visuell',
-                --     },
-                --     opts = { skip = true },
                 -- },
             },
         })
