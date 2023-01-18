@@ -38,7 +38,7 @@ vim.keymap.set('v', 'p', '"_dP')
 vim.keymap.set('n', 'dD', '"_dd')
 
 -- Not yanking with 'c' and 'x'
-vim.keymap.set('n', 'c', '"_c')
+vim.keymap.set('n', 'ciw', '"_ciw')
 -- vim.keymap.set('n', 'x', '"_x')
 
 -- Search and replace word under the cursor
