@@ -2,7 +2,7 @@ return {
     'feline-nvim/feline.nvim',
     event = 'BufReadPre',
     config = function()
-        local macchiato = require('catppuccin.palettes').get_palette('macchiato')
+        local mocha = require('catppuccin.palettes').get_palette('mocha')
         local ctp_feline = require('catppuccin.groups.integrations.feline')
         local clrs = require('catppuccin.palettes').get_palette()
         local U = require('catppuccin.utils.colors')
@@ -30,8 +30,8 @@ return {
                 },
             },
             sett = {
-                text = U.vary_color({ macchiato = macchiato.surface0 }, clrs.surface0),
-                bkg = U.vary_color({ macchiato = 'NONE' }, clrs.surface0),
+                text = U.vary_color({ mocha = mocha.surface0 }, clrs.surface0),
+                bkg = U.vary_color({ mocha = 'NONE' }, clrs.surface0),
                 diffs = clrs.mauve,
                 extras = clrs.overlay1,
                 curr_file = clrs.maroon,

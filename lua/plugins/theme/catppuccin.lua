@@ -6,7 +6,7 @@ vim.g.catppuccin_flavour = 'macchiato'
 local catppuccin = require('catppuccin')
 
 catppuccin.setup({
-    flavour = 'macchiato', -- latte, frappe, macchiato, mocha
+    flavour = 'mocha', -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = 'latte',
         dark = 'macchiato',
