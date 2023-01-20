@@ -41,14 +41,14 @@ vim.keymap.set('n', 'dD', '"_dd')
 vim.keymap.set('n', 'ciw', '"_ciw')
 -- vim.keymap.set('n', 'x', '"_x')
 
+-- Search for matches within visual selection
+vim.keymap.set('x', '<space>/', '<Esc>/\\%V')
+
 -- Search and replace word under the cursor
 vim.keymap.set('n', '<leader>r', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
 
--- Search for matches within visual selection
-vim.keymap.set('x', '<leader>/', '<Esc>/\\%V')
-
 -- Search and replace in visual selection
-vim.keymap.set('x', '<space>/', [[:s/\%V]])
+vim.keymap.set('x', '<leader>/', [[:s/\%V]])
 
 -- Add blank line without leaving normal mode
 vim.keymap.set('n', '<leader>o', 'o<Esc>')

@@ -307,10 +307,10 @@ Diffview open  | <Leader>gd
 Diffview close | <Leader>gc
 
 ## Search
-Search in Visual Selection | <Leader>/
+Search in Visual Selection | <Space>/
 
 ## Search-Replace
-Search and replace in visual selection | <Space>/
+Search and replace in visual selection | <Leader>/
 Search and replace under the cursor    | <Leader>r
 
 ## Add-Blank-Lines
