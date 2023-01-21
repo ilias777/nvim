@@ -7,15 +7,21 @@ ls.config.set_config({
     ext_opts = {
         [types.choiceNode] = {
             active = {
-                virt_text = { { '●', 'IncSearch' } },
+                virt_text = { { '●', 'DiagnosticHint' } },
             },
         },
     },
 })
 
--- Luasnip Choice Node
+-- Luasnip Choice Nodes
 vim.keymap.set('i', '<C-ö>', function()
     if ls.choice_active() then
         ls.change_choice(1)
+    end
+end)
+
+vim.keymap.set('i', '<C-ä>', function()
+    if ls.choice_active() then
+        ls.change_choice(-1)
     end
 end)
