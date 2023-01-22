@@ -115,10 +115,22 @@ return {
         build = ':TSUpdate',
         dependencies = {
             'mrjones2014/nvim-ts-rainbow',
+            'nvim-treesitter/nvim-treesitter-textobjects',
         },
         config = function()
             require('nvim-treesitter.configs').setup({
                 ensure_installed = { 'bibtex', 'comment', 'cpp', 'css', 'html', 'java', 'javascript', 'jsdoc', 'json', 'json5', 'latex', 'lua', 'markdown', 'markdown_inline', 'make', 'php', 'python', 'regex', 'rust', 'scss', 'toml', 'vim', 'vue', 'yaml' },
+                textobjects = {
+                    select = {
+                        enable = true,
+                        lookahead = true,
+                        keymaps = {
+                            ['af'] = '@function.outer',
+                            ['if'] = '@function.inner',
+                        },
+                        include_surrounding_whitespace = false,
+                    },
+                },
                 rainbow = {
                     enable = true,
                     extended_mode = true,
