@@ -70,18 +70,38 @@ end
 
 -- Start Refactoring --
 
-local mySnip = s('mySnip', fmt([[
+local mySnip = s(
+    'mySnip',
+    fmt(
+        [[
 local {} = function({})
     {}
 end
-]], {
-    i(1, 'myVar'),
-    c(2, { t(''), t('myArg') }),
-    i(3, '-- TODO: '),
-}))
+]],
+        {
+            i(1, 'myVar'),
+            c(2, { t(''), t('myArg') }),
+            i(3, '-- TODO: '),
+        }
+    )
+)
+
+local config_functionSnip = s(
+    'conffn',
+    fmt(
+        [[
+config = function ()
+    {}
+end
+]],
+        {
+            i(1),
+        }
+    )
+)
 
 table.insert(snippets, mySnip)
-
+table.insert(snippets, config_functionSnip)
 
 -- End Refactoring --
 

@@ -13,7 +13,7 @@ local rep = require('luasnip.extras').rep -- Repeat
 
 local snippets, autosnippets = {}, {}
 
-local group = vim.api.nvim_create_augroup('Lua Snippets', { clear = true })
+local group = vim.api.nvim_create_augroup('JavaScript Snippets', { clear = true })
 local file_pattern = '*.js'
 
 local function cs(trigger, nodes, opts)
