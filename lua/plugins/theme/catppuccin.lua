@@ -46,7 +46,7 @@ catppuccin.setup({
         neogit = true,
         noice = true,
         notify = true,
-        nvimtree = false,
+        nvimtree = true,
         pounce = true,
         symbols_outline = true,
         telescope = true,
