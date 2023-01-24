@@ -38,14 +38,17 @@ return {
                             ['al'] = { query = '@loop.outer', desc = 'outer loop' },
                             ['il'] = { query = '@loop.inner', desc = 'inner loop' },
                             ['am'] = { query = '@statement.outer', desc = 'outer statement' },
-                            ['ax'] = { query = '@comment.outer', desc = 'outer comment' },
+                            ['ix'] = { query = '@comment.outer', desc = 'comment' },
                         },
                         include_surrounding_whitespace = false,
                     },
                     swap = {
                         enable = true,
                         swap_next = {
-                            ['~'] = '@parameter.inner',
+                            ['<space>s'] = { query = '@parameter.inner', desc = 'Swap next parameters' },
+                        },
+                        swap_previous = {
+                            ['<space>S'] = { query = '@parameter.inner', desc = 'Swap previous parameters' },
                         },
                     },
                 },
