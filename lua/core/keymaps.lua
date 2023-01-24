@@ -84,8 +84,8 @@ vim.keymap.set('n', '<Space>e', '<cmd>NvimTreeToggle<cr>', { desc = 'File Browse
 -- vim.keymap.set('v', 'S', '<cmd>Pounce<CR>')
 
 -- Treehopper
-vim.keymap.set('o', 'm', '<cmd><C-U>lua require("tsht").nodes()<CR>')
-vim.keymap.set('n', 'm', '<cmd>lua require("tsht").nodes()<CR>')
+vim.keymap.set('o', '<leader>m', '<cmd><C-U>lua require("tsht").nodes()<CR>')
+vim.keymap.set('n', '<leader>m', '<cmd>lua require("tsht").nodes()<CR>')
 
 -- Lazy nvim
 vim.keymap.set('n', '<Leader><Leader>l', '<cmd>Lazy<cr>')

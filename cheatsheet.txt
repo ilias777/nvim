@@ -216,10 +216,6 @@ Move between comments backward           | [*
 Move between comments forwards           | ]*
 Move between matching delimiters         | %
 
-## gitsigns
-Stage buffer       | <Leader>hS
-Reset buffer index | <Leader>hU
-
 ## diffview
 Open the diff for the next file                    | <Tab>
 Open the diff for the previous file                | <S-Tab>
@@ -248,9 +244,6 @@ Close                                              | q
 ## venn-comment
 Enable venn in visual block | :VBox
 Move cursor everywhere      | :set virtualedit=all
-
-## Tagbar
-Toggle Tagbar | <Leader>tb
 
 ## Lazy.nvim
 Open Lazy.nvim | <Leader><Leader>l
@@ -316,3 +309,6 @@ Search and replace under the cursor    | <Leader>r
 ## Add-Blank-Lines
 Add blank lines below | <Leader>o
 Add blank lines above | <Leader>O
+
+## Treehopper
+Region selection using hints | <Leader>m
