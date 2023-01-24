@@ -56,7 +56,7 @@ vim.keymap.set('n', '<leader>O', 'O<Esc>')
 
 -- Delete word with backspace
 vim.keymap.set('n', '<BS>', 'ge')
-vim.keymap.set('n', '<C-BS>', 'a<C-w><Esc>')
+vim.keymap.set('n', '<C-BS>', 'a<C-w>')
 
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                 PLUGINS RELATED KEYMAPS                  │
