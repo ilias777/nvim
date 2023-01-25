@@ -208,21 +208,6 @@ return {
             { '<space>bd', '<cmd>Bdelete<cr>', desc = 'Delete Buffer' },
         },
     },
-    {
-        'kevinhwang91/nvim-ufo',
-        keys = {
-            { 'za' },
-            { 'zc' },
-            { 'zo' },
-        },
-        config = function()
-            require('ufo').setup({
-                provider_selector = function(bufnr, filetype)
-                    return { 'treesitter', 'indent' }
-                end,
-            })
-        end,
-    },
 
     -- VIMTEX
     {
