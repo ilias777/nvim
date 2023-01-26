@@ -7,6 +7,16 @@ return {
     },
     config = function()
         require('noice').setup({
+            cmdline = {
+                format = {
+                    search_down = {
+                        view = 'cmdline',
+                    },
+                    search_up = {
+                        view = 'cmdline',
+                    },
+                },
+            },
             messages = {
                 view_history = 'popup',
             },
@@ -28,9 +38,16 @@ return {
             },
             views = {
                 cmdline_popup = {
+                    border = {
+                        style = 'none',
+                        padding = { 1, 3 },
+                    },
+                    win_options = {
+                        winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
+                    },
                     position = {
-                        row = 5,
-                        col = '50%',
+                        row = 3,
+                        -- col = '50%',
                     },
                 },
             },
