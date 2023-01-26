@@ -22,6 +22,17 @@ return {
     --         vim.cmd('colorscheme rose-pine')
     --     end,
     -- },
+    -- {
+    --     'lalitmee/cobalt2.nvim',
+    --     lazy = false,
+    --     priority = 1000,
+    --     dependencies = {
+    --         'tjdevries/colorbuddy.nvim',
+    --     },
+    --     config = function()
+    --         require('colorbuddy').colorscheme('cobalt2')
+    --     end,
+    -- },
 
     -- LSP
     {
