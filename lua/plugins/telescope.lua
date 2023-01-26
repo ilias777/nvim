@@ -6,6 +6,7 @@ return {
         { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Find Word' },
         { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Find Help' },
         { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
+        { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
     },
     branch = '0.1.x',
     dependencies = {
@@ -13,6 +14,7 @@ return {
         'nvim-telescope/telescope-file-browser.nvim',
         'nvim-telescope/telescope-symbols.nvim',
         'xiyaowong/telescope-emoji.nvim',
+        'debugloop/telescope-undo.nvim',
     },
     config = function()
         local trouble = require('trouble.providers.telescope')
@@ -58,6 +60,14 @@ return {
                         },
                     },
                 },
+                undo = {
+                    use_delta = true,
+                    side_by_side = true,
+                    layout_strategy = 'vertical',
+                    layout_config = {
+                        preview_height = 0.8,
+                    },
+                },
                 -- heading = {
                 --    treesitter = true,
                 -- },
@@ -66,6 +76,7 @@ return {
 
         require('telescope').load_extension('emoji')
         require('telescope').load_extension('file_browser')
+        require('telescope').load_extension('undo')
         -- require('telescope').load_extension('heading')
         -- require('telescope').load_extension('neoclip')
         -- require('telescope').load_extension('noice')
