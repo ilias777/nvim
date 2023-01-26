@@ -47,7 +47,7 @@ return {
                     },
                     position = {
                         row = 3,
-                        -- col = '50%',
+                        col = '50%',
                     },
                 },
             },
