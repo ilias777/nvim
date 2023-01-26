@@ -258,6 +258,23 @@ return {
             { 'S', '<cmd>Pounce<CR>', mode = { 'n', 'v' } },
         },
     },
+    {
+        'declancm/cinnamon.nvim',
+        keys = {
+            { '<C-f>' },
+            { '<C-b>' },
+            { 'n' },
+        },
+        config = function()
+            require('cinnamon').setup({
+                extra_keymaps = true,
+                extended_keymaps = true,
+                always_scroll = true,
+                scroll_limit = 200,
+                centered = true,
+            })
+        end,
+    },
 
     -- GIT
     {
