@@ -160,7 +160,7 @@ Single line comment | <Leader>cf
 Multi line comment  | <Leader>cm
 
 ## comment-box
-Centered comment box | <Leader>cf
+Centered comment box | <Leader>cbc
 
 ## table-mode
 Enable table mode         | <Leader>tm
