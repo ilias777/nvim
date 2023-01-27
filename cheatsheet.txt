@@ -159,6 +159,9 @@ Line-comment brackets          | gci{ or gci}
 Single line comment | <Leader>cf
 Multi line comment  | <Leader>cm
 
+## comment-box
+Centered comment box | <Leader>cf
+
 ## table-mode
 Enable table mode         | <Leader>tm
 Disable table mode        | <Leader>tm
