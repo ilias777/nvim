@@ -159,6 +159,8 @@ return {
     {
         'L3MON4D3/LuaSnip',
         event = 'InsertEnter',
+        version = '<CurrentMajor>.*',
+        build = 'make install_jsregexp',
     },
     {
         'rafamadriz/friendly-snippets',
