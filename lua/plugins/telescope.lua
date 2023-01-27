@@ -33,6 +33,10 @@ return {
                 },
             },
             pickers = {
+                buffers = {
+                    -- theme = 'ivy'
+                    initial_mode = 'normal',
+                },
                 find_files = {
                     theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
                     -- layout_strategy = 'vertical',
@@ -44,9 +48,6 @@ return {
                 symbols = {
                     theme = 'dropdown',
                 },
-                buffers = {
-                    -- theme = 'ivy'
-                },
                 registers = {
                     theme = 'ivy',
                 },
@@ -56,7 +57,7 @@ return {
                     theme = 'ivy',
                     mappings = {
                         ['n'] = {
-                            -- ['o'] = fb_actions.goto_cwd
+                            -- ['o'] = fb_actions.select_default,
                         },
                     },
                 },
