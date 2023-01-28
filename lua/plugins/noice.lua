@@ -38,13 +38,13 @@ return {
             },
             views = {
                 cmdline_popup = {
-                    border = {
-                        style = 'none',
-                        padding = { 1, 3 },
-                    },
-                    win_options = {
-                        winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
-                    },
+                    -- border = {
+                    --     style = 'none',
+                    --     padding = { 1, 3 },
+                    -- },
+                    -- win_options = {
+                    --     winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
+                    -- },
                     position = {
                         row = 3,
                         col = '50%',
