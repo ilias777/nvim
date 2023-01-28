@@ -159,12 +159,10 @@ return {
     {
         'L3MON4D3/LuaSnip',
         event = 'InsertEnter',
-        version = '<CurrentMajor>.*',
+        dependencies = {
+            'rafamadriz/friendly-snippets',
+        },
         build = 'make install_jsregexp',
-    },
-    {
-        'rafamadriz/friendly-snippets',
-        event = 'BufReadPre',
     },
     {
         'smjonas/live-command.nvim',
