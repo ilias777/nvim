@@ -1,6 +1,7 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter',
+        event = 'BufReadPre',
         build = ':TSUpdate',
         dependencies = {
             'mrjones2014/nvim-ts-rainbow',
