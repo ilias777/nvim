@@ -1,6 +1,6 @@
 return {
     'akinsho/bufferline.nvim',
-    event = 'BufReadPre',
+    event = 'VimEnter',
     version = 'v3.*',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
