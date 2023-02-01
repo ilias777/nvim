@@ -34,7 +34,10 @@ return {
             },
             pickers = {
                 buffers = {
-                    -- theme = 'ivy'
+                    theme = 'dropdown',
+                    mappings = {
+                        n = { ['<C-e>'] = 'delete_buffer' },
+                    },
                     initial_mode = 'normal',
                 },
                 find_files = {
@@ -55,6 +58,7 @@ return {
             extensions = {
                 file_browser = {
                     theme = 'ivy',
+                    initial_mode = 'normal',
                     mappings = {
                         ['n'] = {
                             -- ['o'] = fb_actions.select_default,
@@ -62,6 +66,7 @@ return {
                     },
                 },
                 undo = {
+                    initial_mode = 'normal',
                     use_delta = true,
                     side_by_side = true,
                     layout_strategy = 'vertical',
