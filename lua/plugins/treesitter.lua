@@ -11,7 +11,7 @@ return {
         },
         config = function()
             require('nvim-treesitter.configs').setup({
-                ensure_installed = { 'bibtex', 'comment', 'cpp', 'css', 'html', 'java', 'javascript', 'jsdoc', 'json', 'json5', 'latex', 'lua', 'markdown', 'markdown_inline', 'make', 'php', 'python', 'regex', 'rust', 'scss', 'toml', 'vim', 'vue', 'yaml' },
+                ensure_installed = { 'bash', 'bibtex', 'comment', 'cpp', 'css', 'html', 'java', 'javascript', 'jsdoc', 'json', 'json5', 'latex', 'lua', 'markdown', 'markdown_inline', 'make', 'php', 'python', 'regex', 'rust', 'scss', 'toml', 'vim', 'vue', 'yaml' },
                 -- Buildin
                 highlight = {
                     enable = true,
