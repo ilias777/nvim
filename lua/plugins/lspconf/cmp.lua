@@ -54,7 +54,7 @@ cmp.setup({
     window = {
         -- completion = cmp.config.window.bordered(),
         -- completion = {
-        --     border = {'┌', '─', '┐', '│', '┘', '─', '└', '│'},
+        --     border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
         --     side_padding = 1,
         --     winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
         -- },
