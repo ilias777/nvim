@@ -7,6 +7,7 @@ return {
         { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Find Help' },
         { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
         { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
+        { '<leader>fl', '<cmd>Telescope highlights<cr>', desc = 'Find Highlights' },
     },
     branch = '0.1.x',
     dependencies = {
