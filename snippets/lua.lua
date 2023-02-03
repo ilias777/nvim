@@ -90,7 +90,7 @@ local config_functionSnip = s(
     'conffn',
     fmt(
         [[
-config = function ()
+config = function()
     {}
 end
 ]],
