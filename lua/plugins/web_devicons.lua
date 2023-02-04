@@ -15,6 +15,12 @@ return {
                 cterm_color = '172',
                 name = 'Bib',
             },
+            vue = {
+                icon = '﵂',
+                color = '#40b883',
+                cterm_color = '42',
+                name = 'Vue',
+            },
         })
     end,
 }
