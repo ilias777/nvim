@@ -1,16 +1,15 @@
 return {
     'https://github.com/niuiic/divider.nvim',
+    enabled = false,
     event = 'BufReadPre',
     config = function()
         require('divider').setup({
             dividers = {
                 {
-                    --  ╭──────────────────────────────────────────────────────────────────────────────╮
-                    --  │                                  == Test ==                                  │
-                    --  ╰──────────────────────────────────────────────────────────────────────────────╯
+                    -- === Test ===
                     -- divider_pattern is passed to rg command
                     -- divider_pattern = [[%%=+ [\s\S]+ =+%%]],
-                    divider_pattern = [[== [\s\S]+ ==]],
+                    divider_pattern = [[=== [\s\S]+ ===]],
                     -- content_pattern is used by lua function string.match
                     content_pattern = [[%%%%=+ ([%s%S]*) =+%%%%]],
                     -- highlight color
