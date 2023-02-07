@@ -40,6 +40,7 @@ return {
                 cmdline_popup = {
                     -- border = {
                     --     style = 'none',
+                    --     style = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
                     --     padding = { 1, 3 },
                     -- },
                     -- win_options = {
