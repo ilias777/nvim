@@ -78,31 +78,20 @@ end
 --     navic.attach(client, bufnr)
 -- end
 
--- Borders diagnostics
+-- Borders
 -- vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#181926]])
 -- vim.cmd([[autocmd! ColorScheme * highlight NormalFloat guibg=#181926]])
 
 local border = {
-    { '╭', 'FloatBorder' },
+    { '┌', 'FloatBorder' },
     { '─', 'FloatBorder' },
-    { '╮', 'FloatBorder' },
+    { '┐', 'FloatBorder' },
     { '│', 'FloatBorder' },
-    { '╯', 'FloatBorder' },
+    { '┘', 'FloatBorder' },
     { '─', 'FloatBorder' },
-    { '╰', 'FloatBorder' },
+    { '└', 'FloatBorder' },
     { '│', 'FloatBorder' },
 }
-
--- local border = {
---     { '┌', 'FloatBorder' },
---     { '─', 'FloatBorder' },
---     { '┐', 'FloatBorder' },
---     { '│', 'FloatBorder' },
---     { '┘', 'FloatBorder' },
---     { '─', 'FloatBorder' },
---     { '└', 'FloatBorder' },
---     { '│', 'FloatBorder' },
--- }
 
 -- LSP settings (for overriding per client)
 local handlers = {
@@ -120,7 +109,7 @@ local handlers = {
 lspconfig.sumneko_lua.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     settings = {
         Lua = {
             runtime = {
@@ -161,7 +150,7 @@ lspconfig.sumneko_lua.setup({
 lspconfig.tsserver.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     -- settings = {
     --     tsserver = {
     --         init_options = {
@@ -184,14 +173,14 @@ lspconfig.tsserver.setup({
 lspconfig.pyright.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
 })
 
 -- Emmet Server
 lspconfig.emmet_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     filetypes = { 'html', 'sass', 'scss', 'css', 'typescriptreact', 'javascriptreact', 'vue' },
 })
 
@@ -199,7 +188,7 @@ lspconfig.emmet_ls.setup({
 lspconfig.cssls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     settings = {
         css = {
             lint = {
@@ -213,14 +202,14 @@ lspconfig.cssls.setup({
 -- lspconfig.tailwindcss.setup({
 --     capabilities = capabilities,
 --     on_attach = on_attach,
---     -- handlers = handlers,
+--     handlers = handlers,
 -- })
 
 -- Volar Vue Server
 lspconfig.volar.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     filetypes = {
         'vue', --[[ 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'json' ]]
     },
@@ -241,7 +230,7 @@ lspconfig.volar.setup({
 lspconfig.jsonls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     filetypes = { 'json', 'jsonc' },
     init_options = {
         provideFormatter = true,
@@ -252,14 +241,14 @@ lspconfig.jsonls.setup({
 lspconfig.html.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
 })
 
 -- LTex Server
 lspconfig.ltex.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     settings = {
         ltex = {
             language = 'de-DE',
@@ -271,7 +260,7 @@ lspconfig.ltex.setup({
 lspconfig.texlab.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     settings = {
         texlab = {
             auxDirectory = '.',
@@ -303,21 +292,21 @@ lspconfig.texlab.setup({
 lspconfig.intelephense.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
 })
 
 -- Java Server
 -- lspconfig.jdtls.setup({
 --     capabilities = capabilities,
 --     on_attach = on_attach,
---     -- handlers = handlers,
+--     handlers = handlers,
 -- })
 
 -- YAML Server
 lspconfig.yamlls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
-    -- handlers = handlers,
+    handlers = handlers,
     settings = {
         yaml = {
             validate = true,
@@ -345,6 +334,7 @@ lspconfig.yamlls.setup({
 lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
     on_attach = on_attach,
+    handlers = handlers,
 })
 
 -- Diagnostics signs
@@ -358,6 +348,7 @@ vim.diagnostic.config({
     virtual_text = {
         prefix = '■ ', -- Could be '●', '▎', 'x', '■', , 
     },
+    float = { border = border },
     -- virtual_text = false,
     -- signs = true,
     -- underline = true,

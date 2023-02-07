@@ -53,17 +53,21 @@ cmp.setup({
     },
     window = {
         -- completion = cmp.config.window.bordered(),
-        -- completion = {
-        --     border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
-        --     side_padding = 1,
-        --     winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
-        -- },
+        completion = {
+            border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
+            -- side_padding = 1,
+            winhighlight = 'Normal:CmpPmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None',
+        },
         -- completion = {
         --     winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,Search:None',
         --     col_offset = -3,
         --     side_padding = 0,
         -- },
         -- documentation = cmp.config.window.bordered(),
+        documentation = {
+            border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
+            winhighlight = 'Normal:CmpPmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None',
+        },
     },
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),

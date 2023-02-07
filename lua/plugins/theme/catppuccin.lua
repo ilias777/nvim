@@ -88,11 +88,13 @@ catppuccin.setup({
             -- ['@field.lua'] = { fg = colors.teal },
 
             -- Float Border
-            NormalFloat = { bg = colors.crust },
+            -- NormalFloat = { bg = colors.crust },
 
             -- Cmp Menu
-            Pmenu = { bg = colors.mantle },
-            PmenuSel = { fg = colors.mantle, bg = colors.maroon, style = { 'bold' } },
+            -- Pmenu = { bg = colors.mantle },
+            -- PmenuSel = { fg = colors.mantle, bg = colors.maroon, style = { 'bold' } },
+            Pmenu = { bg = colors.base },
+            PmenuSel = { fg = colors.base, bg = colors.maroon, style = { 'bold' } },
 
             -- Cmp Item Kind
             -- CmpItemKindSnippet = { fg = colors.base, bg = colors.mauve },
