@@ -157,9 +157,6 @@ catppuccin.setup({
 
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, macchiato.mantle), style = { 'italic' } },
-
-            -- Noice
-            NoiceCursor = { fg = colors.crust, bg = colors.text },
         }
     end,
     highlight_overrides = {},
