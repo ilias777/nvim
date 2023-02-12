@@ -106,7 +106,7 @@ local handlers = {
 
 -- SERVERS
 -- Lua server
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     handlers = handlers,
