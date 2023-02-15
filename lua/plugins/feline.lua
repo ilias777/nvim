@@ -83,6 +83,7 @@ return {
                     'dapui_console',
                     'lspinfo',
                     'mason',
+                    'lazy',
                     'Codewindow',
                     'JABSwindow',
                 },
