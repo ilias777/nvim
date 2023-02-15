@@ -18,4 +18,10 @@ require('core.options')
 require('core.keymaps')
 require('core.autocommands')
 
-require('lazy').setup('plugins')
+local opts = {
+    ui = {
+        border = 'single',
+    },
+}
+
+require('lazy').setup('plugins', opts)

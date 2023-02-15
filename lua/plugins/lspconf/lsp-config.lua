@@ -5,10 +5,12 @@ require('mason').setup({
             package_pending = ' ',
             package_uninstalled = ' ',
         },
+        border = 'single',
     },
 })
 require('mason-lspconfig').setup()
 local lspconfig = require('lspconfig')
+require('lspconfig.ui.windows').default_options.border = 'single'
 
 -- local navic = require('nvim-navic')
 
