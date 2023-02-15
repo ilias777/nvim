@@ -82,6 +82,7 @@ return {
                     'dap-repl',
                     'dapui_console',
                     'lspinfo',
+                    'mason',
                     'Codewindow',
                     'JABSwindow',
                 },
