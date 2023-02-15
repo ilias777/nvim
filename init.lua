@@ -21,6 +21,9 @@ require('core.autocommands')
 local opts = {
     ui = {
         border = 'single',
+        icons = {
+            lazy = '💤',
+        },
     },
 }
 
