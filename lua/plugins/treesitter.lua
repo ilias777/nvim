@@ -4,7 +4,8 @@ return {
         event = 'BufReadPre',
         build = ':TSUpdate',
         dependencies = {
-            'mrjones2014/nvim-ts-rainbow',
+            -- 'mrjones2014/nvim-ts-rainbow',
+            'HiPhish/nvim-ts-rainbow2',
             'nvim-treesitter/nvim-treesitter-textobjects',
             'mfussenegger/nvim-treehopper',
             'RRethy/nvim-treesitter-textsubjects',
