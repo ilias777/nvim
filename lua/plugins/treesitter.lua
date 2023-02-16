@@ -64,17 +64,9 @@ return {
                 -- Rainbow
                 rainbow = {
                     enable = true,
-                    extended_mode = true,
-                    max_file_lines = nil,
-                    colors = {
-                        '#C678DD',
-                        '#98C379',
-                        '#E06C75',
-                        '#E5C07B',
-                        '#56B6C2',
-                        '#61AFEF',
-                        '#E06C75',
-                    }, -- table of hex strings
+                    query = 'rainbow-parens',
+                    strategy = require('ts-rainbow.strategy.global'),
+                    max_file_lines = 3000,
                 },
             })
         end,
