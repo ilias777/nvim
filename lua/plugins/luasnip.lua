@@ -28,13 +28,13 @@ return {
         --         ls.expand_or_jump()
         --     end
         -- end)
-
+        --
         -- vim.keymap.set({ 'i', 's' }, '<C-n>', function()
         --     if ls.jumpable(1) then
         --         ls.jump(1)
         --     end
         -- end)
-
+        --
         -- vim.keymap.set({ 'i', 's' }, '<C-p>', function()
         --     if ls.jumpable(-1) then
         --         ls.jump(-1)
