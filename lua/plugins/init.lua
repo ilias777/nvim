@@ -158,14 +158,6 @@ return {
 
     -- UTILS
     {
-        'L3MON4D3/LuaSnip',
-        event = 'InsertEnter',
-        dependencies = {
-            'rafamadriz/friendly-snippets',
-        },
-        build = 'make install_jsregexp',
-    },
-    {
         'smjonas/live-command.nvim',
         event = 'CmdlineEnter',
         config = function()
