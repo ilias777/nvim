@@ -85,7 +85,7 @@ catppuccin.setup({
     custom_highlights = function(colors)
         return {
             -- Variable
-            -- ['@field.lua'] = { fg = colors.teal },
+            ['@lsp.type.property.lua'] = { fg = colors.teal },
 
             -- Float Border
             -- NormalFloat = { bg = colors.crust },
