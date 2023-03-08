@@ -21,8 +21,8 @@ return {
             windowControls = true,
             lineNumber = true,
             font = 'Cascadia Code',
-            -- lineOffset = 1, -- from where to start line number
-            lineOffset = vim.fn.getcurpos(0)[2],
+            lineOffset = 1, -- from where to start line number
+            -- lineOffset = vim.fn.getcurpos(0)[2],
             linePad = 5, -- padding between lines
             padHoriz = 80, -- Horizontal padding
             padVert = 100, -- vertical padding
