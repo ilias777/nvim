@@ -212,6 +212,15 @@ return {
             { '<space>bd', '<cmd>Bdelete<cr>', desc = 'Delete Buffer' },
         },
     },
+    {
+        'utilyre/sentiment.nvim',
+        event = 'BufReadPre',
+        name = 'sentiment',
+        version = '*',
+        config = function()
+            require('sentiment').setup()
+        end,
+    },
 
     -- VIMTEX
     {
