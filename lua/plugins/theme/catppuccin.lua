@@ -156,8 +156,8 @@ catppuccin.setup({
             -- Folded = { bg = colors.base },
 
             -- Match Parenthesis
-            MatchParen = { style = { 'underline' } },
-            -- MatchParen = { fg = colors.base, bg = colors.red },
+            -- MatchParen = { style = { 'underline' } },
+            MatchParen = { fg = colors.base, bg = colors.red },
 
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, macchiato.mantle), style = { 'italic' } },
