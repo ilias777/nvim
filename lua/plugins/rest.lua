@@ -1,5 +1,6 @@
 return {
     'rest-nvim/rest.nvim',
+    enabled = false,
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
         require('rest-nvim').setup({
@@ -26,7 +27,12 @@ return {
                 formatters = {
                     json = 'jq',
                     html = function(body)
-                        return vim.fn.system({ 'tidy', '-i', '-q', '-' }, body)
+                        return vim.fn.system({
+                            'jq',
+                            -- '-i',
+                            -- '-q',
+                            -- '-',
+                        }, body)
                     end,
                 },
             },
