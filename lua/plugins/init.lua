@@ -348,4 +348,11 @@ return {
             { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
         },
     },
+
+    -- REST
+    {
+        'diepm/vim-rest-console',
+        enabled = false,
+        ft = 'rest',
+    },
 }
