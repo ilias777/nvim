@@ -1,7 +1,7 @@
 local ucolors = require('catppuccin.utils.colors')
-local macchiato = require('catppuccin.palettes').get_palette('macchiato')
+local mocha = require('catppuccin.palettes').get_palette('mocha')
 
-vim.g.catppuccin_flavour = 'macchiato'
+-- vim.g.catppuccin_flavour = 'mocha'
 
 local catppuccin = require('catppuccin')
 
@@ -9,7 +9,7 @@ catppuccin.setup({
     flavour = 'mocha', -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = 'latte',
-        dark = 'macchiato',
+        dark = 'mocha',
     },
     compile_path = vim.fn.stdpath('cache') .. '/catppuccin',
     transparent_background = false,
@@ -158,11 +158,14 @@ catppuccin.setup({
             -- Match Parenthesis
             -- MatchParen = { style = { 'underline' } },
             MatchParen = { fg = colors.base, bg = colors.red },
+            -- MatchParen = { fg = colors.base, bg = ucolors.darken(colors.red, 0.65, mocha.rosewater) },
 
             -- Visual Mode
-            Visual = { bg = ucolors.darken('#9745be', 0.25, macchiato.mantle), style = { 'italic' } },
+            Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.mantle), style = { 'italic' } },
         }
     end,
     highlight_overrides = {},
     color_overrides = {},
 })
+
+vim.cmd.colorscheme('catppuccin')
