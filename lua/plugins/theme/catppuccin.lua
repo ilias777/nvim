@@ -157,7 +157,7 @@ catppuccin.setup({
 
             -- Match Parenthesis
             -- MatchParen = { style = { 'underline' } },
-            MatchParen = { fg = colors.base, bg = colors.red },
+            -- MatchParen = { fg = colors.base, bg = colors.red },
             -- MatchParen = { fg = colors.base, bg = ucolors.darken(colors.red, 0.65, mocha.rosewater) },
 
             -- Visual Mode
