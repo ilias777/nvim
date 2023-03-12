@@ -1,6 +1,9 @@
 return {
     'rest-nvim/rest.nvim',
     enabled = false,
+    keys = {
+        { '<leader>R', '<cmd>lua require("rest-nvim").run()<cr>', desc = 'Rest API' },
+    },
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
         require('rest-nvim').setup({
