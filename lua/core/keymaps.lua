@@ -39,6 +39,7 @@ vim.keymap.set('n', 'dD', '"_dd')
 
 -- Not yanking with 'c' and 'x'
 vim.keymap.set('n', 'ciw', '"_ciw')
+vim.keymap.set('n', 'C', '"_C')
 -- vim.keymap.set('n', 'x', '"_x')
 
 -- Search for matches within visual selection
