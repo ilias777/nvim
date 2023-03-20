@@ -59,7 +59,7 @@ require('null-ls').setup({
 
         -- DIAGNOSTICS
         -- JavaScript
-        require('null-ls').builtins.diagnostics.eslint,
+        -- require('null-ls').builtins.diagnostics.eslint,
         -- require('null-ls').builtins.diagnostics.standard.with({
         --     -- filetypes = { 'javascript' },
         --     extra_args = {
