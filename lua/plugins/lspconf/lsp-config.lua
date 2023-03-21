@@ -153,20 +153,17 @@ lspconfig.tsserver.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     handlers = handlers,
-    -- settings = {
-    --     tsserver = {
-    --         init_options = {
-    --             preferences = {
-    --                 quotePreference = 'single',
-    --                 disableSuggestions = true,
-    --             },
-    --         }
-    --     }
-    -- }
-    init_options = {
-        preferences = {
-            quotePreference = 'single',
-            disableSuggestions = true,
+    settings = {
+        init_options = {
+            preferences = {
+                quotePreference = 'single',
+                disableSuggestions = true,
+            },
+            javascript = {
+                format = {
+                    indentSize = 4,
+                },
+            },
         },
     },
 })
