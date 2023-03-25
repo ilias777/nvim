@@ -20,9 +20,9 @@ return {
             view = {
                 adaptive_size = false,
                 centralize_selection = false,
-                width = 50,
+                width = 40,
                 hide_root_folder = false,
-                side = 'right',
+                side = 'left',
                 preserve_window_proportions = false,
                 number = false,
                 relativenumber = false,
@@ -134,5 +134,5 @@ return {
                 },
             },
         })
-    end
+    end,
 }
