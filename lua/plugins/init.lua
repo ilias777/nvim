@@ -38,13 +38,17 @@ return {
     {
         'neovim/nvim-lspconfig',
         event = 'BufReadPre',
-        dependencies = {
-            'williamboman/mason.nvim',
-            'williamboman/mason-lspconfig.nvim',
-        },
         config = function()
             require('plugins.lspconf.lsp-config')
         end,
+    },
+    {
+        'williamboman/mason.nvim',
+        event = 'BufReadPre',
+        build = ':MasonUpdate',
+        dependencies = {
+            'williamboman/mason-lspconfig.nvim',
+        },
     },
     {
         'folke/trouble.nvim',
