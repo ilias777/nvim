@@ -22,7 +22,7 @@ return {
                 centralize_selection = false,
                 width = 40,
                 hide_root_folder = false,
-                side = 'left',
+                side = 'right',
                 preserve_window_proportions = false,
                 number = false,
                 relativenumber = false,
