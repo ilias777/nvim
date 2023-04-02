@@ -220,7 +220,7 @@ lspconfig.volar.setup({
             diagnostics = true,
         },
         typescript = {
-            serverPath = '/Users/ilias/.local/share/nvim/lsp_servers/tsserver/node_modules/typescript/lib/tsserverlibrary.js',
+            tsdk = '/Users/ilias/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
         },
     },
 })
