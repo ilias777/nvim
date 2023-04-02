@@ -1,5 +1,5 @@
 return {
-    -- COLORSCHEME
+    -- === COLORSCHEME ===
     -- Catppuccin
     {
         'catppuccin/nvim',
@@ -34,7 +34,7 @@ return {
     --     end,
     -- },
 
-    -- LSP
+    -- === LSP ===
     {
         'neovim/nvim-lspconfig',
         event = 'BufReadPre',
@@ -62,7 +62,7 @@ return {
         end,
     },
 
-    -- CMP
+    -- === CMP ===
     {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
@@ -82,7 +82,7 @@ return {
         end,
     },
 
-    -- SYMBOLS OUTLINE LSP
+    -- === SYMBOLS OUTLINE LSP ===
     {
         'simrat39/symbols-outline.nvim',
         cmd = 'SymbolsOutline',
@@ -91,7 +91,7 @@ return {
         end,
     },
 
-    -- NULL-LS
+    -- === NULL-LS ===
     {
         'jose-elias-alvarez/null-ls.nvim',
         config = function()
@@ -99,7 +99,7 @@ return {
         end,
     },
 
-    -- TELESCOPE
+    -- === TELESCOPE ===
     -- {
     --     'nvim-telescope/telescope-file-browser.nvim',
     --     keys = {
@@ -125,7 +125,7 @@ return {
         },
     },
 
-    -- COMMENTS
+    -- === COMMENTS ===
     {
         'numToStr/Comment.nvim',
         keys = {
@@ -160,7 +160,7 @@ return {
         end,
     },
 
-    -- UTILS
+    -- === UTILS ===
     {
         'smjonas/live-command.nvim',
         event = 'CmdlineEnter',
@@ -245,7 +245,7 @@ return {
         end,
     },
 
-    -- VIMTEX
+    -- === VIMTEX ===
     {
         'lervag/vimtex',
         ft = 'tex',
@@ -256,7 +256,7 @@ return {
         end,
     },
 
-    -- COLORS
+    -- === COLORS ===
     {
         'norcalli/nvim-colorizer.lua',
         event = 'BufReadPre',
@@ -265,7 +265,7 @@ return {
         end,
     },
 
-    -- MOTION
+    -- === MOTION ===
     {
         'phaazon/hop.nvim',
         keys = {
@@ -310,7 +310,7 @@ return {
         end,
     },
 
-    -- GIT
+    -- === GIT ===
     {
         'sindrets/diffview.nvim',
         cmd = { 'DiffviewOpen', 'DiffviewClose', 'DiffviewToggleFiles', 'DiffviewFocusFiles' },
@@ -343,7 +343,7 @@ return {
         end,
     },
 
-    -- DAP
+    -- === DAP ===
     {
         'rcarriga/nvim-dap-ui',
         keys = {
@@ -364,7 +364,7 @@ return {
         end,
     },
 
-    -- JAVA
+    -- === JAVA ===
     {
         'mfussenegger/nvim-jdtls',
         keys = {
@@ -372,7 +372,7 @@ return {
         },
     },
 
-    -- REST
+    -- === REST ===
     {
         'diepm/vim-rest-console',
         enabled = false,
