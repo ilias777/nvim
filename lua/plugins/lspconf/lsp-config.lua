@@ -217,11 +217,23 @@ lspconfig.volar.setup({
             disableSuggestions = true,
         },
         languageFeatures = {
+            implementation = true,
+            references = true,
+            definition = true,
+            typeDefinition = true,
+            callHierarchy = true,
+            hover = true,
+            rename = true,
+            renameFileRefactoring = true,
+            signatureHelp = true,
+            codeAction = true,
             diagnostics = true,
         },
-        typescript = {
-            tsdk = '/Users/ilias/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
-        },
+        -- typescript = {
+        -- tsdk = '/Users/ilias/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
+        -- tsdk = '/Users/ilias/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
+        -- tsdk = '',
+        -- },
     },
 })
 
