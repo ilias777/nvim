@@ -2,6 +2,9 @@ return {
     'https://github.com/niuiic/divider.nvim',
     enabled = true,
     event = 'BufReadPre',
+    keys = {
+        { '<leader>v', '<cmd>DividerToggle<cr>', desc = 'Toggle Divider Comment' },
+    },
     dependencies = {
         'niuiic/niuiic-core.nvim',
     },
