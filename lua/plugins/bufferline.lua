@@ -4,6 +4,7 @@ return {
     version = 'v3.*',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
+        local mocha = require('catppuccin.palettes').get_palette('mocha')
         require('bufferline').setup({
             options = {
                 mode = 'buffers', -- set to "tabs" to only show tabpages instead | "buffers"
