@@ -1,5 +1,6 @@
 return {
     'narutoxy/silicon.lua',
+    enabled = false,
     keys = {
         { '<leader>4' },
         { '<leader>5' },
