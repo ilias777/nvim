@@ -5,7 +5,7 @@ return {
         require('which-key').setup()
         local wk = require('which-key')
         wk.register({
-            -- LEADER KEY
+            -- === LEADER KEY ===
 
             -- Comment Frame & Comment Box
             ['<leader>c'] = { name = '+Comment Frame' },
@@ -80,7 +80,7 @@ return {
             -- ['<leader>zf'] = { '<cmd>TZFocus<cr>', 'Zen Focus' },
             -- ['<leader>zn'] = { '<cmd>TZNarrow<cr>', 'Zen Narrow', { mode = 'v' } },
 
-            -- SPACE KEY
+            -- === SPACE KEY ===
 
             -- Bufferline
             ['<space>b'] = { name = '+Buffer' },
@@ -98,6 +98,16 @@ return {
             ['<space>b8'] = { '<cmd>BufferLineGoToBuffer 8<cr>', 'Go to Buffer 8' },
             ['<space>b9'] = { '<cmd>BufferLineGoToBuffer 9<cr>', 'Go to Buffer 9' },
             -- ['<space>bd'] = { '<cmd>Bdelete<cr>', 'Delete Buffer' },
+
+            -- Messages
+            ['<space>m'] = { '<cmd>messages<cr>', 'Show Messages' },
+
+            -- Noice
+            ['<space>n'] = { name = '+Noice' },
+            ['<space>nn'] = { '<cmd>Noice<cr>', 'Noice Messages' },
+            ['<space>nd'] = { '<cmd>NoiceDismiss<cr>', 'Noice Dismiss' },
+            ['<space>nl'] = { '<cmd>NoiceLast<cr>', 'Noice Last' },
+            ['<space>nt'] = { '<cmd>NoiceTelescope<cr>', 'Noice Telescope' },
 
             -- Code Actions with LSP
             ['<space>c'] = { name = '+Code actions with LSP' },
