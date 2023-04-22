@@ -92,6 +92,7 @@ require('null-ls').setup({
         -- CODE ACTIONS
         require('null-ls').builtins.code_actions.eslint,
         require('null-ls').builtins.code_actions.gitsigns,
+        require('null-ls').builtins.code_actions.ts_node_action,
 
         -- COMPLETION
         -- require('null-ls').builtins.completion.spell,
