@@ -1,4 +1,5 @@
 return {
+    -- === Treesitter ===
     {
         'nvim-treesitter/nvim-treesitter',
         event = 'BufReadPre',
@@ -71,6 +72,7 @@ return {
             })
         end,
     },
+    -- === Treesitter Context ===
     {
         'nvim-treesitter/nvim-treesitter-context',
         event = 'BufReadPre',
@@ -78,6 +80,18 @@ return {
             require('treesitter-context').setup()
         end,
     },
+    -- === Treesitter node action ===
+    {
+        'ckolkey/ts-node-action',
+        keys = {
+            { 'Ü', '<cmd>NodeAction<cr>', desc = 'Trigger Node Action' },
+        },
+        dependencies = { 'nvim-treesitter' },
+        config = function()
+            require('ts-node-action').setup()
+        end,
+    },
+    -- === Treesitter Playground ===
     {
         'nvim-treesitter/playground',
         cmd = { 'TSPlaygroundToggle', 'TSHighlightCapturesUnderCursor', 'TSNodeUnderCursor' },
