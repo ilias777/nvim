@@ -105,11 +105,11 @@ cmp.setup({
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
-        { name = 'buffer', max_item_count = 10 },
-        { name = 'nvim_lua', max_item_count = 10 },
+        { name = 'buffer', max_view_entries = 10 },
+        { name = 'nvim_lua', max_view_entries = 10 },
         { name = 'path' },
         { name = 'nvim_lsp_signature_help' },
-        { name = 'treesitter', max_item_count = 10 },
+        { name = 'treesitter', max_view_entries = 10 },
         -- { name = 'spell', option = {
         --     keep_all_entries = false,
         --     enable_in_context = function()
