@@ -93,7 +93,7 @@ catppuccin.setup({
             -- Cmp Menu
             -- Pmenu = { bg = colors.mantle },
             -- PmenuSel = { fg = colors.mantle, bg = colors.maroon, style = { 'bold' } },
-            Pmenu = { bg = colors.base },
+            -- Pmenu = { bg = colors.base },
             PmenuSel = { fg = colors.base, bg = colors.maroon, style = { 'bold' } },
 
             -- Cmp Item Kind
