@@ -141,7 +141,7 @@ catppuccin.setup({
             TelescopePreviewTitle = { fg = colors.crust, bg = colors.mauve },
 
             -- Beacon
-            Beacon = { bg = colors.teal },
+            -- Beacon = { bg = colors.teal },
 
             -- Bufferline
             BufferLineIndicatorSelected = { fg = colors.pink },
