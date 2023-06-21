@@ -141,6 +141,9 @@ lspconfig.lua_ls.setup({
                     quote_style = 'single',
                 },
             },
+            hint = {
+                enable = true,
+            },
             telemetry = {
                 enable = false,
             },
