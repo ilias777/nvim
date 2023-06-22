@@ -160,6 +160,9 @@ catppuccin.setup({
             -- MatchParen = { fg = colors.base, bg = colors.red },
             -- MatchParen = { fg = colors.base, bg = ucolors.darken(colors.red, 0.65, mocha.rosewater) },
 
+            -- Inlay hints
+            LspInlayHint = { bg = colors.base },
+
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.mantle), style = { 'italic' } },
         }
