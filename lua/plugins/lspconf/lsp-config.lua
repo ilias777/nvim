@@ -55,7 +55,21 @@ local on_attach = function(client, bufnr)
         vim.lsp.buf.format({ async = true })
     end, bufopts('Formatting'))
     vim.keymap.set('v', '<space>1f', vim.lsp.buf.format, bufopts('Range Fromatting'))
+
+    -- Winbar Navic
     -- navic.attach(client, bufnr)
+
+    -- Inlay hints
+    vim.api.nvim_create_autocmd({ 'InsertEnter' }, {
+        callback = function()
+            vim.lsp.buf.inlay_hint(bufnr, true)
+        end,
+    })
+    vim.api.nvim_create_autocmd({ 'InsertLeave' }, {
+        callback = function()
+            vim.lsp.buf.inlay_hint(bufnr, false)
+        end,
+    })
 end
 
 -- Keymaps
