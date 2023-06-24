@@ -185,17 +185,6 @@ return {
         end,
     },
     {
-        'ur4ltz/surround.nvim',
-        keys = {
-            { 's', mode = { 'n', 'v' } },
-        },
-        config = function()
-            require('surround').setup({
-                mappings_style = 'sandwich',
-            })
-        end,
-    },
-    {
         'mg979/vim-visual-multi',
         event = 'BufReadPost',
     },
