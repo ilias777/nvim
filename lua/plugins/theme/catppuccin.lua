@@ -49,10 +49,7 @@ catppuccin.setup({
         nvimtree = true,
         pounce = true,
         symbols_outline = true,
-        telescope = {
-            enabled = true,
-            style = 'classic', -- classic | nvchad
-        },
+        telescope = true,
         treesitter = true,
         treesitter_context = true,
         ts_rainbow2 = true,
@@ -78,9 +75,6 @@ catppuccin.setup({
                 hints = { 'undercurl' },
                 warnings = { 'undercurl' },
                 information = { 'undercurl' },
-            },
-            inlay_hints = {
-                background = false,
             },
         },
         navic = {
