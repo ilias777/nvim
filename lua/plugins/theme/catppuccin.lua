@@ -79,6 +79,9 @@ catppuccin.setup({
                 warnings = { 'undercurl' },
                 information = { 'undercurl' },
             },
+            inlay_hints = {
+                background = false,
+            },
         },
         navic = {
             enable = true,
@@ -164,7 +167,7 @@ catppuccin.setup({
             -- MatchParen = { fg = colors.base, bg = ucolors.darken(colors.red, 0.65, mocha.rosewater) },
 
             -- Inlay hints
-            LspInlayHint = { bg = colors.mantle },
+            -- LspInlayHint = { bg = colors.mantle },
 
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.mantle), style = { 'italic' } },
