@@ -157,6 +157,7 @@ lspconfig.lua_ls.setup({
             },
             hint = {
                 enable = true,
+                arrayIndex = 'Disable',
             },
             telemetry = {
                 enable = false,
