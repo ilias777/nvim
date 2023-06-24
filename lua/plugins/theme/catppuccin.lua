@@ -49,7 +49,10 @@ catppuccin.setup({
         nvimtree = true,
         pounce = true,
         symbols_outline = true,
-        telescope = true,
+        telescope = {
+            enabled = true,
+            style = 'classic', -- classic | nvchad
+        },
         treesitter = true,
         treesitter_context = true,
         ts_rainbow2 = true,
