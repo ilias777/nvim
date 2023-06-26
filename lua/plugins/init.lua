@@ -288,6 +288,8 @@ return {
             { 'zz' },
             { 'zt' },
             { 'zb' },
+            { '0' },
+            { '$' },
         },
         config = function()
             vim.keymap.set({ 'n', 'x' }, '0', "<Cmd>lua Scroll('0')<CR>")
