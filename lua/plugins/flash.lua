@@ -25,5 +25,23 @@ return {
                 require('flash').treesitter()
             end,
         },
+        {
+            'r',
+            mode = 'o',
+            function()
+                -- jump to a remote location to execute the operator
+                require('flash').remote()
+            end,
+            desc = 'Remote Flash',
+        },
+        {
+            'R',
+            mode = { 'n', 'o', 'x' },
+            function()
+                -- show labeled treesitter nodes around the search matches
+                require('flash').treesitter_search()
+            end,
+            desc = 'Treesitter Search',
+        },
     },
 }
