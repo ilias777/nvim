@@ -1,6 +1,6 @@
 return {
     'https://github.com/niuiic/divider.nvim',
-    enabled = true,
+    enabled = false,
     event = 'BufReadPre',
     keys = {
         { '<leader>v', '<cmd>DividerToggle<cr>', desc = 'Toggle Divider Comment' },
