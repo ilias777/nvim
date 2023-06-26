@@ -19,7 +19,7 @@ return {
             end,
         },
         {
-            'S',
+            '<C-S>',
             mode = { 'n', 'o', 'x' },
             function()
                 require('flash').treesitter()
