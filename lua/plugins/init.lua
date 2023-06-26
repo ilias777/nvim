@@ -274,7 +274,7 @@ return {
     },
     {
         'rlane/pounce.nvim',
-        enable = false,
+        enabled = false,
         keys = {
             { 'S', '<cmd>Pounce<CR>', mode = { 'n', 'v' } },
         },
