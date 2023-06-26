@@ -89,4 +89,4 @@ vim.keymap.set('o', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = tr
 vim.keymap.set('x', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = true })
 
 -- Lazy nvim
-vim.keymap.set('n', '<Leader><Leader>l', '<cmd>Lazy<cr>')
+vim.keymap.set('n', '<Leader>la', '<cmd>Lazy<cr>')
