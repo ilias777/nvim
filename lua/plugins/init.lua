@@ -190,6 +190,7 @@ return {
     },
     {
         'famiu/bufdelete.nvim',
+        enabled = false,
         cmd = 'Bdelete',
         keys = {
             { '<space>bd', '<cmd>Bdelete<cr>', desc = 'Delete Buffer' },
