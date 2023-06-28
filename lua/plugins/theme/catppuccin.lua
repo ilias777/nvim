@@ -76,6 +76,9 @@ catppuccin.setup({
                 warnings = { 'undercurl' },
                 information = { 'undercurl' },
             },
+            inlay_hints = {
+                background = false,
+            },
         },
         navic = {
             enable = true,
