@@ -18,13 +18,13 @@ return {
                 require('flash').jump()
             end,
         },
-        {
-            '<C-S>',
-            mode = { 'n', 'o', 'x' },
-            function()
-                require('flash').treesitter()
-            end,
-        },
+        -- {
+        --     'S',
+        --     mode = { 'n', 'o', 'x' },
+        --     function()
+        --         require('flash').treesitter()
+        --     end,
+        -- },
         {
             'r',
             mode = 'o',
@@ -42,6 +42,14 @@ return {
                 require('flash').treesitter_search()
             end,
             desc = 'Treesitter Search',
+        },
+        {
+            '<c-s>',
+            mode = { 'c' },
+            function()
+                require('flash').toggle()
+            end,
+            desc = 'Toggle Flash Search',
         },
     },
 }
