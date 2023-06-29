@@ -70,23 +70,11 @@ vim.keymap.set('n', '<C-BS>', 'a<C-w>')
 vim.keymap.set('n', '<S-Left>', '<cmd>BufferLineCyclePrev<cr>', { desc = 'Buffer Previous' })
 vim.keymap.set('n', '<S-Right>', '<cmd>BufferLineCycleNext<cr>', { desc = 'Buffer Next' })
 
--- Focus.nvim - Split panes
--- vim.keymap.set('n', '<Space>h', '<cmd>FocusSplitLeft<CR>', { desc = 'Focus Split Left' })
--- vim.keymap.set('n', '<Space>j', '<cmd>FocusSplitDown<CR>', { desc = 'Focus Split Down' })
--- vim.keymap.set('n', '<Space>k', '<cmd>FocusSplitUp<CR>', { desc = 'Focus Split Up' })
--- vim.keymap.set('n', '<Space>l', '<cmd>FocusSplitRight<CR>', { desc = 'Focus Split Right' })
--- vim.keymap.set('n', '<Space>m', '<cmd>FocusMaxOrEqual<CR>', { desc = 'Maximaze or Equalises Split' })
-
--- Nvim-tree.nvim
--- vim.keymap.set('n', '<Space>e', '<cmd>NvimTreeToggle<cr>', { desc = 'File Browser' })
-
--- Pounce.nvim
--- vim.keymap.set('n', 'S', '<cmd>Pounce<CR>')
--- vim.keymap.set('v', 'S', '<cmd>Pounce<CR>')
-
 -- Treehopper
 vim.keymap.set('o', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = true, remap = true })
 vim.keymap.set('x', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = true })
 
--- Lazy nvim
+-- Lazy.nvim
 vim.keymap.set('n', '<Leader>la', '<cmd>Lazy<cr>')
+vim.keymap.set('n', '<Leader>lc', '<cmd>Lazy Check<cr>')
+vim.keymap.set('n', '<Leader>ls', '<cmd>Lazy Sync<cr>')
