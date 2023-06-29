@@ -3,6 +3,12 @@ return {
     event = 'VeryLazy',
     ---@type Flash.Config
     opts = {
+        label = {
+            rainbow = {
+                enabled = true,
+                shade = 4,
+            },
+        },
         modes = {
             char = {
                 keys = { 'f', 'F', 't', 'T' },
