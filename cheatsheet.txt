@@ -347,7 +347,7 @@ flashSearch forward until charecter        | t
 flashSearch backward until charecter       | T
 flashSearch                                | s
 flashSearch remote                         | r
-flashSearch to select node with Treesitter | R
+flashSearch to select node with Treesitter | <Space>v
 Disable flashSearch in CommantMode         | <C-s>
 
 ## Lazy.nvim
