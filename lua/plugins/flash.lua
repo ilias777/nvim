@@ -41,7 +41,7 @@ return {
             desc = 'Remote Flash',
         },
         {
-            'R',
+            '<Space>v',
             mode = { 'n', 'o', 'x' },
             function()
                 -- show labeled treesitter nodes around the search matches
