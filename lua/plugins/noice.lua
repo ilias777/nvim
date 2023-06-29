@@ -51,6 +51,9 @@ return {
                     winblend = 0,
                 },
             },
+            presets = {
+                inc_rename = true,
+            },
             routes = {
                 {
                     view = 'mini',
