@@ -351,7 +351,9 @@ flashSearch to select node with Treesitter | <Space>v
 Disable flashSearch in CommantMode         | <C-s>
 
 ## Lazy.nvim
-Open Lazy.nvim | <Leader>la
+Open Lazy.nvim     | <Leader>la
+Check Lazy plugins | <Leader>lc
+Sync Lazy plugins  | <Leader>ls
 
 ## vim-visual-multi
 Select words        | <C-n>
