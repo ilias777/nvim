@@ -2,17 +2,20 @@ return {
     'folke/which-key.nvim',
     event = 'BufReadPre',
     enabled = true,
+    init = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+    end,
     config = function()
         require('which-key').setup()
         local wk = require('which-key')
         wk.register({
-            -- === LEADER KEY ===
+            --  ╭──────────────────────────────────────────────────────────╮
+            --  │                        LEADER KEY                        │
+            --  ╰──────────────────────────────────────────────────────────╯
 
             -- Comment Frame & Comment Box
-            ['<leader>c'] = { name = '+Comment Frame' },
-            ['<leader>cb'] = { name = '+Comment Box' },
-            -- ['<leader>cf'] = { '<cmd>lua require("nvim-comment-frame").add_comment()<CR>', 'Add single frame comment' },
-            -- ['<leader>cm'] = { '<cmd>lua require("nvim-comment-frame").add_multiline_comment()<CR>', 'Add multi frame comment' },
+            ['<leader>c'] = { name = '+Comment Frame/Box' },
 
             -- Dap
             ['<leader>d'] = { name = '+Debug' },
@@ -32,11 +35,11 @@ return {
             ['<leader>fc'] = { ":lua require'telescope.builtin'.commands{}<cr>", 'List Commands' },
             ['<leader>fd'] = { '<cmd>Telescope diagnostics<cr>', 'List Diagnostics' },
             ['<leader>fj'] = { '<cmd>Telescope emoji<cr>', 'Find emoji' },
-            ['<leader>fk'] = { '<cmd>Telescope keymaps<cr>', 'Find keymap' },
             ['<leader>fn'] = { '<cmd>Noice telescope<cr>', 'List Noice notifications' },
             ['<leader>fo'] = { '<cmd>Telescope oldfiles<cr>', 'Recently opened files' },
             ['<leader>fs'] = { '<cmd>Telescope symbols<cr>', 'Find Symbols' },
             ['<leader>fr'] = { ':lua require"telescope.builtin".registers{}<cr>', 'List Registers' },
+            -- ['<leader>fk'] = { '<cmd>Telescope keymaps<cr>', 'Find keymap' },
             -- ['<leader>fb'] = { '<cmd>Telescope buffers<cr>', 'Find Buffers' },
             -- ['<leader>fe'] = { '<cmd>Telescope file_browser<cr>', 'Browse Files' },
             -- ['<leader>ff'] = { '<cmd>Telescope find_files<cr>', 'Find File' },
@@ -45,23 +48,22 @@ return {
 
             -- Git
             ['<leader>g'] = { name = '+Git' },
-            ['<leader>gd'] = { '<cmd>DiffviewOpen<cr>', 'Open Diffview' },
+            ['<leader>go'] = { '<cmd>DiffviewOpen<cr>', 'Open Diffview' },
             ['<leader>gc'] = { '<cmd>DiffviewClose<cr>', 'Close Diffview' },
             -- ['<leader>gg'] = { '<cmd>Neogit<cr>', 'Neogit' },
 
             -- Hop
-            ['<leader>h'] = { name = '+Hop' },
+            ['<leader>h'] = { name = 'Hunk Gitsigns/Hop Motion' },
             ['<leader>hl'] = { '<cmd>HopLine<cr>', 'Hop Line' },
             ['<leader>h1'] = { '<cmd>HopChar1<cr>', 'Hop 1 Char' },
             ['<leader>h2'] = { '<cmd>HopChar2<cr>', 'Hop 2 Chars' },
-            ['<leader>hp'] = { '<cmd>HopPattern<cr>', 'Hop Pattern' },
             ['<leader>hv'] = { '<cmd>HopVertical<cr>', 'Hop Vertical' },
+            -- ['<leader>hp'] = { '<cmd>HopPattern<cr>', 'Hop Pattern' },
             -- ['<leader>ha'] = { '<cmd>HopAnywhere<cr>', 'Hop Anywhere' },
             -- ['<leader>a'] = { '<cmd>HopWord<cr>', 'Hop Word' },
 
-            -- Tagbar
-            -- ['<leader>t'] = { name = '+Tagbar' },
-            -- ['<leader>tb'] = { '<cmd>Tagbar<cr>', 'Tagbar Toggle' },
+            -- Gitsigns
+            ['<leader>t'] = { name = '+Toggle' },
 
             -- Symbols Outline
             -- ['<leader>o'] = { '<cmd>SymbolsOutline<cr>', 'Symbols Outline Toggle' },
@@ -74,14 +76,9 @@ return {
             ['<leader>xq'] = { '<cmd>TroubleToggle quickfix<cr>', 'Trouble Quickfix' },
             -- ['<leader>xx'] = { '<cmd>TroubleToggle<cr>', 'Trouble Toggle' },
 
-            -- Zen mode (True-Zen)
-            -- ['<leader>z'] = { name = '+Zen Mode' },
-            -- ['<leader>za'] = { '<cmd>TZAtaraxis<cr>', 'Zen Ataraxis' },
-            -- ['<leader>zm'] = { '<cmd>TZMinimalist<cr>', 'Zen Minimalist' },
-            -- ['<leader>zf'] = { '<cmd>TZFocus<cr>', 'Zen Focus' },
-            -- ['<leader>zn'] = { '<cmd>TZNarrow<cr>', 'Zen Narrow', { mode = 'v' } },
-
-            -- === SPACE KEY ===
+            --  ╭──────────────────────────────────────────────────────────╮
+            --  │                        SPACE KEY                         │
+            --  ╰──────────────────────────────────────────────────────────╯
 
             -- Bufferline
             ['<space>b'] = { name = '+Buffer' },
@@ -100,8 +97,11 @@ return {
             ['<space>b9'] = { '<cmd>BufferLineGoToBuffer 9<cr>', 'Go to Buffer 9' },
             -- ['<space>bd'] = { '<cmd>Bdelete<cr>', 'Delete Buffer' },
 
+            -- Code Actions with LSP
+            ['<space>c'] = { name = '+Code actions / Cheatsheet' },
+
             -- Messages
-            ['<space>m'] = { '<cmd>messages<cr>', 'Show Messages' },
+            ['<leader>m'] = { '<cmd>messages<cr>', 'Show Messages' },
 
             -- Noice
             ['<space>n'] = { name = '+Noice' },
@@ -109,9 +109,6 @@ return {
             ['<space>nd'] = { '<cmd>NoiceDismiss<cr>', 'Noice Dismiss' },
             ['<space>nl'] = { '<cmd>NoiceLast<cr>', 'Noice Last' },
             ['<space>nt'] = { '<cmd>NoiceTelescope<cr>', 'Noice Telescope' },
-
-            -- Code Actions with LSP
-            ['<space>c'] = { name = '+Code actions with LSP' },
 
             -- Workspace LSP
             ['<space>w'] = { name = '+Workspace LSP' },

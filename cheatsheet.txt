@@ -1,30 +1,56 @@
 ## cheatsheet
+Open cheatsheet    | <Space>cs
+Edit cheatsheet    | <Space>ce
 Yank the cheatcode | <C-Y>
 
+## Exit-InsertMode
+Exit Insert mode | kj
+
+## Search
+Search Forward | <Leader>s
+Search Backward | <Leader>S
+
+## Search-Replace
+Search and replace all under the cursor | <Leader>r
+
 ## buffers
-Go to left buffer  | <S-Left>
-Go to right buffer | <S-Right>
-Move buffer left   | <Leader>b<Left>
-Move buffer right  | <Leader>b<Right>
-Buffer delete      | <Space>b
+Go to left buffer   | <S-Left>
+Go to right buffer  | <S-Right>
+Buffer delete       | <Space>bd
+Move buffer left    | <Space>b<Left>
+Move buffer right   | <Space>b<Right>
+Pin Buffer          | <Space>bp
+Pik Buffer          | <Space>bk
+Go to Buffer number | <Space>b{1-9}
+
+## Messages
+Show Messages | <Leader>m
 
 ## split-panes
 Go left pane            | <Space>h
 Go right pane           | <Space>l
 Go up pane              | <Space>k
 Go down pane            | <Space>j
+Maximize split and back | <Space>m
 Resize split pane up    | <M-Up>
 Resize split pane down  | <M-Down>
 Resize split pane left  | <M-Left>
 Resize split pane right | <M-Right>
 
-## move-lines
-Move line up   | <C-k>
-Move line down | <C-j>
+## move-Lines-And-Multilines
+Move line up (normal or visual mode)   | <C-k>
+Move line down (normal or visual mode) | <C-j>
 
-## move-multilines
-Move visual lines up   | <C-k>
-Move visual lines down | <C-j>
+## Correcting-Word
+Correcting a word in insert mode | <C-l>
+
+## Add-Blankline
+Add Blankline below | <Leader>o
+Add Blankline above | <Leader>O
+
+## Delete-Word-Backwards
+Go back one word                            | <BS>
+Delete word backwards and enter insert mode | <C-BS>
 
 ## nvim-Tree
 Toggle Nvim-Tree                                          | <Space>e
@@ -84,39 +110,31 @@ Toggle between file and folder browser              | f
 Toggle hidden files/folders                         | h
 Toggle all entries ignoring ./ and ../              | s
 
-## peekup-Registers
-Open peekup window          | ""
-Close peekup window         | <Esc>
-Scroll peekup window up     | <C-k>
-Scroll peekup window down   | <C-j>
-Move to next registers up   | <Up>
-Move to next registers down | <Down>
-
-## toggleterm
-Toggle terminal | <Space>te
+## neoclip
+See all yanks                                 | <Leader>fv
+To select a yank from Telescope (insert-mode) | <C-p>
+To select a yank from Telescope (normal-mode) | p
 
 ## lsp
-Go to declaration              | gD
-Go to definition               | gd
-Go to implementation           | gI
-Information on Hover           | K
-Sygnature help                 | <Leader>k
-Add workspace folder           | <Leader>wa
-Remove workspace folder        | <Leader>wr
-List workspace folders         | <Leader>wl
-Type Definition                | <Space>D
-Rename with lsp                | <Space>rn
-Code action                    | <Space>ca
-Go to reference                | gr
-Open diagnostics on hover      | <Space>d
-Go to previous diagnostic      | <Space><Left>
-Go to next diagnostic          | <Space><Right>
-Send diagnostics to local list | <Space>q
-Formatting with lsp            | <Space>f
+Go to declaration                 | gD
+Go to definition                  | gd
+Go to implementation              | gI
+Information on Hover              | K
+Sygnature help                    | <Leader>k
+Add workspace folder              | <Leader>wa
+Remove workspace folder           | <Leader>wr
+List workspace folders            | <Leader>wl
+Type Definition                   | <Space>D
+Rename with lsp                   | <Space>rn
+Code action                       | <Space>ca
+Go to reference with QuickFixList | gR
+Open diagnostics on hover         | <Space>d
+Go to previous diagnostic         | <Space><Left>
+Go to next diagnostic             | <Space><Right>
+Send diagnostics to local list    | <Space>q
+Formatting with lsp               | <Space>f
 
 ## hop
-Hop to charecter in line forwards  | f
-Hop to charecter in line backwards | F
 Hop to Word                        | <Leader>a
 Hop to Line                        | <Leader>hl
 Hop to one charecter               | <Leader>h1
@@ -131,12 +149,7 @@ Toggle Trouble workspace diagnostics | <Leader>xw
 Toggle Trouble document diagnostics  | <Leader>xd
 Toggle Trouble Location-List         | <Leader>xl
 Toggle Trouble Quickfix-List         | <Leader>xq
-Trouble LSP-Reference                | gR
-
-## neoclip
-See all yanks                                 | <Leader>fv
-To select a yank from Telescope (insert-mode) | <C-p>
-To select a yank from Telescope (normal-mode) | p
+Trouble LSP-Reference                | gr
 
 ## comment
 Line-comment toggle            | gcc
@@ -160,7 +173,7 @@ Single line comment | <Leader>cf
 Multi line comment  | <Leader>cm
 
 ## comment-box
-Centered comment box | <Leader>cbc
+Centered comment box | <Leader>cb
 
 ## table-mode
 Enable table mode         | <Leader>tm
@@ -177,12 +190,13 @@ Delete Column             | <Leader>tdc
 Insert Column             | <Leader>tic
 
 ## surround
-Normal Mode              | sa{motion}{char}
-Visual Mode              | s<char>
-Replace Surrounding      | sr<from><to>
-Delete Surrounding       | sd<char>
-Toggle Surround Brackets | stb
-Toggle Surround Quotes   | stq
+Surround in Normal Mode      | ys{motion}{char}
+Surround in Visual Mode      | S<char>
+Change surrounding           | cs<from><to>
+Delete surrounding           | ds<char>
+Change surrounding quotes    | csq
+Add surround in insert mode  | <C-g>s
+Add surround in current line | yss
 
 ## todo-comments
 Todo Keyword fix         | FIX{:}
@@ -251,10 +265,6 @@ Move cursor everywhere      | :set virtualedit=all
 ## Lazy.nvim
 Open Lazy.nvim | <Leader><Leader>l
 
-## Pounce
-Pounce Insert Mode   | S
-Pounce Visual Select | S
-
 ## Dap
 Add Breakpoint             | <Leader>db
 Add Conditional Breakpoint | <Leader>dB
@@ -276,42 +286,77 @@ Aligns to 2 chars, looking left and with previews       | as
 Aligns to a string, looking left and with previews      | aw
 Aligns to a Lua pattern, looking left and with previews | ar
 
-## CCC-Color-Picker
-Complete               | <CR>
-Quit                   | q
-Cancel                 | :q
-Toggle input mode      | i
-Toggle alpha           | a
-Toggle previous colors | g
-Go next                | w
-Go previous            | b
-Go to tail             | W
-Go to head             | B
-Increase               | l/d/, (1/5/10)
-Decrease               | h/s/m (1/5/10)
-Set precentage         | H/M/L (0/5/10) 1-9 (10%-90%)
-
-## Codewindow-Minimap
-Open minimap            | <Leader>mo
-Close minimap           | <Leader>mc
-Focus / Unfocus minimap | <Leader>mf
-Toggle minimap          | <Leader>mm
-
 ## Git
-Neogit         | <Leader>gg
-Diffview open  | <Leader>gd
-Diffview close | <Leader>gc
+Open Neogit        | <Leader>gg
+Open Git-Diffview  | <Leader>go
+Close Git-Diffview | <Leader>gc
 
-## Search
-Search in Visual Selection | <Space>/
-
-## Search-Replace
-Search and replace in visual selection | <Leader>/
-Search and replace under the cursor    | <Leader>r
+## Gitsigns
+Go to next git hunk        | <Leader>gn
+Go to previous git hunk    | <Leader>gp
+Git hunk stage             | <Leader>hs
+Git hunk reset             | <Leader>hr
+Git hunk stage buffer      | <Leader>hS
+Git hunk reset buffer      | <Leader>hR
+Git hunk undo stage        | <Leader>hu
+Git hunk preview           | <Leader>hp
+Git hunk blame line        | <Leader>hb
+Git hunk diff              | <Leader>hd
+Git hunk diff              | <Leader>hD
+Git hunk toggle blame line | <Leader>tb
+Git hunk toggle deleted    | <Leader>td
+Git select hunk            | vih
 
 ## Add-Blank-Lines
 Add blank lines below | <Leader>o
 Add blank lines above | <Leader>O
 
-## Treehopper
-Region selection using hints | <Leader>m
+## TS-Treehopper
+Region selection using labels | vm
+
+## TS-Node_Actions
+Node Action | +
+
+## TS-Textobjects
+Select outer funtion     | vaf
+Select inner funtion     | vif
+Select outer conditional | vac
+Select outer conditional | vic
+Select outer loop        | val
+Select outer funtion     | vil
+Select outer statement   | vam
+Select outer comment     | vix
+
+## TS-ParametersSwap
+Swap Next Function Parameters     | <Space>s
+Swap Previous Function Parameters | <Space>S
+
+## TS-Textsubjects
+To Select Textsubjects | <cr>
+
+## Noice.nvim
+Show Noice Messages      | <Space>nn
+Dismiss Noice Messages   | <Space>nd
+Show Noice Last Messages | <Space>nl
+Show Noice Telescope     | <Space>nt
+
+## flash.nvim
+flashSearch forward to charecter           | f
+flashSearch backward to charecter          | F
+flashSearch forward until charecter        | t
+flashSearch backward until charecter       | T
+flashSearch                                | s
+flashSearch remote                         | r
+flashSearch to select node with Treesitter | R
+Disable flashSearch in CommantMode         | <C-s>
+
+## Lazy.nvim
+Open Lazy.nvim | <Leader>la
+
+## vim-visual-multi
+Select words        | <C-n>
+Go to next word     | n
+Go one word back    | N
+Quit selection      | q
+Create cursors up   | <C-UP>
+Create cursors down | <C-DOWN>

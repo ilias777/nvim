@@ -1,6 +1,9 @@
 return {
     'nvim-tree/nvim-tree.lua',
     cmd = 'NvimTreeToggle',
+    keys = {
+        { '<Space>e', '<cmd>NvimTreeToggle<cr>', desc = 'File Browser' },
+    },
     dependencies = 'nvim-tree/nvim-web-devicons',
     version = 'nightly',
     config = function()
@@ -78,7 +81,7 @@ return {
             on_attach = on_attach,
             hijack_cursor = true,
             view = {
-                -- width = 40,
+                width = 45,
                 side = 'right',
                 -- mappings = {
                 --     list = {
@@ -88,7 +91,7 @@ return {
                 --     },
                 -- },
                 float = {
-                    enable = true,
+                    enable = false,
                     quit_on_focus_loss = true,
                     open_win_config = {
                         relative = 'editor',

@@ -8,6 +8,8 @@ return {
         { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
         { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
         { '<leader>fl', '<cmd>Telescope highlights<cr>', desc = 'Find Highlights' },
+        { '<leader>fk', '<cmd>Telescope keymaps<cr>', desc = 'Find Keymaps' },
+        { '<leader>fd', '<cmd>Telescope diagnostics<cr>', desc = 'Find Diagnostics' },
     },
     branch = '0.1.x',
     dependencies = {
