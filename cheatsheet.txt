@@ -362,3 +362,6 @@ Go one word back    | N
 Quit selection      | q
 Create cursors up   | <C-UP>
 Create cursors down | <C-DOWN>
+
+## inc-rename
+Inc-Rename with LSP | <Space>ir
