@@ -12,7 +12,7 @@ vim.keymap.set('n', '<Leader>S', '?')
 -- vim.keymap.set('x', '<space>/', '<Esc>/\\%V')
 
 -- Search and replace word under the cursor
-vim.keymap.set('n', '<leader>r', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
+vim.keymap.set('n', '<leader>R', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
 
 -- Search and replace in visual selection
 vim.keymap.set('x', '<leader>/', [[:s/\%V]])
