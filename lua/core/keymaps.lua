@@ -76,5 +76,5 @@ vim.keymap.set('x', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = tr
 
 -- Lazy.nvim
 vim.keymap.set('n', '<Leader>la', '<cmd>Lazy<cr>')
-vim.keymap.set('n', '<Leader>lc', '<cmd>Lazy Check<cr>')
-vim.keymap.set('n', '<Leader>ls', '<cmd>Lazy Sync<cr>')
+vim.keymap.set('n', '<Leader>lc', '<cmd>Lazy check<cr>')
+vim.keymap.set('n', '<Leader>ls', '<cmd>Lazy sync<cr>')
