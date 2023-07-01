@@ -60,7 +60,12 @@ local on_attach = function(client, bufnr)
     -- navic.attach(client, bufnr)
 
     -- Inlay hints
-    vim.lsp.buf.inlay_hint(bufnr, true)
+    if vim.bo.filetype == 'markdown' then
+        vim.lsp.buf.inlay_hint(bufnr, false)
+    else
+        vim.lsp.buf.inlay_hint(bufnr, true)
+    end
+    -- vim.lsp.buf.inlay_hint(bufnr, true)
     -- vim.api.nvim_create_autocmd({ 'InsertEnter' }, {
     --     callback = function()
     --         vim.lsp.buf.inlay_hint(bufnr, true)
