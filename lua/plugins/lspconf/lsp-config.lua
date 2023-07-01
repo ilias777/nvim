@@ -1,3 +1,7 @@
+--  ╭──────────────────────────────────────────────────────────╮
+--  │                    LSP Configuration                     │
+--  ╰──────────────────────────────────────────────────────────╯
+
 require('mason').setup({
     ui = {
         icons = {
@@ -22,6 +26,7 @@ local opts = function(desc)
     return { noremap = true, silent = true, desc = desc }
 end
 
+-- Keymaps
 -- local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, opts('Open Diagnostic Window'))
 vim.keymap.set('n', '<space><left>', vim.diagnostic.goto_prev, opts('Previous Diagnostic'))
@@ -56,7 +61,7 @@ local on_attach = function(client, bufnr)
     end, bufopts('Formatting'))
     vim.keymap.set('v', '<space>1f', vim.lsp.buf.format, bufopts('Range Fromatting'))
 
-    -- Winbar Navic
+    -- Winbar with Navic
     -- navic.attach(client, bufnr)
 
     -- Inlay hints
@@ -65,6 +70,8 @@ local on_attach = function(client, bufnr)
     else
         vim.lsp.buf.inlay_hint(bufnr, true)
     end
+
+    -- Inlay hints only on insert mode
     -- vim.lsp.buf.inlay_hint(bufnr, true)
     -- vim.api.nvim_create_autocmd({ 'InsertEnter' }, {
     --     callback = function()
@@ -77,28 +84,6 @@ local on_attach = function(client, bufnr)
     --     end,
     -- })
 end
-
--- Keymaps
--- local on_attach = function(client, bufnr)
---     vim.keymap.set('n', '<space>d', '<cmd>lua vim.diagnostic.open_float()<CR>', { buffer = true })
---     vim.keymap.set('n', '<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { buffer = true })
---     vim.keymap.set('n', '<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<CR>', { buffer = true })
---     vim.keymap.set('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', { buffer = true })
---     vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', { buffer = true })
---     vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { buffer = true })
---     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { buffer = true })
---     vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { buffer = true })
---     vim.keymap.set('n', '<leader>k', '<cmd>lua vim.lsp.buf.signature_help()<CR>', { buffer = true })
---     vim.keymap.set('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', { buffer = true })
---     vim.keymap.set('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', { buffer = true })
---     vim.keymap.set('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', { buffer = true })
---     vim.keymap.set('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', { buffer = true })
---     vim.keymap.set('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { buffer = true })
---     vim.keymap.set('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { buffer = true })
---     vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { buffer = true })
---     vim.keymap.set('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting_sync()<CR>', { buffer = true })
---     navic.attach(client, bufnr)
--- end
 
 -- Borders
 -- vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#181926]])
@@ -126,7 +111,26 @@ local handlers = {
 --     virtual_text = false,
 -- })
 
--- SERVERS
+-- Diagnostics signs
+local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
+for type, icon in pairs(signs) do
+    local hl = 'DiagnosticSign' .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = '■ ', -- Could be '●', '▎', 'x', '■', , 
+    },
+    float = { border = border },
+    -- virtual_text = false,
+    -- signs = true,
+    -- underline = true,
+})
+
+--  ╭──────────────────────────────────────────────────────────╮
+--  │                         SERVERS                          │
+--  ╰──────────────────────────────────────────────────────────╯
 -- Lua server
 lspconfig.lua_ls.setup({
     capabilities = capabilities,
@@ -370,21 +374,4 @@ lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     handlers = handlers,
-})
-
--- Diagnostics signs
-local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
-for type, icon in pairs(signs) do
-    local hl = 'DiagnosticSign' .. type
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
-
-vim.diagnostic.config({
-    virtual_text = {
-        prefix = '■ ', -- Could be '●', '▎', 'x', '■', , 
-    },
-    float = { border = border },
-    -- virtual_text = false,
-    -- signs = true,
-    -- underline = true,
 })
