@@ -19,7 +19,6 @@ return {
                     'comment',
                     'cpp',
                     'css',
-                    'help',
                     'html',
                     'http',
                     'java',
