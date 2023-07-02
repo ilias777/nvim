@@ -13,7 +13,10 @@
   <img width="1452" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/9d2c6eb0-e81a-402f-baaf-c6d86932dc40">
   <img width="1452" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/8b740e40-de61-4f48-9331-5fc4795aaf27">
   <img width="1452" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/adf6a765-537d-4615-aa61-c91e88f85a91">
+  <img width="1452" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/d8ef3bd0-111b-4a44-8faa-fda4076fb0ed">
+  <img width="1452" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/e0f2f0f3-d64b-4b69-ae8a-cb4709b828a5">
 
+  
 </div>
 
 ## ⚡️ Requirements
