@@ -46,6 +46,11 @@ cd ~/.config
 
 ```shell
 git clone https://github.com/ilias777/nvim.git
+```
+
+### Navigate to nvim folder and open Neovim
+
+```shell
 cd nvim
 nvim init.lua
 ```
