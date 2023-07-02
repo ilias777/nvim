@@ -15,7 +15,7 @@
   <img width="1452" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/adf6a765-537d-4615-aa61-c91e88f85a91">
   <img width="1452" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/d8ef3bd0-111b-4a44-8faa-fda4076fb0ed">
   <img width="1452" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/e0f2f0f3-d64b-4b69-ae8a-cb4709b828a5">
-
+  <img width="1452" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/a88bc4d1-4d37-493e-81de-e9fc2751eaa7">
   
 </div>
 
