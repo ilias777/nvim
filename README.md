@@ -56,3 +56,6 @@ nvim init.lua
 ```
 
 ### 📺 Preview installation process
+
+https://github.com/ilias777/nvim/assets/39212564/096991aa-2841-41db-a807-8a3d6ad63d93
+
