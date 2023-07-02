@@ -29,6 +29,7 @@
 - Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
 - Debug Adapter Protocol with [Nvim DAP](https://github.com/mfussenegger/nvim-dap)
 - Beautiful UI with [Catppuccin](https://github.com/catppuccin/nvim) and [Noice.nvim](https://github.com/folke/noice.nvim)
+- Fast code navigation with [flash.nvim](https://github.com/folke/flash.nvim)
 
 ## ⚡️ Requirements
 
