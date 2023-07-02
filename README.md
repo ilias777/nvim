@@ -23,3 +23,26 @@
 - a [Nerd Font](https://www.nerdfonts.com/) (optional)
 
 ## 🛠️ Installation
+
+### Linux / MacOS (Unix)
+
+#### Make a backup of your current nvim and shared folder
+
+```shell
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+```
+
+#### Go to your .config folder
+
+```shell
+cd ~/.config
+```
+
+#### Clone the Repository
+
+```shell
+git clone https://github.com/ilias777/nvim.git
+cd nvim
+nvim init.lua
+```
