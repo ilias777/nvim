@@ -49,3 +49,5 @@ git clone https://github.com/ilias777/nvim.git
 cd nvim
 nvim init.lua
 ```
+
+### 📺 Preview installation process
