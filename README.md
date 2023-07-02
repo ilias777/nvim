@@ -19,6 +19,17 @@
   
 </div>
 
+## ✨ Features
+
+- File explorer with [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- Autocompletion with [CMP](https://github.com/hrsh7th/nvim-cmp)
+- Git integration with [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [Neogit](https://github.com/NeogitOrg/neogit)
+- Fuzzy finding with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- Formatting and Linting with [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
+- Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
+- Debug Adapter Protocol with [Nvim DAP](https://github.com/mfussenegger/nvim-dap)
+- Beautiful UI with [Catppuccin](https://github.com/catppuccin/nvim) and [Noice.nvim](https://github.com/folke/noice.nvim)
+
 ## ⚡️ Requirements
 
 - Neovim >= 0.8.0
