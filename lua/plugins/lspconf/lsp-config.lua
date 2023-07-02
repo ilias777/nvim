@@ -12,7 +12,24 @@ require('mason').setup({
         border = 'rounded',
     },
 })
-require('mason-lspconfig').setup()
+require('mason-lspconfig').setup({
+    ensure_installed = {
+        'cssls',
+        'emmet_ls',
+        'html',
+        'intelephense',
+        'jdtls',
+        'jsonls',
+        'ltex',
+        'lua_ls',
+        'pyright',
+        'rust_analyzer',
+        'texlab',
+        'tsserver',
+        'volar',
+        'yamlls',
+    },
+})
 local lspconfig = require('lspconfig')
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
