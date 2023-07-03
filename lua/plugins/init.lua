@@ -1,6 +1,8 @@
 return {
-    -- === COLORSCHEME ===
-    -- Catppuccin
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                       COLORSCHEME                        │
+    --  ╰──────────────────────────────────────────────────────────╯
+    -- === Catppuccin ===
     {
         'catppuccin/nvim',
         lazy = false,
@@ -11,7 +13,7 @@ return {
             vim.cmd('colorscheme catppuccin-mocha')
         end,
     },
-    -- Rose-Pine
+    -- === Rose-Pine ===
     -- {
     --     'rose-pine/neovim',
     --     lazy = false,
@@ -34,7 +36,9 @@ return {
     --     end,
     -- },
 
-    -- === LSP ===
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                           LSP                            │
+    --  ╰──────────────────────────────────────────────────────────╯
     {
         'neovim/nvim-lspconfig',
         event = 'BufReadPre',
@@ -62,7 +66,9 @@ return {
         end,
     },
 
-    -- === CMP ===
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                           CMP                            │
+    --  ╰──────────────────────────────────────────────────────────╯
     {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
@@ -82,28 +88,15 @@ return {
         end,
     },
 
-    -- === SYMBOLS OUTLINE LSP ===
-    {
-        'simrat39/symbols-outline.nvim',
-        cmd = 'SymbolsOutline',
-        config = function()
-            require('symbols-outline').setup()
-        end,
-    },
-
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                  LINTING AND FORMATING                   │
+    --  ╰──────────────────────────────────────────────────────────╯
     -- === NULL-LS ===
     {
         'jose-elias-alvarez/null-ls.nvim',
         config = function()
             require('plugins.lspconf.null-ls')
         end,
-    },
-    {
-        'sudormrfbin/cheatsheet.nvim',
-        keys = {
-            { '<space>cs', '<cmd>Cheatsheet<cr>', desc = 'Cheatsheet' },
-            { '<space>ce', '<cmd>CheatsheetEdit<cr>', desc = 'Cheatsheet Edit' },
-        },
     },
 
     -- === COMMENTS ===
@@ -141,7 +134,16 @@ return {
         end,
     },
 
-    -- === UTILS ===
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                          UTILS                           │
+    --  ╰──────────────────────────────────────────────────────────╯
+    {
+        'sudormrfbin/cheatsheet.nvim',
+        keys = {
+            { '<space>cs', '<cmd>Cheatsheet<cr>', desc = 'Cheatsheet' },
+            { '<space>ce', '<cmd>CheatsheetEdit<cr>', desc = 'Cheatsheet Edit' },
+        },
+    },
     {
         'smjonas/live-command.nvim',
         event = 'CmdlineEnter',
@@ -221,8 +223,24 @@ return {
             })
         end,
     },
+    {
+        'simrat39/symbols-outline.nvim',
+        cmd = 'SymbolsOutline',
+        config = function()
+            require('symbols-outline').setup()
+        end,
+    },
+    {
+        'norcalli/nvim-colorizer.lua',
+        event = 'BufReadPre',
+        config = function()
+            require('colorizer').setup()
+        end,
+    },
 
-    -- === VIMTEX ===
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                         WRITING                          │
+    --  ╰──────────────────────────────────────────────────────────╯
     {
         'lervag/vimtex',
         ft = 'tex',
@@ -233,16 +251,9 @@ return {
         end,
     },
 
-    -- === COLORS ===
-    {
-        'norcalli/nvim-colorizer.lua',
-        event = 'BufReadPre',
-        config = function()
-            require('colorizer').setup()
-        end,
-    },
-
-    -- === MOTION ===
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                          MOTION                          │
+    --  ╰──────────────────────────────────────────────────────────╯
     {
         'phaazon/hop.nvim',
         keys = {
@@ -290,7 +301,9 @@ return {
         end,
     },
 
-    -- === DAP ===
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                          DEBUG                           │
+    --  ╰──────────────────────────────────────────────────────────╯
     {
         'rcarriga/nvim-dap-ui',
         keys = {
@@ -311,7 +324,9 @@ return {
         end,
     },
 
-    -- === JAVA ===
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                           JAVA                           │
+    --  ╰──────────────────────────────────────────────────────────╯
     {
         'mfussenegger/nvim-jdtls',
         keys = {
@@ -319,7 +334,9 @@ return {
         },
     },
 
-    -- === REST ===
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                        REST-HTML                         │
+    --  ╰──────────────────────────────────────────────────────────╯
     {
         'diepm/vim-rest-console',
         enabled = false,
