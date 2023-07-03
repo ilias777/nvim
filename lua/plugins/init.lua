@@ -365,7 +365,7 @@ return {
         end,
     },
     {
-        'TimUntersberger/neogit',
+        'NeogitOrg/neogit',
         keys = {
             { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Neogit' },
         },
