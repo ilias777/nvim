@@ -78,3 +78,8 @@ If you see the Treesitter installing the parser messages, press `Enter` to skip 
 At the first time the Command `MasonUpdate` is not found. Please wait about 2 minutes for the
 language server installation to finish.
 When all language servers are installed, restart Neovim.
+
+## 🔌 Plugins
+
+- Over **80 Plugins** preinstalled
+- Startuptime **~100ms - 120ms**
