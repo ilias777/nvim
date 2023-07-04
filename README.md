@@ -83,3 +83,6 @@ When all language servers are installed, restart Neovim.
 
 - Over **80 Plugins** preinstalled
 - Startuptime **~100ms - 120ms**
+
+<img width="1452" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/fb09cd4f-e8a7-4e02-9da4-fe510cd20a7d">
+
