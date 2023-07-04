@@ -96,4 +96,13 @@ return {
             })
         end,
     },
+    --  ╭──────────────────────────────────────────────────────────╮
+    --  │                    Advance git search                    │
+    --  ╰──────────────────────────────────────────────────────────╯
+    {
+        'aaronhallaert/advanced-git-search.nvim',
+        dependencies = {
+            'nvim-telescope/telescope.nvim',
+        },
+    },
 }

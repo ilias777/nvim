@@ -80,13 +80,17 @@ return {
                 -- heading = {
                 --    treesitter = true,
                 -- },
+                advanced_git_search = {
+                    diff_plugin = 'diffview',
+                    git_flags = {},
+                },
             },
         })
 
         require('telescope').load_extension('emoji')
         require('telescope').load_extension('file_browser')
         require('telescope').load_extension('undo')
-        -- require('telescope').load_extension('heading')
+        require('telescope').load_extension('advanced_git_search') -- require('telescope').load_extension('heading')
         -- require('telescope').load_extension('neoclip')
         -- require('telescope').load_extension('noice')
     end,
