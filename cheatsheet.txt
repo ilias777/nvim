@@ -38,8 +38,8 @@ Resize split pane left  | <M-Left>
 Resize split pane right | <M-Right>
 
 ## move-Lines-And-Multilines
-Move line up (normal or visual mode)   | <C-k>
-Move line down (normal or visual mode) | <C-j>
+Move line up (normal, insert and visual mode)   | <C-k>
+Move line down (normal, insert and visual mode) | <C-j>
 
 ## Correcting-Word
 Correcting a word in insert mode | <C-l>
@@ -51,6 +51,12 @@ Add Blankline above | <Leader>O
 ## Delete-Word-Backwards
 Go back one word                            | <BS>
 Delete word backwards and enter insert mode | <C-BS>
+
+## ClearSearch
+Clear search with <esc> | <ESC>
+
+## Add-NewFile
+Add new file | <Leader>fn
 
 ## nvim-Tree
 Toggle Nvim-Tree                                          | <Space>e

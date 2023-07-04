@@ -4,6 +4,10 @@
 -- Exit from insert mode
 vim.keymap.set('i', 'kj', '<esc>')
 
+-- better up/down
+vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+
 -- Search
 vim.keymap.set('n', '<Leader>s', '/')
 vim.keymap.set('n', '<Leader>S', '?')
@@ -23,7 +27,7 @@ vim.keymap.set('i', '<c-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
 -- Buffers
 vim.keymap.set('n', '<Space>bd', '<cmd>bd<cr>', { desc = 'Delete Buffer' })
 
--- Swich split panes
+-- Move to window (split) using <space> hlkj keys
 -- vim.keymap.set('n', '<Space>h', '<c-w>h', { desc = 'Split Left' })
 -- vim.keymap.set('n', '<Space>l', '<c-w>l', { desc = 'Split Right' })
 -- vim.keymap.set('n', '<Space>k', '<c-w>k', { desc = 'Split Up' })
@@ -38,6 +42,8 @@ vim.keymap.set('n', '<M-RIGHT>', '<cmd>vertical resize -2<cr>')
 -- Move lines
 vim.keymap.set('n', '<c-k>', ':m -2<CR>==')
 vim.keymap.set('n', '<c-j>', ':m +1<CR>==')
+vim.keymap.set('i', '<c-k>', '<esc><cmd>m .-2<cr>==gi')
+vim.keymap.set('i', '<c-j>', '<esc><cmd>m .+1<cr>==gi')
 vim.keymap.set('v', '<c-K>', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', '<c-J>', ":m '>+1<CR>gv=gv")
 
@@ -62,6 +68,12 @@ vim.keymap.set('n', '<leader>O', 'O<Esc>')
 vim.keymap.set('n', '<BS>', 'ge')
 vim.keymap.set('n', '<C-BS>', 'a<C-w>')
 
+-- Clear search with <esc>
+vim.keymap.set({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and clear hlsearch' })
+
+-- Add new file
+vim.keymap.set('n', '<leader>fn', '<cmd>enew<cr>', { desc = 'New File' })
+
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                 PLUGINS RELATED KEYMAPS                  │
 --  ╰──────────────────────────────────────────────────────────╯
@@ -75,6 +87,6 @@ vim.keymap.set('o', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = tr
 vim.keymap.set('x', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = true })
 
 -- Lazy.nvim
-vim.keymap.set('n', '<Leader>la', '<cmd>Lazy<cr>')
-vim.keymap.set('n', '<Leader>lc', '<cmd>Lazy check<cr>')
-vim.keymap.set('n', '<Leader>ls', '<cmd>Lazy sync<cr>')
+vim.keymap.set('n', '<Leader>la', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
+vim.keymap.set('n', '<Leader>lc', '<cmd>Lazy check<cr>', { desc = 'Check Lazy Plugins' })
+vim.keymap.set('n', '<Leader>ls', '<cmd>Lazy sync<cr>', { desc = 'Sync Lazy Plugins' })
