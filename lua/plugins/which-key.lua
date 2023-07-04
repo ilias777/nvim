@@ -35,7 +35,6 @@ return {
             ['<leader>fc'] = { ":lua require'telescope.builtin'.commands{}<cr>", 'List Commands' },
             ['<leader>fd'] = { '<cmd>Telescope diagnostics<cr>', 'List Diagnostics' },
             ['<leader>fj'] = { '<cmd>Telescope emoji<cr>', 'Find emoji' },
-            ['<leader>fn'] = { '<cmd>Noice telescope<cr>', 'List Noice notifications' },
             ['<leader>fo'] = { '<cmd>Telescope oldfiles<cr>', 'Recently opened files' },
             ['<leader>fs'] = { '<cmd>Telescope symbols<cr>', 'Find Symbols' },
             ['<leader>fr'] = { ':lua require"telescope.builtin".registers{}<cr>', 'List Registers' },
