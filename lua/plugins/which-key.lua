@@ -101,7 +101,7 @@ return {
             ['<space>c'] = { name = '+Code actions / Cheatsheet' },
 
             -- Messages
-            ['<leader>m'] = { '<cmd>messages<cr>', 'Show Messages' },
+            -- ['<leader>m'] = { '<cmd>messages<cr>', 'Show Messages' },
 
             -- Noice
             ['<space>n'] = { name = '+Noice' },
