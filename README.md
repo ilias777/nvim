@@ -86,6 +86,8 @@ When all language servers are installed, restart Neovim.
 
 <img width="1452" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/fb09cd4f-e8a7-4e02-9da4-fe510cd20a7d">
 
+### Plugins List
+
 #### Package Manager
 
 - [lazy.nvim](https://github.com/folke/lazy.nvim) - A modern plugin manager.
