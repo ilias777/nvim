@@ -155,6 +155,11 @@ return {
             { '<space>cs', '<cmd>Cheatsheet<cr>', desc = 'Cheatsheet' },
             { '<space>ce', '<cmd>CheatsheetEdit<cr>', desc = 'Cheatsheet Edit' },
         },
+        dependencies = {
+            { 'nvim-telescope/telescope.nvim' },
+            { 'nvim-lua/popup.nvim' },
+            { 'nvim-lua/plenary.nvim' },
+        },
     },
     {
         'smjonas/live-command.nvim',
