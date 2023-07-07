@@ -196,7 +196,7 @@ lspconfig.lua_ls.setup({
 -- JavaScript Server
 lspconfig.tsserver.setup({
     capabilities = capabilities,
-    on_attach = on_attach,
+    -- on_attach = on_attach,
     handlers = handlers,
     init_options = {
         preferences = {
@@ -210,6 +210,11 @@ lspconfig.tsserver.setup({
             importModuleSpecifierPreference = 'non-relative',
         },
     },
+    on_attach = function(client, bufnr)
+        client.server_capabilities.document_formatting = false
+        client.server_capabilities.document_range_formatting = false
+        on_attach(client, bufnr)
+    end,
 
     -- settings = {
     --     init_options = {
