@@ -202,7 +202,7 @@ When all language servers are installed, restart Neovim.
 
 ---
 
-### Installed Language Servers
+### Preinstalled Language Servers
 
 - [cssls](https://github.com/microsoft/vscode-css-languageservice) - Language services for CSS, LESS and SCSS.
 - [emmet_ls](https://github.com/aca/emmet-ls) - Emmet support based on LSP.
