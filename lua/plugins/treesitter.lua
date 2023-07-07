@@ -6,7 +6,7 @@ return {
         build = ':TSUpdate',
         dependencies = {
             -- 'mrjones2014/nvim-ts-rainbow',
-            'HiPhish/nvim-ts-rainbow2',
+            -- 'HiPhish/nvim-ts-rainbow2',
             'nvim-treesitter/nvim-treesitter-textobjects',
             'mfussenegger/nvim-treehopper',
             'RRethy/nvim-treesitter-textsubjects',
@@ -90,12 +90,12 @@ return {
                     },
                 },
                 -- Rainbow
-                rainbow = {
-                    enable = true,
-                    query = 'rainbow-parens',
-                    strategy = require('ts-rainbow.strategy.global'),
-                    max_file_lines = 3000,
-                },
+                -- rainbow = {
+                --     enable = true,
+                --     query = 'rainbow-parens',
+                --     strategy = require('ts-rainbow.strategy.global'),
+                --     max_file_lines = 3000,
+                -- },
             })
         end,
     },
