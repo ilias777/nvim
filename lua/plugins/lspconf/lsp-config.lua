@@ -87,11 +87,6 @@ local on_attach = function(client, bufnr)
     if client.server_capabilities.inlayHintProvider then
         vim.lsp.buf.inlay_hint(bufnr, true)
     end
-    -- if vim.bo.filetype == 'markdown' then
-    --     vim.lsp.buf.inlay_hint(bufnr, false)
-    -- else
-    --     vim.lsp.buf.inlay_hint(bufnr, true)
-    -- end
 
     -- Inlay hints only on insert mode
     -- vim.lsp.buf.inlay_hint(bufnr, true)
