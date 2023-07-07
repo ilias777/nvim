@@ -60,11 +60,9 @@ return {
         dependencies = {
             'neovim/nvim-lspconfig',
         },
-        config = function()
-            require('nvim-navic').setup({
-                highlight = true,
-            })
-        end,
+        opts = {
+            highlight = true,
+        },
     },
     {
         'folke/trouble.nvim',
