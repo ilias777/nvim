@@ -198,19 +198,32 @@ lspconfig.tsserver.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     handlers = handlers,
-    settings = {
-        init_options = {
-            preferences = {
-                quotePreference = 'single',
-                disableSuggestions = true,
-            },
-            javascript = {
-                format = {
-                    indentSize = 4,
-                },
-            },
+    init_options = {
+        preferences = {
+            includeInlayParameterNameHints = 'all',
+            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+            includeInlayFunctionParameterTypeHints = true,
+            includeInlayVariableTypeHints = true,
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayFunctionLikeReturnTypeHints = true,
+            includeInlayEnumMemberValueHints = true,
+            importModuleSpecifierPreference = 'non-relative',
         },
     },
+
+    -- settings = {
+    --     init_options = {
+    --         preferences = {
+    --             quotePreference = 'single',
+    --             disableSuggestions = true,
+    --         },
+    --         javascript = {
+    --             format = {
+    --                 indentSize = 4,
+    --             },
+    --         },
+    --     },
+    -- },
 })
 
 -- Python Server
