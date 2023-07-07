@@ -160,6 +160,11 @@ return {
             { 'nvim-lua/popup.nvim' },
             { 'nvim-lua/plenary.nvim' },
         },
+        opts = {
+            bundled_plugin_cheatsheets = {
+                disabled = { 'gitsigns.nvim' },
+            },
+        },
     },
     {
         'smjonas/live-command.nvim',
