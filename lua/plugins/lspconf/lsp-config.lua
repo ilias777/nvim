@@ -34,8 +34,8 @@ local lspconfig = require('lspconfig')
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
 -- Winbar with Navic
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-local navic = require('nvim-navic')
+-- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+-- local navic = require('nvim-navic')
 
 -- CMP LSP
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -81,7 +81,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('v', '<space>1f', vim.lsp.buf.format, bufopts('Range Fromatting'))
 
     -- Winbar with Navic
-    navic.attach(client, bufnr)
+    -- navic.attach(client, bufnr)
 
     -- Inlay hints
     if vim.bo.filetype == 'markdown' then
