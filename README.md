@@ -37,6 +37,10 @@
 - Git >= 2.19.0
 - a [Nerd Font](https://www.nerdfonts.com/) (optional)
 
+## 🔠 Used Font
+
+- [Cascadia Code](https://github.com/microsoft/cascadia-code) - A new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Terminal.
+
 ## 🛠️ Installation
 
 ### Linux / MacOS (Unix)
