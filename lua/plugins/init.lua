@@ -55,6 +55,18 @@ return {
         },
     },
     {
+        'SmiteshP/nvim-navic',
+        event = 'BufReadPre',
+        dependencies = {
+            'neovim/nvim-lspconfig',
+        },
+        config = function()
+            require('nvim-navic').setup({
+                highlight = true,
+            })
+        end,
+    },
+    {
         'folke/trouble.nvim',
         keys = {
             { '<leader>xx', '<cmd>TroubleToggle<cr>', desc = 'Trouble Toggle' },
