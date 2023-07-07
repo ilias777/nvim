@@ -11,6 +11,7 @@ vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, si
 -- Search
 vim.keymap.set('n', '<Leader>s', '/')
 vim.keymap.set('n', '<Leader>S', '?')
+vim.keymap.set('n', 'ƒ', '/')
 
 -- Search for matches within visual selection
 -- vim.keymap.set('x', '<space>/', '<Esc>/\\%V')
