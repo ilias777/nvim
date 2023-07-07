@@ -64,6 +64,12 @@ cd ~/.config
 git clone https://github.com/ilias777/nvim.git
 ```
 
+#### Remove `.git` folder and add your own repo if you want
+
+```shell
+rm -rf ~/.config/nvim/.git
+```
+
 #### Navigate to nvim folder and open init.lua with Neovim
 
 ```shell
