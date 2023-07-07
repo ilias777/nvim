@@ -86,6 +86,8 @@ When all language servers are installed, restart Neovim.
 
 <img width="1452" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/fb09cd4f-e8a7-4e02-9da4-fe510cd20a7d">
 
+---
+
 ### Plugins List
 
 #### Package Manager
@@ -197,3 +199,24 @@ When all language servers are installed, restart Neovim.
 #### Writing
 
 - [vimtex](https://github.com/lervag/vimtex) - A modern Vim and Neovim filetype and syntax plugin for LaTeX files.
+
+---
+
+### Installed Language Servers
+
+- [cssls](https://github.com/microsoft/vscode-css-languageservice) - Language services for CSS, LESS and SCSS.
+- [emmet_ls](https://github.com/aca/emmet-ls) - Emmet support based on LSP.
+- [html](https://github.com/microsoft/vscode-html-languageservice) - Language services for HTML.
+- [intelephense](https://intelephense.com) - PHP language server.
+- [jdtls](https://github.com/eclipse/eclipse.jdt.ls) - Java language server.
+- [jsonls](https://github.com/microsoft/vscode-json-languageservice) - JSON language service.
+- [ltex](https://valentjn.github.io/ltex/) - Grammar checking of various markup languages.
+- [lua_ls](https://github.com/LuaLS/lua-language-server) - A language server that offers Lua language support.
+- [pyright](https://github.com/microsoft/pyright) - Static Type Checker for Python.
+- [rust_analyzer](https://github.com/rust-lang/rust-analyzer) - Rust compiler.
+- [texlab](https://github.com/latex-lsp/texlab) - Language Server Protocol for LaTeX.
+- [tsserver](https://github.com/typescript-language-server/typescript-language-server) - TypeScript & JavaScript Language Server.
+- [volar](https://github.com/johnsoncodehk/volar) - High-performance Vue language tooling based-on Volar.js.
+- [yamlls](https://github.com/redhat-developer/yaml-language-server) - Language Server for YAML Files.
+
+---
