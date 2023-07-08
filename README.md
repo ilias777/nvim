@@ -113,6 +113,7 @@ When all language servers are installed, restart Neovim.
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Configurations for the LSP client.
 - [mason](https://github.com/williamboman/mason.nvim) - Install and manage LSP servers.
 - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim) - Bridge between mason and lsp-ocnfig.
+- [trouble.nvim](https://github.com/folke/trouble.nvim) - A pretty diagnostics, references, telescope results, quickfix and location list.
 
 #### Autocompletion
 
