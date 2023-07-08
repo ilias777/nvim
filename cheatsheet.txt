@@ -179,7 +179,8 @@ Single line comment | <Leader>cf
 Multi line comment  | <Leader>cm
 
 ## comment-box
-Centered comment box | <Leader>cb
+Centered comment box     | <Leader>cb
+Open comment box catalog | <Leader>cc
 
 ## table-mode
 Enable table mode         | <Leader>tm
