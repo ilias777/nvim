@@ -33,7 +33,6 @@ return {
             -- Telescope
             ['<leader>f'] = { name = '+File' },
             ['<leader>fc'] = { ":lua require'telescope.builtin'.commands{}<cr>", 'List Commands' },
-            ['<leader>fd'] = { '<cmd>Telescope diagnostics<cr>', 'List Diagnostics' },
             ['<leader>fj'] = { '<cmd>Telescope emoji<cr>', 'Find emoji' },
             ['<leader>fo'] = { '<cmd>Telescope oldfiles<cr>', 'Recently opened files' },
             ['<leader>fs'] = { '<cmd>Telescope symbols<cr>', 'Find Symbols' },
