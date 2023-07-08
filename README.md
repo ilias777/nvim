@@ -234,4 +234,4 @@ When all language servers are installed, restart Neovim.
 
 ## ⚙ Configuration
 
-How to configure Neovim is explained in the Wiki
+How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
