@@ -230,3 +230,7 @@ When all language servers are installed, restart Neovim.
 - [yamlls](https://github.com/redhat-developer/yaml-language-server) - Language Server for YAML Files.
 
 ---
+
+## ⚙️C Configuration
+
+How to configure Neovim is explained in the Wiki
