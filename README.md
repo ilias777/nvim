@@ -169,7 +169,7 @@ When all language servers are installed, restart Neovim.
 - [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) - Ultra fold with modern looking and performance boosting.
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Show dev icons.
 - [sentiment.nvim](https://github.com/utilyre/sentiment.nvim) - Enhanced matchparen.
-- [ssr.nvim](https://github.com/cshuaimin/ssr.nvim) - Structural search and replace.
+- [ssr.nvim](https://github.com/cshuaimin/ssr.nvim) - Treesitter based structural search and replace plugin.
 - [statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim) - Configurable 'statuscolumn' with builtin segments and click handlers.
 - [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) - A tree like view for symbols.
 - [vim-visual-multi](https://github.com/mg979/vim-visual-multi) - Multiple cursors.
