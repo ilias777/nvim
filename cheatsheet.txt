@@ -372,3 +372,9 @@ Create cursors down | <C-DOWN>
 
 ## inc-rename
 Inc-Rename with LSP | <Space>ir
+
+## zen-mode
+Zen Mode Toggle | <Leader>z
+
+## ssr @search @replace
+Search and Replace with LSP | <Leader>r
