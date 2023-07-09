@@ -229,7 +229,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 | Language Server                                                                      | Description                                             | Programming Language |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------- | -------------------- |
 | [cssls](https://github.com/microsoft/vscode-css-languageservice)                     | Language services for CSS, LESS and SCSS                | CSS                  |
-| [emmet_ls](https://github.com/aca/emmet-ls)                                          | Emmet support based on LSP                              | HMLT - CSS           |
+| [emmet_ls](https://github.com/aca/emmet-ls)                                          | Emmet support based on LSP                              | HTML - CSS           |
 | [html](https://github.com/microsoft/vscode-html-languageservice)                     | Language services for HTML                              | HTML                 |
 | [intelephense](https://intelephense.com)                                             | PHP language server                                     | PHP                  |
 | [jdtls](https://github.com/eclipse/eclipse.jdt.ls)                                   | Java language server                                    | Java                 |
