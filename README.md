@@ -100,8 +100,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 <img width="1452" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/fb09cd4f-e8a7-4e02-9da4-fe510cd20a7d">
 
----
-
 ### Plugins List
 
 #### Package Manager
