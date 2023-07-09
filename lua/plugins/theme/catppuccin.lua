@@ -175,4 +175,18 @@ catppuccin.setup({
     color_overrides = {},
 })
 
+-- Change theme on hour
+-- local hour = tonumber(vim.fn.strftime('%H'))
+-- if hour >= 17 or hour < 7 then
+--     vim.o.background = 'dark'
+-- else
+--     vim.o.background = 'light'
+-- end
+--
+-- if vim.o.background == 'light' then
+--     vim.cmd.colorscheme('catppuccin-latte')
+-- else
+--     vim.cmd.colorscheme('catppuccin-frappe')
+-- end
+
 -- vim.cmd.colorscheme('catppuccin')
