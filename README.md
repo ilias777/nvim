@@ -89,6 +89,10 @@ At the first time the Command `MasonUpdate` is not found. Please wait about 2 mi
 language server installation to finish.
 When all language servers are installed, restart Neovim.
 
+## ⚙ Configuration
+
+How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
+
 ## 🔌 Plugins
 
 - Over **70 Plugins** preinstalled
@@ -232,7 +236,3 @@ When all language servers are installed, restart Neovim.
 - [yamlls](https://github.com/redhat-developer/yaml-language-server) - Language Server for YAML Files.
 
 ---
-
-## ⚙ Configuration
-
-How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
