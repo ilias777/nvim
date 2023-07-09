@@ -218,17 +218,35 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 ### Preinstalled Language Servers
 
+#### Web Development
+
 - [cssls](https://github.com/microsoft/vscode-css-languageservice) - Language services for CSS, LESS and SCSS.
 - [emmet_ls](https://github.com/aca/emmet-ls) - Emmet support based on LSP.
 - [html](https://github.com/microsoft/vscode-html-languageservice) - Language services for HTML.
 - [intelephense](https://intelephense.com) - PHP language server.
-- [jdtls](https://github.com/eclipse/eclipse.jdt.ls) - Java language server.
 - [jsonls](https://github.com/microsoft/vscode-json-languageservice) - JSON language service.
-- [ltex](https://valentjn.github.io/ltex/) - Grammar checking of various markup languages.
-- [lua_ls](https://github.com/LuaLS/lua-language-server) - A language server that offers Lua language support.
-- [pyright](https://github.com/microsoft/pyright) - Static Type Checker for Python.
-- [rust_analyzer](https://github.com/rust-lang/rust-analyzer) - Rust compiler.
-- [texlab](https://github.com/latex-lsp/texlab) - Language Server Protocol for LaTeX.
-- [tsserver](https://github.com/typescript-language-server/typescript-language-server) - TypeScript & JavaScript Language Server.
 - [volar](https://github.com/johnsoncodehk/volar) - High-performance Vue language tooling based-on Volar.js.
 - [yamlls](https://github.com/redhat-developer/yaml-language-server) - Language Server for YAML Files.
+
+#### JavaScript
+
+- [tsserver](https://github.com/typescript-language-server/typescript-language-server) - TypeScript & JavaScript Language Server.
+
+#### Lua
+
+- [lua_ls](https://github.com/LuaLS/lua-language-server) - A language server that offers Lua language support.
+
+#### Python
+
+- [pyright](https://github.com/microsoft/pyright) - Static Type Checker for Python.
+
+#### Rust
+- [rust_analyzer](https://github.com/rust-lang/rust-analyzer) - Rust compiler.
+
+#### Java
+- [jdtls](https://github.com/eclipse/eclipse.jdt.ls) - Java language server.
+
+#### LaTex
+
+- [ltex](https://valentjn.github.io/ltex/) - Grammar checking of various markup languages.
+- [texlab](https://github.com/latex-lsp/texlab) - Language Server Protocol for LaTeX.
