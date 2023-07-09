@@ -2,7 +2,7 @@
   <img src="./logo/neovim.png" width="300">
 </div>
 
-<h2 align="center">Neovim configuration</h2>
+<h1 align="center">Neovim Configuration</h1>
 
 ## 🌟 Preview
 
