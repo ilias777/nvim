@@ -160,6 +160,7 @@ When all language servers are installed, restart Neovim.
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - IndentLine replacement.
 - [live-command.nvim](https://github.com/smjonas/live-command.nvim) - Text editing with immediate visual feedback.
 - [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your browser.
+- [multicursors.nvim](https://github.com/smoka7/multicursors.nvim) - A multi cursor plugin.
 - [noice.nvim](https://github.com/folke/noice.nvim) - Replaces the UI for messages, cmdline and the popupmenu.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - A minimalist autopairs.
 - [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua) - A high-performance color highlighter.
