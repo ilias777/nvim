@@ -216,8 +216,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 - [vimtex](https://github.com/lervag/vimtex) - A modern Vim and Neovim filetype and syntax plugin for LaTeX files.
 
----
-
 ### Preinstalled Language Servers
 
 - [cssls](https://github.com/microsoft/vscode-css-languageservice) - Language services for CSS, LESS and SCSS.
@@ -234,5 +232,3 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [tsserver](https://github.com/typescript-language-server/typescript-language-server) - TypeScript & JavaScript Language Server.
 - [volar](https://github.com/johnsoncodehk/volar) - High-performance Vue language tooling based-on Volar.js.
 - [yamlls](https://github.com/redhat-developer/yaml-language-server) - Language Server for YAML Files.
-
----
