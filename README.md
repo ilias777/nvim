@@ -11,7 +11,7 @@
   <a href="https://github.com/ilias777/nvim#%EF%B8%8F-installation">Installation</a> •
   <a href="https://github.com/ilias777/nvim#%EF%B8%8F-installation">Configuration</a> •
   <a href="https://github.com/ilias777/nvim#-plugins">Plugins</a> •
-  <a href="https://github.com/ilias777/nvim/wiki">Plugins</a>
+  <a href="https://github.com/ilias777/nvim/wiki">Wiki</a>
 </h4>
 
 ## 🌟 Preview
