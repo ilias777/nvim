@@ -5,12 +5,12 @@
 <h1 align="center">Neovim Configuration</h1>
 
 <h4 align="center">
-  <a href="https://github.com/ilias777/nvim#-features">Features</a>•
-  <a href="https://github.com/ilias777/nvim#%EF%B8%8F-requirements">Requirements</a>•
-  <a href="https://github.com/ilias777/nvim#-used-font">Font</a>•
-  <a href="https://github.com/ilias777/nvim#%EF%B8%8F-installation">Installation</a>•
-  <a href="https://github.com/ilias777/nvim#%EF%B8%8F-installation">Configuration</a>•
-  <a href="https://github.com/ilias777/nvim#-plugins">Plugins</a>•
+  <a href="https://github.com/ilias777/nvim#-features">Features</a> •
+  <a href="https://github.com/ilias777/nvim#%EF%B8%8F-requirements">Requirements</a> •
+  <a href="https://github.com/ilias777/nvim#-used-font">Font</a> •
+  <a href="https://github.com/ilias777/nvim#%EF%B8%8F-installation">Installation</a> •
+  <a href="https://github.com/ilias777/nvim#%EF%B8%8F-installation">Configuration</a> •
+  <a href="https://github.com/ilias777/nvim#-plugins">Plugins</a> •
 </h4>
 
 ## 🌟 Preview
