@@ -55,7 +55,7 @@ return {
             ['<leader>hl'] = { '<cmd>HopLine<cr>', 'Hop Line' },
             ['<leader>h1'] = { '<cmd>HopChar1<cr>', 'Hop 1 Char' },
             ['<leader>h2'] = { '<cmd>HopChar2<cr>', 'Hop 2 Chars' },
-            ['<leader>hv'] = { '<cmd>HopVertical<cr>', 'Hop Vertical' },
+            ['<leader>hc'] = { '<cmd>HopVertical<cr>', 'Hop Vertical' },
             -- ['<leader>hp'] = { '<cmd>HopPattern<cr>', 'Hop Pattern' },
             -- ['<leader>ha'] = { '<cmd>HopAnywhere<cr>', 'Hop Anywhere' },
             -- ['<leader>a'] = { '<cmd>HopWord<cr>', 'Hop Word' },
