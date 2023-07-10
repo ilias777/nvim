@@ -1,15 +1,16 @@
 return {
     'nvim-telescope/telescope.nvim',
     keys = {
-        { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },
+        { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
+        { '<leader>fd', '<cmd>Telescope diagnostics<cr>', desc = 'Find Diagnostics' },
         { '<leader>fe', '<cmd>Telescope file_browser<cr>', desc = 'File Browser' },
+        { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },
         { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Find Word' },
         { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Find Help' },
-        { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
-        { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
-        { '<leader>fl', '<cmd>Telescope highlights<cr>', desc = 'Find Highlights' },
         { '<leader>fk', '<cmd>Telescope keymaps<cr>', desc = 'Find Keymaps' },
-        { '<leader>fd', '<cmd>Telescope diagnostics<cr>', desc = 'Find Diagnostics' },
+        { '<leader>fl', '<cmd>Telescope highlights<cr>', desc = 'Find Highlights' },
+        { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
+        { '<leader>ft', '<cmd>Telescope git_files<cr>', desc = 'Find Git Files' },
     },
     branch = '0.1.x',
     dependencies = {
