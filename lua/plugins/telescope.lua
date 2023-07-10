@@ -11,6 +11,7 @@ return {
         { '<leader>fl', '<cmd>Telescope highlights<cr>', desc = 'Find Highlights' },
         { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
         { '<leader>ft', '<cmd>Telescope git_files<cr>', desc = 'Find Git Files' },
+        { '<leader>fp', '<cmd>Telescope spell_suggest<cr>', desc = 'Find Spell Suggest' },
     },
     branch = '0.1.x',
     dependencies = {
