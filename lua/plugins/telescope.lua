@@ -44,7 +44,7 @@ return {
                     initial_mode = 'normal',
                 },
                 find_files = {
-                    theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
+                    -- theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
                     -- layout_strategy = 'vertical',
                     -- layout_config = { height = 0.9 },
                 },
