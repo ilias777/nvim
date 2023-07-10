@@ -52,7 +52,7 @@ catppuccin.setup({
         symbols_outline = true,
         telescope = {
             enabled = true,
-            -- style = 'nvchad'
+            -- style = 'nvchad',
         },
         treesitter = true,
         treesitter_context = true,
