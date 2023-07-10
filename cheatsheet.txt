@@ -99,6 +99,7 @@ Find yanks in telescope    | <Leader>fv
 Find symbols               | <Leader>fs
 Find emoji                 | <Leader>fj
 Find diagnostics           | <Leader>fd
+Find git files             | <Leader>ft
 
 ## Telescope-File-Browser
 Create file/folder                                  | c
