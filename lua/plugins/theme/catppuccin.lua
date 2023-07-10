@@ -50,7 +50,10 @@ catppuccin.setup({
         rainbow_delimiters = true,
         pounce = true,
         symbols_outline = true,
-        telescope = true,
+        telescope = {
+            enabled = true,
+            -- style = 'nvchad'
+        },
         treesitter = true,
         treesitter_context = true,
         ts_rainbow2 = true,
