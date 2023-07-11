@@ -37,6 +37,8 @@
   <img width="1366" alt="tr3" src="https://github.com/ilias777/nvim/assets/39212564/b228654a-7a4e-488e-9bf9-f9600d99e034">
 </div>
 
+How you can set transparent background is explained in the [Wiki](https://github.com/ilias777/nvim/wiki/Transparent-Background)
+
 ## ✨ Features
 
 - File explorer with [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
