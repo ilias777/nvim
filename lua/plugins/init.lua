@@ -236,6 +236,10 @@ return {
             local colors = require('catppuccin.palettes').get_palette('mocha')
             vim.api.nvim_set_hl(0, 'MultiCursor', { fg = colors.maroon, bg = colors.crust })
             vim.api.nvim_set_hl(0, 'MultiCursorMain', { fg = colors.crust, bg = colors.maroon, bold = true })
+            -- vim.api.nvim_set_hl(0, 'MultiCursor', { fg = '#11111b', bg = '#74c7ec' })
+            -- vim.api.nvim_set_hl(0, 'MultiCursorMain', { fg = '#11111b', bg = '#eba0ac', bold = true })
+            -- vim.cmd([[ hi MultiCursor guibg=#74c7ec guifg=#11111b ]])
+            -- vim.cmd([[ hi MultiCursorMain guibg=#eba0ac guifg=#11111b ]])
         end,
     },
     {
