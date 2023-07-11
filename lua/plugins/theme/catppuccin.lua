@@ -6,73 +6,23 @@ local mocha = require('catppuccin.palettes').get_palette('mocha')
 local catppuccin = require('catppuccin')
 
 catppuccin.setup({
-    flavour = 'mocha', -- latte, frappe, macchiato, mocha
-    background = { -- :h background
-        light = 'latte',
-        dark = 'mocha',
-    },
-    compile_path = vim.fn.stdpath('cache') .. '/catppuccin',
-    transparent_background = false,
-    term_colors = false,
-    dim_inactive = {
-        enabled = false,
-        shade = 'dark',
-        percentage = 0.15,
-    },
     styles = {
-        comments = { 'italic' },
-        conditionals = { 'italic' },
-        loops = {},
-        functions = {},
         keywords = { 'italic' },
-        strings = {},
         variables = { 'italic' },
-        numbers = {},
         booleans = { 'italic' },
         properties = { 'italic' },
-        types = {},
-        operators = {},
     },
     -- Integrations
     integrations = {
-        beacon = true,
-        cmp = true,
-        fidget = true,
-        gitsigns = true,
         hop = true,
         lsp_trouble = true,
         mason = true,
-        markdown = true,
         neogit = true,
         noice = true,
         notify = true,
-        nvimtree = true,
-        rainbow_delimiters = true,
-        pounce = true,
         symbols_outline = true,
-        telescope = {
-            enabled = true,
-            -- style = 'nvchad',
-        },
-        treesitter = true,
         treesitter_context = true,
-        which_key = false,
-        dap = {
-            enabled = true,
-            enable_ui = true,
-        },
-        indent_blankline = {
-            enabled = true,
-            colored_indent_levels = true,
-        },
         native_lsp = {
-            enabled = true,
-            virtual_text = {
-                errors = { 'italic' },
-                hints = { 'italic' },
-                warnings = { 'italic' },
-                information = { 'italic' },
-            },
             underlines = {
                 errors = { 'undercurl' },
                 hints = { 'undercurl' },
@@ -82,10 +32,6 @@ catppuccin.setup({
             inlay_hints = {
                 background = false,
             },
-        },
-        navic = {
-            enable = true,
-            custom_bg = 'NONE',
         },
     },
     custom_highlights = function(colors)
