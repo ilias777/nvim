@@ -234,10 +234,14 @@ return {
     {
         'utilyre/sentiment.nvim',
         event = 'BufReadPre',
-        name = 'sentiment',
         version = '*',
-        config = function()
-            require('sentiment').setup()
+        opts = {
+            included_modes = {
+                i = false,
+            },
+        },
+        init = function()
+            vim.g.loaded_matchparen = 1
         end,
     },
     {
