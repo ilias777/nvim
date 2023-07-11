@@ -36,12 +36,6 @@ catppuccin.setup({
     },
     custom_highlights = function(colors)
         return {
-            -- Variable
-            -- ['@lsp.type.property.lua'] = { fg = colors.lavender },
-
-            -- Float Border
-            -- NormalFloat = { bg = colors.crust },
-
             -- Cmp Menu
             -- Pmenu = { bg = colors.mantle },
             -- PmenuSel = { fg = colors.mantle, bg = colors.maroon, style = { 'bold' } },
@@ -92,9 +86,6 @@ catppuccin.setup({
             TelescopeResultsTitle = { fg = colors.crust, bg = colors.mauve },
             TelescopePreviewTitle = { fg = colors.crust, bg = colors.mauve },
 
-            -- Beacon
-            -- Beacon = { bg = colors.teal },
-
             -- Bufferline
             BufferLineIndicatorSelected = { fg = colors.pink },
             BufferLineIndicator = { fg = colors.base },
@@ -122,19 +113,5 @@ catppuccin.setup({
     highlight_overrides = {},
     color_overrides = {},
 })
-
--- Change theme on hour
--- local hour = tonumber(vim.fn.strftime('%H'))
--- if hour >= 17 or hour < 7 then
---     vim.o.background = 'dark'
--- else
---     vim.o.background = 'light'
--- end
---
--- if vim.o.background == 'light' then
---     vim.cmd.colorscheme('catppuccin-latte')
--- else
---     vim.cmd.colorscheme('catppuccin-frappe')
--- end
 
 -- vim.cmd.colorscheme('catppuccin')
