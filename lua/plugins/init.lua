@@ -203,6 +203,7 @@ return {
         },
         opts = function()
             local N = require('multicursors.normal_mode')
+            local I = require('multicursors.insert_mode')
             return {
                 normal_keys = {
                     -- to change default lhs of key mapping change the key
@@ -211,6 +212,15 @@ return {
                         method = N.clear_others,
                         -- description to show in hint window
                         desc = 'Clear others',
+                    },
+                },
+                insert_keys = {
+                    -- to change default lhs of key mapping change the key
+                    ['<CR>'] = {
+                        -- assigning nil to method exits from multi cursor mode
+                        method = I.Cr_method,
+                        -- description to show in hint window
+                        desc = 'new line',
                     },
                 },
             }
