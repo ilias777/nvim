@@ -57,7 +57,7 @@ vim.keymap.set('v', 'p', '"_dP')
 vim.keymap.set('n', 'dD', '"_dd')
 
 -- Not yanking with 'c' and 'x'
-vim.keymap.set('n', 'c', '"_c')
+vim.keymap.set({ 'n', 'v' }, 'c', '"_c')
 vim.keymap.set('n', 'C', '"_C')
 -- vim.keymap.set('n', 'x', '"_x')
 
