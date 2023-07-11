@@ -196,8 +196,8 @@ return {
     },
     {
         'smoka7/multicursors.nvim',
-        -- enabled = true,
-        event = 'VeryLazy',
+        enabled = true,
+        event = 'BufReadPre',
         dependencies = {
             'smoka7/hydra.nvim',
         },
@@ -232,6 +232,11 @@ return {
                 desc = 'Create Multicursor',
             },
         },
+        init = function()
+            local colors = require('catppuccin.palettes').get_palette('mocha')
+            vim.api.nvim_set_hl(0, 'MultiCursor', { fg = colors.maroon, bg = colors.crust })
+            vim.api.nvim_set_hl(0, 'MultiCursorMain', { fg = colors.crust, bg = colors.maroon, bold = true })
+        end,
     },
     {
         'famiu/bufdelete.nvim',
