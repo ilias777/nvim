@@ -29,6 +29,14 @@
   
 </div>
 
+### With transparent background
+
+<div align="center">
+  <img width="1365" alt="tr1" src="https://github.com/ilias777/nvim/assets/39212564/8b305c2d-6641-43ab-9dbe-7b24d96ee2f3">
+  <img width="1368" alt="tr2" src="https://github.com/ilias777/nvim/assets/39212564/9b28c832-1a1b-46a6-9188-50146071ec41">
+  <img width="1366" alt="tr3" src="https://github.com/ilias777/nvim/assets/39212564/b228654a-7a4e-488e-9bf9-f9600d99e034">
+</div>
+
 ## ✨ Features
 
 - File explorer with [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
