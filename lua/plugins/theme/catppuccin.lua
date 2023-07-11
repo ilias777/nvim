@@ -56,7 +56,6 @@ catppuccin.setup({
         },
         treesitter = true,
         treesitter_context = true,
-        ts_rainbow2 = true,
         which_key = false,
         dap = {
             enabled = true,
