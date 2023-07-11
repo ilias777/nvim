@@ -29,7 +29,7 @@
   
 </div>
 
-### With transparent background
+#### With transparent background
 
 <div align="center">
   <img width="1365" alt="tr1" src="https://github.com/ilias777/nvim/assets/39212564/8b305c2d-6641-43ab-9dbe-7b24d96ee2f3">
