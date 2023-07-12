@@ -128,7 +128,7 @@ Go to declaration                 | gD
 Go to definition                  | gd
 Go to implementation              | gI
 Information on Hover              | K
-Sygnature help                    | <Leader>k
+Signature help                    | <Leader>k
 Add workspace folder              | <Leader>wa
 Remove workspace folder           | <Leader>wr
 List workspace folders            | <Leader>wl
