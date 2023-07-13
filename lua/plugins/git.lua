@@ -81,21 +81,21 @@ return {
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                          Neogit                          │
     --  ╰──────────────────────────────────────────────────────────╯
-    {
-        'NeogitOrg/neogit',
-        keys = {
-            { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Neogit' },
-        },
-        dependencies = 'nvim-lua/plenary.nvim',
-        config = function()
-            require('neogit').setup({
-                disable_commit_confirmation = true,
-                integrations = {
-                    diffview = true,
-                },
-            })
-        end,
-    },
+    -- {
+    --     'NeogitOrg/neogit',
+    --     keys = {
+    --         { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Neogit' },
+    --     },
+    --     dependencies = 'nvim-lua/plenary.nvim',
+    --     config = function()
+    --         require('neogit').setup({
+    --             disable_commit_confirmation = true,
+    --             integrations = {
+    --                 diffview = true,
+    --             },
+    --         })
+    --     end,
+    -- },
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                    Advance git search                    │
     --  ╰──────────────────────────────────────────────────────────╯
