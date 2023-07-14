@@ -42,10 +42,6 @@ return {
                     'yaml',
                 },
                 -- Buildin
-                -- highlight = {
-                --     enable = true,
-                -- },
-                -- Buildin
                 incremental_selection = {
                     enable = true,
                     keymaps = {
