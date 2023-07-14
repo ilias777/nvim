@@ -42,9 +42,9 @@ return {
                     'yaml',
                 },
                 -- Buildin
-                highlight = {
-                    enable = false,
-                },
+                -- highlight = {
+                --     enable = true,
+                -- },
                 -- Buildin
                 incremental_selection = {
                     enable = true,
