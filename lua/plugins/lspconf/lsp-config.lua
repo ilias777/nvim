@@ -243,7 +243,7 @@ lspconfig.emmet_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     handlers = handlers,
-    filetypes = { 'html', 'sass', 'scss', 'css', 'typescriptreact', 'javascriptreact', 'vue' },
+    filetypes = { 'astro', 'css', 'eruby', 'html', 'htmldjango', 'javascript', 'javascriptreact', 'less', 'pug', 'sass', 'scss', 'svelte', 'typescriptreact', 'vue' },
 })
 
 -- CSS Server
