@@ -252,6 +252,7 @@ return {
     },
     {
         'utilyre/sentiment.nvim',
+        enabled = false,
         event = 'BufReadPre',
         version = '*',
         opts = {
