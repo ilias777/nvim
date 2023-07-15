@@ -1,5 +1,7 @@
 return {
     'beauwilliams/focus.nvim',
+    enabled = true,
+    version = '*',
     keys = {
         { '<space>h', '<cmd>FocusSplitLeft<CR>', desc = 'Focus Split Left' },
         { '<space>j', '<cmd>FocusSplitDown<CR>', desc = 'Focus Split Down' },
@@ -9,12 +11,15 @@ return {
     },
     config = function()
         require('focus').setup({
-            enable = true,
-            autoresize = false,
-            number = false,
-            relativenumber = false,
-            hybridnumber = false,
-            signcolumn = false,
+            autoresize = {
+                enable = false,
+            },
+            ui = {
+                number = false,
+                relativenumber = false,
+                hybridnumber = false,
+                signcolumn = false,
+            },
             excluded_filetypes = {
                 'toggleterm',
                 'qf',
@@ -24,8 +29,6 @@ return {
                 'tsplayground',
                 'Outline',
             },
-            cursorline = false,
-            winhighlight = false,
         })
     end,
 }
