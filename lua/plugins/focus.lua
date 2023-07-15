@@ -1,7 +1,6 @@
 return {
     'nvim-focus/focus.nvim',
     enabled = true,
-    event = 'VeryLazy',
     version = '*',
     keys = {
         { '<space>h', '<cmd>FocusSplitLeft<CR>', desc = 'Focus Split Left' },
