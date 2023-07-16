@@ -2,6 +2,10 @@
 --  │                    LSP Configuration                     │
 --  ╰──────────────────────────────────────────────────────────╯
 
+-- Neodev
+require('neodev').setup()
+
+-- Mason
 require('mason').setup({
     ui = {
         icons = {
@@ -30,8 +34,10 @@ require('mason-lspconfig').setup({
         'yamlls',
     },
 })
-require('neodev').setup()
+
+-- Lspconfig
 local lspconfig = require('lspconfig')
+
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
 -- Winbar with Navic
