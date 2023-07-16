@@ -55,6 +55,11 @@ return {
         },
     },
     {
+        'folke/neodev.nvim',
+        event = 'VeryLazy',
+        opts = {},
+    },
+    {
         'SmiteshP/nvim-navic',
         enabled = false,
         event = 'BufReadPre',

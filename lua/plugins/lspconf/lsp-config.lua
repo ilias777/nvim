@@ -30,6 +30,7 @@ require('mason-lspconfig').setup({
         'yamlls',
     },
 })
+require('neodev').setup()
 local lspconfig = require('lspconfig')
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
@@ -165,6 +166,8 @@ lspconfig.lua_ls.setup({
             workspace = {
                 library = {
                     [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                    [vim.fn.stdpath('data') .. '/mason/packages/lua-language-server/libexec/meta/3rd/luv/library'] = true,
+                    '${3rd}/luv/library',
                     vim.api.nvim_get_runtime_file('', true),
                     [vim.fn.expand('%:p:h')] = true,
                 },
@@ -173,6 +176,7 @@ lspconfig.lua_ls.setup({
             },
             completion = {
                 enable = true,
+                callSnippet = 'Both',
             },
             format = {
                 enable = true,
