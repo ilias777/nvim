@@ -41,8 +41,8 @@ local lspconfig = require('lspconfig')
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
 -- Winbar with Navic
--- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
--- local navic = require('nvim-navic')
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+local navic = require('nvim-navic')
 
 -- CMP LSP
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -192,6 +192,9 @@ vim.diagnostic.config({
 lspconfig.lua_ls.setup({
     capabilities = capabilities,
     -- on_attach = on_attach,
+    on_attach = function(client, bufnr)
+        navic.attach(client, bufnr)
+    end,
     handlers = handlers,
     settings = {
         Lua = {
