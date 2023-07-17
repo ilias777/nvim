@@ -61,7 +61,7 @@ return {
     },
     {
         'SmiteshP/nvim-navic',
-        enabled = true,
+        enabled = false,
         event = 'BufReadPre',
         dependencies = {
             'neovim/nvim-lspconfig',
