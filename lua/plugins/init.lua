@@ -204,6 +204,7 @@ return {
         enabled = true,
         event = 'BufReadPre',
         dependencies = {
+            'nvim-treesitter/nvim-treesitter',
             'smoka7/hydra.nvim',
         },
         opts = function()
@@ -212,7 +213,7 @@ return {
             return {
                 normal_keys = {
                     -- to change default lhs of key mapping change the key
-                    ['b'] = {
+                    [','] = {
                         -- assigning nil to method exits from multi cursor mode
                         method = N.clear_others,
                         -- description to show in hint window
