@@ -4,7 +4,7 @@
 -- Exit from insert mode
 vim.keymap.set('i', 'kj', '<esc>')
 
--- better up/down
+-- Better up/down
 vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
@@ -60,6 +60,10 @@ vim.keymap.set('n', 'dD', '"_dd')
 vim.keymap.set({ 'n', 'v' }, 'c', '"_c')
 vim.keymap.set('n', 'C', '"_C')
 -- vim.keymap.set('n', 'x', '"_x')
+
+-- Change inner quotes
+vim.keymap.set('o', 'iq', "i'")
+vim.keymap.set('o', 'iQ', 'i"')
 
 -- Add blank line without leaving normal mode
 vim.keymap.set('n', '<leader>o', 'o<Esc>')
