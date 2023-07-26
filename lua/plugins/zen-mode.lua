@@ -5,8 +5,8 @@ return {
     },
     opts = {
         window = {
-            width = 100,
-            height = 0.7,
+            backdrop = 1,
+            height = 0.8,
         },
     },
 }
