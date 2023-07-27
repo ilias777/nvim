@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd({ 'InsertEnter', 'WinLeave' }, {
     end,
 })
 
--- zsh to sh filetype
+-- Disable inlay hints for specific filetypes
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'zsh', 'conf' },
     callback = function()
