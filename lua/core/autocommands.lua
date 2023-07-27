@@ -21,14 +21,10 @@ vim.api.nvim_create_autocmd({ 'InsertEnter', 'WinLeave' }, {
     end,
 })
 
--- Inlay hints
--- vim.api.nvim_create_autocmd({ 'InsertEnter' }, {
---     callback = function()
---         vim.lsp.buf.inlay_hint(0, true)
---     end,
--- })
--- vim.api.nvim_create_autocmd({ 'InsertLeave' }, {
---     callback = function()
---         vim.lsp.buf.inlay_hint(0, false)
---     end,
--- })
+-- zsh to sh filetype
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'zsh', 'conf' },
+    callback = function()
+        vim.lsp.inlay_hint(0, false)
+    end,
+})
