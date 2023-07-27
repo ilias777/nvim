@@ -7,7 +7,20 @@ return {
         vim.o.timeoutlen = 500
     end,
     config = function()
-        require('which-key').setup()
+        require('which-key').setup({
+            window = {
+                border = 'rounded', -- none, single, double, shadow
+                position = 'bottom', -- bottom, top
+                margin = { 0, 10, 1, 10 }, -- extra window margin [top, right, bottom, left]
+            },
+            layout = {
+                height = { min = 4, max = 15 }, -- min and max height of the columns
+                width = { min = 20, max = 50 }, -- min and max width of the columns
+                spacing = 2, -- spacing between columns
+                align = 'center', -- align columns left, center or right
+            },
+        })
+
         local wk = require('which-key')
         wk.register({
             --  ╭──────────────────────────────────────────────────────────╮
