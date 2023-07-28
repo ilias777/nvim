@@ -65,6 +65,8 @@ vim.keymap.set('n', 'C', '"_C')
 -- Change inner quotes
 vim.keymap.set('o', 'iq', "i'")
 vim.keymap.set('o', 'iQ', 'i"')
+vim.keymap.set('x', 'iq', "i'")
+vim.keymap.set('x', 'iQ', 'i"')
 
 -- Add blank line without leaving normal mode
 vim.keymap.set('n', '<leader>o', 'o<Esc>')
