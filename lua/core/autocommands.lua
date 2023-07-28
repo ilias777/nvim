@@ -9,17 +9,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Cursorline on normal mode and no cursorline on insert mode
-vim.api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {
-    callback = function()
-        vim.opt.cursorline = true
-    end,
-})
-
-vim.api.nvim_create_autocmd({ 'InsertEnter', 'WinLeave' }, {
-    callback = function()
-        vim.opt.cursorline = false
-    end,
-})
+-- vim.api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {
+--     callback = function()
+--         vim.opt.cursorline = true
+--     end,
+-- })
+--
+-- vim.api.nvim_create_autocmd({ 'InsertEnter', 'WinLeave' }, {
+--     callback = function()
+--         vim.opt.cursorline = false
+--     end,
+-- })
 
 -- Disable inlay hints for specific filetypes
 vim.api.nvim_create_autocmd('FileType', {
