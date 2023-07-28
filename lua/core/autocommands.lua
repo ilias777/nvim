@@ -37,10 +37,10 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
--- Quit help with q
+-- Quit some windows with q
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = 'help',
+    pattern = { 'help', 'qf', 'checkhealth' },
     callback = function()
-        vim.keymap.set('n', 'q', '<cmd>helpclose<cr>', { silent = true })
+        vim.keymap.set('n', 'q', '<cmd>close<cr>', { silent = true, buffer = true })
     end,
 })
