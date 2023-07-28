@@ -28,3 +28,11 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.lsp.inlay_hint(0, false)
     end,
 })
+
+-- Force treesitter to work with specific filestypes
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'zsh', 'conf' },
+    callback = function()
+        vim.bo.filetype = 'sh'
+    end,
+})
