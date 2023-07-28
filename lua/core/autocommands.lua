@@ -36,3 +36,11 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.bo.filetype = 'sh'
     end,
 })
+
+-- Quit help with q
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'help',
+    callback = function()
+        vim.keymap.set('n', 'q', ':q<cr>', { silent = true })
+    end,
+})
