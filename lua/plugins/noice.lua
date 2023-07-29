@@ -17,7 +17,7 @@ return {
             },
             lsp = {
                 progress = {
-                    enabled = true,
+                    enabled = false,
                 },
                 signature = {
                     enabled = false,
