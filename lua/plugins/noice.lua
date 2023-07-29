@@ -8,7 +8,7 @@ return {
     config = function()
         require('noice').setup({
             messages = {
-                view_history = 'popup',
+                view_history = 'notify',
             },
             commands = {
                 history = {
@@ -17,7 +17,7 @@ return {
             },
             lsp = {
                 progress = {
-                    enabled = false,
+                    enabled = true,
                 },
                 signature = {
                     enabled = false,
@@ -40,15 +40,6 @@ return {
                         row = 3,
                         col = '50%',
                     },
-                },
-            },
-            mini = {
-                win_options = {
-                    -- winhighlight = {
-                    --     Normal = 'NormalFloat',
-                    --     FloatBorder = 'FloatBorder',
-                    -- },
-                    winblend = 0,
                 },
             },
             presets = {
