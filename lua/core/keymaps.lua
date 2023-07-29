@@ -62,6 +62,10 @@ vim.keymap.set({ 'n', 'v' }, 'c', '"_c')
 vim.keymap.set('n', 'C', '"_C')
 -- vim.keymap.set('n', 'x', '"_x')
 
+-- Jump to BoL and EoL without living instert mode
+vim.keymap.set('i', '<M-i>', '<Esc>I', { desc = 'Jump to Beginn of Line in insert mode' })
+vim.keymap.set('i', '<M-a>', '<Esc>A', { desc = 'Jump to End of Line in insert mode' })
+
 -- Change inner quotes
 vim.keymap.set('o', 'iq', "i'")
 vim.keymap.set('o', 'iQ', 'i"')

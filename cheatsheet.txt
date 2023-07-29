@@ -380,3 +380,7 @@ Zen Mode Toggle | <Leader>z
 
 ## ssr @search @replace
 Search and Replace with LSP | <Leader>r
+
+## Jump-in-Insert-Mode
+Jump to Beginn of Line in insert mode | <M-i>
+Jump to End of Line in insert mode | <M-a>
