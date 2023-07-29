@@ -44,3 +44,10 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.keymap.set('n', 'q', '<cmd>bd<cr>', { silent = true, buffer = true })
     end,
 })
+
+-- Check if code actions are availeble on lsp
+vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+    callback = function()
+        require('code_action_utils').code_action_listener()
+    end,
+})
