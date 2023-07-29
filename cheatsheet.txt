@@ -384,3 +384,9 @@ Search and Replace with LSP | <Leader>r
 ## Jump-in-Insert-Mode
 Jump to Beginn of Line in insert mode | <M-i>
 Jump to End of Line in insert mode | <M-a>
+
+## Glance
+Glance references       | <Space>gr
+Glance definitions      | <Space>gd
+Glance type_definitions | <Space>gy
+Glance implementations  | <Space>gm

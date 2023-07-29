@@ -16,9 +16,10 @@ return {
             ['<leader>x'] = { name = '+Trouble' }, -- Trouble
             ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
             ['<space>c'] = { name = '+Code actions / Cheatsheet' }, -- Code Actions with LSP
+            ['<space>g'] = { name = '+Glance LSP' }, -- Glance LSP locations
             ['<space>n'] = { name = '+Noice' }, -- Noice.nvim
-            ['<space>w'] = { name = '+Workspace LSP' }, -- Workspace LSP
             ['<space>r'] = { name = '+Rename with LSP' }, -- Rename with LSP
+            ['<space>w'] = { name = '+Workspace LSP' }, -- Workspace LSP
         })
     end,
     opts = {
