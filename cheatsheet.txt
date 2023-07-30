@@ -302,13 +302,13 @@ Close Git-Diffview | <Leader>gc
 
 ## Gitsigns
 Go to next git hunk        | <Leader>hn
-Go to previous git hunk    | <Leader>hp
+Go to previous git hunk    | <Leader>hN
 Git hunk stage             | <Leader>hs
 Git hunk reset             | <Leader>hr
 Git hunk stage buffer      | <Leader>hS
 Git hunk reset buffer      | <Leader>hR
 Git hunk undo stage        | <Leader>hu
-Git hunk preview           | <Leader>hv
+Git hunk preview           | <Leader>hp
 Git hunk blame line        | <Leader>hb
 Git hunk diff              | <Leader>hd
 Git hunk diff              | <Leader>hD
