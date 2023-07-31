@@ -8,7 +8,7 @@ return {
     config = function()
         require('noice').setup({
             messages = {
-                view_history = 'notify',
+                view_history = 'popup',
             },
             commands = {
                 history = {
