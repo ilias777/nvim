@@ -408,12 +408,11 @@ return {
         keys = {
             { '<C-f>' },
             { '<C-b>' },
-            { 'n' },
+            { '<C-d>' },
+            { '<C-u>' },
             { 'zz' },
             { 'zt' },
             { 'zb' },
-            { '0' },
-            { '$' },
         },
         config = function()
             -- vim.keymap.set({ 'n', 'x' }, '0', "<Cmd>lua Scroll('0')<CR>")
@@ -423,11 +422,8 @@ return {
             vim.keymap.set('n', 'zt', "<Cmd>lua Scroll('zt', 0, 1)<CR>")
             vim.keymap.set('n', 'zb', "<Cmd>lua Scroll('zb', 0, 1)<CR>")
             require('cinnamon').setup({
-                extra_keymaps = false,
-                extended_keymaps = false,
                 always_scroll = true,
                 scroll_limit = 200,
-                -- centered = true,
             })
         end,
     },
