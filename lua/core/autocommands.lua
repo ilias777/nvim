@@ -60,8 +60,8 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- Check if code actions are availeble on lsp
-vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-    callback = function()
-        require('code_action_utils').code_action_listener()
-    end,
-})
+-- vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+--     callback = function()
+--         require('code_action_utils').code_action_listener()
+--     end,
+-- })
