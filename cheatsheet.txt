@@ -148,7 +148,7 @@ Hop to Line                        | <Leader>hl
 Hop to one charecter               | <Leader>h1
 Hop to two charecters              | <Leader>h2
 Hop to Pattern                     | <Leader>hp
-Hop Anywhere                       | <Leader>ha
+Hop Anywhere                       | <Leader>hh
 Hop Vertical                       | <Leader>hc
 
 ## trouble-lsp
