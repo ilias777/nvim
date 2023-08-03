@@ -1,73 +1,83 @@
 return {
-    'folke/noice.nvim',
-    event = 'VeryLazy',
-    dependencies = {
-        'MunifTanjim/nui.nvim',
-        'rcarriga/nvim-notify',
-    },
-    config = function()
-        require('noice').setup({
-            messages = {
-                view_history = 'popup',
-            },
-            commands = {
-                history = {
-                    view = 'popup',
+    {
+        'folke/noice.nvim',
+        event = 'VeryLazy',
+        dependencies = {
+            'MunifTanjim/nui.nvim',
+            'rcarriga/nvim-notify',
+        },
+        config = function()
+            require('noice').setup({
+                messages = {
+                    view_history = 'popup',
                 },
-            },
-            lsp = {
-                progress = {
-                    enabled = false,
-                },
-                signature = {
-                    enabled = false,
-                },
-                hover = {
-                    enabled = false,
-                },
-            },
-            views = {
-                cmdline_popup = {
-                    -- border = {
-                    --     style = 'none',
-                    --     style = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
-                    --     padding = { 1, 3 },
-                    -- },
-                    -- win_options = {
-                    --     winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
-                    -- },
-                    position = {
-                        row = 3,
-                        col = '50%',
+                commands = {
+                    history = {
+                        view = 'popup',
                     },
                 },
-            },
-            presets = {
-                inc_rename = true,
-            },
-            routes = {
-                {
-                    view = 'mini',
-                    filter = {
-                        -- event = {
-                        --     'msg_showmode',
-                        --     -- 'msg_showcmd',
+                lsp = {
+                    progress = {
+                        enabled = false,
+                    },
+                    signature = {
+                        enabled = false,
+                    },
+                    hover = {
+                        enabled = false,
+                    },
+                },
+                views = {
+                    cmdline_popup = {
+                        -- border = {
+                        --     style = 'none',
+                        --     style = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
+                        --     padding = { 1, 3 },
                         -- },
-                        event = 'msg_show',
-                        kind = '',
-                        find = 'geschrieben',
+                        -- win_options = {
+                        --     winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
+                        -- },
+                        position = {
+                            row = 3,
+                            col = '50%',
+                        },
                     },
                 },
-                -- {
-                --     view = 'mini',
-                --     filter = {
-                --         event = {
-                --             'msg_showmode',
-                --             -- 'msg_showcmd',
-                --         },
-                --     },
-                -- },
-            },
-        })
-    end,
+                presets = {
+                    inc_rename = true,
+                },
+                routes = {
+                    {
+                        view = 'mini',
+                        filter = {
+                            -- event = {
+                            --     'msg_showmode',
+                            --     -- 'msg_showcmd',
+                            -- },
+                            event = 'msg_show',
+                            kind = '',
+                            find = 'geschrieben',
+                        },
+                    },
+                    -- {
+                    --     view = 'mini',
+                    --     filter = {
+                    --         event = {
+                    --             'msg_showmode',
+                    --             -- 'msg_showcmd',
+                    --         },
+                    --     },
+                    -- },
+                },
+            })
+        end,
+    },
+    {
+        'rcarriga/nvim-notify',
+        event = 'VeryLazy',
+        opts = {
+            render = 'compact',
+            stages = 'slide',
+        },
+    },
 }
