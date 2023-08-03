@@ -80,6 +80,10 @@ vim.keymap.set('n', '<leader>O', 'O<Esc>')
 vim.keymap.set('n', '<BS>', 'ge')
 vim.keymap.set('n', '<C-BS>', 'a<C-w>')
 
+-- Go to last change
+vim.keymap.set('n', 'g,', 'g;', { desc = 'Go to newest change' })
+vim.keymap.set('n', 'g;', 'g,', { desc = 'Go to last change' })
+
 -- Clear search with <esc>
 vim.keymap.set({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and clear hlsearch' })
 
