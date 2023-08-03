@@ -278,9 +278,9 @@ Open Lazy.nvim | <Leader><Leader>l
 Add Breakpoint             | <Leader>db
 Add Conditional Breakpoint | <Leader>dB
 Dap Continue               | <Leader>dc
-Dap Step Into              | <Leader>di
-Dap Step Over              | <Leader>do
-Dap Step Out               | <Leader>ds
+Dap Step Into              | <Leader>dsi
+Dap Step Over              | <Leader>dso
+Dap Step Out               | <Leader>dst
 Dap Terminate              | <Leader>dt
 Dap Show Log               | <Leader>dl
 Dap Toggle Repl            | <Leader>dr

@@ -9,6 +9,7 @@ return {
         wk.register({
             ['<leader>c'] = { name = '+Comment Frame/Box' }, -- Comment Frame & Comment Box
             ['<leader>d'] = { name = '+Debug' }, -- nvim-dap
+            ['<leader>ds'] = { name = '+Dap Step' }, -- nvim-dap step
             ['<leader>f'] = { name = '+File' }, -- Telescope
             ['<leader>g'] = { name = '+Git' }, -- Git
             ['<leader>h'] = { name = 'Hunk Gitsigns/Hop Motion' }, -- Hop

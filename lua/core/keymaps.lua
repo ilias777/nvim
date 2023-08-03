@@ -123,9 +123,9 @@ vim.keymap.set('n', '<Leader>ls', '<cmd>Lazy sync<cr>', { desc = 'Sync Lazy Plug
 -- nvim-dap
 vim.keymap.set('n', '<leader>dB', '<cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', { desc = 'Add Conditional Breakpoint' })
 vim.keymap.set('n', '<leader>dc', '<cmd>DapContinue<CR>', { desc = 'Dap Continue' })
-vim.keymap.set('n', '<leader>di', '<cmd>DapStepInto<CR>', { desc = 'Dap Step Into' })
-vim.keymap.set('n', '<leader>do', '<cmd>DapStepOver<CR>', { desc = 'Dap Step Over' })
-vim.keymap.set('n', '<leader>ds', '<cmd>DapStepOut<CR>', { desc = 'Dap Step Out' })
+vim.keymap.set('n', '<leader>dsi', '<cmd>DapStepInto<CR>', { desc = 'Dap Step Into' })
+vim.keymap.set('n', '<leader>dso', '<cmd>DapStepOver<CR>', { desc = 'Dap Step Over' })
+vim.keymap.set('n', '<leader>dst', '<cmd>DapStepOut<CR>', { desc = 'Dap Step Out' })
 vim.keymap.set('n', '<leader>dt', '<cmd>DapTerminate<CR>', { desc = 'Dap Terminate' })
 vim.keymap.set('n', '<leader>dl', '<cmd>DapShowLog<CR>', { desc = 'Dap Show Log' })
 vim.keymap.set('n', '<leader>dr', '<cmd>DapToggleRepl<CR>', { desc = 'Dap Toggle Repl' })
