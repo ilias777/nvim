@@ -65,3 +65,9 @@ vim.api.nvim_create_autocmd('FileType', {
 --         require('code_action_utils').code_action_listener()
 --     end,
 -- })
+
+-- Open help in a new tab
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'help',
+    command = ':wincmd T',
+})
