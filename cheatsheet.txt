@@ -296,9 +296,9 @@ Aligns to a string, looking left and with previews      | aw
 Aligns to a Lua pattern, looking left and with previews | ar
 
 ## Git
-Open Neogit        | <Leader>gg
-Open Git-Diffview  | <Leader>go
-Close Git-Diffview | <Leader>gc
+Open Neogit    | <Leader>gg
+Diffview Open  | <Leader>do
+Diffview Close | <Leader>dc
 
 ## Gitsigns
 Go to next git hunk        | <Leader>hn

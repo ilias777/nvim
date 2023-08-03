@@ -138,8 +138,8 @@ vim.keymap.set('n', '<leader>fs', '<cmd>Telescope symbols<cr>', { desc = 'Find S
 vim.keymap.set('n', '<leader>fr', ':lua require"telescope.builtin".registers{}<cr>', { desc = 'List Registers' })
 
 -- diffview.nvim
-vim.keymap.set('n', '<leader>go', '<cmd>DiffviewOpen<cr>', { desc = 'Open Diffview' })
-vim.keymap.set('n', '<leader>gc', '<cmd>DiffviewClose<cr>', { desc = 'Close Diffview' })
+vim.keymap.set('n', '<leader>do', '<cmd>DiffviewOpen<cr>', { desc = 'Open Diffview' })
+vim.keymap.set('n', '<leader>dc', '<cmd>DiffviewClose<cr>', { desc = 'Close Diffview' })
 
 -- hop.nvim
 vim.keymap.set('n', '<leader>hl', '<cmd>HopLine<cr>', { desc = 'Hop Line' })
