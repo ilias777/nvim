@@ -214,10 +214,18 @@ return {
     {
         'smoka7/multicursors.nvim',
         enabled = true,
-        event = 'BufReadPre',
         dependencies = {
             'nvim-treesitter/nvim-treesitter',
             'smoka7/hydra.nvim',
+        },
+        cmd = { 'MCstart', 'MCvisual', 'MCclear', 'MCpattern', 'MCvisualPattern', 'MCunderCursor' },
+        keys = {
+            {
+                mode = { 'v', 'n' },
+                '<Leader>m',
+                '<cmd>MCstart<cr>',
+                desc = 'Create Multicursor',
+            },
         },
         opts = function()
             local N = require('multicursors.normal_mode')
@@ -238,18 +246,18 @@ return {
                         -- assigning nil to method exits from multi cursor mode
                         method = I.Cr_method,
                         -- description to show in hint window
-                        desc = 'new line',
+                        desc = 'New line',
                     },
                 },
             }
         end,
-        keys = {
-            {
-                '<Leader>m',
-                '<cmd>MCstart<cr>',
-                desc = 'Create Multicursor',
-            },
-        },
+        config = function()
+            require('multicursors').setup({
+                hint_config = {
+                    border = 'single',
+                },
+            })
+        end,
         -- init = function()
         --     local colors = require('catppuccin.palettes').get_palette('mocha')
         --     vim.api.nvim_set_hl(0, 'MultiCursor', { fg = colors.maroon, bg = colors.crust })
