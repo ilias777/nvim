@@ -4,7 +4,8 @@ return {
     ---@type Flash.Config
     opts = {
         label = {
-            reuse = 'all', ---@type "lowercase" | "all"
+            ---@type "lowercase" | "all"
+            reuse = 'all',
         },
         modes = {
             char = {
