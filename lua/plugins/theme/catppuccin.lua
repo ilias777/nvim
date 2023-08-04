@@ -33,7 +33,7 @@ catppuccin.setup({
                 background = false,
             },
         },
-        flash = false,
+        flash = true,
     },
     custom_highlights = function(colors)
         return {
