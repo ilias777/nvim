@@ -254,7 +254,8 @@ return {
         config = function()
             require('multicursors').setup({
                 hint_config = {
-                    border = 'single',
+                    border = 'rounded',
+                    position = 'top',
                 },
             })
         end,
