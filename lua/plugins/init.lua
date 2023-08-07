@@ -375,6 +375,18 @@ return {
         -- lazy-loading with `cmd =` does not work well with incremental preview
         event = 'CmdlineEnter',
     },
+    {
+        'jokajak/keyseer.nvim',
+        enabled = true,
+        version = false,
+        cmd = 'KeySeer',
+        opts = {
+            ui = {
+                winblend = 100,
+                border = 'rounded',
+            },
+        },
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                         WRITING                          │
