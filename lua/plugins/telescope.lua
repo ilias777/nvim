@@ -12,6 +12,7 @@ return {
         { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
         { '<leader>ft', '<cmd>Telescope git_files<cr>', desc = 'Find Git Files' },
         { '<leader>fp', '<cmd>Telescope spell_suggest<cr>', desc = 'Find Spell Suggest' },
+        { '<leader>fz', '<cmd>Telescope zoxide list<cr>', desc = 'Find Directory' },
     },
     branch = '0.1.x',
     dependencies = {
@@ -20,6 +21,7 @@ return {
         'nvim-telescope/telescope-symbols.nvim',
         'xiyaowong/telescope-emoji.nvim',
         'debugloop/telescope-undo.nvim',
+        'jvgrootveld/telescope-zoxide',
     },
     config = function()
         local trouble = require('trouble.providers.telescope')
@@ -95,6 +97,7 @@ return {
         require('telescope').load_extension('undo')
         require('telescope').load_extension('advanced_git_search')
         require('telescope').load_extension('yank_history')
+        require('telescope').load_extension('zoxide')
         -- require('telescope').load_extension('heading')
         -- require('telescope').load_extension('neoclip')
         -- require('telescope').load_extension('noice')

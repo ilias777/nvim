@@ -101,6 +101,7 @@ Find emoji                 | <Leader>fj
 Find diagnostics           | <Leader>fd
 Find git files             | <Leader>ft
 Find spell suggest         | <Leader>fp
+Find Directory             | <Leader>fz
 
 ## Telescope-File-Browser
 Create file/folder                                  | c
