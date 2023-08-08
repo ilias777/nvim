@@ -385,6 +385,9 @@ return {
                 winblend = 100,
                 border = 'rounded',
             },
+            keyboard = {
+                layout = 'qwertz',
+            },
         },
     },
 
