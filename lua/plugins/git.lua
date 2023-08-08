@@ -86,7 +86,11 @@ return {
         keys = {
             { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Neogit' },
         },
-        dependencies = 'nvim-lua/plenary.nvim',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope.nvim',
+            'sindrets/diffview.nvim',
+        },
         config = function()
             require('neogit').setup({
                 disable_commit_confirmation = true,
