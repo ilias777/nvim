@@ -94,9 +94,6 @@ return {
         config = true,
         opts = {
             disable_commit_confirmation = true,
-            commit_popup = {
-                kind = 'popup',
-            },
             integrations = {
                 telescope = true,
                 diffview = true,
