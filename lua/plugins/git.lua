@@ -91,14 +91,22 @@ return {
             'nvim-telescope/telescope.nvim',
             'sindrets/diffview.nvim',
         },
-        config = function()
-            require('neogit').setup({
-                disable_commit_confirmation = true,
-                integrations = {
-                    diffview = true,
-                },
-            })
-        end,
+        config = true,
+        opts = {
+            disable_commit_confirmation = true,
+            integrations = {
+                telescope = true,
+                diffview = true,
+            },
+        },
+        -- config = function()
+        --     require('neogit').setup({
+        --         disable_commit_confirmation = true,
+        --         integrations = {
+        --             diffview = true,
+        --         },
+        --     })
+        -- end,
     },
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                    Advance git search                    │
