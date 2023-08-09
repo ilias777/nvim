@@ -6,71 +6,69 @@ return {
             'MunifTanjim/nui.nvim',
             'rcarriga/nvim-notify',
         },
-        config = function()
-            require('noice').setup({
-                messages = {
-                    view_history = 'popup',
+        opts = {
+            messages = {
+                view_history = 'popup',
+            },
+            commands = {
+                history = {
+                    view = 'popup',
                 },
-                commands = {
-                    history = {
-                        view = 'popup',
-                    },
+            },
+            lsp = {
+                progress = {
+                    enabled = false,
                 },
-                lsp = {
-                    progress = {
-                        enabled = false,
-                    },
-                    signature = {
-                        enabled = false,
-                    },
-                    hover = {
-                        enabled = false,
-                    },
+                hover = {
+                    enabled = false,
                 },
-                views = {
-                    cmdline_popup = {
-                        -- border = {
-                        --     style = 'none',
-                        --     style = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
-                        --     padding = { 1, 3 },
-                        -- },
-                        -- win_options = {
-                        --     winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
-                        -- },
-                        position = {
-                            row = 3,
-                            col = '50%',
-                        },
-                    },
+                signature = {
+                    enabled = false,
                 },
-                presets = {
-                    inc_rename = true,
-                },
-                routes = {
-                    {
-                        view = 'mini',
-                        filter = {
-                            -- event = {
-                            --     'msg_showmode',
-                            --     -- 'msg_showcmd',
-                            -- },
-                            event = 'msg_show',
-                            kind = '',
-                            find = 'geschrieben',
-                        },
-                    },
-                    -- {
-                    --     view = 'mini',
-                    --     filter = {
-                    --         event = {
-                    --             'msg_showmode',
-                    --             -- 'msg_showcmd',
-                    --         },
-                    --     },
+            },
+            views = {
+                cmdline_popup = {
+                    -- border = {
+                    --     style = 'none',
+                    --     style = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
+                    --     padding = { 1, 3 },
                     -- },
+                    -- win_options = {
+                    --     winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
+                    -- },
+                    position = {
+                        row = 3,
+                        col = '50%',
+                    },
                 },
-            })
-        end,
+            },
+            presets = {
+                inc_rename = true,
+            },
+            routes = {
+                {
+                    view = 'mini',
+                    filter = {
+                        -- event = {
+                        --     'msg_showmode',
+                        --     -- 'msg_showcmd',
+                        -- },
+                        event = 'msg_show',
+                        kind = '',
+                        find = 'geschrieben',
+                    },
+                },
+                -- {
+                --     view = 'mini',
+                --     filter = {
+                --         event = {
+                --             'msg_showmode',
+                --             -- 'msg_showcmd',
+                --         },
+                --     },
+                -- },
+            },
+        },
     },
     {
         'rcarriga/nvim-notify',
