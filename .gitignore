@@ -11,6 +11,9 @@ lazy-lock.json
 test/
 test2/
 
+# Logo folder
+logo/
+
 # Java Degug folders
 vscode-java-test/
 java-debug/
