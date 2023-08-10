@@ -2,6 +2,9 @@
 --  │                      BASIC KEYMAPS                       │
 --  ╰──────────────────────────────────────────────────────────╯
 
+-- Function helpers
+local Utils = require('core.utils')
+
 -- Exit from insert mode
 vim.keymap.set('i', 'kj', '<esc>')
 
@@ -34,6 +37,9 @@ vim.keymap.set('n', '<Space>h', '<c-w>h', { desc = 'Split Left' })
 vim.keymap.set('n', '<Space>l', '<c-w>l', { desc = 'Split Right' })
 vim.keymap.set('n', '<Space>k', '<c-w>k', { desc = 'Split Up' })
 vim.keymap.set('n', '<Space>j', '<c-w>j', { desc = 'Split Down' })
+vim.keymap.set('n', '<Space>m', function()
+    Utils.max_or_equal()
+end, { desc = 'Split Down' })
 
 -- Resize split panes
 vim.keymap.set('n', '<M-UP>', '<cmd>resize +2<cr>')
