@@ -13,6 +13,8 @@ return {
                 'lazy',
                 'mason',
                 'notify',
+                'NeogitStatus',
+                'NeogitPopup',
             },
             callback = function()
                 vim.b.miniindentscope_disable = true
