@@ -35,76 +35,26 @@ return {
             view = {
                 width = 45,
                 side = 'right',
-                float = {
-                    enable = false,
-                    quit_on_focus_loss = true,
-                    open_win_config = {
-                        relative = 'editor',
-                        border = 'rounded',
-                        width = 40,
-                        height = 30,
-                        row = 1,
-                        col = 1,
-                    },
-                },
-            },
-            renderer = {
-                indent_markers = {
-                    enable = false,
-                    icons = {
-                        corner = '└ ',
-                        edge = '│ ',
-                        item = '│',
-                        bottom = '─',
-                        none = '  ',
-                    },
-                },
-                icons = {
-                    webdev_colors = true,
-                    glyphs = {
-                        default = '',
-                        symlink = '',
-                        bookmark = '',
-                        modified = '●',
-                        folder = {
-                            arrow_closed = '',
-                            arrow_open = '',
-                            default = '',
-                            open = '',
-                            empty = '',
-                            empty_open = '',
-                            symlink = '',
-                            symlink_open = '',
-                        },
-                    },
-                },
+                -- float = {
+                --     enable = false,
+                --     quit_on_focus_loss = true,
+                --     open_win_config = {
+                --         relative = 'editor',
+                --         border = 'rounded',
+                --         width = 40,
+                --         height = 30,
+                --         row = 1,
+                --         col = 1,
+                --     },
+                -- },
             },
             diagnostics = {
                 enable = true,
-                show_on_dirs = false,
-                icons = {
-                    hint = ' ',
-                    info = ' ',
-                    warning = ' ',
-                    error = ' ',
-                },
-            },
-            git = {
-                enable = true,
-                ignore = true,
-                show_on_dirs = true,
-                show_on_open_dirs = true,
-                timeout = 400,
             },
             actions = {
                 open_file = {
                     quit_on_open = true,
-                    resize_window = true,
                 },
-            },
-            trash = {
-                cmd = 'trash',
-                require_confirm = true,
             },
         })
         open_nvim_tree()
