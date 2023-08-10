@@ -2,7 +2,7 @@ return {
     'nvim-neo-tree/neo-tree.nvim',
     enabled = true,
     branch = 'v3.x',
-    lazy = false,
+    event = 'BufReadPre',
     keys = {
         {
             '<Space>e',
@@ -23,7 +23,7 @@ return {
     },
     init = function()
         vim.api.nvim_create_autocmd('VimEnter', {
-            command = 'Neotree show right',
+            command = 'Neotree right',
         })
     end,
     opts = {
