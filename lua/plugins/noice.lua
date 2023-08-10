@@ -26,47 +26,35 @@ return {
                     enabled = false,
                 },
             },
+            presets = {
+                inc_rename = true,
+            },
             views = {
                 cmdline_popup = {
-                    -- border = {
-                    --     style = 'none',
-                    --     style = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
-                    --     padding = { 1, 3 },
-                    -- },
-                    -- win_options = {
-                    --     winhighlight = 'NormalFloat:NormalFloat,FloatBorder:FloatBorder',
-                    -- },
                     position = {
                         row = 3,
                         col = '50%',
                     },
                 },
             },
-            presets = {
-                inc_rename = true,
-            },
             routes = {
                 {
                     view = 'mini',
                     filter = {
-                        -- event = {
-                        --     'msg_showmode',
-                        --     -- 'msg_showcmd',
-                        -- },
                         event = 'msg_show',
                         kind = '',
                         find = 'geschrieben',
                     },
                 },
-                -- {
-                --     view = 'mini',
-                --     filter = {
-                --         event = {
-                --             'msg_showmode',
-                --             -- 'msg_showcmd',
-                --         },
-                --     },
-                -- },
+                {
+                    view = 'mini',
+                    filter = {
+                        event = {
+                            'msg_showmode',
+                            -- 'msg_showcmd',
+                        },
+                    },
+                },
             },
         },
     },
