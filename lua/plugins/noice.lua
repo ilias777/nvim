@@ -8,7 +8,7 @@ return {
         },
         opts = {
             messages = {
-                view_history = 'popup',
+                view_history = 'notify',
             },
             commands = {
                 history = {
