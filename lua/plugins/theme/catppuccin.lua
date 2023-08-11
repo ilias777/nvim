@@ -18,7 +18,6 @@ catppuccin.setup({
         lsp_trouble = true,
         mason = true,
         neogit = true,
-        neotree = true,
         noice = true,
         notify = true,
         symbols_outline = true,
