@@ -10,9 +10,9 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
         -- Always open nvim-tree
-        local function open_nvim_tree()
-            require('nvim-tree.api').tree.open()
-        end
+        -- local function open_nvim_tree()
+        --     require('nvim-tree.api').tree.open()
+        -- end
 
         local function my_on_attach(bufnr)
             local api = require('nvim-tree.api')
@@ -58,6 +58,6 @@ return {
                 },
             },
         })
-        open_nvim_tree()
+        -- open_nvim_tree()
     end,
 }
