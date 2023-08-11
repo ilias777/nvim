@@ -21,11 +21,12 @@ return {
         'nvim-tree/nvim-web-devicons',
         'MunifTanjim/nui.nvim',
     },
-    init = function()
-        vim.api.nvim_create_autocmd('VimEnter', {
-            command = 'Neotree right',
-        })
-    end,
+    -- init = function()
+    --     -- Auto-open on startup
+    --     vim.api.nvim_create_autocmd('VimEnter', {
+    --         command = 'Neotree right',
+    --     })
+    -- end,
     opts = {
         filesystem = {
             window = {
