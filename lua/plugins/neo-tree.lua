@@ -42,12 +42,6 @@ return {
             indent = {
                 with_markers = false,
             },
-            git_status = {
-                symbols = {
-                    added = '✚', -- or "✚", but this is redundant info if you use git_status_colors on the name
-                    modified = '', -- or "", but this is redundant info if you use git_status_colors on the name
-                },
-            },
         },
         event_handlers = {
             {
