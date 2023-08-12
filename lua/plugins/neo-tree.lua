@@ -46,6 +46,12 @@ return {
             indent = {
                 with_markers = false,
             },
+            git_status = {
+                symbols = {
+                    -- Status type
+                    unstaged = '',
+                },
+            },
         },
         event_handlers = {
             {
