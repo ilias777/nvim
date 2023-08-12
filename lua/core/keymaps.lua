@@ -141,7 +141,7 @@ vim.keymap.set('n', '<leader>fc', ":lua require'telescope.builtin'.commands{}<cr
 vim.keymap.set('n', '<leader>fj', '<cmd>Telescope emoji<cr>', { desc = 'Find emoji' })
 vim.keymap.set('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', { desc = 'Recently opened files' })
 vim.keymap.set('n', '<leader>fs', '<cmd>Telescope symbols<cr>', { desc = 'Find Symbols' })
-vim.keymap.set('n', '<leader>fr', ':lua require"telescope.builtin".registers{}<cr>', { desc = 'List Registers' })
+-- vim.keymap.set('n', '<leader>fr', ':lua require"telescope.builtin".registers{}<cr>', { desc = 'List Registers' })
 
 -- diffview.nvim
 vim.keymap.set('n', '<leader>do', '<cmd>DiffviewOpen<cr>', { desc = 'Open Diffview' })
