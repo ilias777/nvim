@@ -65,6 +65,9 @@ return {
                 registers = {
                     theme = 'ivy',
                 },
+                live_grep = {
+                    theme = 'ivy',
+                },
             },
             extensions = {
                 file_browser = {
