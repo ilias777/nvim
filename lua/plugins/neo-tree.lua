@@ -13,7 +13,7 @@ return {
                     position = 'right',
                 })
             end,
-            desc = 'Buffers (root dir)',
+            desc = 'Filesystem (root dir)',
         },
     },
     dependencies = {
@@ -28,14 +28,18 @@ return {
     --     })
     -- end,
     opts = {
-        filesystem = {
-            window = {
-                mappings = {
-                    ['o'] = {
-                        command = 'open',
-                        nowait = true,
-                    },
-                },
+        window = {
+            mappings = {
+                ['o'] = 'open',
+                ['e'] = function()
+                    vim.api.nvim_exec('Neotree focus filesystem right', true)
+                end,
+                ['b'] = function()
+                    vim.api.nvim_exec('Neotree focus buffers right', true)
+                end,
+                ['g'] = function()
+                    vim.api.nvim_exec('Neotree focus git_status right', true)
+                end,
             },
         },
         default_component_configs = {
