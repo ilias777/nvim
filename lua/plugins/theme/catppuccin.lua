@@ -111,6 +111,16 @@ catppuccin.setup({
             -- Inlay hints
             -- LspInlayHint = { bg = colors.mantle },
 
+            -- Neotree
+            NeoTreeGitAdded = { fg = colors.green, style = { 'italic' } },
+            NeoTreeGitConflict = { fg = colors.red, style = { 'italic' } },
+            NeoTreeGitDeleted = { fg = colors.red, style = { 'italic' } },
+            NeoTreeGitIgnored = { fg = colors.overlay0, style = { 'italic' } },
+            NeoTreeGitModified = { fg = colors.yellow, style = { 'italic' } },
+            NeoTreeGitUnstaged = { fg = colors.red, style = { 'italic' } },
+            NeoTreeGitUntracked = { fg = colors.blue, style = { 'italic' } },
+            NeoTreeGitStaged = { fg = colors.green, style = { 'italic' } },
+
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.mantle), style = { 'italic' } },
         }
