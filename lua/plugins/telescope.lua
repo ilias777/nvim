@@ -72,7 +72,7 @@ return {
                     initial_mode = 'normal',
                     mappings = {
                         ['n'] = {
-                            -- ['o'] = fb_actions.select_default,
+                            ['o'] = 'select_default',
                         },
                     },
                 },
