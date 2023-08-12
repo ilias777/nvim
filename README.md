@@ -129,7 +129,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 #### File Explorer
 
-- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - A simple and fast file explorer tree.
+- [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) - Manage and browse the file system.
 
 #### Plugins for LSP
 
@@ -137,7 +137,9 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [mason](https://github.com/williamboman/mason.nvim) - Install and manage LSP servers.
 - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim) - Bridge between mason and lsp-ocnfig.
 - [trouble.nvim](https://github.com/folke/trouble.nvim) - A pretty diagnostics, references, telescope results, quickfix and location list.
+- [glance.nvim](https://github.com/dnlhc/glance.nvim) - A pretty window for previewing, navigating and editing your LSP locations.
 - [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim) - Incremental LSP rename command.
+- [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) - A tree like view for symbols using LSP.
 - [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls) - Extensions for the built-in LSP support for eclipse.jdt.ls.
 
 #### Autocompletion
@@ -171,6 +173,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 #### Git integration
 
+- [advanced-git-search](https://github.com/aaronhallaert/advanced-git-search.nvim) - Search your git history by commit message, content and author with Telescope.
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Interface for easily cycling through diffs.
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim) - Git integration: signs, hunk actions, blame, etc.
 - [neogit](https://github.com/NeogitOrg/neogit) - A Magit clone for Neovim
@@ -179,10 +182,8 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 - [align.nvim](https://github.com/Vonr/align.nvim) - Aligning lines.
 - [cheatsheet.nvim](https://github.com/sudormrfbin/cheatsheet.nvim) - Searchable cheatsheet.
-- [focus.nvim](https://github.com/beauwilliams/focus.nvim) - Auto-Focusing and Auto-Resizing Splits/Windows.
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - IndentLine replacement.
 - [live-command.nvim](https://github.com/smjonas/live-command.nvim) - Text editing with immediate visual feedback.
-- [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your browser.
 - [multicursors.nvim](https://github.com/smoka7/multicursors.nvim) - A multi cursor plugin.
 - [noice.nvim](https://github.com/folke/noice.nvim) - Replaces the UI for messages, cmdline and the popupmenu.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - A minimalist autopairs.
@@ -192,12 +193,12 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [nvim-toggler](https://github.com/nguyenvukhang/nvim-toggler) - Invert text.
 - [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) - Ultra fold with modern looking and performance boosting.
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Show dev icons.
-- [sentiment.nvim](https://github.com/utilyre/sentiment.nvim) - Enhanced matchparen.
+- [rainbow-delimiters](https://github.com/HiPhish/rainbow-delimiters.nvim) - Rainbow delimiters for Neovim with Treesitter.
 - [ssr.nvim](https://github.com/cshuaimin/ssr.nvim) - Treesitter based structural search and replace plugin.
 - [statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim) - Configurable 'statuscolumn' with builtin segments and click handlers.
-- [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) - A tree like view for symbols.
 - [vim-visual-multi](https://github.com/mg979/vim-visual-multi) - Multiple cursors.
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Popup of keybindings.
+- [yanky.nvim](https://github.com/gbprod/yanky.nvim) - Improved Yank and Put functionalities.
 - [zen-mode.nvim](https://github.com/folke/zen-mode.nvim) - Distraction-free coding.
 
 #### Treesitter
@@ -234,6 +235,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 #### Writing
 
 - [vimtex](https://github.com/lervag/vimtex) - A modern Vim and Neovim filetype and syntax plugin for LaTeX files.
+- [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your browser.
 
 ### Preinstalled Language Servers
 
