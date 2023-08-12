@@ -9,6 +9,7 @@ return {
         { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Find Help' },
         { '<leader>fk', '<cmd>Telescope keymaps<cr>', desc = 'Find Keymaps' },
         { '<leader>fl', '<cmd>Telescope highlights<cr>', desc = 'Find Highlights' },
+        { '<leader>fr', '<cmd>Telescope grep_string<cr>', desc = 'Find Word Under Cursor' },
         { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
         { '<leader>ft', '<cmd>Telescope git_files<cr>', desc = 'Find Git Files' },
         { '<leader>fp', '<cmd>Telescope spell_suggest<cr>', desc = 'Find Spell Suggest' },
@@ -63,6 +64,10 @@ return {
                     theme = 'dropdown',
                 },
                 registers = {
+                    theme = 'ivy',
+                },
+                grep_string = {
+                    initial_mode = 'normal',
                     theme = 'ivy',
                 },
                 live_grep = {
