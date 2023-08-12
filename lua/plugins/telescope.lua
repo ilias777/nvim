@@ -64,9 +64,9 @@ return {
                 help_tags = {
                     theme = 'ivy',
                 },
-                symbols = {
-                    theme = 'dropdown',
-                },
+                -- symbols = {
+                --     theme = 'dropdown',
+                -- },
                 registers = {
                     theme = 'ivy',
                 },
@@ -79,6 +79,9 @@ return {
                 },
             },
             extensions = {
+                symbols = {
+                    theme = 'dropdown',
+                },
                 file_browser = {
                     theme = 'ivy',
                     initial_mode = 'normal',
