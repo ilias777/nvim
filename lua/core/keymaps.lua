@@ -136,13 +136,6 @@ vim.keymap.set('n', '<leader>dt', '<cmd>DapTerminate<CR>', { desc = 'Dap Termina
 vim.keymap.set('n', '<leader>dl', '<cmd>DapShowLog<CR>', { desc = 'Dap Show Log' })
 vim.keymap.set('n', '<leader>dr', '<cmd>DapToggleRepl<CR>', { desc = 'Dap Toggle Repl' })
 
--- telescope.nvim
-vim.keymap.set('n', '<leader>fc', ":lua require'telescope.builtin'.commands{}<cr>", { desc = 'List Commands' })
-vim.keymap.set('n', '<leader>fj', '<cmd>Telescope emoji<cr>', { desc = 'Find emoji' })
-vim.keymap.set('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', { desc = 'Recently opened files' })
-vim.keymap.set('n', '<leader>fs', '<cmd>Telescope symbols<cr>', { desc = 'Find Symbols' })
--- vim.keymap.set('n', '<leader>fr', ':lua require"telescope.builtin".registers{}<cr>', { desc = 'List Registers' })
-
 -- diffview.nvim
 vim.keymap.set('n', '<leader>do', '<cmd>DiffviewOpen<cr>', { desc = 'Open Diffview' })
 vim.keymap.set('n', '<leader>dc', '<cmd>DiffviewClose<cr>', { desc = 'Close Diffview' })

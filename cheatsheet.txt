@@ -89,19 +89,23 @@ Toggle visibility of dotfiles                             | H
 Refresh the tree                                          | R
 
 ## Telescope
-Find files in telescope    | <Leader>ff
-Grep in telescope          | <Leader>fg
-Find buffers in telescope  | <Leader>fb
-Find help in telescope     | <Leader>fh
-Browser in telescope       | <Leader>fe
-Find commands in telescope | <Leader>fc
-Find yanks in telescope    | <Leader>fv
-Find symbols               | <Leader>fs
-Find emoji                 | <Leader>fj
-Find diagnostics           | <Leader>fd
-Find git files             | <Leader>ft
-Find spell suggest         | <Leader>fp
-Find Directory             | <Leader>fz
+Find buffers             | <Leader>fb
+Find commands            | <Leader>fc
+Find diagnostics         | <Leader>fd
+File browser             | <Leader>fe
+Find files               | <Leader>ff
+Live grep                | <Leader>fg
+Find help                | <Leader>fh
+Find emoji               | <Leader>fj
+Find keymaps             | <Leader>fk
+Find highlights          | <Leader>fl
+Find old files           | <Leader>fo
+Find spell suggest       | <Leader>fp
+Grep string under cursor | <Leader>fr
+Find symbols             | <Leader>fs
+Find git files           | <Leader>ft
+Find undo                | <Leader>fu
+Find Directory           | <Leader>fz
 
 ## Telescope-File-Browser
 Create file/folder                                  | c
