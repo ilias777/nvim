@@ -51,6 +51,10 @@ return {
                     -- theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
                     -- layout_strategy = 'vertical',
                     -- layout_config = { height = 0.9 },
+                    layout_config = {
+                        prompt_position = 'top',
+                    },
+                    sorting_strategy = 'ascending',
                 },
                 help_tags = {
                     theme = 'ivy',
