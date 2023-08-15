@@ -15,6 +15,7 @@ return {
                 'notify',
                 'NeogitStatus',
                 'NeogitPopup',
+                'lspinfo',
             },
             callback = function()
                 vim.b.miniindentscope_disable = true
