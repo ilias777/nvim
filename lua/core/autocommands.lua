@@ -38,18 +38,18 @@ vim.api.nvim_create_autocmd('FileType', {
 -- })
 
 -- Force treesitter to work with specific filestypes
-vim.filetype.add({
-    extension = {
-        sh = 'sh',
-        zsh = 'sh',
-        conf = 'sh',
-    },
-    filename = {
-        ['.zshrc'] = 'sh',
-        ['.zshenv'] = 'sh',
-        ['.conf'] = 'sh',
-    },
-})
+-- vim.filetype.add({
+--     extension = {
+--         sh = 'sh',
+--         zsh = 'sh',
+--         conf = 'sh',
+--     },
+--     filename = {
+--         ['.zshrc'] = 'sh',
+--         ['.zshenv'] = 'sh',
+--         ['.conf'] = 'sh',
+--     },
+-- })
 
 -- Quit some windows with q
 vim.api.nvim_create_autocmd('FileType', {
