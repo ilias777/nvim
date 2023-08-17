@@ -5,11 +5,22 @@ return {
         event = 'BufReadPre',
         build = ':TSUpdate',
         dependencies = {
-            -- 'mrjones2014/nvim-ts-rainbow',
-            -- 'HiPhish/nvim-ts-rainbow2',
-            'nvim-treesitter/nvim-treesitter-textobjects',
-            'mfussenegger/nvim-treehopper',
-            'RRethy/nvim-treesitter-textsubjects',
+            -- TS Textobjects
+            { 'nvim-treesitter/nvim-treesitter-textobjects' },
+            -- TS Textsubjects
+            { 'RRethy/nvim-treesitter-textsubjects' },
+            -- TS Treehopper
+            { 'mfussenegger/nvim-treehopper' },
+            -- TS Context
+            { 'nvim-treesitter/nvim-treesitter-context' },
+            -- TS Node-Action
+            {
+                'ckolkey/ts-node-action',
+                keys = {
+                    { '+', '<cmd>NodeAction<cr>', desc = 'Trigger Node Action' },
+                },
+                opts = {},
+            },
         },
         config = function()
             require('nvim-treesitter.configs').setup({
@@ -37,7 +48,6 @@ return {
                     'rust',
                     'scss',
                     'toml',
-                    'vim',
                     'vue',
                     'yaml',
                 },
@@ -85,36 +95,10 @@ return {
                         ['<cr>'] = 'textsubjects-smart', -- works in visual mode
                     },
                 },
-                -- Rainbow
-                -- rainbow = {
-                --     enable = true,
-                --     query = 'rainbow-parens',
-                --     strategy = require('ts-rainbow.strategy.global'),
-                --     max_file_lines = 3000,
-                -- },
             })
         end,
     },
-    -- === Treesitter Context ===
-    {
-        'nvim-treesitter/nvim-treesitter-context',
-        event = 'BufReadPre',
-        config = function()
-            require('treesitter-context').setup()
-        end,
-    },
-    -- === Treesitter node action ===
-    {
-        'ckolkey/ts-node-action',
-        keys = {
-            { '+', '<cmd>NodeAction<cr>', desc = 'Trigger Node Action' },
-        },
-        dependencies = { 'nvim-treesitter' },
-        config = function()
-            require('ts-node-action').setup()
-        end,
-    },
-    -- === Treesitter Playground ===
+    -- Treesitter Playground
     {
         'nvim-treesitter/playground',
         cmd = { 'TSPlaygroundToggle', 'TSHighlightCapturesUnderCursor', 'TSNodeUnderCursor' },
