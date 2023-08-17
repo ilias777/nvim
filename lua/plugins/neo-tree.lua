@@ -2,7 +2,7 @@ return {
     'nvim-neo-tree/neo-tree.nvim',
     enabled = true,
     branch = 'v3.x',
-    event = 'VimEnter',
+    lazy = false,
     keys = {
         {
             '<Space>e',
