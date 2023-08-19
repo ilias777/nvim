@@ -54,7 +54,7 @@ return {
             end
         end)
 
-        -- Disable diagnostics on select mode
+        -- Disable diagnostics while expandingon select mode
         local augroup = vim.api.nvim_create_augroup('luasnip-expand', { clear = true })
 
         vim.api.nvim_create_autocmd('ModeChanged', {
