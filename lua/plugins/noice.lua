@@ -25,6 +25,20 @@ return {
                 signature = {
                     enabled = false,
                 },
+                documentation = {
+                    enabled = false,
+                    opts = {
+                        border = { style = 'rounded' },
+                        relative = 'cursor',
+                        position = {
+                            row = 2,
+                        },
+                        winhighlight = {
+                            Normal = 'LspFloat',
+                            FloatBorder = 'LspFloatBorder',
+                        },
+                    },
+                },
             },
             presets = {
                 bottom_search = true,
