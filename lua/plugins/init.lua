@@ -106,7 +106,7 @@ return {
             'hrsh7th/cmp-buffer',
             'saadparwaiz1/cmp_luasnip',
             'ray-x/cmp-treesitter',
-            -- 'hrsh7th/cmp-nvim-lsp-signature-help',
+            'hrsh7th/cmp-nvim-lsp-signature-help',
             'hrsh7th/cmp-nvim-lua',
             'f3fora/cmp-spell',
             'hrsh7th/cmp-path',

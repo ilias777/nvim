@@ -22,9 +22,9 @@ return {
                 hover = {
                     enabled = false,
                 },
-                -- signature = {
-                --     enabled = false,
-                -- },
+                signature = {
+                    enabled = false,
+                },
                 documentation = {
                     enabled = false,
                     opts = {
