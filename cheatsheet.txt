@@ -306,19 +306,20 @@ Diffview Open  | <Leader>do
 Diffview Close | <Leader>dc
 
 ## Gitsigns
-Go to next git hunk        | <Leader>hn
-Go to previous git hunk    | <Leader>hN
-Git hunk stage             | <Leader>hs
-Git hunk reset             | <Leader>hr
-Git hunk stage buffer      | <Leader>hS
-Git hunk reset buffer      | <Leader>hR
-Git hunk undo stage        | <Leader>hu
-Git hunk preview           | <Leader>hp
-Git hunk blame line        | <Leader>hb
-Git hunk diff              | <Leader>hd
-Git hunk diff              | <Leader>hD
-Git hunk toggle blame line | <Leader>tb
-Git hunk toggle deleted    | <Leader>td
+Go to next git hunk        | <Leader>gn
+Go to previous git hunk    | <Leader>gN
+Git hunk stage             | <Leader>gs
+Git hunk reset             | <Leader>gr
+Git hunk stage buffer      | <Leader>gS
+Git hunk reset buffer      | <Leader>gR
+Git hunk undo stage        | <Leader>gu
+Git hunk preview           | <Leader>gp
+Git hunk blame line        | <Leader>gb
+Git hunk blame line full   | <Leader>gB
+Git hunk diff              | <Leader>gd
+Git hunk diff              | <Leader>gD
+Git hunk toggle blame line | <Leader>gb
+Git hunk toggle deleted    | <Leader>gt
 Git select hunk            | vih
 
 ## Add-Blank-Lines
