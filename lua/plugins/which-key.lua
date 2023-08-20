@@ -8,18 +8,19 @@ return {
         local wk = require('which-key')
         wk.register({
             ['<leader>c'] = { name = '+Comment Frame/Box' }, -- Comment Frame & Comment Box
-            ['<leader>d'] = { name = '+Debug' }, -- nvim-dap
+            ['<leader>d'] = { name = '+Diffview/Debug' }, -- Diffview & nvim-dap
             ['<leader>ds'] = { name = '+Dap Step' }, -- nvim-dap step
             ['<leader>f'] = { name = '+File' }, -- Telescope
             ['<leader>g'] = { name = '+Git' }, -- Git
-            ['<leader>h'] = { name = 'Hunk Gitsigns/Hop Motion' }, -- Hop
-            ['<leader>t'] = { name = '+Toggle' }, -- Gitsigns
+            ['<leader>h'] = { name = '+Hop Motion' }, -- Hop
+            ['<leader>l'] = { name = '+Lazy' }, -- Lazy
             ['<leader>x'] = { name = '+Trouble' }, -- Trouble
             ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
             ['<space>c'] = { name = '+Code actions / Cheatsheet' }, -- Code Actions with LSP
             ['<space>g'] = { name = '+Glance LSP' }, -- Glance LSP locations
+            ['<space>i'] = { name = '+IncRename' }, -- IncRename
             ['<space>n'] = { name = '+Noice' }, -- Noice.nvim
-            ['<space>r'] = { name = '+Rename with LSP' }, -- Rename with LSP
+            ['<space>r'] = { name = '+Rename' }, -- Rename with LSP
             ['<space>w'] = { name = '+Workspace LSP' }, -- Workspace LSP
         })
     end,
