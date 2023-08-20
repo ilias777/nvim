@@ -153,6 +153,19 @@ cmp.setup({
             return vim_item
         end,
     },
+    sorting = {
+        comparators = {
+            cmp.config.compare.score,
+            cmp.config.compare.offset,
+            -- cmp.config.compare.exact,
+            -- cmp.config.compare.recently_used,
+            -- cmp.config.compare.length,
+            -- cmp.config.compare.locality,
+            -- cmp.config.compare.kind,
+            -- cmp.config.compare.sort_text,
+            -- cmp.config.compare.order,
+        },
+    },
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
