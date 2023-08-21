@@ -26,6 +26,9 @@ local opts = {
             lazy = '💤',
         },
     },
+    checker = {
+        enabled = true,
+    },
 }
 
 require('lazy').setup('plugins', opts)
