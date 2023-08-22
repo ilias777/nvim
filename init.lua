@@ -28,6 +28,7 @@ local opts = {
     },
     checker = {
         enabled = true,
+        concurrency = 100,
     },
 }
 
