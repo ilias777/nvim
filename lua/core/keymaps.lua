@@ -72,15 +72,23 @@ vim.keymap.set('n', 'C', '"_C')
 vim.keymap.set('i', '<M-i>', '<Esc>I', { desc = 'Jump to Beginn of Line in insert mode' })
 vim.keymap.set('i', '<M-a>', '<Esc>A', { desc = 'Jump to End of Line in insert mode' })
 
--- Change inner quotes
-vim.keymap.set('o', 'iq', "i'")
-vim.keymap.set('o', 'iQ', 'i"')
-vim.keymap.set('x', 'iq', "i'")
-vim.keymap.set('x', 'iQ', 'i"')
+-- Inner quotes
+vim.keymap.set({ 'o', 'x' }, 'iq', "i'", { desc = 'Inner Single Quotes' })
+vim.keymap.set({ 'o', 'x' }, 'iQ', 'i"', { desc = 'Inner Double Quotes' })
+
+-- Outer quotes
+vim.keymap.set({ 'o', 'x' }, 'aq', "2i'", { desc = 'Around Single Quotes' })
+vim.keymap.set({ 'o', 'x' }, 'aQ', '2i"', { desc = 'Around Double Quotes' })
+vim.keymap.set({ 'o', 'x' }, "a'", "2i'", { desc = 'Around Single Quotes' })
+vim.keymap.set({ 'o', 'x' }, 'a"', '2i"', { desc = 'Around Double Quotes' })
 
 -- Add blank line without leaving normal mode
 vim.keymap.set('n', '<leader>o', 'o<Esc>')
 vim.keymap.set('n', '<leader>O', 'O<Esc>')
+
+-- Add komma for arguments
+-- vim.keymap.set("n", ",,", [[f'a]])
+vim.keymap.set('i', '<C-,>', "<esc>f'a,")
 
 -- Delete word with backspace
 vim.keymap.set('n', '<BS>', 'ge')
