@@ -25,6 +25,7 @@ local kind_icons = {
     Property = ' ',
     Reference = ' ',
     Snippet = ' ',
+    String = ' ',
     Struct = ' ',
     Text = ' ',
     TypeParameter = '󰅲 ',
