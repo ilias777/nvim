@@ -33,13 +33,13 @@ vim.keymap.set('i', '<c-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
 vim.keymap.set('n', '<Space>bd', '<cmd>bd<cr>', { desc = 'Delete Buffer' })
 
 -- Move to window (split) using <space> hlkj keys
--- vim.keymap.set('n', '<Space>h', '<c-w>h', { desc = 'Split Left' })
--- vim.keymap.set('n', '<Space>l', '<c-w>l', { desc = 'Split Right' })
--- vim.keymap.set('n', '<Space>k', '<c-w>k', { desc = 'Split Up' })
--- vim.keymap.set('n', '<Space>j', '<c-w>j', { desc = 'Split Down' })
--- vim.keymap.set('n', '<Space>m', function()
---     Utils.max_or_equal()
--- end, { desc = 'Max or Equal Split' })
+vim.keymap.set('n', '<Space>h', '<c-w>h', { desc = 'Split Left' })
+vim.keymap.set('n', '<Space>l', '<c-w>l', { desc = 'Split Right' })
+vim.keymap.set('n', '<Space>k', '<c-w>k', { desc = 'Split Up' })
+vim.keymap.set('n', '<Space>j', '<c-w>j', { desc = 'Split Down' })
+vim.keymap.set('n', '<Space>m', function()
+    Utils.max_or_equal()
+end, { desc = 'Max or Equal Split' })
 
 -- Resize split panes
 vim.keymap.set('n', '<M-UP>', '<cmd>resize +2<cr>')
