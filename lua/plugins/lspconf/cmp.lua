@@ -125,11 +125,11 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'luasnip' },
-        { name = 'buffer', max_view_entries = 10 },
+        { name = 'buffer' },
         { name = 'path' },
-        { name = 'nvim_lua', max_view_entries = 10 },
-        { name = 'treesitter', max_view_entries = 10 },
-        { name = 'nerdfonts', max_view_entries = 10 },
+        { name = 'nvim_lua' },
+        { name = 'treesitter' },
+        { name = 'nerdfonts' },
         -- { name = 'spell', option = {
         --     keep_all_entries = false,
         --     enable_in_context = function()
