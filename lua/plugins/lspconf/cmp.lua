@@ -174,6 +174,9 @@ cmp.setup({
             -- cmp.config.compare.order,
         },
     },
+    experimental = {
+        ghost_text = true,
+    },
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
@@ -187,10 +190,15 @@ cmp.setup.cmdline({ '/', '?' }, {
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
+    -- sources = cmp.config.sources({
+    --     { name = 'path' },
+    -- }, {
+    --     { name = 'cmdline' },
+    -- }),
+    -- Same as above
     sources = cmp.config.sources({
-        { name = 'path' },
-    }, {
-        { name = 'cmdline' },
+        { name = 'path', group_index = 1 },
+        { name = 'cmdline', group_index = 2 },
     }),
 })
 
