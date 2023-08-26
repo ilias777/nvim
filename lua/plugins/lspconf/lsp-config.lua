@@ -38,6 +38,10 @@ require('mason-lspconfig').setup({
 -- Lspconfig
 local lspconfig = require('lspconfig')
 
+-- CMP LSP
+local lsp_defaults = lspconfig.util.default_config
+lsp_defaults.capabilities = vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
+
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
 -- Winbar with Navic
@@ -47,7 +51,7 @@ require('lspconfig.ui.windows').default_options.border = 'rounded'
 -- CMP LSP
 -- local capabilities = vim.lsp.protocol.make_client_capabilities()
 -- capabilities = require('cmp_nvim_lsp').default_capabilities()
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Options with description
 local opts = function(desc)
@@ -148,7 +152,7 @@ vim.diagnostic.config({
 --  ╰──────────────────────────────────────────────────────────╯
 -- Lua server
 lspconfig.lua_ls.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     -- on_attach = function(client, bufnr)
     --     navic.attach(client, bufnr)
@@ -199,7 +203,7 @@ lspconfig.lua_ls.setup({
 
 -- JavaScript Server
 lspconfig.tsserver.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach
     handlers = handlers,
     init_options = {
@@ -237,14 +241,14 @@ lspconfig.tsserver.setup({
 
 -- Python Server
 lspconfig.pyright.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
 })
 
 -- Emmet Server
 lspconfig.emmet_ls.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
     filetypes = { 'astro', 'css', 'eruby', 'html', 'htmldjango', 'javascript', 'javascriptreact', 'less', 'pug', 'sass', 'scss', 'svelte', 'typescriptreact', 'vue' },
@@ -252,7 +256,7 @@ lspconfig.emmet_ls.setup({
 
 -- CSS Server
 lspconfig.cssls.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
     settings = {
@@ -273,7 +277,7 @@ lspconfig.cssls.setup({
 
 -- Volar Vue Server
 lspconfig.volar.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
     filetypes = {
@@ -306,7 +310,7 @@ lspconfig.volar.setup({
 
 -- JSON Server
 lspconfig.jsonls.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
     filetypes = { 'json', 'jsonc' },
@@ -317,14 +321,14 @@ lspconfig.jsonls.setup({
 
 -- HTML Server
 lspconfig.html.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
 })
 
 -- LTex Server
 lspconfig.ltex.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
     settings = {
@@ -336,7 +340,7 @@ lspconfig.ltex.setup({
 
 -- TexLab Server
 lspconfig.texlab.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
     settings = {
@@ -368,7 +372,7 @@ lspconfig.texlab.setup({
 
 -- PHP Server
 lspconfig.intelephense.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
 })
@@ -382,7 +386,7 @@ lspconfig.intelephense.setup({
 
 -- YAML Server
 lspconfig.yamlls.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
     settings = {
@@ -410,7 +414,7 @@ lspconfig.yamlls.setup({
 
 -- Rust
 lspconfig.rust_analyzer.setup({
-    capabilities = capabilities,
+    -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
 })
