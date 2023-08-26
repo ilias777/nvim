@@ -7,6 +7,7 @@ vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 local kind_icons = {
     Class = ' ',
     Color = ' ',
+    Comment = '//',
     Constant = ' ',
     Constructor = ' ',
     Enum = ' ',
@@ -128,7 +129,7 @@ cmp.setup({
         { name = 'path' },
         { name = 'nvim_lua', max_view_entries = 10 },
         { name = 'treesitter', max_view_entries = 10 },
-        { name = 'nerdfonts' },
+        { name = 'nerdfonts', max_view_entries = 10 },
         -- { name = 'spell', option = {
         --     keep_all_entries = false,
         --     enable_in_context = function()
