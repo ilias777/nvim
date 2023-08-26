@@ -123,6 +123,7 @@ cmp.setup({
         { name = 'path' },
         { name = 'nvim_lua', max_view_entries = 10 },
         { name = 'treesitter', max_view_entries = 10 },
+        { name = 'nerdfonts' },
         -- { name = 'spell', option = {
         --     keep_all_entries = false,
         --     enable_in_context = function()
@@ -148,6 +149,7 @@ cmp.setup({
                 path = '( Path )',
                 nvim_lua = '( Lua )',
                 treesitter = '( Treesitter )',
+                nerdfonts = '( Nerdfonts )',
                 -- spell = '( Spell )',
             })[entry.source.name]
             return vim_item

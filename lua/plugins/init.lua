@@ -110,6 +110,7 @@ return {
             'hrsh7th/cmp-nvim-lua',
             'f3fora/cmp-spell',
             'hrsh7th/cmp-path',
+            'fazibear/cmp-nerdfonts',
         },
         config = function()
             require('plugins.lspconf.cmp')
