@@ -121,6 +121,38 @@ cmp.setup({
                 fallback()
             end
         end, { 'i', 's' }),
+        -- Look for english words
+        ['<C-k>'] = cmp.mapping(function(fallback)
+            if vim.fn.pumvisible() == 1 then
+                cmp.select_prev_item()
+            elseif has_words_before() then
+                cmp.setup.buffer({
+                    sources = {
+                        { name = 'look' },
+                    },
+                })
+                cmp.complete()
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+        ['<C-o>'] = cmp.mapping(function(fallback)
+            if has_words_before() then
+                cmp.setup.buffer({
+                    sources = {
+                        { name = 'nvim_lsp' },
+                        { name = 'nvim_lsp_signature_help' },
+                        { name = 'luasnip' },
+                        { name = 'buffer' },
+                        { name = 'path' },
+                        { name = 'nvim_lua' },
+                        { name = 'treesitter' },
+                        { name = 'nerdfonts', max_item_count = 20 },
+                    },
+                })
+                cmp.complete()
+            end
+        end, { 'i', 's' }),
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
@@ -164,6 +196,7 @@ cmp.setup({
                 nvim_lua = '( Lua )',
                 treesitter = '( Treesitter )',
                 nerdfonts = '( Nerdfonts )',
+                look = '( Look )',
                 -- spell = '( Spell )',
             })[entry.source.name]
             return vim_item

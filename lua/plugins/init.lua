@@ -111,6 +111,7 @@ return {
             'f3fora/cmp-spell',
             'hrsh7th/cmp-path',
             'fazibear/cmp-nerdfonts',
+            'octaltree/cmp-look',
         },
         config = function()
             require('plugins.lspconf.cmp')
