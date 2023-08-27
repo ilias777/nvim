@@ -86,9 +86,9 @@ vim.keymap.set({ 'o', 'x' }, 'a"', '2i"', { desc = 'Around Double Quotes' })
 vim.keymap.set('n', '<leader>o', 'o<Esc>')
 vim.keymap.set('n', '<leader>O', 'O<Esc>')
 
--- Add komma for arguments
+-- Add komma
 -- vim.keymap.set("n", ",,", [[f'a]])
-vim.keymap.set('i', '<C-,>', "<esc>f'a,")
+vim.keymap.set('i', '<C-,>', '<esc>la,')
 
 -- Delete word with backspace
 vim.keymap.set('n', '<BS>', 'ge')
