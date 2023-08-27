@@ -145,8 +145,15 @@ cmp.setup({
             -- Kind icons
             -- This concatonates the icons with the name of the item kind
             vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
-            -- vim_item.icons = string.format('%s', kind_icons[vim_item.kind])
-            -- vim.item.kind = string.format('%s', kind_icons.kind)
+            -- Trim text function
+            function trim(text)
+                local max = 40
+                if text and text:len(1, max) > max then
+                    text = text:sub(1, max) .. '...'
+                end
+                return text
+            end
+            vim_item.abbr = trim(vim_item.abbr)
             -- Source
             vim_item.menu = ({
                 nvim_lsp = '( LSP )',
