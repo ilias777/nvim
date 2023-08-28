@@ -9,7 +9,7 @@ local jdtls_binary_path = jdtls_bin_folder .. 'jdtls'
 
 local path_to_lsp_server = jdtls_path .. '/config_mac'
 local path_to_plugins = jdtls_path .. '/plugins/'
-local path_to_jar = path_to_plugins .. 'org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar'
+local path_to_jar = path_to_plugins .. 'org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar'
 local lombok_path = jdtls_path .. '/lombok.jar'
 
 local root_markers = { '.git', 'mvnw', 'gradlew', 'pom.xml', 'build.gradle' }
@@ -54,11 +54,21 @@ local config = {
     -- },
     init_options = {
         bundles = {
-            vim.fn.glob("/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
-        }
+            vim.fn.glob('/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1),
+        },
     },
     -- on_attach = function (client, bufnr)
     --     require('jdtls').setup_dap({ hotcodereplace = 'auto' })
     -- end
 }
 require('jdtls').start_or_attach(config)
+
+-- Keymaps
+vim.keymap.set('n', '<M-o>', "<Cmd>lua require'jdtls'.organize_imports()<CR>", { desc = 'Organize Imports' })
+vim.keymap.set({ 'n', 'v' }, 'crv', "<Cmd>lua require('jdtls').extract_variable()<CR>", { desc = 'Extract Variable' })
+vim.keymap.set({ 'n', 'v' }, 'crc', "<Cmd>lua require('jdtls').extract_constant()<CR>", { desc = 'Extract Constant' })
+vim.keymap.set('v', 'crm', "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>", { desc = 'Extract Method' })
+
+-- Keymaps for nvim-dap
+vim.keymap.set('n', '<leader>df', "<Cmd>lua require'jdtls'.test_class()<CR>", { desc = 'Test Class' })
+vim.keymap.set('n', '<leader>dn', "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", { desc = 'Test Nearest Method' })
