@@ -145,8 +145,13 @@ vim.keymap.set('n', '<leader>dl', '<cmd>DapShowLog<CR>', { desc = 'Dap Show Log'
 vim.keymap.set('n', '<leader>dr', '<cmd>DapToggleRepl<CR>', { desc = 'Dap Toggle Repl' })
 
 -- diffview.nvim
-vim.keymap.set('n', '<leader>do', '<cmd>DiffviewOpen<cr>', { desc = 'Open Diffview' })
-vim.keymap.set('n', '<leader>dc', '<cmd>DiffviewClose<cr>', { desc = 'Close Diffview' })
+vim.keymap.set('n', '<leader>dv', function()
+    if vim.bo.ft == 'DiffviewFiles' then
+        vim.cmd('DiffviewClose')
+    else
+        vim.cmd('DiffviewOpen')
+    end
+end, { desc = 'Toggle Diffview' })
 
 -- hop.nvim
 vim.keymap.set('n', '<leader>hl', '<cmd>HopLine<cr>', { desc = 'Hop Line' })
