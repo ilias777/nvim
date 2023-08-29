@@ -108,6 +108,14 @@ vim.keymap.set({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and 
 -- Add new file
 vim.keymap.set('n', '<leader>fn', '<cmd>enew<cr>', { desc = 'New File' })
 
+-- Indent properly when entering insert mode on empty lines
+vim.keymap.set('n', 'i', function()
+    if vim.api.nvim_get_current_line():find('^%s*$') then
+        return [["_cc]]
+    end
+    return 'i'
+end, { expr = true, desc = 'better i' })
+
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                 PLUGINS RELATED KEYMAPS                  │
 --  ╰──────────────────────────────────────────────────────────╯
