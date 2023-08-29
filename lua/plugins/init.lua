@@ -336,6 +336,16 @@ return {
             },
         },
     },
+    {
+        'luckasRanarison/nvim-devdocs',
+        cmd = 'DevdocsOpen',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope.nvim',
+            'nvim-treesitter/nvim-treesitter',
+        },
+        opts = {},
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                         WRITING                          │
