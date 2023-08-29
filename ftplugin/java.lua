@@ -24,6 +24,10 @@ local workspace_dir = vim.fn.stdpath('data') .. '/site/java/workspace-root/' .. 
 -- local bundles = vim.fn.glob("/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
 -- vim.list_extend(bundles, vim.split(vim.fn.glob("/Users/ilias/.config/nvim/vscode-java-test/server/*.jar", 1), "\n"))
 
+local bundles = {
+    vim.fn.glob('/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1),
+}
+
 local config = {
     cmd = {
         'java', -- '/opt/homebrew/Cellar/openjdk@17/17.0.5/libexec/openjdk.jdk/Contents/Home',
@@ -49,14 +53,15 @@ local config = {
         workspace_dir,
     },
     root_dir = root_dir,
-    -- init_options = {
-    --     bundles = bundles,
-    -- },
+    vim.list_extend(bundles, vim.split(vim.fn.glob('/Users/ilias/.config/vscode-java-test/server/*.jar', 1), '\n')),
     init_options = {
-        bundles = {
-            vim.fn.glob('/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1),
-        },
+        bundles = bundles,
     },
+    -- init_options = {
+    --     bundles = {
+    --         vim.fn.glob('/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1),
+    --     },
+    -- },
     -- on_attach = function (client, bufnr)
     --     require('jdtls').setup_dap({ hotcodereplace = 'auto' })
     -- end
