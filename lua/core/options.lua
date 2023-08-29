@@ -55,3 +55,4 @@ vim.g.VM_maps = {
     ['Select h'] = '<C-Left>',
 }
 vim.g.python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.11/bin/python3'
+vim.g.markdown_fenced_languages = { 'html', 'python', 'lua', 'js=javascript' }
