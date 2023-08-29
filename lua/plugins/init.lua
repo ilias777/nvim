@@ -346,6 +346,17 @@ return {
         },
         opts = {},
     },
+    {
+        'ellisonleao/glow.nvim',
+        cmd = 'Glow',
+        config = true,
+        opts = {
+            border = 'single',
+            style = 'dracula',
+            width = 120,
+            width_ratio = 0.8,
+        },
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                         WRITING                          │
