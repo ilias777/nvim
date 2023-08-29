@@ -4,7 +4,7 @@ return {
         { 'aa', mode = { 'v' } },
         { 'as', mode = { 'v' } },
         { 'aw', mode = { 'v' } },
-        { 'ar', mode = { 'v' } },
+        -- { 'ar', mode = { 'v' } },
     },
     config = function()
         local NS = { noremap = true, silent = true }
@@ -25,8 +25,8 @@ return {
         end, NS)
 
         -- Aligns to a Lua pattern, looking left and with previews
-        vim.keymap.set('x', 'ar', function()
-            require('align').align_to_string(true, true, true)
-        end, NS)
+        -- vim.keymap.set('x', 'ar', function()
+        --     require('align').align_to_string(true, true, true)
+        -- end, NS)
     end,
 }
