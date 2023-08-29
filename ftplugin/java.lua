@@ -77,9 +77,9 @@ vim.keymap.set('n', '<leader>dn', "<Cmd>lua require'jdtls'.test_nearest_method()
 --  │                 Introductions for Debug                  │
 --  ╰──────────────────────────────────────────────────────────╯
 -- Open a .java file
--- Set a breakpoint with <Leader>db
+-- Set a breakpoint with <Leader>db '<cmd>DapToggleBreakpoint<cr>'
 -- Call the command:
 -- require('jdtls.dap').setup_dap_main_class_configs()
 -- or:
 -- JdtUpdateDebugConfigs
--- Then continue the debug with <Leader>dc to start
+-- Then continue the debug with <Leader>dc '<cmd>DapContinue<CR>'
