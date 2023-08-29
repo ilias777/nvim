@@ -4,14 +4,14 @@ return {
         { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
     },
     config = function()
+        local dap = require('dap')
+
         -- Signs
         local sign = vim.fn.sign_define
         -- 
         sign('DapBreakpoint', { text = ' ', texthl = 'DapBreakpoint', linehl = '', numhl = '' })
         sign('DapBreakpointCondition', { text = '●', texthl = 'DapBreakpointCondition', linehl = '', numhl = '' })
         sign('DapLogPoint', { text = '◆', texthl = 'DapLogPoint', linehl = '', numhl = '' })
-
-        local dap = require('dap')
 
         --  ╭──────────────────────────────────────────────────────────╮
         --  │                       PYTHON DEBUG                       │
