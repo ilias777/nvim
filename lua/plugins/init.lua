@@ -357,6 +357,20 @@ return {
             width_ratio = 0.8,
         },
     },
+    {
+        'yaocccc/nvim-hl-mdcodeblock.lua',
+        enabled = true,
+        ft = 'markdown',
+        dependencies = { 'nvim-treesitter' },
+        config = true,
+        opts = {
+            hl_group = 'CursorLine',
+            minumum_len = 80,
+            -- minumum_len = function()
+            --     return math.max(math.floor(vim.api.nvim_win_get_width(0) * 0.8), 100)
+            -- end,
+        },
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                         WRITING                          │
