@@ -72,3 +72,14 @@ vim.keymap.set('v', 'crm', "<Esc><Cmd>lua require('jdtls').extract_method(true)<
 -- Keymaps for nvim-dap
 vim.keymap.set('n', '<leader>df', "<Cmd>lua require'jdtls'.test_class()<CR>", { desc = 'Test Class' })
 vim.keymap.set('n', '<leader>dn', "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", { desc = 'Test Nearest Method' })
+
+--  ╭──────────────────────────────────────────────────────────╮
+--  │                 Introductions for Debug                  │
+--  ╰──────────────────────────────────────────────────────────╯
+-- Open a .java file
+-- Set a breakpoint with <Leader>db
+-- Call the command:
+-- require('jdtls.dap').setup_dap_main_class_configs()
+-- or:
+-- JdtUpdateDebugConfigs
+-- Then continue the debug with <Leader>dc to start
