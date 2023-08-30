@@ -208,11 +208,6 @@ return {
         end,
     },
     {
-        'mg979/vim-visual-multi',
-        event = 'BufReadPost',
-        branch = 'master',
-    },
-    {
         'famiu/bufdelete.nvim',
         enabled = false,
         cmd = 'Bdelete',

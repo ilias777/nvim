@@ -49,10 +49,5 @@ vim.opt.splitbelow = true
 vim.opt.signcolumn = 'yes:1'
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
--- Multi Cursors
-vim.g.VM_maps = {
-    ['Select l'] = '<C-Right>',
-    ['Select h'] = '<C-Left>',
-}
 vim.g.python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.11/bin/python3'
 vim.g.markdown_fenced_languages = { 'html', 'python', 'lua', 'js=javascript' }
