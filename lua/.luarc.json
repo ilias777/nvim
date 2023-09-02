@@ -1,5 +1,5 @@
 {
-    "workspace.library": [
-        "/Users/ilias/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/7485de2c"
-    ]
+  "workspace.library": [
+    "/Users/ilias/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/7485de2c"
+  ]
 }
