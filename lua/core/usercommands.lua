@@ -22,5 +22,5 @@ vim.api.nvim_create_user_command('ClearReg', function()
 end, {})
 
 -- Set ltex language on the fly
--- vim.api.nvim_create_user_command('LtexLang', "lua require('core.functions').set_ltex_lang(<q-args>)", { nargs = 1, desc = 'Set ltex-ls language' })
+vim.api.nvim_create_user_command('LtexLang', "lua require('core.functions').set_ltex_lang(<q-args>)", { nargs = 1, desc = 'Set ltex-ls language' })
 vim.api.nvim_set_keymap('n', '<leader>lx', "<cmd>lua require('core.functions').set_ltex_lang('en')<cr>", { desc = 'Set ltex-ls language' })
