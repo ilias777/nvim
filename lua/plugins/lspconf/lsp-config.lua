@@ -151,6 +151,9 @@ vim.diagnostic.config({
 --  │                         SERVERS                          │
 --  ╰──────────────────────────────────────────────────────────╯
 -- Lua server
+local runtime_path = vim.split(package.path, ';')
+table.insert(runtime_path, 'lua/?.lua')
+table.insert(runtime_path, 'lua/?/init.lua')
 lspconfig.lua_ls.setup({
     -- capabilities = capabilities,
     -- on_attach = on_attach,
@@ -162,6 +165,7 @@ lspconfig.lua_ls.setup({
         Lua = {
             runtime = {
                 version = 'LuaJIT',
+                path = runtime_path,
             },
             diagnostics = {
                 -- enable = true,
@@ -170,9 +174,12 @@ lspconfig.lua_ls.setup({
             workspace = {
                 library = {
                     [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                    [vim.fn.stdpath('config') .. '/lua'] = true,
+                    -- [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
                     [vim.fn.stdpath('data') .. '/mason/packages/lua-language-server/libexec/meta/3rd/luv/library'] = true,
                     '${3rd}/luv/library',
-                    vim.api.nvim_get_runtime_file('', true),
+                    -- vim.api.nvim_get_runtime_file('', true),
+                    vim.env.VIMRUNTIME,
                     [vim.fn.expand('%:p:h')] = true,
                 },
                 -- library = vim.api.nvim_get_runtime_file('', true),
