@@ -170,6 +170,7 @@ lspconfig.lua_ls.setup({
             diagnostics = {
                 -- enable = true,
                 globals = { 'vim', 'use', 'winid' },
+                disable = { 'undefined-field', 'undefined-doc-name' },
             },
             workspace = {
                 library = {
