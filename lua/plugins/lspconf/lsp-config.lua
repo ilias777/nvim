@@ -173,13 +173,13 @@ lspconfig.lua_ls.setup({
             },
             workspace = {
                 library = {
+                    vim.env.VIMRUNTIME,
+                    -- vim.api.nvim_get_runtime_file('', true),
                     [vim.fn.expand('$VIMRUNTIME/lua')] = true,
                     [vim.fn.stdpath('config') .. '/lua'] = true,
                     -- [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
                     [vim.fn.stdpath('data') .. '/mason/packages/lua-language-server/libexec/meta/3rd/luv/library'] = true,
                     '${3rd}/luv/library',
-                    -- vim.api.nvim_get_runtime_file('', true),
-                    vim.env.VIMRUNTIME,
                     [vim.fn.expand('%:p:h')] = true,
                 },
                 -- library = vim.api.nvim_get_runtime_file('', true),
