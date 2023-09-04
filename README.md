@@ -42,7 +42,7 @@ How you can set transparent background is explained in the [Wiki](https://github
 
 ## ✨ Features
 
-- File explorer with [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- File explorer with [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - Autocompletion with [CMP](https://github.com/hrsh7th/nvim-cmp)
 - Git integration with [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [Neogit](https://github.com/NeogitOrg/neogit)
 - Fuzzy finding with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
