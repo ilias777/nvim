@@ -442,9 +442,10 @@ return {
         keys = {
             { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
         },
-        config = function()
-            require('nvim-dap-virtual-text').setup()
-        end,
+        config = true,
+        -- config = function()
+        --     require('nvim-dap-virtual-text').setup()
+        -- end,
     },
 
     --  ╭──────────────────────────────────────────────────────────╮
