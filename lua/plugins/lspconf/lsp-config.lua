@@ -161,52 +161,79 @@ lspconfig.lua_ls.setup({
     --     navic.attach(client, bufnr)
     -- end,
     handlers = handlers,
-    settings = {
-        Lua = {
-            runtime = {
-                version = 'LuaJIT',
-                path = runtime_path,
-            },
-            diagnostics = {
-                -- enable = true,
-                globals = { 'vim', 'use', 'winid' },
-                disable = { 'undefined-field', 'undefined-doc-name' },
-            },
-            workspace = {
-                library = {
-                    vim.env.VIMRUNTIME,
-                    -- vim.api.nvim_get_runtime_file('', true),
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.stdpath('config') .. '/lua'] = true,
-                    -- [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-                    '${3rd}/luv/library',
-                    -- [vim.fn.stdpath('data') .. '/mason/packages/lua-language-server/libexec/meta/3rd/luv/library'] = true,
-                    [vim.fn.expand('%:p:h')] = true,
+    on_init = function(client)
+        local path = client.workspace_folders[1].name
+        if not vim.loop.fs_stat(path .. '/.luarc.json') and not vim.loop.fs_stat(path .. '/.luarc.jsonc') then
+            client.config.settings = vim.tbl_deep_extend('force', client.config.settings, {
+                Lua = {
+                    runtime = {
+                        -- Tell the language server which version of Lua you're using
+                        -- (most likely LuaJIT in the case of Neovim)
+                        version = 'LuaJIT',
+                    },
+                    -- Make the server aware of Neovim runtime files
+                    workspace = {
+                        checkThirdParty = false,
+                        library = {
+                            vim.env.VIMRUNTIME,
+                            -- "${3rd}/luv/library"
+                            -- "${3rd}/busted/library",
+                        },
+                        -- or pull in all of 'runtimepath'. NOTE: this is a lot slower
+                        -- library = vim.api.nvim_get_runtime_file("", true)
+                    },
                 },
-                -- library = vim.api.nvim_get_runtime_file('', true),
-                -- library = ${workspace}/**/init.lua,
-            },
-            completion = {
-                enable = true,
-                callSnippet = 'Both',
-            },
-            format = {
-                enable = true,
-                defaultConfig = {
-                    indent_style = 'space',
-                    indent_size = '4',
-                    quote_style = 'single',
-                },
-            },
-            hint = {
-                enable = true,
-                arrayIndex = 'Disable',
-            },
-            telemetry = {
-                enable = false,
-            },
-        },
-    },
+            })
+
+            client.notify('workspace/didChangeConfiguration', { settings = client.config.settings })
+        end
+        return true
+    end,
+    -- settings = {
+    --     Lua = {
+    --         runtime = {
+    --             version = 'LuaJIT',
+    --             path = runtime_path,
+    --         },
+    --         diagnostics = {
+    --             -- enable = true,
+    --             globals = { 'vim', 'use', 'winid' },
+    --             disable = { 'undefined-field', 'undefined-doc-name' },
+    --         },
+    --         workspace = {
+    --             library = {
+    --                 vim.env.VIMRUNTIME,
+    --                 -- [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+    --                 -- [vim.fn.stdpath('config') .. '/lua'] = true,
+    --                 -- [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+    --                 '${3rd}/luv/library',
+    --                 -- [vim.fn.stdpath('data') .. '/mason/packages/lua-language-server/libexec/meta/3rd/luv/library'] = true,
+    --                 [vim.fn.expand('%:p:h')] = true,
+    --             },
+    --             -- library = vim.api.nvim_get_runtime_file('', true),
+    --             -- library = ${workspace}/**/init.lua,
+    --         },
+    --         completion = {
+    --             enable = true,
+    --             callSnippet = 'Both',
+    --         },
+    --         format = {
+    --             enable = true,
+    --             defaultConfig = {
+    --                 indent_style = 'space',
+    --                 indent_size = '4',
+    --                 quote_style = 'single',
+    --             },
+    --         },
+    --         hint = {
+    --             enable = true,
+    --             arrayIndex = 'Disable',
+    --         },
+    --         telemetry = {
+    --             enable = false,
+    --         },
+    --     },
+    -- },
 })
 
 -- JavaScript Server
