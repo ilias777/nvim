@@ -53,6 +53,7 @@ local luasnip = require('luasnip')
 -- Setup nvim-cmp
 local cmp = require('cmp')
 
+---@diagnostic disable-next-line missing-fields
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -61,6 +62,7 @@ cmp.setup({
     },
     window = {
         -- completion = cmp.config.window.bordered(),
+        ---@diagnostic disable-next-line missing-fields
         completion = {
             border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
             -- side_padding = 1,
@@ -72,6 +74,7 @@ cmp.setup({
         --     side_padding = 0,
         -- },
         -- documentation = cmp.config.window.bordered(),
+        ---@diagnostic disable-next-line missing-fields
         documentation = {
             border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
             winhighlight = 'Normal:CmpPmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None',
@@ -126,6 +129,7 @@ cmp.setup({
             if vim.fn.pumvisible() == 1 then
                 cmp.select_prev_item()
             elseif has_words_before() then
+                ---@diagnostic disable-next-line missing-fields
                 cmp.setup.buffer({
                     sources = {
                         { name = 'look' },
@@ -138,6 +142,7 @@ cmp.setup({
         end, { 'i', 's' }),
         ['<C-o>'] = cmp.mapping(function(fallback)
             if has_words_before() then
+                ---@diagnostic disable-next-line missing-fields
                 cmp.setup.buffer({
                     sources = {
                         { name = 'nvim_lsp' },
@@ -171,6 +176,7 @@ cmp.setup({
         --     max_item_count = 10,
         -- } },
     }),
+    ---@diagnostic disable-next-line missing-fields
     formatting = {
         fields = { 'abbr', 'kind', 'menu' },
         format = function(entry, vim_item)
@@ -202,6 +208,7 @@ cmp.setup({
             return vim_item
         end,
     },
+    ---@diagnostic disable-next-line missing-fields
     sorting = {
         comparators = {
             cmp.config.compare.score,
@@ -221,6 +228,7 @@ cmp.setup({
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+---@diagnostic disable-next-line missing-fields
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
@@ -229,6 +237,7 @@ cmp.setup.cmdline({ '/', '?' }, {
 })
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+---@diagnostic disable-next-line missing-fields
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     -- sources = cmp.config.sources({
