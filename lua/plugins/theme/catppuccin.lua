@@ -22,6 +22,7 @@ catppuccin.setup({
         symbols_outline = true,
         treesitter_context = true,
         native_lsp = {
+            enabled = true,
             underlines = {
                 errors = { 'undercurl' },
                 hints = { 'undercurl' },
