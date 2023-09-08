@@ -70,7 +70,8 @@ return {
         vim.api.nvim_create_autocmd('ModeChanged', {
             group = augroup,
             -- pattern = '[is]:n',
-            pattern = '*:n',
+            -- pattern = '*:n',
+            pattern = 'n',
             callback = function()
                 if ls.in_snippet() then
                     return vim.diagnostic.enable()
