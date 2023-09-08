@@ -18,7 +18,7 @@ return {
                 --     end
                 -- end,
                 tab_size = 20,
-                ---@type 'thin' | 'thick' | 'slant'
+                ---@type 'thin' | 'thick' | 'slant' | 'padded_slant' | 'slope' | 'padded_slope'
                 separator_style = 'thin',
                 groups = {
                     options = {
