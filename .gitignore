@@ -15,6 +15,7 @@ test2/
 logo/
 
 # Java Degug folders
+debug/
 vscode-java-test/
 java-debug/
 js-debug/

@@ -25,7 +25,7 @@ local workspace_dir = vim.fn.stdpath('data') .. '/site/java/workspace-root/' .. 
 -- vim.list_extend(bundles, vim.split(vim.fn.glob("/Users/ilias/.config/nvim/vscode-java-test/server/*.jar", 1), "\n"))
 
 local bundles = {
-    vim.fn.glob('/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1),
+    vim.fn.glob('/Users/ilias/.config/nvim/debug/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1),
 }
 
 local config = {
@@ -53,7 +53,7 @@ local config = {
         workspace_dir,
     },
     root_dir = root_dir,
-    vim.list_extend(bundles, vim.split(vim.fn.glob('/Users/ilias/.config/vscode-java-test/server/*.jar', 1), '\n')),
+    vim.list_extend(bundles, vim.split(vim.fn.glob('/Users/ilias/.config/debug/vscode-java-test/server/*.jar', 1), '\n')),
     init_options = {
         bundles = bundles,
     },
