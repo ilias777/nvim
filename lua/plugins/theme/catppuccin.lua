@@ -129,7 +129,7 @@ catppuccin.setup({
             NeoTreeGitIgnored = { fg = colors.overlay0, style = { 'italic' } },
             NeoTreeGitModified = { fg = colors.yellow, style = { 'italic' } },
             NeoTreeGitUnstaged = { fg = colors.red, style = { 'italic' } },
-            NeoTreeGitUntracked = { fg = colors.blue, style = { 'italic' } },
+            NeoTreeGitUntracked = { fg = colors.teal, style = { 'italic' } },
             NeoTreeGitStaged = { fg = colors.green, style = { 'italic' } },
 
             -- Visual Mode
