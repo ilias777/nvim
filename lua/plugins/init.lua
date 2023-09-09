@@ -442,7 +442,10 @@ return {
             },
             {
                 'theHamsta/nvim-dap-virtual-text',
-                config = true,
+                opts = {
+                    commented = true,
+                    virt_text_pos = 'eol',
+                },
             },
         },
         config = function()
