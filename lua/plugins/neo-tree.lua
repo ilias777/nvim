@@ -61,6 +61,11 @@ return {
             indent = {
                 with_markers = false,
             },
+            icon = {
+                folder_closed = '',
+                folder_open = '',
+                folder_empty = '',
+            },
             git_status = {
                 symbols = {
                     -- Status type
