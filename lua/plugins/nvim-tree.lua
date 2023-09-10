@@ -1,6 +1,6 @@
 return {
     'nvim-tree/nvim-tree.lua',
-    enabled = false,
+    enabled = true,
     version = '*',
     lazy = false,
     cmd = 'NvimTreeToggle',
@@ -34,8 +34,9 @@ return {
             on_attach = my_on_attach,
             hijack_cursor = true,
             view = {
-                width = 45,
+                centralize_selection = true,
                 side = 'right',
+                width = 45,
                 -- float = {
                 --     enable = false,
                 --     quit_on_focus_loss = true,
@@ -49,7 +50,27 @@ return {
                 --     },
                 -- },
             },
+            renderer = {
+                highlight_git = true,
+                icons = {
+                    git_placement = 'after',
+                    show = {
+                        folder_arrow = false,
+                    },
+                    glyphs = {
+                        folder = {
+                            default = '',
+                            open = '',
+                            empty = '',
+                            empty_open = '',
+                        },
+                    },
+                },
+            },
             diagnostics = {
+                enable = true,
+            },
+            modified = {
                 enable = true,
             },
             actions = {
