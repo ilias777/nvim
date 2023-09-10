@@ -21,6 +21,7 @@ catppuccin.setup({
         notify = true,
         symbols_outline = true,
         treesitter_context = true,
+        nvimtree = false,
         native_lsp = {
             enabled = true,
             underlines = {
@@ -131,6 +132,17 @@ catppuccin.setup({
             NeoTreeGitUnstaged = { fg = colors.red, style = { 'italic' } },
             NeoTreeGitUntracked = { fg = colors.teal, style = { 'italic' } },
             NeoTreeGitStaged = { fg = colors.green, style = { 'italic' } },
+
+            -- Nvimtree
+            NvimTreeRootFolder = { fg = colors.pink, style = { 'bold', 'italic' } },
+            NvimTreeGitNew = { fg = colors.green, style = { 'italic' } },
+            NvimTreeGitIgnored = { fg = colors.overlay0, style = { 'italic' } },
+            NvimTreeGitStaged = { fg = colors.teal, style = { 'italic' } },
+            NvimTreeGitDirty = { fg = colors.maroon, style = { 'italic' } },
+            NvimTreeGitDeleted = { fg = colors.red, style = { 'italic' } },
+            NvimTreeGitMerge = { fg = colors.peach, style = { 'italic' } },
+            NvimTreeGitMerged = { fg = colors.pink, style = { 'italic' } },
+            NvimTreeGitRenamed = { fg = colors.yellow, style = { 'italic' } },
 
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.mantle), style = { 'italic' } },
