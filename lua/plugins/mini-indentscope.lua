@@ -16,6 +16,7 @@ return {
                 'NeogitStatus',
                 'NeogitPopup',
                 'lspinfo',
+                'NvimTree',
                 'glowpreview',
                 'oil',
                 'oil_preview',
