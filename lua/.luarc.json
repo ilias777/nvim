@@ -96,5 +96,5 @@
   "workspace.checkThirdParty": false,
   "hint.enable": true,
   "hint.arrayIndex": "Disable",
-  "diagnostics.disable": ["missing-fields", "missing-parameter"]
+  "diagnostics.disable": ["missing-fields"]
 }
