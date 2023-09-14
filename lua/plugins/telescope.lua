@@ -8,6 +8,7 @@ return {
         { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },
         { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Find Word' },
         { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Find Help' },
+        { '<leader>fi', '<cmd>Telescope import<cr>', desc = 'Find Imports' },
         { '<leader>fj', '<cmd>Telescope emoji<cr>', desc = 'Find emoji' },
         { '<leader>fk', '<cmd>Telescope keymaps<cr>', desc = 'Find Keymaps' },
         { '<leader>fl', '<cmd>Telescope highlights<cr>', desc = 'Find Highlights' },
@@ -27,6 +28,7 @@ return {
         'xiyaowong/telescope-emoji.nvim',
         'debugloop/telescope-undo.nvim',
         'jvgrootveld/telescope-zoxide',
+        'piersolenski/telescope-import.nvim',
     },
     config = function()
         local trouble = require('trouble.providers.telescope')
@@ -117,6 +119,7 @@ return {
         require('telescope').load_extension('advanced_git_search')
         require('telescope').load_extension('yank_history')
         require('telescope').load_extension('zoxide')
+        require('telescope').load_extension('import')
         -- require('telescope').load_extension('heading')
         -- require('telescope').load_extension('neoclip')
         -- require('telescope').load_extension('noice')
