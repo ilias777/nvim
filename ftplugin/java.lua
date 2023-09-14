@@ -57,15 +57,28 @@ local config = {
     },
     root_dir = root_dir,
     vim.list_extend(bundles, vim.split(vim.fn.glob('/Users/ilias/.config/debug/vscode-java-test/server/*.jar', 1), '\n')),
+
+    on_attach = function(client, bufnr)
+        vim.lsp.inlay_hint(bufnr, true)
+    end,
+
+    settings = {
+        java = {
+            inlayHints = { parameterNames = { enabled = 'all' } },
+        },
+    },
+
     init_options = {
         bundles = bundles,
         extendedClientCapabilities = extendedClientCapabilities,
     },
+
     -- init_options = {
     --     bundles = {
     --         vim.fn.glob('/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1),
     --     },
     -- },
+
     -- on_attach = function (client, bufnr)
     --     require('jdtls').setup_dap({ hotcodereplace = 'auto' })
     -- end
