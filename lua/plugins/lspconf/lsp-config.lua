@@ -319,6 +319,9 @@ lspconfig.volar.setup({
         'vue', --[[ 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'json' ]]
     },
     init_options = {
+        typescript = {
+            tsdk = '/Users/ilias/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
+        },
         preferences = {
             disableSuggestions = true,
         },
@@ -333,13 +336,16 @@ lspconfig.volar.setup({
             renameFileRefactoring = true,
             signatureHelp = true,
             codeAction = true,
+            workspaceSymbol = true,
             diagnostics = true,
+            semanticTokens = true,
+            completion = {
+                defaultTagNameCase = 'both',
+                defaultAttrNameCase = 'kebabCase',
+                getDocumentNameCasesRequest = false,
+                getDocumentSelectionRequest = false,
+            },
         },
-        -- typescript = {
-        -- tsdk = '/Users/ilias/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
-        -- tsdk = '/Users/ilias/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
-        -- tsdk = '',
-        -- },
     },
 })
 
