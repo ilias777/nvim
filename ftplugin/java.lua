@@ -28,6 +28,9 @@ local bundles = {
     vim.fn.glob('/Users/ilias/.config/nvim/debug/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', 1),
 }
 
+local extendedClientCapabilities = require('jdtls').extendedClientCapabilities
+extendedClientCapabilities.onCompletionItemSelectedCommand = 'editor.action.triggerParameterHints'
+
 local config = {
     cmd = {
         'java', -- '/opt/homebrew/Cellar/openjdk@17/17.0.5/libexec/openjdk.jdk/Contents/Home',
@@ -56,6 +59,7 @@ local config = {
     vim.list_extend(bundles, vim.split(vim.fn.glob('/Users/ilias/.config/debug/vscode-java-test/server/*.jar', 1), '\n')),
     init_options = {
         bundles = bundles,
+        extendedClientCapabilities = extendedClientCapabilities,
     },
     -- init_options = {
     --     bundles = {
