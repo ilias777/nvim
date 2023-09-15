@@ -1,5 +1,6 @@
 return {
     'nvim-telescope/telescope.nvim',
+    cmd = { 'Telescope' },
     keys = {
         { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
         { '<leader>fc', ":lua require'telescope.builtin'.commands{}<cr>", desc = 'List Commands' },
