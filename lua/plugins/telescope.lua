@@ -86,7 +86,8 @@ return {
                     theme = 'dropdown',
                 },
                 file_browser = {
-                    theme = 'ivy',
+                    dir_icon = '',
+                    theme = 'dropdown',
                     initial_mode = 'normal',
                     mappings = {
                         ['n'] = {
