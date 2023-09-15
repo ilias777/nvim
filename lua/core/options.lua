@@ -51,3 +51,10 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.11/bin/python3'
 vim.g.markdown_fenced_languages = { 'html', 'python', 'lua', 'js=javascript' }
+
+-- Open telescope file_browser if nvim has no arguments
+if vim.fn.argc() == 0 then
+    vim.defer_fn(function()
+        vim.cmd('Telescope file_browser')
+    end, 0)
+end
