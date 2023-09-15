@@ -91,6 +91,9 @@ return {
                     mappings = {
                         ['n'] = {
                             ['o'] = 'select_default',
+                            ['H'] = fb_actions.toggle_hidden,
+                            ['h'] = fb_actions.goto_parent_dir,
+                            ['l'] = 'select_default',
                         },
                     },
                 },
