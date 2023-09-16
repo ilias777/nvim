@@ -29,7 +29,7 @@
   <img width="1493" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/d79eebc3-77a6-44ec-8d2f-4bed2cfe2c73">
   <h6>Mason.nvim</h6>
   <img width="1493" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/fb9c08f9-7aaf-4d9a-8dd3-517282078a8d">
-  <h6>Autocompleation with nvim-cmp</h6>
+  <h6>Autocompletion with nvim-cmp</h6>
   <img width="1493" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/22452662-1b6e-4694-a21a-330c0f3240af">
 </div>
 
