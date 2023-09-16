@@ -31,15 +31,15 @@
   <img width="1493" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/fb9c08f9-7aaf-4d9a-8dd3-517282078a8d">
   <h6>Autocompleation with nvim-cmp</h6>
   <img width="1493" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/22452662-1b6e-4694-a21a-330c0f3240af">
- 
 </div>
 
 #### With transparent background
 
 <div align="center">
-  <img width="1365" alt="tr1" src="https://github.com/ilias777/nvim/assets/39212564/8b305c2d-6641-43ab-9dbe-7b24d96ee2f3">
-  <img width="1368" alt="tr2" src="https://github.com/ilias777/nvim/assets/39212564/9b28c832-1a1b-46a6-9188-50146071ec41">
-  <img width="1366" alt="tr3" src="https://github.com/ilias777/nvim/assets/39212564/b228654a-7a4e-488e-9bf9-f9600d99e034">
+  <img width="1404" alt="t1" src="https://github.com/ilias777/nvim/assets/39212564/42ef91cb-8184-461b-aea7-282d20460d3c">
+  <img width="1404" alt="t2" src="https://github.com/ilias777/nvim/assets/39212564/96a06bbc-9089-4abf-9502-740739c73de2">
+  <img width="1404" alt="t3" src="https://github.com/ilias777/nvim/assets/39212564/c2031813-c6e2-48e1-a5f9-e9d55082c7ed">
+  <img width="1404" alt="t4" src="https://github.com/ilias777/nvim/assets/39212564/a4eb9756-b97d-4e64-886c-afac417a00eb">
 </div>
 
 How you can set transparent background is explained in the [Wiki](https://github.com/ilias777/nvim/wiki/Transparent-Background)
