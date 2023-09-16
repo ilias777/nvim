@@ -17,15 +17,19 @@
 ## 🌟 Preview
 
 <div align="center">
-  <img width="1493" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/43c34630-cc8a-4dae-9e6c-a3ea8c7307de">
-
   <h6>Find files with Telescope</h6>
-  <img width="1493" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/2d9e28b0-a082-4d16-8389-bac6861d29c1">
+  <img width="1493" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/43c34630-cc8a-4dae-9e6c-a3ea8c7307de">
+  <h6>Show keybindings with which-key</h6>
   <img width="1493" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/e5856a21-f0ff-43a2-91e5-924c8ba00287">
+  <h6>File browser with Telescope</h6>
   <img width="1493" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/a50a90e6-75e9-4e8e-9e39-41a7c026ffa4">
+  <h6>Neo-tree file browser</h6>
   <img width="1493" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/63153adb-ff66-4eaf-b949-582b648579bb">
+  <h6>Lazy.nvim</h6>
   <img width="1493" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/d79eebc3-77a6-44ec-8d2f-4bed2cfe2c73">
+  <h6>Mason.nvim</h6>
   <img width="1493" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/fb9c08f9-7aaf-4d9a-8dd3-517282078a8d">
+  <h6>Autocompleation with nvim-cmp</h6>
   <img width="1493" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/22452662-1b6e-4694-a21a-330c0f3240af">
  
 </div>
