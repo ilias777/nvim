@@ -8,6 +8,7 @@ vim.opt.hidden = true
 vim.opt.ruler = true
 vim.opt.showcmd = true
 vim.opt.mouse = 'nvi'
+vim.opt.background = 'dark'
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 -- vim.opt.colorcolumn = '100'
