@@ -16,10 +16,10 @@
 
 ## 🌟 Preview
 
-<div align="center>
+<div align="center">
   <img width="1493" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/43c34630-cc8a-4dae-9e6c-a3ea8c7307de">
 
-  <h6>• Find files with Telescope</h6>
+  <h6>Find files with Telescope</h6>
   <img width="1493" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/2d9e28b0-a082-4d16-8389-bac6861d29c1">
   <img width="1493" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/e5856a21-f0ff-43a2-91e5-924c8ba00287">
   <img width="1493" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/a50a90e6-75e9-4e8e-9e39-41a7c026ffa4">
