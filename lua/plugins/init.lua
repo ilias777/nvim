@@ -10,7 +10,7 @@ return {
         priority = 1000,
         config = function()
             require('plugins.theme.catppuccin')
-            vim.cmd('colorscheme catppuccin-mocha')
+            vim.cmd('colorscheme catppuccin')
         end,
     },
     -- === Rose-Pine ===
