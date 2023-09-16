@@ -88,6 +88,7 @@ return {
                 file_browser = {
                     dir_icon = '',
                     prompt_path = true,
+                    grouped = true,
                     theme = 'dropdown',
                     initial_mode = 'normal',
                     mappings = {
