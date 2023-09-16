@@ -17,15 +17,8 @@
 ## 🌟 Preview
 
 <div align="center>
-  <img width="1452" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/aeabf57f-72fe-4551-8536-aa53fb03fdf4">
-
-  <img width="1452" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/a2e199c2-6d72-4236-957d-36279c0cb788">
-  <img width="1452" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/9d2c6eb0-e81a-402f-baaf-c6d86932dc40">
-  <img width="1452" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/8b740e40-de61-4f48-9331-5fc4795aaf27">
-  <img width="1452" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/adf6a765-537d-4615-aa61-c91e88f85a91">
-  <img width="1452" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/d8ef3bd0-111b-4a44-8faa-fda4076fb0ed">
-  <img width="1452" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/e0f2f0f3-d64b-4b69-ae8a-cb4709b828a5">
-  <img width="1452" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/e0157d28-a2d0-4a95-b5d2-974d6fd51ba3">
+  <img width="1493" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/43c34630-cc8a-4dae-9e6c-a3ea8c7307de">
+  <img width="1493" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/e5856a21-f0ff-43a2-91e5-924c8ba00287">
 
   
 </div>
