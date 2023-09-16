@@ -5,7 +5,6 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
         require('bufferline').setup({
-            ---@diagnostic disable-next-line missing-fields
             options = {
                 -- indicator = {
                 --     icon = '▎',
