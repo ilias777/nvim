@@ -53,6 +53,7 @@ return {
                     'rust',
                     'scss',
                     'toml',
+                    'vim',
                     'vue',
                     'yaml',
                 },
