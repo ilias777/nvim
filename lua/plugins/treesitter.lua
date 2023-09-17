@@ -49,6 +49,7 @@ return {
                     'make',
                     'php',
                     'python',
+                    'query',
                     'regex',
                     'rust',
                     'scss',
