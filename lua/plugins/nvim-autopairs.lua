@@ -2,7 +2,9 @@ return {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = function()
-        require('nvim-autopairs').setup()
+        require('nvim-autopairs').setup({
+            fast_wrap = {},
+        })
 
         local npairs = require('nvim-autopairs')
         local Rule = require('nvim-autopairs.rule')
