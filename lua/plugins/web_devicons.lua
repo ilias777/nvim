@@ -4,13 +4,13 @@ return {
     config = function()
         require('nvim-web-devicons').set_icon({
             toc = {
-                icon = '',
+                icon = '󰎟',
                 color = '#dee0cd',
                 cterm_color = '86',
                 name = 'Toc',
             },
             bib = {
-                icon = '',
+                icon = '󰌱',
                 color = '#d78700',
                 cterm_color = '172',
                 name = 'Bib',

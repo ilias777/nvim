@@ -13,9 +13,9 @@ return {
                 right_separator = '',
                 mode_icon = '',
                 dir = '',
-                file = '',
+                file = '󰈙 ',
                 lsp = {
-                    server = '力',
+                    server = '󰒋 ',
                     error = '',
                     warning = '',
                     info = '',
