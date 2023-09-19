@@ -136,7 +136,7 @@ cmp.setup({
                 fallback()
             end
         end, { 'i', 's' }),
-        ['<C-o>'] = cmp.mapping(function(fallback)
+        ['<C-h>'] = cmp.mapping(function(fallback)
             if has_words_before() then
                 cmp.setup.buffer({
                     sources = {
