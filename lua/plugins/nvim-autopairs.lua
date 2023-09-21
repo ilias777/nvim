@@ -3,7 +3,9 @@ return {
     event = 'InsertEnter',
     config = function()
         require('nvim-autopairs').setup({
-            fast_wrap = {},
+            fast_wrap = {
+                map = '∑',
+            },
         })
 
         local npairs = require('nvim-autopairs')
