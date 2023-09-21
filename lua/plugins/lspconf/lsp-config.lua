@@ -104,6 +104,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
+-- Toggle Inlay Hints
+if vim.lsp.inlay_hint then
+    vim.keymap.set('n', '<Space>ih', function()
+        vim.lsp.inlay_hint(0, nil)
+    end, { desc = 'Toggle Inlay Hints' })
+end
+
 -- Borders
 -- vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#181926]])
 -- vim.cmd([[autocmd! ColorScheme * highlight NormalFloat guibg=#181926]])
