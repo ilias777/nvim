@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+  "workspace.checkThirdParty": false,
+  "hint.enable": true,
+  "hint.setType": true,
+  "hint.arrayIndex": "Disable",
+  "diagnostics.disable": ["missing-fields"],
+  "telemetry": false
+}
