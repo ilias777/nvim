@@ -5,5 +5,5 @@
   "hint.setType": true,
   "hint.arrayIndex": "Disable",
   "diagnostics.disable": ["missing-fields"],
-  "telemetry": false
+  "telemetry.enable": false
 }
