@@ -94,6 +94,7 @@ return {
         config = true,
         opts = {
             disable_commit_confirmation = true,
+            disable_builtin_notifications = true,
             integrations = {
                 telescope = true,
                 diffview = true,
