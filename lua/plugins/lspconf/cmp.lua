@@ -77,6 +77,9 @@ cmp.setup({
             winhighlight = 'Normal:CmpPmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None',
         },
     },
+    view = {
+        entries = { name = 'custom', selection_order = 'near_cursor' },
+    },
     mapping = cmp.mapping.preset.insert({
         -- ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
         -- ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
