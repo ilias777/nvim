@@ -68,7 +68,7 @@ How you can set transparent background is explained in the [Wiki](https://github
 
 ## 🛠️ Installation
 
-### Linux / MacOS (Unix)
+### Linux / macOS (Unix)
 
 #### Make a backup of your current nvim and shared folder
 
