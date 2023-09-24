@@ -1,6 +1,6 @@
 return {
     'L3MON4D3/LuaSnip',
-    version = '1.2.1',
+    version = '2.*',
     event = 'VeryLazy',
     dependencies = {
         'rafamadriz/friendly-snippets',
