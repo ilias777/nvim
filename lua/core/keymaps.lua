@@ -182,3 +182,8 @@ vim.keymap.set('n', '<space>nn', '<cmd>Noice<cr>', { desc = 'Noice Messages' })
 vim.keymap.set('n', '<space>nd', '<cmd>NoiceDismiss<cr>', { desc = 'Noice Dismiss' })
 vim.keymap.set('n', '<space>nl', '<cmd>NoiceLast<cr>', { desc = 'Noice Last' })
 vim.keymap.set('n', '<space>nt', '<cmd>NoiceTelescope<cr>', { desc = 'Noice Telescope' })
+
+--  ╭──────────────────────────────────────────────────────────╮
+--  │                    FOR GREEK KEYBOARD                    │
+--  ╰──────────────────────────────────────────────────────────╯
+vim.keymap.set('i', '<C-ε>', '<C-e>', { remap = true })
