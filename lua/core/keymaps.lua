@@ -48,12 +48,12 @@ vim.keymap.set('n', '<M-LEFT>', '<cmd>vertical resize +2<cr>')
 vim.keymap.set('n', '<M-RIGHT>', '<cmd>vertical resize -2<cr>')
 
 -- Move lines
-vim.keymap.set('n', '<c-k>', ':m -2<CR>==')
-vim.keymap.set('n', '<c-j>', ':m +1<CR>==')
+vim.keymap.set('n', '<c-k>', ':m -2<CR>==', { silent = true })
+vim.keymap.set('n', '<c-j>', ':m +1<CR>==', { silent = true })
 -- vim.keymap.set('i', '<c-k>', '<esc><cmd>m .-2<cr>==gi')
 -- vim.keymap.set('i', '<c-j>', '<esc><cmd>m .+1<cr>==gi')
-vim.keymap.set('v', '<c-k>', ":m '<-2<CR>gv=gv")
-vim.keymap.set('v', '<c-j>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', '<c-k>', ":m '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set('v', '<c-j>', ":m '>+1<CR>gv=gv", { silent = true })
 
 -- Indent lines in visual selection
 vim.keymap.set('v', '<', '<gv')
