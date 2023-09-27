@@ -111,7 +111,7 @@ catppuccin.setup({
             CursorLine = { bg = colors.mantle },
 
             -- Folds
-            -- Folded = { bg = colors.base },
+            Folded = { bg = colors.mantle },
 
             -- Match Parenthesis
             -- MatchParen = { style = { 'underline' } },
