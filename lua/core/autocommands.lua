@@ -71,3 +71,31 @@ vim.api.nvim_create_autocmd('FileType', {
     pattern = 'help',
     command = ':wincmd T',
 })
+
+-- Keymap to change ltex language on markdown and tex files
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'markdown', 'tex' },
+    callback = function()
+        vim.keymap.set('n', '<Space>ä', function()
+            local options = {
+                'English',
+                'German',
+                'Greek',
+            }
+            vim.ui.select(options, {
+                prompt = 'Select language for ltex',
+                -- format_item = function(item)
+                --     return 'Set language to: ' .. item
+                -- end,
+            }, function(choice)
+                if choice == 'English' then
+                    vim.cmd('LtexLang en')
+                elseif choice == 'German' then
+                    vim.cmd('LtexLang de')
+                elseif choice == 'Greek' then
+                    vim.cmd('LtexLang el')
+                end
+            end)
+        end, { desc = 'Change language for ltex' })
+    end,
+})
