@@ -102,7 +102,7 @@ vim.api.nvim_create_autocmd('FileType', {
 
 vim.api.nvim_create_autocmd({ 'BufEnter' }, {
     callback = function()
-        vim.opt.formatoptions:remove({ 'o', 'r' })
+        vim.opt.formatoptions:remove({ 'o', 'r', 'c' })
         vim.opt.formatoptions:append({ 't' })
     end,
 })
