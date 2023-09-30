@@ -13,7 +13,7 @@ return {
             ['<leader>f'] = { name = '+File' }, -- Telescope
             ['<leader>g'] = { name = '+Git' }, -- Git
             ['<leader>h'] = { name = '+Hop Motion' }, -- Hop
-            ['<leader>l'] = { name = '+Lazy' }, -- Lazy
+            ['<leader>l'] = { name = '+Lazy/LTeX' }, -- Lazy & LTeX
             ['<leader>x'] = { name = '+Trouble' }, -- Trouble
             ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
             ['<space>c'] = { name = '+Code actions / Cheatsheet' }, -- Code Actions with LSP
