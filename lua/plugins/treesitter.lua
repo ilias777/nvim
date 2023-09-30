@@ -98,8 +98,11 @@ return {
                 -- Textsubjects
                 textsubjects = {
                     enable = true,
+                    prev_selection = ',', -- (Optional) keymap to select the previous selection
                     keymaps = {
-                        ['<cr>'] = 'textsubjects-smart', -- works in visual mode
+                        ['<CR>'] = 'textsubjects-smart', -- works in visual mode
+                        [';'] = 'textsubjects-container-outer',
+                        ['i;'] = { 'textsubjects-container-inner', desc = 'Select inside containers (classes, functions, etc.)' },
                     },
                 },
             })
