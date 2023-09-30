@@ -99,3 +99,10 @@ vim.api.nvim_create_autocmd('FileType', {
         end, { desc = 'Change language for ltex' })
     end,
 })
+
+vim.api.nvim_create_autocmd({ 'BufEnter' }, {
+    callback = function()
+        vim.opt.formatoptions:remove({ 'o', 'r' })
+        vim.opt.formatoptions:append({ 't' })
+    end,
+})
