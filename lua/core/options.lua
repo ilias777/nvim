@@ -9,6 +9,7 @@ vim.opt.ruler = true
 vim.opt.showcmd = true
 vim.opt.mouse = 'nvi'
 vim.opt.background = 'dark'
+vim.opt.confirm = true
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 -- vim.opt.colorcolumn = '100'
@@ -20,6 +21,7 @@ vim.opt.relativenumber = true
 -- vim.opt.foldmethod = 'indent'
 -- vim.opt.foldenable = true
 -- vim.opt.foldmarker = '{{{,}}}'
+--
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 10
 vim.opt.list = true
