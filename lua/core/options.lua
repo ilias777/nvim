@@ -21,7 +21,6 @@ vim.opt.relativenumber = true
 -- vim.opt.foldmethod = 'indent'
 -- vim.opt.foldenable = true
 -- vim.opt.foldmarker = '{{{,}}}'
---
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 10
 vim.opt.list = true
