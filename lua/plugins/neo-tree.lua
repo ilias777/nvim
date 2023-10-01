@@ -79,9 +79,6 @@ return {
             },
         },
         default_component_configs = {
-            indent = {
-                with_markers = false,
-            },
             icon = {
                 folder_closed = '',
                 folder_open = '',
