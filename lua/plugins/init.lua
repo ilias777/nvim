@@ -272,11 +272,10 @@ return {
         end,
     },
     {
-        'norcalli/nvim-colorizer.lua',
+        'brenoprata10/nvim-highlight-colors',
+        enabled = true,
         event = 'BufReadPre',
-        config = function()
-            require('colorizer').setup()
-        end,
+        config = true,
     },
     {
         'gbprod/yanky.nvim',
