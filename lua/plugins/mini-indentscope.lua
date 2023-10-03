@@ -20,6 +20,7 @@ return {
                 'glowpreview',
                 'oil',
                 'oil_preview',
+                'markdown',
             },
             callback = function()
                 vim.b.miniindentscope_disable = true
