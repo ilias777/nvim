@@ -45,9 +45,9 @@ vim.o.foldcolumn = '1'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
-vim.opt.foldmethod = 'expr'
-vim.opt.foldtext = 'v:lua.vim.treesitter.foldtext()'
-vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+-- vim.opt.foldmethod = 'expr'
+-- vim.opt.foldtext = 'v:lua.vim.treesitter.foldtext()'
+-- vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
 -- Clipboard
 vim.opt.clipboard = 'unnamedplus'
