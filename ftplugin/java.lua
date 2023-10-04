@@ -30,6 +30,7 @@ local bundles = {
 
 local extendedClientCapabilities = require('jdtls').extendedClientCapabilities
 extendedClientCapabilities.onCompletionItemSelectedCommand = 'editor.action.triggerParameterHints'
+extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
 
 local config = {
     cmd = {
@@ -64,7 +65,54 @@ local config = {
 
     settings = {
         java = {
-            inlayHints = { parameterNames = { enabled = 'all' } },
+            eclipse = {
+                downloadSources = true,
+            },
+            maven = {
+                downloadSources = true,
+            },
+            inlayHints = {
+                parameterNames = {
+                    enabled = 'all',
+                },
+            },
+            format = {
+                enabled = true,
+            },
+            signatureHelp = {
+                enabled = true,
+            },
+            completion = {
+                favoriteStaticMembers = {
+                    'org.hamcrest.MatcherAssert.assertThat',
+                    'org.hamcrest.Matchers.*',
+                    'org.hamcrest.CoreMatchers.*',
+                    'org.junit.jupiter.api.Assertions.*',
+                    'java.util.Objects.requireNonNull',
+                    'java.util.Objects.requireNonNullElse',
+                    'org.mockito.Mockito.*',
+                },
+                filteredTypes = {
+                    'com.sun.*',
+                    'io.micrometer.shaded.*',
+                    'java.awt.*',
+                    'jdk.*',
+                    'sun.*',
+                },
+                guessMethodArguments = true,
+            },
+            contentProvider = {
+                preferred = 'fernflower',
+            },
+            codeGeneration = {
+                toString = {
+                    template = '${object.className}{${member.name()}=${member.value}, ${otherMembers}}',
+                },
+                hashCodeEquals = {
+                    useJava7Objects = true,
+                },
+                useBlocks = true,
+            },
         },
     },
 
