@@ -39,7 +39,6 @@ vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.breakindent = true
 -- vim.opt.encoding = 'utf-8'
-vim.opt.syntax = 'enable'
 
 -- Folding
 vim.o.foldcolumn = '1'
