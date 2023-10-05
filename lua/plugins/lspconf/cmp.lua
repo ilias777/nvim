@@ -246,33 +246,45 @@ cmp.setup.cmdline(':', {
     }),
 })
 
--- Autopairs
+-- nvim-autopairs
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local ts_utils = require('nvim-treesitter.ts_utils')
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
-local ts_node_func_parens_disabled = {
-    -- ecma
-    named_imports = true,
-    -- rust
-    use_declaration = true,
-}
-
-local default_handler = cmp_autopairs.filetypes['*']['('].handler
-cmp_autopairs.filetypes['*']['('].handler = function(char, item, bufnr, rules, commit_character)
-    local node_type = ts_utils.get_node_at_cursor():type()
-    if ts_node_func_parens_disabled[node_type] then
-        if item.data then
-            item.data.funcParensDisabled = true
-        else
-            char = ''
-        end
-    end
-    default_handler(char, item, bufnr, rules, commit_character)
-end
+local handlers = require('nvim-autopairs.completion.handlers')
 
 cmp.event:on(
     'confirm_done',
     cmp_autopairs.on_confirm_done({
-        sh = false,
+        filetypes = {
+            -- "*" is a alias to all filetypes
+            ['*'] = {
+                ['('] = {
+                    kind = {
+                        cmp.lsp.CompletionItemKind.Function,
+                        cmp.lsp.CompletionItemKind.Method,
+                        cmp.lsp.CompletionItemKind.Constructor,
+                    },
+                    handler = handlers['*'],
+                },
+            },
+            lua = {
+                ['('] = {
+                    kind = {
+                        cmp.lsp.CompletionItemKind.Function,
+                        cmp.lsp.CompletionItemKind.Method,
+                    },
+                    ---@param char string
+                    ---@param item table item completion
+                    ---@param bufnr number buffer number
+                    ---@param rules table
+                    ---@param commit_character table<string>
+                    handler = function(char, item, bufnr, rules, commit_character)
+                        -- Your handler function. Inpect with print(vim.inspect{char, item, bufnr, rules, commit_character})
+                    end,
+                },
+            },
+            -- Disable for tex
+            tex = false,
+        },
     })
 )
