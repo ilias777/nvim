@@ -6,7 +6,14 @@ return {
     opts = {
         window = {
             backdrop = 1,
+            width = 0.7,
             height = 0.8,
+        },
+        plugins = {
+            options = {
+                enabled = true,
+                laststatus = 0,
+            },
         },
     },
 }
