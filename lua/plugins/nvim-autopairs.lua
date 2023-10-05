@@ -1,11 +1,10 @@
 return {
     'windwp/nvim-autopairs',
+    enabled = false,
     event = 'InsertEnter',
     config = function()
         require('nvim-autopairs').setup({
-            fast_wrap = {
-                map = '∑',
-            },
+            fast_wrap = {},
         })
 
         local npairs = require('nvim-autopairs')
