@@ -15,8 +15,6 @@ return {
             })
         end, NS)
 
-        -- [hallo]
-
         -- Aligns to a Vim regex with previews
         vim.keymap.set('x', 'aR', function()
             require('align').align_to_string({
