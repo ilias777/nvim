@@ -1,32 +1,37 @@
 return {
     'Vonr/align.nvim',
-    keys = {
-        { 'aa', mode = { 'v' } },
-        { 'as', mode = { 'v' } },
-        { 'aw', mode = { 'v' } },
-        -- { 'ar', mode = { 'v' } },
-    },
-    config = function()
+    branch = 'v2',
+    lazy = true,
+    -- keys = {
+    --     { 'aa', mode = { 'v' } },
+    -- },
+    init = function()
         local NS = { noremap = true, silent = true }
 
-        -- Aligns to 1 character, looking left
+        -- Aligns to 1 character
         vim.keymap.set('x', 'aa', function()
-            require('align').align_to_char(1, true)
+            require('align').align_to_char({
+                length = 1,
+            })
         end, NS)
 
-        -- Aligns to 2 characters, looking left and with previews
-        vim.keymap.set('x', 'as', function()
-            require('align').align_to_char(2, true, true)
+        -- [hallo]
+
+        -- Aligns to a Vim regex with previews
+        vim.keymap.set('x', 'aR', function()
+            require('align').align_to_string({
+                preview = true,
+                regex = true,
+            })
         end, NS)
 
-        -- Aligns to a string, looking left and with previews
-        vim.keymap.set('x', 'aw', function()
-            require('align').align_to_string(false, true, true)
+        -- Example gawip to align a paragraph to a string with previews
+        vim.keymap.set('n', 'gaw', function()
+            local a = require('align')
+            a.operator(a.align_to_string, {
+                regex = false,
+                preview = true,
+            })
         end, NS)
-
-        -- Aligns to a Lua pattern, looking left and with previews
-        -- vim.keymap.set('x', 'ar', function()
-        --     require('align').align_to_string(true, true, true)
-        -- end, NS)
     end,
 }
