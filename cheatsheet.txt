@@ -295,10 +295,9 @@ Dap UI Toggle              | <Leader>du
 Toggle Word | <Leader>w
 
 ## Align
-Aligns to 1 chars, looking left                         | aa
-Aligns to 2 chars, looking left and with previews       | as
-Aligns to a string, looking left and with previews      | aw
-Aligns to a Lua pattern, looking left and with previews | ar
+Aligns to 1 character                       | aa
+Aligns to a Vim regex with previews         | aR
+Align a paragraph to a string with previews | gawip
 
 ## Git
 Open Neogit    | <Leader>gg
