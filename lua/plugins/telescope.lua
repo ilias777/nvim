@@ -41,10 +41,14 @@ return {
                 prompt_prefix = '   ',
                 winblend = 0,
                 mappings = {
-                    i = { ['<c-t>'] = trouble.open_with_trouble },
+                    i = {
+                        ['<c-t>'] = trouble.open_with_trouble,
+                        ['<M-p>'] = action_layout.toggle_preview,
+                    },
                     n = {
                         ['<c-t>'] = trouble.open_with_trouble,
                         ['q'] = require('telescope.actions').close,
+                        ['<M-p>'] = action_layout.toggle_preview,
                     },
                 },
             },
