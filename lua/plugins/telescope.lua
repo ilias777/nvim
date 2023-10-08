@@ -35,6 +35,8 @@ return {
     config = function()
         local trouble = require('trouble.providers.telescope')
         local fb_actions = require('telescope').extensions.file_browser.actions
+        local actions = require('telescope.actions')
+        local action_layout = require('telescope.actions.layout')
 
         require('telescope').setup({
             defaults = {
