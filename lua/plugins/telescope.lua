@@ -19,7 +19,7 @@ return {
         { '<leader>fs', '<cmd>Telescope symbols<cr>', desc = 'Find Symbols' },
         { '<leader>ft', '<cmd>Telescope git_files<cr>', desc = 'Find Git Files' },
         { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
-        { '<leader>fy', '<cmd>Telescope yank_history', desc = 'Find yanks' },
+        { '<leader>fy', '<cmd>Telescope yank_history<cr>', desc = 'Find yanks' },
         { '<leader>fz', '<cmd>Telescope zoxide list<cr>', desc = 'Find Directory' },
     },
     branch = '0.1.x',
