@@ -93,6 +93,27 @@ return {
             require('glance').setup()
         end,
     },
+    {
+        'simrat39/symbols-outline.nvim',
+        enabled = true,
+        cmd = 'SymbolsOutline',
+        config = function()
+            require('symbols-outline').setup()
+        end,
+    },
+    {
+        'stevearc/aerial.nvim',
+        enabled = true,
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter',
+            'nvim-tree/nvim-web-devicons',
+        },
+        opts = {
+            layout = {
+                width = 60,
+            },
+        },
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                           CMP                            │
@@ -262,13 +283,6 @@ return {
                     { text = { builtin.foldfunc, ' ' }, click = 'v:lua.ScFa' },
                 },
             })
-        end,
-    },
-    {
-        'simrat39/symbols-outline.nvim',
-        cmd = 'SymbolsOutline',
-        config = function()
-            require('symbols-outline').setup()
         end,
     },
     {
