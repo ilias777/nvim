@@ -19,6 +19,7 @@ return {
             center = {
                 { action = 'Telescope find_files', desc = ' Find file', icon = ' ', key = 'f' },
                 { action = 'enew | startinsert', desc = ' New file', icon = ' ', key = 'n' },
+                { action = 'Telescope file_browser', desc = ' File explorer', icon = '󰙅 ', key = 'e' },
                 { action = 'Telescope oldfiles', desc = ' Recent files', icon = ' ', key = 'r' },
                 { action = 'Telescope live_grep', desc = ' Find text', icon = ' ', key = 'g' },
                 { action = 'e lua/plugins/init.lua', desc = ' Config', icon = ' ', key = 'c' },
