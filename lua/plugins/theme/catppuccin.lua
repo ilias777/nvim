@@ -6,6 +6,7 @@ local mocha = require('catppuccin.palettes').get_palette('mocha')
 local catppuccin = require('catppuccin')
 
 catppuccin.setup({
+    transparent_background = true,
     styles = {
         keywords = { 'italic' },
         variables = { 'italic' },
