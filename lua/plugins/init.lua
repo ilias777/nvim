@@ -97,9 +97,23 @@ return {
         'simrat39/symbols-outline.nvim',
         enabled = true,
         cmd = 'SymbolsOutline',
-        config = function()
-            require('symbols-outline').setup()
-        end,
+        config = true,
+        opts = {
+            width = 40,
+            symbols = {
+                File = { icon = '󰈔', hl = '@text.uri' }, -- change
+                Module = { icon = '󰆧', hl = '@namespace' }, -- change
+                Namespace = { icon = '󰅪', hl = '@namespace' }, -- change
+                Field = { icon = '󰆨', hl = '@field' }, -- change
+                Interface = { icon = '󰜰', hl = '@type' }, -- change
+                Array = { icon = '󰅪', hl = '@constant' }, -- change
+                Event = { icon = '', hl = '@type' }, -- change
+                Component = { icon = '󰅴', hl = '@function' }, -- change
+            },
+        },
+        -- config = function()
+        --     require('symbols-outline').setup()
+        -- end,
     },
     {
         'stevearc/aerial.nvim',
