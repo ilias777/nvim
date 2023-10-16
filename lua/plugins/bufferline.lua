@@ -20,7 +20,7 @@ return {
                 tab_size = 20,
                 diagnostics = 'nvim_lsp',
                 diagnostics_indicator = function(count, level, diagnostics_dict, context)
-                    local ret = (diagnostics_dict.error and ' ' .. diagnostics_dict.error .. ' ' or '') .. (diagnostics_dict.warning and ' ' .. diagnostics_dict.warning or '')
+                    local ret = (diagnostics_dict.error and ' ' .. diagnostics_dict.error .. ' ' or '') .. (diagnostics_dict.warning and ' ' .. diagnostics_dict.warning or '') .. (diagnostics_dict.hint and '' .. diagnostics_dict.hint .. ' ' or '')
                     return vim.trim(ret)
                 end,
                 ---@type 'thin' | 'thick' | 'slant' | 'padded_slant' | 'slope' | 'padded_slope'
@@ -37,6 +37,15 @@ return {
             highlights = require('catppuccin.groups.integrations.bufferline').get({
                 custom = {
                     all = {
+                        ---@diagnostic disable: need-check-nil
+                        info = { fg = mocha.surface1 },
+                        info_diagnostic = { fg = mocha.surface1 },
+                        hint = { fg = mocha.surface1 },
+                        hint_diagnostic = { fg = mocha.surface1 },
+                        warning = { fg = mocha.surface1 },
+                        warning_diagnostic = { fg = mocha.surface1 },
+                        error = { fg = mocha.surface1 },
+                        error_diagnostic = { fg = mocha.surface1 },
                         -- -- Fill
                         -- fill = { bg = 'NONE' },
                         -- -- Background
