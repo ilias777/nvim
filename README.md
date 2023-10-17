@@ -17,20 +17,21 @@
 ## 🌟 Preview
 
 <div align="center">
+  <img width="1912" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/db615b18-d73d-480a-8fd6-327801192b18">
   <h6>Find files with Telescope</h6>
-  <img width="1493" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/43c34630-cc8a-4dae-9e6c-a3ea8c7307de">
+  <img width="1490" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/ae7056e1-172b-4ba5-b4cb-3581556fab1a">
   <h6>Show keybindings with which-key</h6>
-  <img width="1493" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/e5856a21-f0ff-43a2-91e5-924c8ba00287">
+  <img width="1528" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/f4bfaacb-7d43-4b22-ae49-ffd248d0b14f">
   <h6>File browser with Telescope</h6>
-  <img width="1493" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/a50a90e6-75e9-4e8e-9e39-41a7c026ffa4">
+  <img width="1490" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/f3dfde21-3c6f-43c8-b69b-0b9559d5d424">
   <h6>Neo-tree file browser</h6>
-  <img width="1493" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/63153adb-ff66-4eaf-b949-582b648579bb">
+  <img width="1490" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/81820deb-26a9-445c-aa00-e7cf174c3a20">
   <h6>Lazy.nvim</h6>
-  <img width="1493" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/d79eebc3-77a6-44ec-8d2f-4bed2cfe2c73">
+  <img width="1490" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/242cf526-c75a-45ad-8c46-b6aa05c68ff6">
   <h6>Mason.nvim</h6>
-  <img width="1493" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/fb9c08f9-7aaf-4d9a-8dd3-517282078a8d">
+  <img width="1490" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/777f96a3-5be7-4537-84a0-7bd2da2c1388">
   <h6>Autocompletion with nvim-cmp</h6>
-  <img width="1493" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/22452662-1b6e-4694-a21a-330c0f3240af">
+  <img width="1490" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/15a5c55d-3316-4db7-aba6-89868935214a">
 </div>
 
 #### With transparent background
