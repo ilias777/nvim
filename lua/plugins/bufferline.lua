@@ -38,14 +38,14 @@ return {
                 custom = {
                     all = {
                         ---@diagnostic disable: need-check-nil
-                        info = { fg = mocha.surface1 },
-                        info_diagnostic = { fg = mocha.surface1 },
-                        hint = { fg = mocha.surface1 },
-                        hint_diagnostic = { fg = mocha.surface1 },
-                        warning = { fg = mocha.surface1 },
-                        warning_diagnostic = { fg = mocha.surface1 },
-                        error = { fg = mocha.surface1 },
-                        error_diagnostic = { fg = mocha.surface1 },
+                        info = { fg = mocha.surface2 },
+                        info_diagnostic = { fg = mocha.surface2 },
+                        hint = { fg = mocha.surface2 },
+                        hint_diagnostic = { fg = mocha.surface2 },
+                        warning = { fg = mocha.surface2 },
+                        warning_diagnostic = { fg = mocha.surface2 },
+                        error = { fg = mocha.surface2 },
+                        error_diagnostic = { fg = mocha.surface2 },
                     },
                 },
             }),
