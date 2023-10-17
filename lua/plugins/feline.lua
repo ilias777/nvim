@@ -1,6 +1,6 @@
 return {
     'freddiehaddad/feline.nvim',
-    event = 'VimEnter',
+    event = 'VeryLazy',
     config = function()
         local mocha = require('catppuccin.palettes').get_palette('mocha')
         local ctp_feline = require('catppuccin.groups.integrations.feline')
