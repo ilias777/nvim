@@ -1,84 +1,70 @@
 return {
-    {
-        'folke/noice.nvim',
-        event = 'VeryLazy',
-        dependencies = {
-            'MunifTanjim/nui.nvim',
-            'rcarriga/nvim-notify',
+    'folke/noice.nvim',
+    event = 'VeryLazy',
+    opts = {
+        messages = {
+            view_history = 'notify',
         },
-        opts = {
-            messages = {
-                view_history = 'notify',
+        commands = {
+            history = {
+                view = 'popup',
             },
-            commands = {
-                history = {
-                    view = 'popup',
-                },
+        },
+        lsp = {
+            progress = {
+                enabled = false,
             },
-            lsp = {
-                progress = {
-                    enabled = false,
-                },
-                hover = {
-                    enabled = false,
-                },
-                signature = {
-                    enabled = false,
-                },
-                documentation = {
-                    enabled = false,
-                    opts = {
-                        border = { style = 'rounded' },
-                        relative = 'cursor',
-                        position = {
-                            row = 2,
-                        },
-                        winhighlight = {
-                            Normal = 'LspFloat',
-                            FloatBorder = 'LspFloatBorder',
-                        },
-                    },
-                },
+            hover = {
+                enabled = false,
             },
-            presets = {
-                bottom_search = true,
-                inc_rename = true,
+            signature = {
+                enabled = false,
             },
-            views = {
-                cmdline_popup = {
+            documentation = {
+                enabled = false,
+                opts = {
+                    border = { style = 'rounded' },
+                    relative = 'cursor',
                     position = {
-                        row = 3,
-                        col = '50%',
+                        row = 2,
                     },
-                },
-            },
-            routes = {
-                {
-                    view = 'mini',
-                    filter = {
-                        event = 'msg_show',
-                        kind = '',
-                        find = 'geschrieben',
-                    },
-                },
-                {
-                    view = 'mini',
-                    filter = {
-                        event = {
-                            'msg_showmode',
-                            -- 'msg_showcmd',
-                        },
+                    winhighlight = {
+                        Normal = 'LspFloat',
+                        FloatBorder = 'LspFloatBorder',
                     },
                 },
             },
         },
-    },
-    {
-        'rcarriga/nvim-notify',
-        event = 'VeryLazy',
-        opts = {
-            render = 'compact',
-            stages = 'slide',
+        presets = {
+            bottom_search = true,
+            inc_rename = true,
+        },
+        views = {
+            cmdline_popup = {
+                position = {
+                    row = 3,
+                    col = '50%',
+                },
+            },
+        },
+        routes = {
+            {
+                view = 'mini',
+                filter = {
+                    event = 'msg_show',
+                    kind = '',
+                    find = 'geschrieben',
+                },
+            },
+            {
+                view = 'mini',
+                filter = {
+                    event = {
+                        'msg_showmode',
+                        -- 'msg_showcmd',
+                    },
+                },
+            },
         },
     },
 }
