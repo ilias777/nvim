@@ -32,6 +32,9 @@ return {
                 return { '⚡ Neovim loaded ' .. stats.loaded .. '/' .. stats.count .. ' plugins in ' .. ms .. 'ms' }
             end,
         },
+        hide = {
+            tabline = false,
+        },
     },
-    dependencies = { { 'nvim-tree/nvim-web-devicons' } },
+    -- dependencies = { { 'nvim-tree/nvim-web-devicons' } },
 }
