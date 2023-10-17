@@ -17,7 +17,7 @@
 ## 🌟 Preview
 
 <div align="center">
-  <img width="1912" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/db615b18-d73d-480a-8fd6-327801192b18">
+  <img width="1912" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/25cff403-6a32-47c9-8da1-5a5bae24a877">
   <h6>Find files with Telescope</h6>
   <img width="1490" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/ae7056e1-172b-4ba5-b4cb-3581556fab1a">
   <h6>Show keybindings with which-key</h6>
@@ -121,10 +121,10 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 ## 🔌 Plugins
 
-- Over **80 Plugins** preinstalled
-- Startuptime **~100ms - ~130ms**
+- Over **90 Plugins** preinstalled
+- Startuptime **~47ms - ~49ms**
 
-<img width="1493" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/9a147802-e667-4c20-8fa6-16b81608b95b">
+<img width="1912" alt="startuptime" src="https://github.com/ilias777/nvim/assets/39212564/694d8772-ee43-41d7-9cc6-d0a9c87ce65b">
 
 ### Plugins List
 
