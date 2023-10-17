@@ -42,22 +42,20 @@ return {
     {
         'neovim/nvim-lspconfig',
         event = { 'BufReadPost', 'BufNewFile' },
+        dependencies = {
+            { 'folke/neodev.nvim', opts = {} },
+        },
         config = function()
             require('plugins.lspconf.lsp-config')
         end,
     },
     {
         'williamboman/mason.nvim',
-        event = 'BufReadPre',
         build = ':MasonUpdate',
+        cmd = 'Mason',
         dependencies = {
             'williamboman/mason-lspconfig.nvim',
         },
-    },
-    {
-        'folke/neodev.nvim',
-        event = 'VeryLazy',
-        opts = {},
     },
     {
         'SmiteshP/nvim-navic',
