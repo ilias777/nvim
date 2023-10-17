@@ -98,6 +98,7 @@ return {
                     grouped = true,
                     theme = 'dropdown',
                     initial_mode = 'normal',
+                    previewer = false,
                     mappings = {
                         ['n'] = {
                             ['o'] = 'select_default',
