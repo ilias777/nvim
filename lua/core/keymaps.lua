@@ -179,7 +179,6 @@ vim.keymap.set('n', '<leader>xq', '<cmd>TroubleToggle quickfix<cr>', { desc = 'T
 
 -- noice.nvim
 vim.keymap.set('n', '<space>nn', '<cmd>Noice<cr>', { desc = 'Noice Messages' })
-vim.keymap.set('n', '<space>nd', '<cmd>NoiceDismiss<cr>', { desc = 'Noice Dismiss' })
 vim.keymap.set('n', '<space>nl', '<cmd>NoiceLast<cr>', { desc = 'Noice Last' })
 vim.keymap.set('n', '<space>nt', '<cmd>NoiceTelescope<cr>', { desc = 'Noice Telescope' })
 
