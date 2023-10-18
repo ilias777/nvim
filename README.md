@@ -54,7 +54,7 @@
 
 ## 🔠 Used Font
 
-- [Cascadia Code](https://github.com/microsoft/cascadia-code) - A new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Terminal.
+- [Caskaydia Cove Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode) - A new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Terminal.
 
 ## 🛠️ Installation
 
