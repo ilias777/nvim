@@ -34,17 +34,6 @@
   <img width="1490" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/15a5c55d-3316-4db7-aba6-89868935214a">
 </div>
 
-#### With transparent background
-
-<div align="center">
-  <img width="1404" alt="t1" src="https://github.com/ilias777/nvim/assets/39212564/42ef91cb-8184-461b-aea7-282d20460d3c">
-  <img width="1404" alt="t2" src="https://github.com/ilias777/nvim/assets/39212564/96a06bbc-9089-4abf-9502-740739c73de2">
-  <img width="1404" alt="t3" src="https://github.com/ilias777/nvim/assets/39212564/c2031813-c6e2-48e1-a5f9-e9d55082c7ed">
-  <img width="1404" alt="t4" src="https://github.com/ilias777/nvim/assets/39212564/a4eb9756-b97d-4e64-886c-afac417a00eb">
-</div>
-
-How you can set transparent background is explained in the [Wiki](https://github.com/ilias777/nvim/wiki/Transparent-Background)
-
 ## ✨ Features
 
 - File explorer with [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
