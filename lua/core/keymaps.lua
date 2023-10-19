@@ -116,6 +116,9 @@ vim.keymap.set('n', 'i', function()
     return 'i'
 end, { expr = true, desc = 'better i' })
 
+-- Spelling
+vim.keymap.set('n', 'z.', '1z=', { desc = '󰓆 Fix Spelling' })
+
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                 PLUGINS RELATED KEYMAPS                  │
 --  ╰──────────────────────────────────────────────────────────╯
