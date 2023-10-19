@@ -36,5 +36,4 @@ return {
             tabline = false,
         },
     },
-    -- dependencies = { { 'nvim-tree/nvim-web-devicons' } },
 }
