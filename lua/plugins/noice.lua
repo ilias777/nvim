@@ -52,16 +52,20 @@ return {
                 view = 'mini',
                 filter = {
                     event = 'msg_show',
-                    kind = '',
-                    find = 'written',
+                    any = {
+                        { find = '; after #%d+' },
+                        { find = '; before #%d+' },
+                        { find = 'fewer lines' },
+                        { find = 'written' },
+                    },
                 },
             },
             {
                 view = 'mini',
                 filter = {
-                    event = {
-                        'msg_showmode',
-                        -- 'msg_showcmd',
+                    event = 'notify',
+                    any = {
+                        { find = 'hidden' },
                     },
                 },
             },
