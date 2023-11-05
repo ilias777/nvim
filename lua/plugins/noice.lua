@@ -53,7 +53,7 @@ return {
                 filter = {
                     event = 'msg_show',
                     kind = '',
-                    find = 'geschrieben',
+                    find = 'written',
                 },
             },
             {
