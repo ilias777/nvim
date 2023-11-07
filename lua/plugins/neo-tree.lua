@@ -71,6 +71,8 @@ return {
                 ['g'] = function()
                     vim.api.nvim_exec('Neotree focus git_status right', true)
                 end,
+                ['O'] = { 'show_help', nowait = false, config = { title = 'Order by', prefix_key = 'o' } },
+                ['o'] = 'open',
             },
         },
         filesystem = {
@@ -80,6 +82,11 @@ return {
             },
             follow_current_file = {
                 enabled = true,
+            },
+            window = {
+                mappings = {
+                    ['O'] = { 'show_help', nowait = false, config = { title = 'Order by', prefix_key = 'o' } },
+                },
             },
         },
         default_component_configs = {
