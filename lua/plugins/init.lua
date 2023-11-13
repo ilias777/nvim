@@ -187,6 +187,11 @@ return {
                 async = false,
                 timeout_ms = 500,
             },
+            formatters = {
+                latexindent = {
+                    command = '-l /Users/ilias/.indentconfig.yaml',
+                },
+            },
         },
     },
     {
