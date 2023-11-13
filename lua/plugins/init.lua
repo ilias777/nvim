@@ -153,7 +153,7 @@ return {
     },
 
     --  ╭──────────────────────────────────────────────────────────╮
-    --  │                  LINTING AND FORMATING                   │
+    --  │                  FORMATING AND LINTING                   │
     --  ╰──────────────────────────────────────────────────────────╯
     -- {
     --     'jose-elias-alvarez/null-ls.nvim',
@@ -162,10 +162,32 @@ return {
     --     end,
     -- },
     {
-        'jose-elias-alvarez/null-ls.nvim',
-        config = function()
-            require('plugins.lspconf.null-ls')
-        end,
+
+        'stevearc/conform.nvim',
+        event = { 'BufReadPre', 'BufNewFile' },
+        opts = {
+            formatters_by_ft = {
+                css = { 'prettier' },
+                html = { 'prettier' },
+                java = { 'prettier' },
+                javascript = { 'prettier' },
+                json = { 'prettier' },
+                latex = { 'latexindent' },
+                lua = { 'stylua' },
+                markdown = { 'prettier' },
+                php = { 'prettier' },
+                python = { 'black' },
+                rust = { 'rustfmt' },
+                scss = { 'prettier' },
+                vue = { 'prettier' },
+                yaml = { 'prettier' },
+            },
+            format_on_save = {
+                lsp_fallback = true,
+                async = false,
+                timeout_ms = 500,
+            },
+        },
     },
 
     --  ╭──────────────────────────────────────────────────────────╮
@@ -296,7 +318,10 @@ return {
             require('statuscol').setup({
                 relculright = true,
                 segments = {
-                    { sign = { namespace = { 'gitsigns*' }, maxwidth = 1, colwidth = 1, auto = false }, click = 'v:lua.ScSa' },
+                    {
+                        sign = { namespace = { 'gitsigns*' }, maxwidth = 1, colwidth = 1, auto = false },
+                        click = 'v:lua.ScSa',
+                    },
                     { sign = { name = { 'Diagnostic' }, maxwidth = 1, auto = false }, click = 'v:lua.ScSa' },
                     { text = { builtin.lnumfunc, '  ' }, click = 'v:lua.ScLa' },
                     { text = { builtin.foldfunc, ' ' }, click = 'v:lua.ScFa' },
