@@ -41,7 +41,7 @@ return {
     --  ╰──────────────────────────────────────────────────────────╯
     {
         'neovim/nvim-lspconfig',
-        event = { 'BufReadPost', 'BufNewFile' },
+        event = { 'BufReadPre', 'BufReadPost', 'BufNewFile' },
         dependencies = {
             { 'folke/neodev.nvim', opts = {} },
         },
