@@ -162,7 +162,6 @@ return {
     --     end,
     -- },
     {
-
         'stevearc/conform.nvim',
         event = { 'BufReadPre', 'BufNewFile' },
         opts = {
