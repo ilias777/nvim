@@ -111,7 +111,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 ## 🔌 Plugins
 
 - Over **90 Plugins** preinstalled
-- Startuptime **~47ms - ~49ms**
+- Startuptime **~40ms - ~49ms**
 
 <img width="1471" alt="startuptime" src="https://github.com/ilias777/nvim/assets/39212564/379ea23b-665e-4640-bf46-611f52bb4292">
 
@@ -140,9 +140,13 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Completion plugin.
 
-#### Formatter and linter
+#### Formatter
 
-- [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim) - Language server to inject LSP diagnostics, code actions, and more via Lua.
+- [conform.nvim](https://github.com/stevearc/conform.nvim) - Lightweight yet powerful formatter plugin for Neovim.
+
+#### Linter
+
+- [nvim-lint](https://github.com/mfussenegger/nvim-lint) - An asynchronous linter plugin for Neovim.
 
 #### Colorscheme
 
