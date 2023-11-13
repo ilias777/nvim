@@ -178,8 +178,9 @@ return {
                 python = { 'black' },
                 rust = { 'rustfmt' },
                 scss = { 'prettier' },
+                toml = { 'prettier' },
                 vue = { 'prettier' },
-                yaml = { 'prettier' },
+                yaml = { 'yamlfmt' },
             },
             format_on_save = {
                 lsp_fallback = true,
