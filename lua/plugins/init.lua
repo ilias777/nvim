@@ -171,7 +171,7 @@ return {
                 java = { 'prettier' },
                 javascript = { 'prettier' },
                 json = { 'prettier' },
-                latex = { 'latexindent' },
+                tex = { 'latexindent' },
                 lua = { 'stylua' },
                 markdown = { 'prettier' },
                 php = { 'prettier' },
