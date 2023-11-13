@@ -155,6 +155,12 @@ return {
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                  LINTING AND FORMATING                   │
     --  ╰──────────────────────────────────────────────────────────╯
+    -- {
+    --     'jose-elias-alvarez/null-ls.nvim',
+    --     config = function()
+    --         require('plugins.lspconf.null-ls')
+    --     end,
+    -- },
     {
         'jose-elias-alvarez/null-ls.nvim',
         config = function()
