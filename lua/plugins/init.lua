@@ -187,11 +187,11 @@ return {
                 async = false,
                 timeout_ms = 500,
             },
-            formatters = {
-                latexindent = {
-                    prepend_args = { '-l', '/Users/ilias/.indentconfig.yaml' },
-                },
-            },
+            -- formatters = {
+            --     latexindent = {
+            --         prepend_args = { '-l', '/Users/ilias/.indentconfig.yaml' },
+            --     },
+            -- },
         },
     },
     {
