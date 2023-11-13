@@ -189,7 +189,7 @@ return {
             },
             formatters = {
                 latexindent = {
-                    command = '-l /Users/ilias/.indentconfig.yaml',
+                    prepend_args = { '-l', '/Users/ilias/.indentconfig.yaml' },
                 },
             },
         },
