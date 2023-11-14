@@ -166,7 +166,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 - [cinnamon.nvim](https://github.com/declancm/cinnamon.nvim) - Smooth scrolling for any movement command.
 - [flash.nvim](https://github.com/folke/flash.nvim) - Navigate your code with search labels.
-- [hop.nvim](https://github.com/phaazon/hop.nvim) - Jump anywhere in a document.
+- [hop.nvim](https://github.com/smoka7/hop.nvim) - Jump anywhere in a document.
 - [nvim-spider](https://github.com/chrisgrieser/nvim-spider) - Use the w, e, b motions like a spider.
 
 #### Git integration
