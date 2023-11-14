@@ -3,7 +3,7 @@ return {
     event = 'VeryLazy',
     opts = {
         messages = {
-            view_history = 'notify',
+            view_history = 'messages',
         },
         commands = {
             history = {
