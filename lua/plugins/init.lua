@@ -435,15 +435,13 @@ return {
     --  │                          MOTION                          │
     --  ╰──────────────────────────────────────────────────────────╯
     {
-        'phaazon/hop.nvim',
+        'smoka7/hop.nvim',
+        version = '*',
         keys = {
             { '<leader>a', '<cmd>HopWord<cr>', desc = 'Hop Word' },
             { '<leader>hh', '<cmd>HopAnywhere<cr>', desc = 'Hop Anywhere' },
         },
-        branch = 'v2',
-        config = function()
-            require('hop').setup()
-        end,
+        config = true,
     },
     {
         'rlane/pounce.nvim',
