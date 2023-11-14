@@ -66,6 +66,7 @@ return {
                     event = 'notify',
                     any = {
                         { find = 'hidden' },
+                        { find = 'clipboard' },
                     },
                 },
             },
