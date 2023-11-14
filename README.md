@@ -40,7 +40,7 @@
 - Autocompletion with [CMP](https://github.com/hrsh7th/nvim-cmp)
 - Git integration with [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [Neogit](https://github.com/NeogitOrg/neogit)
 - Fuzzy finding with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- Formatting and Linting with [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)
+- Formatting  with [conform.nvim](https://github.com/stevearc/conform.nvim) and Linting [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
 - Debug Adapter Protocol with [Nvim DAP](https://github.com/mfussenegger/nvim-dap)
 - Beautiful UI with [Catppuccin](https://github.com/catppuccin/nvim) and [Noice.nvim](https://github.com/folke/noice.nvim)
@@ -194,6 +194,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [rainbow-delimiters](https://github.com/HiPhish/rainbow-delimiters.nvim) - Rainbow delimiters for Neovim with Treesitter.
 - [ssr.nvim](https://github.com/cshuaimin/ssr.nvim) - Treesitter based structural search and replace plugin.
 - [statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim) - Configurable 'statuscolumn' with builtin segments and click handlers.
+- [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) - A neovim lua plugin to help easily manage multiple terminal windows.
 - [vim-visual-multi](https://github.com/mg979/vim-visual-multi) - Multiple cursors.
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Popup of keybindings.
 - [yanky.nvim](https://github.com/gbprod/yanky.nvim) - Improved Yank and Put functionalities.
