@@ -150,7 +150,12 @@ vim.keymap.set('n', '<Leader>lc', '<cmd>Lazy check<cr>', { desc = 'Check Lazy Pl
 vim.keymap.set('n', '<Leader>ls', '<cmd>Lazy sync<cr>', { desc = 'Sync Lazy Plugins' })
 
 -- nvim-dap
-vim.keymap.set('n', '<leader>dB', '<cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', { desc = 'Add Conditional Breakpoint' })
+vim.keymap.set(
+    'n',
+    '<leader>dB',
+    '<cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>',
+    { desc = 'Add Conditional Breakpoint' }
+)
 vim.keymap.set('n', '<leader>dc', '<cmd>DapContinue<CR>', { desc = 'Dap Continue' })
 vim.keymap.set('n', '<leader>dsi', '<cmd>DapStepInto<CR>', { desc = 'Dap Step Into' })
 vim.keymap.set('n', '<leader>dso', '<cmd>DapStepOver<CR>', { desc = 'Dap Step Over' })
@@ -175,8 +180,18 @@ vim.keymap.set('n', '<leader>h2', '<cmd>HopChar2<cr>', { desc = 'Hop 2 Chars' })
 vim.keymap.set('n', '<leader>hc', '<cmd>HopVertical<cr>', { desc = 'Hop Vertical' })
 
 -- trouble.nvim
-vim.keymap.set('n', '<leader>xw', '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>', { desc = 'Trouble Workspace Diagnostics' })
-vim.keymap.set('n', '<leader>xd', '<cmd>TroubleToggle lsp_document_diagnostics<cr>', { desc = 'Trouble Document Diagnostics' })
+vim.keymap.set(
+    'n',
+    '<leader>xw',
+    '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>',
+    { desc = 'Trouble Workspace Diagnostics' }
+)
+vim.keymap.set(
+    'n',
+    '<leader>xd',
+    '<cmd>TroubleToggle lsp_document_diagnostics<cr>',
+    { desc = 'Trouble Document Diagnostics' }
+)
 vim.keymap.set('n', '<leader>xl', '<cmd>TroubleToggle loclist<cr>', { desc = 'Trouble Location List' })
 vim.keymap.set('n', '<leader>xq', '<cmd>TroubleToggle quickfix<cr>', { desc = 'Trouble Quickfix' })
 
@@ -184,6 +199,20 @@ vim.keymap.set('n', '<leader>xq', '<cmd>TroubleToggle quickfix<cr>', { desc = 'T
 vim.keymap.set('n', '<space>nn', '<cmd>Noice<cr>', { desc = 'Noice Messages' })
 vim.keymap.set('n', '<space>nl', '<cmd>NoiceLast<cr>', { desc = 'Noice Last' })
 vim.keymap.set('n', '<space>nt', '<cmd>NoiceTelescope<cr>', { desc = 'Noice Telescope' })
+
+-- toggleterm.nvim
+function _G.set_terminal_keymaps()
+    local opts = { buffer = 0 }
+    vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+    vim.keymap.set('t', 'kj', [[<C-\><C-n>]], opts)
+    vim.keymap.set('t', '<space>h>', [[<Cmd>wincmd h<CR>]], opts)
+    vim.keymap.set('t', '<space>j>', [[<Cmd>wincmd j<CR>]], opts)
+    vim.keymap.set('t', '<space>k>', [[<Cmd>wincmd k<CR>]], opts)
+    vim.keymap.set('t', '<space>l>', [[<Cmd>wincmd l<CR>]], opts)
+    vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+end
+
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                    FOR GREEK KEYBOARD                    │
