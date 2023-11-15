@@ -61,6 +61,7 @@ vim.keymap.set('v', '>', '>gv')
 
 -- Paste
 vim.keymap.set('v', 'p', '"_dP')
+vim.keymap.set('x', 'p', 'P')
 vim.keymap.set('n', 'dD', '"_dd')
 
 -- Not yanking with 'c' and 'x'
