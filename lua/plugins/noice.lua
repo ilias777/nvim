@@ -67,6 +67,7 @@ return {
                     any = {
                         { find = 'hidden' },
                         { find = 'clipboard' },
+                        { find = 'Deleted' },
                     },
                 },
             },
