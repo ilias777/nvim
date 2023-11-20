@@ -4,9 +4,11 @@
 
 <h1 align="center">Neovim Configuration</h1>
 
-<h1 align="center">
+<div align="center">
   <img src="https://img.shields.io/badge/Made_with_Lua-blue?style=for-the-badge&logo=lua" />
-</h1>
+</div>
+
+<hr>
 
 <h4 align="center">
   <a href="https://github.com/ilias777/nvim#-features">Features</a> •
