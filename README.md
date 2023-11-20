@@ -4,9 +4,9 @@
 
 <h1 align="center">Neovim Configuration</h1>
 
-<p align="center">
+<div align="center">
   ![Static Badge](https://img.shields.io/badge/Made_with_Lua-darkblue?style=for-the-badge&logo=lua)
-</p>
+</div>
 
 <h4 align="center">
   <a href="https://github.com/ilias777/nvim#-features">Features</a> •
