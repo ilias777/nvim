@@ -407,7 +407,7 @@ return {
     },
     {
         'yaocccc/nvim-hl-mdcodeblock.lua',
-        enabled = true,
+        enabled = false,
         ft = 'markdown',
         dependencies = { 'nvim-treesitter' },
         config = true,
