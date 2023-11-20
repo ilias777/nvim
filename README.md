@@ -5,7 +5,7 @@
 <h1 align="center">Neovim Configuration</h1>
 
 <div align="center">
-  ![Static Badge](https://img.shields.io/badge/Made_with_Lua-darkblue?style=for-the-badge&logo=lua)
+  <img src="https://img.shields.io/badge/Made_with_Lua-blue?style=for-the-badge&logo=lua" />
 </div>
 
 <h4 align="center">
