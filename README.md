@@ -252,7 +252,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 | [jdtls](https://github.com/eclipse/eclipse.jdt.ls)                                   | Java language server                                    | Java                 |
 | [tsserver](https://github.com/typescript-language-server/typescript-language-server) | TypeScript & JavaScript Language Server                 | JavaScript           |
 | [ltex](https://valentjn.github.io/ltex/)                                             | Grammar checking of various markup languages            | LaTex, Markdown      |
-| [texlab](https://github.com/latex-lsp/texlab)                                        | Language Server Protocol for LaTeX                      | Latex                |
+| [texlab](https://github.com/latex-lsp/texlab)                                        | Language Server Protocol for LaTeX                      | LaTex                |
 | [lua_ls](https://github.com/LuaLS/lua-language-server)                               | A language server that offers Lua language support      | Lua                  |
 | [intelephense](https://intelephense.com)                                             | PHP language server                                     | PHP                  |
 | [pyright](https://github.com/microsoft/pyright)                                      | Static Type Checker for Python                          | Python               |
