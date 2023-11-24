@@ -96,17 +96,6 @@ cd nvim
 nvim init.lua
 ```
 
-### 📺 Preview installation process
-
-https://github.com/ilias777/nvim/assets/39212564/096991aa-2841-41db-a807-8a3d6ad63d93
-
-> [!Note]
-If you see the Treesitter installing the parser messages, press `Enter` to skip these.
-
-At the first time the Command `MasonUpdate` is not found. Please wait about 2 minutes for the
-language server installation to finish.
-When all language servers are installed, restart Neovim.
-
 ## ⚙ Configuration
 
 How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
