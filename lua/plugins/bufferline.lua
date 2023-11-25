@@ -6,10 +6,10 @@ return {
         local mocha = require('catppuccin.palettes').get_palette('mocha')
         require('bufferline').setup({
             options = {
-                -- indicator = {
-                --     icon = '▎',
-                --     style = 'icon', -- 'icon' | 'underline' | 'none'
-                -- },
+                indicator = {
+                    -- icon = '▎',
+                    style = 'underline', -- 'icon' | 'underline' | 'none'
+                },
                 -- name_formatter = function(buf) -- buf contains a "name", "path" and "bufnr"
                 --     -- remove extension from markdown files for example
                 --     if buf.name:match('%.md') then
