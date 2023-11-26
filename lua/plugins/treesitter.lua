@@ -102,7 +102,10 @@ return {
                     keymaps = {
                         ['<CR>'] = 'textsubjects-smart', -- works in visual mode
                         [';'] = 'textsubjects-container-outer',
-                        ['i;'] = { 'textsubjects-container-inner', desc = 'Select inside containers (classes, functions, etc.)' },
+                        ['i;'] = {
+                            'textsubjects-container-inner',
+                            desc = 'Select inside containers (classes, functions, etc.)',
+                        },
                     },
                 },
             })
