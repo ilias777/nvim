@@ -40,7 +40,8 @@ local lspconfig = require('lspconfig')
 
 -- CMP LSP
 local lsp_defaults = lspconfig.util.default_config
-lsp_defaults.capabilities = vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
+lsp_defaults.capabilities =
+    vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
 
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
@@ -299,7 +300,6 @@ lspconfig.emmet_ls.setup({
     -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
-    filetypes = { 'astro', 'css', 'eruby', 'html', 'htmldjango', 'javascript', 'javascriptreact', 'less', 'pug', 'sass', 'scss', 'svelte', 'typescriptreact', 'vue' },
 })
 
 -- CSS Server
