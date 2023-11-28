@@ -147,7 +147,7 @@ end
 
 vim.diagnostic.config({
     virtual_text = {
-        prefix = '■ ', -- Could be '●', '▎', 'x', '■', , 
+        prefix = '│', -- Could be '●', '▎', │, 'x', '■', , 
     },
     float = { border = border },
     -- virtual_text = false,
