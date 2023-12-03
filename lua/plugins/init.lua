@@ -203,6 +203,7 @@ return {
                 javascript = { 'eslint' },
                 json = { 'jsonlint' },
                 lua = { 'luacheck' },
+                markdown = { 'vale' },
                 python = { 'ruff' },
                 vue = { 'eslint' },
                 yaml = { 'yamllint' },
