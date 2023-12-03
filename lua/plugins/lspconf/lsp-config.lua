@@ -378,6 +378,13 @@ lspconfig.html.setup({
     -- capabilities = capabilities,
     -- on_attach = on_attach,
     handlers = handlers,
+    settigns = {
+        css = {
+            lint = {
+                validProperties = {},
+            },
+        },
+    },
 })
 
 -- LTex Server
