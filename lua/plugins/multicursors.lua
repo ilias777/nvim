@@ -1,6 +1,6 @@
 return {
     'smoka7/multicursors.nvim',
-    enabled = true,
+    enabled = false,
     dependencies = {
         'nvim-treesitter/nvim-treesitter',
         'smoka7/hydra.nvim',
