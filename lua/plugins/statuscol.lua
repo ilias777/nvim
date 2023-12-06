@@ -6,6 +6,7 @@ return {
         require('statuscol').setup({
             relculright = true,
             segments = {
+                { sign = { name = { 'Dap' }, maxwidth = 1, auto = false }, click = 'v:lua.ScSa' },
                 {
                     sign = { namespace = { 'gitsigns*' }, maxwidth = 1, colwidth = 1, auto = false },
                     click = 'v:lua.ScSa',
