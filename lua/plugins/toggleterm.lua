@@ -5,4 +5,7 @@ return {
         { '<space>t', '<cmd>ToggleTerm<cr>', desc = 'ToggleTerm' },
     },
     config = true,
+    opts = {
+        direction = 'float',
+    },
 }
