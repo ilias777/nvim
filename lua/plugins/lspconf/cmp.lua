@@ -205,19 +205,19 @@ cmp.setup({
             return vim_item
         end,
     },
-    sorting = {
-        comparators = {
-            cmp.config.compare.score,
-            cmp.config.compare.offset,
-            -- cmp.config.compare.exact,
-            -- cmp.config.compare.recently_used,
-            -- cmp.config.compare.length,
-            -- cmp.config.compare.locality,
-            -- cmp.config.compare.kind,
-            -- cmp.config.compare.sort_text,
-            -- cmp.config.compare.order,
-        },
-    },
+    -- sorting = {
+    --     comparators = {
+    --         cmp.config.compare.score,
+    --         cmp.config.compare.offset,
+    --         cmp.config.compare.exact,
+    --         cmp.config.compare.recently_used,
+    --         cmp.config.compare.length,
+    --         cmp.config.compare.locality,
+    --         cmp.config.compare.kind,
+    --         cmp.config.compare.sort_text,
+    --         cmp.config.compare.order,
+    --     },
+    -- },
     experimental = {
         ghost_text = true,
     },
