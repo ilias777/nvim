@@ -7,20 +7,20 @@ return {
         vim.o.timeoutlen = 500
         local wk = require('which-key')
         wk.register({
-            ['<leader>c'] = { name = '+Comment Frame/Box' }, -- Comment Frame & Comment Box
-            ['<leader>d'] = { name = '+Diffview/Debug' }, -- Diffview & nvim-dap
+            ['<leader>c'] = { name = '+Comment Frame - Box' }, -- Comment Frame & Comment Box
+            ['<leader>d'] = { name = '+Diffview / Debug' }, -- Diffview & nvim-dap
             ['<leader>ds'] = { name = '+Dap Step' }, -- nvim-dap step
             ['<leader>f'] = { name = '+File' }, -- Telescope
             ['<leader>g'] = { name = '+Git' }, -- Git
             ['<leader>h'] = { name = '+Hop Motion' }, -- Hop
-            ['<leader>l'] = { name = '+Lazy/LTeX' }, -- Lazy & LTeX
+            ['<leader>l'] = { name = '+Lazy / LTeX' }, -- Lazy & LTeX
             ['<leader>x'] = { name = '+Trouble' }, -- Trouble
             ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
             ['<space>c'] = { name = '+Code actions / Cheatsheet' }, -- Code Actions with LSP
             ['<space>g'] = { name = '+Glance LSP' }, -- Glance LSP locations
-            ['<space>i'] = { name = '+IncRename' }, -- IncRename
+            ['<space>i'] = { name = '+IncRename / Inlay Hints' }, -- IncRename
             ['<space>n'] = { name = '+Noice' }, -- Noice.nvim
-            ['<space>r'] = { name = '+Rename' }, -- Rename with LSP
+            ['<space>r'] = { name = '+Lsp Rename' }, -- Rename with LSP
             ['<space>w'] = { name = '+Workspace LSP' }, -- Workspace LSP
         })
     end,
