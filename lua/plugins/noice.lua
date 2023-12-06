@@ -68,6 +68,7 @@ return {
                         { find = 'hidden' },
                         { find = 'clipboard' },
                         { find = 'Deleted' },
+                        { find = 'Renamed' },
                     },
                 },
             },
