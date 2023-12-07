@@ -107,8 +107,8 @@ catppuccin.setup({
             -- Bufferline
             BufferLineIndicatorSelected = { fg = colors.pink },
             BufferLineIndicator = { fg = colors.base },
-            BufferLineModifiedSelected = { fg = colors.teal },
             TabLineSel = { bg = colors.pink },
+            -- BufferLineModifiedSelected = { fg = colors.teal },
 
             -- Cursorline & Linenumbers
             CursorLine = { bg = colors.mantle },
