@@ -237,7 +237,7 @@ return {
         'LudoPinelli/comment-box.nvim',
         cmd = { 'CBcatalog', 'CBcbox' },
         keys = {
-            { '<leader>cb', '<cmd>CBcbox<cr>', desc = 'Comment Box' },
+            { '<leader>cb', '<cmd>CBlcbox<cr>', desc = 'Comment Box' },
             { '<leader>cc', '<cmd>CBcatalog<cr>', desc = 'Comment Box Catalog' },
         },
     },
