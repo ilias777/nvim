@@ -9,8 +9,8 @@ return {
 
         vim.g.rainbow_delimiters = {
             strategy = {
-                [''] = christmas_lights,
-                -- [''] = rainbow_delimiters.strategy['global'],
+                -- [''] = christmas_lights,
+                [''] = rainbow_delimiters.strategy['global'],
                 vim = rainbow_delimiters.strategy['local'],
             },
             query = {
