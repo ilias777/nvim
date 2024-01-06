@@ -98,9 +98,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- Inlay Hints
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
         if client.server_capabilities.inlayHintProvider then
-            vim.lsp.inlay_hint(ev.buf, true)
+            vim.lsp.inlay_hint.enable(ev.buf, true)
         else
-            vim.lsp.inlay_hint(ev.buf, false)
+            vim.lsp.inlay_hint.enable(ev.buf, false)
         end
     end,
 })
@@ -108,7 +108,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- Toggle Inlay Hints
 if vim.lsp.inlay_hint then
     vim.keymap.set('n', '<Space>ih', function()
-        vim.lsp.inlay_hint(0, nil)
+        vim.lsp.inlay_hint.enable(0, nil)
     end, { desc = 'Toggle Inlay Hints' })
 end
 
