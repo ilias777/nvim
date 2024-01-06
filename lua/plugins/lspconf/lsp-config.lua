@@ -255,18 +255,18 @@ lspconfig.tsserver.setup({
     -- capabilities = capabilities,
     -- on_attach = on_attach
     handlers = handlers,
-    -- init_options = {
-    --     preferences = {
-    --         includeInlayParameterNameHints = 'all',
-    --         includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-    --         includeInlayFunctionParameterTypeHints = true,
-    --         includeInlayVariableTypeHints = true,
-    --         includeInlayPropertyDeclarationTypeHints = true,
-    --         includeInlayFunctionLikeReturnTypeHints = true,
-    --         includeInlayEnumMemberValueHints = true,
-    --         importModuleSpecifierPreference = 'non-relative',
-    --     },
-    -- },
+    init_options = {
+        preferences = {
+            includeInlayParameterNameHints = 'all',
+            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+            includeInlayFunctionParameterTypeHints = true,
+            includeInlayVariableTypeHints = true,
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayFunctionLikeReturnTypeHints = true,
+            includeInlayEnumMemberValueHints = true,
+            importModuleSpecifierPreference = 'non-relative',
+        },
+    },
     -- on_attach = function(client, bufnr)
     --     client.server_capabilities.document_formatting = false
     --     client.server_capabilities.document_range_formatting = false
