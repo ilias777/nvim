@@ -10,11 +10,31 @@ sign('DapLogPoint', { text = '◆', texthl = 'DapLogPoint', linehl = '', numhl =
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                          PYTHON                          │
 --  ╰──────────────────────────────────────────────────────────╯
-dap.adapters.python = {
-    type = 'executable',
-    command = '/opt/homebrew/lib/python3.10/site-packages/debugpy/bin/python3',
-    args = { '-m', 'debugpy.adapter' },
-}
+dap.adapters.python = function(cb, config)
+    if config.request == 'attach' then
+        ---@diagnostic disable-next-line: undefined-field
+        local port = (config.connect or config).port
+        ---@diagnostic disable-next-line: undefined-field
+        local host = (config.connect or config).host or '127.0.0.1'
+        cb({
+            type = 'server',
+            port = assert(port, '`connect.port` is required for a python `attach` configuration'),
+            host = host,
+            options = {
+                source_filetype = 'python',
+            },
+        })
+    else
+        cb({
+            type = 'executable',
+            command = '/Users/ilias/.virtualenvs/debugpy/bin/python3',
+            args = { '-m', 'debugpy.adapter' },
+            options = {
+                source_filetype = 'python',
+            },
+        })
+    end
+end
 dap.configurations.python = {
     {
         -- The first three options are required by nvim-dap
@@ -30,12 +50,12 @@ dap.configurations.python = {
             -- The code below looks for a `venv` or `.venv` folder in the current directly and uses the python within.
             -- You could adapt this - to for example use the `VIRTUAL_ENV` environment variable.
             local cwd = vim.fn.getcwd()
-            if vim.fn.executable(cwd .. '/opt/homebrew/lib/python3.10/site-packages/debugpy/bin/python3') == 1 then
-                return cwd .. '/opt/homebrew/lib/python3.10/site-packages/debugpy/bin/python3'
-            elseif vim.fn.executable(cwd .. '/opt/homebrew/lib/python3.10/site-packages/debugpy/bin/python3') == 1 then
-                return cwd .. '/opt/homebrew/lib/python3.10/site-packages/debugpy/bin/python3'
+            if vim.fn.executable(cwd .. '/Users/ilias/.virtualenvs/debugpy/bin/python3') == 1 then
+                return cwd .. '/Users/ilias/.virtualenvs/debugpy/bin/python3'
+            elseif vim.fn.executable(cwd .. '/Users/ilias/.virtualenvs/debugpy/bin/python3') == 1 then
+                return cwd .. '/Users/ilias/.virtualenvs/debugpy/bin/python3'
             else
-                return '/opt/homebrew/lib/python3.10/site-packages/debugpy/bin/python3'
+                return '/Users/ilias/.virtualenvs/debugpy/bin/python3'
             end
         end,
     },
