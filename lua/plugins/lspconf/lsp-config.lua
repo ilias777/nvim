@@ -49,11 +49,6 @@ require('lspconfig.ui.windows').default_options.border = 'rounded'
 -- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 -- local navic = require('nvim-navic')
 
--- CMP LSP
--- local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities = require('cmp_nvim_lsp').default_capabilities()
--- local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 -- Options with description
 local opts = function(desc)
     return { noremap = true, silent = true, desc = desc }
