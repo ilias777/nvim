@@ -97,10 +97,29 @@ vim.api.nvim_create_autocmd('FileType', {
                 end
             end)
         end, { desc = 'Change language for ltex' })
-        vim.api.nvim_create_user_command('LtexLang', "lua require('core.utils').set_ltex_lang(<q-args>)", { nargs = 1, desc = 'Set ltex-ls language' })
-        vim.api.nvim_set_keymap('n', '<leader>le', "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>", { desc = 'Set english ltex-ls language' })
-        vim.api.nvim_set_keymap('n', '<leader>lg', "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>", { desc = 'Set german ltex-ls language' })
-        vim.api.nvim_set_keymap('n', '<leader>lk', "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>", { desc = 'Set greek ltex-ls language' })
+        vim.api.nvim_create_user_command(
+            'LtexLang',
+            "lua require('core.utils').set_ltex_lang(<q-args>)",
+            { nargs = 1, desc = 'Set ltex-ls language' }
+        )
+        vim.api.nvim_set_keymap(
+            'n',
+            '<leader>le',
+            "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>",
+            { desc = 'Set english ltex-ls language' }
+        )
+        vim.api.nvim_set_keymap(
+            'n',
+            '<leader>lg',
+            "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>",
+            { desc = 'Set german ltex-ls language' }
+        )
+        vim.api.nvim_set_keymap(
+            'n',
+            '<leader>lk',
+            "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>",
+            { desc = 'Set greek ltex-ls language' }
+        )
     end,
 })
 
