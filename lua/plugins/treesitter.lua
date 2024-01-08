@@ -55,6 +55,7 @@ return {
                     'scss',
                     'toml',
                     'vim',
+                    'vimdoc',
                     'vue',
                     'yaml',
                 },
