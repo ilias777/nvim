@@ -60,7 +60,7 @@ local config = {
     vim.list_extend(bundles, vim.split(vim.fn.glob('/Users/ilias/.config/debug/vscode-java-test/server/*.jar', 1), '\n')),
 
     on_attach = function(client, bufnr)
-        vim.lsp.inlay_hint(bufnr, true)
+        vim.lsp.inlay_hint.enable(bufnr, true)
     end,
 
     settings = {

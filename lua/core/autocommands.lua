@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'zsh', 'conf' },
     callback = function()
-        vim.lsp.inlay_hint(0, false)
+        vim.lsp.inlay_hint.enable(0, false)
     end,
 })
 
