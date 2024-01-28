@@ -31,7 +31,7 @@ local kind_icons = {
     TypeParameter = '󰅲 ',
     Unit = ' ',
     Value = '󰎠 ',
-    Variable = '𝝰 ',
+    Variable = '󰀫',
     -- Old
     -- Constructor = ' ',
     -- Enum = '了 ',
