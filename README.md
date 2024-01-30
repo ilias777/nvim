@@ -103,7 +103,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 ## 🔌 Plugins
 
 - Over **90 Plugins** preinstalled
-- Startuptime **~40ms - ~49ms**
+- Startuptime **~40ms - ~59ms**
 
 <img width="1566" alt="startuptime" src="https://github.com/ilias777/nvim/assets/39212564/be49c54c-7f25-4a6c-98aa-719011e996c6">
 
