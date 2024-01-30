@@ -158,8 +158,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 lspconfig.lua_ls.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
+    -- For nvim-navic
     -- on_attach = function(client, bufnr)
     --     navic.attach(client, bufnr)
     -- end,
@@ -247,8 +246,6 @@ lspconfig.lua_ls.setup({
 
 -- JavaScript Server
 lspconfig.tsserver.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach
     handlers = handlers,
     init_options = {
         preferences = {
@@ -267,40 +264,20 @@ lspconfig.tsserver.setup({
     --     client.server_capabilities.document_range_formatting = false
     --     on_attach(client, bufnr)
     -- end,
-
-    -- settings = {
-    --     init_options = {
-    --         preferences = {
-    --             quotePreference = 'single',
-    --             disableSuggestions = true,
-    --         },
-    --         javascript = {
-    --             format = {
-    --                 indentSize = 4,
-    --             },
-    --         },
-    --     },
-    -- },
 })
 
 -- Python Server
 lspconfig.pyright.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
 })
 
 -- Emmet Server
 lspconfig.emmet_ls.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
 })
 
 -- CSS Server
 lspconfig.cssls.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
     settings = {
         css = {
@@ -313,15 +290,11 @@ lspconfig.cssls.setup({
 
 -- Tailwind Server
 -- lspconfig.tailwindcss.setup({
---     capabilities = capabilities,
---     -- on_attach = on_attach,
 --     handlers = handlers,
 -- })
 
 -- Volar Vue Server
 lspconfig.volar.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
     filetypes = {
         'vue', --[[ 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'json' ]]
@@ -359,8 +332,6 @@ lspconfig.volar.setup({
 
 -- JSON Server
 lspconfig.jsonls.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
     filetypes = { 'json', 'jsonc' },
     init_options = {
@@ -370,8 +341,6 @@ lspconfig.jsonls.setup({
 
 -- HTML Server
 lspconfig.html.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
     settigns = {
         css = {
@@ -384,8 +353,6 @@ lspconfig.html.setup({
 
 -- LTex Server
 lspconfig.ltex.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
     settings = {
         ltex = {
@@ -396,8 +363,6 @@ lspconfig.ltex.setup({
 
 -- TexLab Server
 lspconfig.texlab.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
     settings = {
         texlab = {
@@ -428,22 +393,16 @@ lspconfig.texlab.setup({
 
 -- PHP Server
 lspconfig.intelephense.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
 })
 
 -- Java Server
 -- lspconfig.jdtls.setup({
---     capabilities = capabilities,
---     -- on_attach = on_attach,
 --     handlers = handlers,
 -- })
 
 -- YAML Server
 lspconfig.yamlls.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
     settings = {
         yaml = {
@@ -470,7 +429,5 @@ lspconfig.yamlls.setup({
 
 -- Rust
 lspconfig.rust_analyzer.setup({
-    -- capabilities = capabilities,
-    -- on_attach = on_attach,
     handlers = handlers,
 })
