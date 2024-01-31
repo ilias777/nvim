@@ -88,3 +88,7 @@ vim.opt.langmap = 'ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,�
 --         vim.cmd('Telescope file_browser')
 --     end, 0)
 -- end
+
+-- For treesitter commentstring
+vim.opt.updatetime = 100
+vim.g.skip_ts_context_commentstring_module = true
