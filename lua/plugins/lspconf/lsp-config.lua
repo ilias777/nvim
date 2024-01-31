@@ -2,10 +2,10 @@
 --  │                    LSP Configuration                     │
 --  ╰──────────────────────────────────────────────────────────╯
 
--- Neodev
+-- NEODEV
 require('neodev').setup()
 
--- Mason
+-- MASON
 require('mason').setup({
     ui = {
         icons = {
@@ -16,6 +16,8 @@ require('mason').setup({
         border = 'rounded',
     },
 })
+
+-- MASON LSPCONFIG
 require('mason-lspconfig').setup({
     ensure_installed = {
         'cssls',
@@ -35,32 +37,32 @@ require('mason-lspconfig').setup({
     },
 })
 
--- Lspconfig
+-- LSPCONFIG
 local lspconfig = require('lspconfig')
 
--- CMP LSP
+-- CMP LSP CAPABILITIES
 local lsp_defaults = lspconfig.util.default_config
 lsp_defaults.capabilities =
     vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
 
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
--- Winbar with Navic
+-- WINBAR WITH NAVIC
 -- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 -- local navic = require('nvim-navic')
 
--- Options with description
+-- KEYMAPS
 local opts = function(desc)
     return { noremap = true, silent = true, desc = desc }
 end
 
--- Keymaps
 -- local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, opts('Open Diagnostic Window'))
 vim.keymap.set('n', '<space><left>', vim.diagnostic.goto_prev, opts('Previous Diagnostic'))
 vim.keymap.set('n', '<space><right>', vim.diagnostic.goto_next, opts('Next Diagnostic'))
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts('Send Diagnostic to Locallist'))
 
+-- LSPATTACH AUTOCOMMAND
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
@@ -100,14 +102,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
--- Toggle Inlay Hints
+-- TOGGLE INLAY HINTS
 if vim.lsp.inlay_hint then
     vim.keymap.set('n', '<Space>ih', function()
         vim.lsp.inlay_hint.enable(0, nil)
     end, { desc = 'Toggle Inlay Hints' })
 end
 
--- Borders
+-- BORDERS FOR DIAGNOSTICS
 -- vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#181926]])
 -- vim.cmd([[autocmd! ColorScheme * highlight NormalFloat guibg=#181926]])
 
@@ -122,18 +124,18 @@ local border = {
     { '│', 'FloatBorder' },
 }
 
--- LSP settings (for overriding per client)
+-- LSP SETTINGS (FOR OVERRIDING PER CLIENT)
 local handlers = {
     ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
     ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
 }
 
--- Disable lsp (not cmp) inline diagnostics error messages
+-- DISABLE LSP (NOT CMP) INLINE DIAGNOSTICS ERROR MESSAGES
 -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 --     virtual_text = false,
 -- })
 
--- Diagnostics signs  
+-- DIAGNOSTICS SIGNS
 local signs = { Error = ' ', Warn = ' ', Hint = '󰌶 ', Info = ' ' }
 for type, icon in pairs(signs) do
     local hl = 'DiagnosticSign' .. type
@@ -153,7 +155,7 @@ vim.diagnostic.config({
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                         SERVERS                          │
 --  ╰──────────────────────────────────────────────────────────╯
--- Lua server
+-- LUA SERVER
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
@@ -197,6 +199,7 @@ lspconfig.lua_ls.setup({
         end
         return true
     end,
+    -- OLD CONFIGURATION FOR ON_ATTACH FUNCTION
     -- settings = {
     --     Lua = {
     --         runtime = {
@@ -244,7 +247,7 @@ lspconfig.lua_ls.setup({
     -- },
 })
 
--- JavaScript Server
+-- JAVASCRIPT SERVER
 lspconfig.tsserver.setup({
     handlers = handlers,
     init_options = {
@@ -266,17 +269,17 @@ lspconfig.tsserver.setup({
     -- end,
 })
 
--- Python Server
+-- PYTHON SERVER
 lspconfig.pyright.setup({
     handlers = handlers,
 })
 
--- Emmet Server
+-- EMMET SERVER
 lspconfig.emmet_ls.setup({
     handlers = handlers,
 })
 
--- CSS Server
+-- CSS SERVER
 lspconfig.cssls.setup({
     handlers = handlers,
     settings = {
@@ -288,12 +291,12 @@ lspconfig.cssls.setup({
     },
 })
 
--- Tailwind Server
+-- TAILWIND SERVER
 -- lspconfig.tailwindcss.setup({
 --     handlers = handlers,
 -- })
 
--- Volar Vue Server
+-- VOLAR VUE SERVER
 lspconfig.volar.setup({
     handlers = handlers,
     filetypes = {
@@ -330,7 +333,7 @@ lspconfig.volar.setup({
     },
 })
 
--- JSON Server
+-- JSON SERVER
 lspconfig.jsonls.setup({
     handlers = handlers,
     filetypes = { 'json', 'jsonc' },
@@ -339,7 +342,7 @@ lspconfig.jsonls.setup({
     },
 })
 
--- HTML Server
+-- HTML SERVER
 lspconfig.html.setup({
     handlers = handlers,
     settigns = {
@@ -351,7 +354,7 @@ lspconfig.html.setup({
     },
 })
 
--- LTex Server
+-- LTEX SERVER
 lspconfig.ltex.setup({
     handlers = handlers,
     settings = {
@@ -361,7 +364,7 @@ lspconfig.ltex.setup({
     },
 })
 
--- TexLab Server
+-- TEXLAB SERVER
 lspconfig.texlab.setup({
     handlers = handlers,
     settings = {
@@ -391,17 +394,17 @@ lspconfig.texlab.setup({
     },
 })
 
--- PHP Server
+-- PHP SERVER
 lspconfig.intelephense.setup({
     handlers = handlers,
 })
 
--- Java Server
+-- JAVA SERVER
 -- lspconfig.jdtls.setup({
 --     handlers = handlers,
 -- })
 
--- YAML Server
+-- YAML SERVER
 lspconfig.yamlls.setup({
     handlers = handlers,
     settings = {
@@ -427,7 +430,7 @@ lspconfig.yamlls.setup({
     },
 })
 
--- Rust
+-- RUST
 lspconfig.rust_analyzer.setup({
     handlers = handlers,
 })
