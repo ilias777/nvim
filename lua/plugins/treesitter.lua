@@ -26,6 +26,8 @@ return {
                 },
                 opts = {},
             },
+            -- TS context commentstring
+            { 'JoosepAlviste/nvim-ts-context-commentstring' },
         },
         config = function()
             require('nvim-treesitter.configs').setup({
@@ -58,6 +60,9 @@ return {
                     'vimdoc',
                     'vue',
                     'yaml',
+                },
+                highlight = {
+                    enable = true,
                 },
                 -- Buildin
                 incremental_selection = {
