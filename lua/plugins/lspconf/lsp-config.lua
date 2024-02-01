@@ -360,6 +360,7 @@ lspconfig.ltex.setup({
     settings = {
         ltex = {
             language = 'de-DE',
+            enabled = { 'bibtex', 'markdown', 'latex', 'tex' },
         },
     },
 })
