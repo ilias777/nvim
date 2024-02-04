@@ -112,6 +112,7 @@ catppuccin.setup({
 
             -- Cursorline & Linenumbers
             CursorLine = { bg = colors.mantle },
+            Cursor = { bg = colors.red },
 
             -- Folds
             Folded = { bg = colors.mantle },
