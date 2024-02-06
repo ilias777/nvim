@@ -80,9 +80,9 @@ return {
                 hide_dotfiles = false,
                 hide_gitignored = false,
             },
-            follow_current_file = {
-                enabled = true,
-            },
+            -- follow_current_file = {
+            --     enabled = true,
+            -- },
             window = {
                 mappings = {
                     ['O'] = { 'show_help', nowait = false, config = { title = 'Order by', prefix_key = 'o' } },
