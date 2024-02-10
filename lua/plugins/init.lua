@@ -178,7 +178,6 @@ return {
                 python = { 'black' },
                 rust = { 'rustfmt' },
                 scss = { 'prettier' },
-                toml = { 'prettier' },
                 vue = { 'prettier' },
                 yaml = { 'yamlfmt' },
             },
