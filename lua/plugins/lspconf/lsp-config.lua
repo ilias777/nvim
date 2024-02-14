@@ -105,7 +105,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- TOGGLE INLAY HINTS
 if vim.lsp.inlay_hint then
     vim.keymap.set('n', '<Space>ih', function()
-        vim.lsp.inlay_hint.enable(0, nil)
+        vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())
     end, { desc = 'Toggle Inlay Hints' })
 end
 
