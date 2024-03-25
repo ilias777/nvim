@@ -18,11 +18,9 @@ catppuccin.setup({
         hop = true,
         lsp_trouble = true,
         mason = true,
-        neotree = true,
         noice = true,
         notify = true,
         symbols_outline = true,
-        treesitter_context = true,
         nvimtree = false,
         native_lsp = {
             enabled = true,
