@@ -22,6 +22,7 @@ return {
                 'oil_preview',
                 'markdown',
                 'toggleterm',
+                'Outline',
             },
             callback = function()
                 vim.b.miniindentscope_disable = true
