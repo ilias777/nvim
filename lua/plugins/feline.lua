@@ -60,6 +60,14 @@ return {
                 ['r?'] = { 'CONFIRM', clrs.mauve },
                 ['!'] = { 'SHELL', clrs.green },
             },
+            view = {
+                lsp = {
+                    progress = true, -- if true the status bar will display an lsp progress indicator
+                    name = true, -- if true the status bar will display the lsp servers name, otherwise it will display the text "Lsp"
+                    exclude_lsp_names = {}, -- lsp server names that should not be displayed when name is set to true
+                    separator = '|', -- the separator used when there are multiple lsp servers
+                },
+            },
         })
 
         require('feline').setup({
