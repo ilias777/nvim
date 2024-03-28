@@ -125,7 +125,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [trouble.nvim](https://github.com/folke/trouble.nvim) - A pretty diagnostics, references, telescope results, quickfix and location list.
 - [glance.nvim](https://github.com/dnlhc/glance.nvim) - A pretty window for previewing, navigating and editing your LSP locations.
 - [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim) - Incremental LSP rename command.
-- [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) - A tree like view for symbols using LSP.
+- [outline.nvim](https://github.com/hedyhli/outline.nvim) - Code outline sidebar powered by LSP.
 - [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls) - Extensions for the built-in LSP support for eclipse.jdt.ls.
 
 #### Autocompletion
