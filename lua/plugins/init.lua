@@ -92,6 +92,12 @@ return {
         end,
     },
     {
+        'hedyhli/outline.nvim',
+        enabled = true,
+        cmd = 'Outline',
+        config = true,
+    },
+    {
         'stevearc/aerial.nvim',
         enabled = true,
         cmd = 'AerialToggle',
