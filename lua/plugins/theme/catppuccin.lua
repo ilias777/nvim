@@ -20,7 +20,6 @@ catppuccin.setup({
         mason = true,
         noice = true,
         notify = true,
-        symbols_outline = true,
         nvimtree = false,
         native_lsp = {
             enabled = true,
