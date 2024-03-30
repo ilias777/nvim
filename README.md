@@ -96,6 +96,32 @@ cd nvim
 nvim init.lua
 ```
 
+## Folder and File Structure
+
+```shell
+~/.config/nvim
+│
+├── lua
+│   ├── core
+│   │   ├── autocommands.lua    # File to store all the autocommands
+│   │   ├── usercommands.lua    # File to store all the usercommands
+│   │   ├── keymaps.lua         # Keybindings
+│   │   └── options.lua         # All the Neovim options
+│   └── plugins
+│       ├── init.lua            # Many plugins in one file
+│       ├── plugin_1.lua        # One or more plugins in one file
+│       ├── plugin_2.lua        # One or more plugins in one file
+│       ├── **
+│       └── plugin_xx.lua
+├── snippets
+│   ├── javaspript.lua          # JavaScript snippets
+│   └── lua.lua                 # Lua snippets
+├── ftplugin
+│   └── java.lua                # Java configuration
+│── init.lua                    # Main file
+└── cheatsheet.txt              # File for cheatsheet.nvim
+```
+
 ## ⚙ Configuration
 
 How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
