@@ -63,7 +63,7 @@
 
 ## 🛠️ Installation
 
-### Linux / macOS (Unix)
+### Linux / macOS
 
 #### Make a backup of your current nvim and shared folder
 
