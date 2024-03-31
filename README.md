@@ -102,19 +102,19 @@ nvim init.lua
 ```shell
 ~/.config/nvim
 │
-├── lua
-│   ├── core                    # CORE FOLDER
+├── lua                         # LUA FOLDER
+│   ├── core
 │   │   ├── autocommands.lua    # File to store all the autocommands
 │   │   ├── usercommands.lua    # File to store all the usercommands
 │   │   ├── keymaps.lua         # Keybindings
 │   │   └── options.lua         # All the Neovim options
-│   └── plugins                 # PLUGINS FOLDER
+│   └── plugins
 │       ├── init.lua            # Many plugins in one file
 │       ├── plugin_1.lua        # One or more plugins in one file
 │       ├── plugin_2.lua        # One or more plugins in one file
 │       ├── **
 │       └── plugin_xx.lua
-├── snippets                    # SNIPPETS FOLDER
+├── snippets
 │   ├── javaspript.lua          # JavaScript snippets
 │   └── lua.lua                 # Lua snippets
 ├── ftplugin
