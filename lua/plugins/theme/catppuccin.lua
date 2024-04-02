@@ -145,6 +145,9 @@ catppuccin.setup({
             -- NvimTreeGitMerged = { fg = colors.pink, style = { 'italic' } },
             -- NvimTreeGitRenamed = { fg = colors.yellow, style = { 'italic' } },
 
+            -- Dashboard.nvim
+            DashboardHeader = { fg = colors.yellow, style = { 'bold', 'italic' } },
+
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.mantle), style = { 'italic' } },
         }
