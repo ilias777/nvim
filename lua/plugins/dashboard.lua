@@ -5,7 +5,7 @@ return {
         theme = 'doom',
         config = {
             header = {
-                '',
+                'Neovim',
                 '',
             },
             -- header = {
