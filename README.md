@@ -107,7 +107,7 @@ nvim init.lua
 │   │   ├── autocommands.lua    # File to store all the autocommands
 │   │   ├── usercommands.lua    # File to store all the usercommands
 │   │   ├── keymaps.lua         # Keybindings
-│   │   └── options.lua         # All the Neovim options
+│   │   └── options.lua         # All Neovim options
 │   └── plugins
 │       ├── init.lua            # Many plugins in one file
 │       ├── plugin_1.lua        # One or more plugins in one file
