@@ -53,6 +53,9 @@ return {
                         ['<M-p>'] = action_layout.toggle_preview,
                     },
                 },
+                file_ignore_patterns = {
+                    'node_modules',
+                },
             },
             pickers = {
                 buffers = {
