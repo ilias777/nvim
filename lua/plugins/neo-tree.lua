@@ -73,7 +73,16 @@ return {
                 end,
                 ['O'] = { 'show_help', nowait = false, config = { title = 'Order by', prefix_key = 'o' } },
                 ['o'] = 'open',
+                ['<leader>p'] = 'image_wezterm',
             },
+        },
+        commands = {
+            image_wezterm = function(state)
+                local node = state.tree:get_node()
+                if node.type == 'file' then
+                    require('image_preview').PreviewImage(node.path)
+                end
+            end,
         },
         filesystem = {
             filtered_items = {
