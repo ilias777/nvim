@@ -227,7 +227,7 @@ return {
         cmd = { 'CBcatalog', 'CBcbox' },
         keys = {
             { '<leader>cb', '<cmd>CBlcbox<cr>', desc = 'Comment Box' },
-            { '<leader>cc', '<cmd>CBcatalog<cr>', desc = 'Comment Box Catalog' },
+            { '<leader>cl', '<cmd>CBcatalog<cr>', desc = 'Comment Box Catalog' },
         },
     },
     {
