@@ -407,7 +407,7 @@ return {
     {
         'uga-rosa/ccc.nvim',
         keys = {
-            { '<leader>cc', '<cmd>CccPick<cr>', desc = 'Colot Picker' },
+            { '<leader>cc', '<cmd>CccPick<cr>', desc = 'Color Picker' },
         },
         config = true,
     },
