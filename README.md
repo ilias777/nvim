@@ -201,7 +201,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [cheatsheet.nvim](https://github.com/sudormrfbin/cheatsheet.nvim) - Searchable cheatsheet.
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - IndentLine replacement.
 - [live-command.nvim](https://github.com/smjonas/live-command.nvim) - Text editing with immediate visual feedback.
-- [multicursors.nvim](https://github.com/smoka7/multicursors.nvim) - A multi cursor plugin.
 - [noice.nvim](https://github.com/folke/noice.nvim) - Replaces the UI for messages, cmdline and the popupmenu.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - A minimalist autopairs.
 - [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua) - A high-performance color highlighter.
