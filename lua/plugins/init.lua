@@ -244,6 +244,7 @@ return {
     --  ╰──────────────────────────────────────────────────────────╯
     {
         'sudormrfbin/cheatsheet.nvim',
+        enabled = false,
         keys = {
             { '<space>cs', '<cmd>Cheatsheet<cr>', desc = 'Cheatsheet' },
             { '<space>ce', '<cmd>CheatsheetEdit<cr>', desc = 'Cheatsheet Edit' },
