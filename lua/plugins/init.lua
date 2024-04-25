@@ -339,7 +339,7 @@ return {
     },
     {
         'jokajak/keyseer.nvim',
-        enabled = true,
+        enabled = false,
         version = false,
         cmd = 'KeySeer',
         opts = {
