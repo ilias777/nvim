@@ -46,6 +46,12 @@ return {
                     col = '50%',
                 },
             },
+            popup = {
+                size = {
+                    width = '80%',
+                    height = '70%',
+                },
+            },
         },
         routes = {
             {
