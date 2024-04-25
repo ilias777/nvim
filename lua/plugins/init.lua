@@ -87,9 +87,7 @@ return {
             { '<space>gy', '<cmd>Glance type_definitions<cr>', desc = 'Glance type_definitions' },
             { '<space>gm', '<cmd>Glance implementations<cr>', desc = 'Glance implementations' },
         },
-        config = function()
-            require('glance').setup()
-        end,
+        config = true,
     },
     {
         'hedyhli/outline.nvim',
@@ -232,14 +230,13 @@ return {
     },
     {
         's1n7ax/nvim-comment-frame',
+        enabled = false,
         keys = {
             { '<leader>cf', desc = 'Single Comment Frame' },
             { '<leader>cm', desc = 'Multi Comment Frame' },
         },
         dependencies = 'nvim-treesitter',
-        config = function()
-            require('nvim-comment-frame').setup()
-        end,
+        config = true,
     },
 
     --  ╭──────────────────────────────────────────────────────────╮
