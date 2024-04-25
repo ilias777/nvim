@@ -198,7 +198,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 #### Utils
 
 - [align.nvim](https://github.com/Vonr/align.nvim) - Aligning lines.
-- [cheatsheet.nvim](https://github.com/sudormrfbin/cheatsheet.nvim) - Searchable cheatsheet.
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - IndentLine replacement.
 - [live-command.nvim](https://github.com/smjonas/live-command.nvim) - Text editing with immediate visual feedback.
 - [noice.nvim](https://github.com/folke/noice.nvim) - Replaces the UI for messages, cmdline and the popupmenu.
