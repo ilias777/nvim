@@ -230,7 +230,7 @@ return {
     },
     {
         's1n7ax/nvim-comment-frame',
-        enabled = false,
+        enabled = true,
         keys = {
             { '<leader>cf', desc = 'Single Comment Frame' },
             { '<leader>cm', desc = 'Multi Comment Frame' },
