@@ -13,28 +13,6 @@ return {
             vim.cmd('colorscheme catppuccin')
         end,
     },
-    -- === Rose-Pine ===
-    -- {
-    --     'rose-pine/neovim',
-    --     lazy = false,
-    --     name = 'rose-pine',
-    --     priority = 1000,
-    --     config = function()
-    --         require('plugins.theme.rose-pine')
-    --         vim.cmd('colorscheme rose-pine')
-    --     end,
-    -- },
-    -- {
-    --     'lalitmee/cobalt2.nvim',
-    --     lazy = false,
-    --     priority = 1000,
-    --     dependencies = {
-    --         'tjdevries/colorbuddy.nvim',
-    --     },
-    --     config = function()
-    --         require('colorbuddy').colorscheme('cobalt2')
-    --     end,
-    -- },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                           LSP                            │
@@ -137,12 +115,6 @@ return {
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                  FORMATING AND LINTING                   │
     --  ╰──────────────────────────────────────────────────────────╯
-    -- {
-    --     'jose-elias-alvarez/null-ls.nvim',
-    --     config = function()
-    --         require('plugins.lspconf.null-ls')
-    --     end,
-    -- },
     {
         'stevearc/conform.nvim',
         event = { 'BufReadPre', 'BufNewFile' },
