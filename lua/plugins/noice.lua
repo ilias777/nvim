@@ -36,7 +36,6 @@ return {
             },
         },
         presets = {
-            -- bottom_search = true,
             inc_rename = true,
         },
         views = {
