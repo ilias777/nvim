@@ -94,6 +94,7 @@ vim.keymap.set('n', '<leader>O', 'O<Esc>')
 -- Add komma
 -- vim.keymap.set("n", ",,", [[f'a]])
 vim.keymap.set('i', '<C-,>', '<esc>la,')
+vim.keymap.set('i', '<C-b>', '<esc>la,<esc>hi')
 
 -- Delete word with backspace
 vim.keymap.set('n', '<BS>', 'ge')
