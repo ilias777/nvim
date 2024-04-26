@@ -357,10 +357,10 @@ lspconfig.html.setup({
 -- LTEX SERVER
 lspconfig.ltex.setup({
     handlers = handlers,
+    filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
     settings = {
         ltex = {
             language = 'de-DE',
-            enabled = { 'bibtex', 'markdown', 'latex', 'tex' },
         },
     },
 })
