@@ -370,6 +370,12 @@ return {
             -- end,
         },
     },
+    {
+        'stevearc/dressing.nvim',
+        enabled = true,
+        event = 'BufReadPre',
+        opts = {},
+    },
 
     -- ╭─────────────────────────────────────────────────────────╮
     -- │                      COLOR PICKER                       │
