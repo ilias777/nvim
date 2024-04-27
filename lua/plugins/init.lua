@@ -199,6 +199,9 @@ return {
             { '<leader>cb', '<cmd>CBlcbox<cr>', desc = 'Comment Box' },
             { '<leader>cl', '<cmd>CBcatalog<cr>', desc = 'Comment Box Catalog' },
         },
+        opts = {
+            line_width = 60,
+        },
     },
     {
         's1n7ax/nvim-comment-frame',
@@ -370,12 +373,7 @@ return {
             -- end,
         },
     },
-    {
-        'stevearc/dressing.nvim',
-        enabled = true,
-        event = 'BufReadPre',
-        opts = {},
-    },
+    { 'stevearc/dressing.nvim', enabled = true, event = 'BufReadPre', opts = {} },
 
     -- ╭─────────────────────────────────────────────────────────╮
     -- │                      COLOR PICKER                       │
