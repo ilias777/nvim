@@ -2,10 +2,10 @@
 --  │                    LSP Configuration                     │
 --  ╰──────────────────────────────────────────────────────────╯
 
--- NEODEV
+-- ───────────────────── NEODEV ──────────────────
 require('neodev').setup()
 
--- MASON
+-- ────────────────────── MASON ──────────────────────
 require('mason').setup({
     ui = {
         icons = {
@@ -17,7 +17,7 @@ require('mason').setup({
     },
 })
 
--- MASON LSPCONFIG
+-- ───────────────── MASON LSPCONFIG ─────────────────
 require('mason-lspconfig').setup({
     ensure_installed = {
         'cssls',
@@ -37,21 +37,21 @@ require('mason-lspconfig').setup({
     },
 })
 
--- LSPCONFIG
+-- ──────────────────── LSPCONFIG ────────────────────
 local lspconfig = require('lspconfig')
 
--- CMP LSP CAPABILITIES
+-- ────────────── CMP LSP CAPABILITIES ───────────
 local lsp_defaults = lspconfig.util.default_config
 lsp_defaults.capabilities =
     vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
 
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
--- WINBAR WITH NAVIC
+-- ──────────────── WINBAR WITH NAVIC ────────────────
 -- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 -- local navic = require('nvim-navic')
 
--- KEYMAPS
+-- ───────────────────── KEYMAPS ─────────────────────
 local opts = function(desc)
     return { noremap = true, silent = true, desc = desc }
 end
@@ -62,7 +62,7 @@ vim.keymap.set('n', '<space><left>', vim.diagnostic.goto_prev, opts('Previous Di
 vim.keymap.set('n', '<space><right>', vim.diagnostic.goto_next, opts('Next Diagnostic'))
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts('Send Diagnostic to Locallist'))
 
--- LSPATTACH AUTOCOMMAND
+-- ────────────── LSPATTACH AUTOCOMMAND ──────────────
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
@@ -102,14 +102,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
--- TOGGLE INLAY HINTS
+-- ─────────────── TOGGLE INLAY HINTS ────────────
 if vim.lsp.inlay_hint then
     vim.keymap.set('n', '<Space>ih', function()
         vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())
     end, { desc = 'Toggle Inlay Hints' })
 end
 
--- BORDERS FOR DIAGNOSTICS
+-- ───────────── BORDERS FOR DIAGNOSTICS ─────────────
 -- vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#181926]])
 -- vim.cmd([[autocmd! ColorScheme * highlight NormalFloat guibg=#181926]])
 
@@ -124,7 +124,7 @@ local border = {
     { '│', 'FloatBorder' },
 }
 
--- LSP SETTINGS (FOR OVERRIDING PER CLIENT)
+-- ─────────────────── LSP BORDERS ───────────────────
 local handlers = {
     ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
     ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
@@ -135,7 +135,7 @@ local handlers = {
 --     virtual_text = false,
 -- })
 
--- DIAGNOSTICS SIGNS
+-- ──────────────── DIAGNOSTICS SIGNS ────────────────
 local signs = { Error = ' ', Warn = ' ', Hint = '󰌶 ', Info = ' ' }
 for type, icon in pairs(signs) do
     local hl = 'DiagnosticSign' .. type
@@ -155,7 +155,7 @@ vim.diagnostic.config({
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                         SERVERS                          │
 --  ╰──────────────────────────────────────────────────────────╯
--- LUA SERVER
+-- ─────────────────── LUA SERVER ────────────────
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
@@ -199,6 +199,7 @@ lspconfig.lua_ls.setup({
         end
         return true
     end,
+
     -- OLD CONFIGURATION FOR ON_ATTACH FUNCTION
     -- settings = {
     --     Lua = {
@@ -247,7 +248,7 @@ lspconfig.lua_ls.setup({
     -- },
 })
 
--- JAVASCRIPT SERVER
+-- ──────────────── JAVASCRIPT SERVER ────────────────
 lspconfig.tsserver.setup({
     handlers = handlers,
     init_options = {
@@ -269,17 +270,17 @@ lspconfig.tsserver.setup({
     -- end,
 })
 
--- PYTHON SERVER
+-- ────────────────── PYTHON SERVER ──────────────────
 lspconfig.pyright.setup({
     handlers = handlers,
 })
 
--- EMMET SERVER
+-- ────────────────── EMMET SERVER ───────────────
 lspconfig.emmet_ls.setup({
     handlers = handlers,
 })
 
--- CSS SERVER
+-- ─────────────────── CSS SERVER ────────────────
 lspconfig.cssls.setup({
     handlers = handlers,
     settings = {
@@ -291,12 +292,12 @@ lspconfig.cssls.setup({
     },
 })
 
--- TAILWIND SERVER
+-- ───────────────── TAILWIND SERVER ─────────────────
 -- lspconfig.tailwindcss.setup({
 --     handlers = handlers,
 -- })
 
--- VOLAR VUE SERVER
+-- ──────────────── VOLAR VUE SERVER ─────────────
 lspconfig.volar.setup({
     handlers = handlers,
     filetypes = {
@@ -333,7 +334,7 @@ lspconfig.volar.setup({
     },
 })
 
--- JSON SERVER
+-- ─────────────────── JSON SERVER ───────────────────
 lspconfig.jsonls.setup({
     handlers = handlers,
     filetypes = { 'json', 'jsonc' },
@@ -342,7 +343,7 @@ lspconfig.jsonls.setup({
     },
 })
 
--- HTML SERVER
+-- ─────────────────── HTML SERVER ───────────────────
 lspconfig.html.setup({
     handlers = handlers,
     settigns = {
@@ -354,7 +355,7 @@ lspconfig.html.setup({
     },
 })
 
--- LTEX SERVER
+-- ─────────────────── LTEX SERVER ───────────────────
 lspconfig.ltex.setup({
     handlers = handlers,
     filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
@@ -365,7 +366,7 @@ lspconfig.ltex.setup({
     },
 })
 
--- TEXLAB SERVER
+-- ────────────────── TEXLAB SERVER ──────────────────
 lspconfig.texlab.setup({
     handlers = handlers,
     settings = {
@@ -395,17 +396,17 @@ lspconfig.texlab.setup({
     },
 })
 
--- PHP SERVER
+-- ─────────────────── PHP SERVER ────────────────
 lspconfig.intelephense.setup({
     handlers = handlers,
 })
 
--- JAVA SERVER
+-- ─────────────────── JAVA SERVER ───────────────────
 -- lspconfig.jdtls.setup({
 --     handlers = handlers,
 -- })
 
--- YAML SERVER
+-- ─────────────────── YAML SERVER ───────────────────
 lspconfig.yamlls.setup({
     handlers = handlers,
     settings = {
@@ -431,7 +432,7 @@ lspconfig.yamlls.setup({
     },
 })
 
--- RUST
+-- ────────────────────── RUST ───────────────────
 lspconfig.rust_analyzer.setup({
     handlers = handlers,
 })
