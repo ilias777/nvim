@@ -38,6 +38,7 @@ return {
     --     -- end
     -- end,
     opts = {
+        popup_border_style = 'rounded',
         window = {
             mappings = {
                 ['h'] = function(state)
