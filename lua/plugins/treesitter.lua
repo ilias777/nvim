@@ -5,8 +5,6 @@ return {
     dependencies = {
         -- TS Textobjects
         { 'nvim-treesitter/nvim-treesitter-textobjects' },
-        -- TS Textsubjects
-        { 'RRethy/nvim-treesitter-textsubjects' },
         -- TS Treehopper
         { 'mfussenegger/nvim-treehopper' },
         -- TS Context
@@ -96,19 +94,6 @@ return {
                     },
                     swap_previous = {
                         ['<space>S'] = { query = '@parameter.inner', desc = 'Swap previous parameters' },
-                    },
-                },
-            },
-            -- Textsubjects
-            textsubjects = {
-                enable = true,
-                prev_selection = ',', -- (Optional) keymap to select the previous selection
-                keymaps = {
-                    ['<CR>'] = 'textsubjects-smart', -- works in visual mode
-                    [';'] = 'textsubjects-container-outer',
-                    ['i;'] = {
-                        'textsubjects-container-inner',
-                        desc = 'Select inside containers (classes, functions, etc.)',
                     },
                 },
             },
