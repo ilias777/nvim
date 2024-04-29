@@ -7,6 +7,7 @@ return {
             relculright = true,
             segments = {
                 { sign = { name = { 'Dap' }, maxwidth = 1, auto = false }, click = 'v:lua.ScSa' },
+                { sign = { name = { 'todo*' }, maxwidth = 1 } },
                 {
                     sign = { namespace = { 'gitsigns*' }, maxwidth = 1, colwidth = 1, auto = false },
                     click = 'v:lua.ScSa',
