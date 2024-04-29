@@ -13,7 +13,7 @@ return {
                     click = 'v:lua.ScSa',
                 },
                 {
-                    sign = { namespace = { 'gitsigns*' }, maxwidth = 1, colwidth = 1, auto = false },
+                    sign = { namespace = { 'gitsigns*' }, maxwidth = 1, colwidth = 2, auto = false },
                     click = 'v:lua.ScSa',
                 },
                 { text = { builtin.lnumfunc, '  ' }, click = 'v:lua.ScLa' },
