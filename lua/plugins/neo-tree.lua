@@ -15,6 +15,16 @@ return {
             end,
             desc = 'Filesystem (root dir)',
         },
+        {
+            '<Leader>e',
+            function()
+                require('neo-tree.command').execute({
+                    toggle = true,
+                    source = 'filesystem',
+                    position = 'float',
+                })
+            end,
+        },
     },
     dependencies = {
         'nvim-lua/plenary.nvim',
