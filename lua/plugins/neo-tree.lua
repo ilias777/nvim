@@ -83,13 +83,13 @@ return {
                         require('neo-tree.utils').open_file(state, path)
                     end
                 end,
-                ['e'] = function()
+                ['E'] = function()
                     vim.api.nvim_exec('Neotree focus filesystem right', true)
                 end,
-                ['b'] = function()
+                ['B'] = function()
                     vim.api.nvim_exec('Neotree focus buffers right', true)
                 end,
-                ['g'] = function()
+                ['G'] = function()
                     vim.api.nvim_exec('Neotree focus git_status right', true)
                 end,
                 ['O'] = { 'show_help', nowait = false, config = { title = 'Order by', prefix_key = 'o' } },
