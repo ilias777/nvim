@@ -25,6 +25,16 @@ return {
                 })
             end,
         },
+        {
+            '<Leader>b',
+            function()
+                require('neo-tree.command').execute({
+                    toggle = true,
+                    source = 'buffers',
+                    position = 'float',
+                })
+            end,
+        },
     },
     dependencies = {
         'nvim-lua/plenary.nvim',
