@@ -2,7 +2,7 @@ return {
     -- === Treesitter ===
     {
         'nvim-treesitter/nvim-treesitter',
-        event = 'BufReadPre',
+        event = { 'BufReadPre', 'BufNewFile' },
         build = ':TSUpdate',
         dependencies = {
             -- TS Textobjects
