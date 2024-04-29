@@ -37,7 +37,7 @@ return {
                             gs.next_hunk()
                         end)
                         return '<Ignore>'
-                    end, { expr = true, desc = 'Gitsigns Go to next git hunk' })
+                    end, { expr = true, desc = 'Gitsigns Next Hunk' })
 
                     map('n', '<leader>gN', function()
                         if vim.wo.diff then
@@ -47,7 +47,7 @@ return {
                             gs.prev_hunk()
                         end)
                         return '<Ignore>'
-                    end, { expr = true, desc = 'Gitsigns Go to previous git hunk' })
+                    end, { expr = true, desc = 'Gitsigns Previous Hunk' })
 
                     -- Actions
                     map('n', '<leader>gs', gs.stage_hunk, { desc = 'Gitsigns Stage Hunk' })
@@ -64,13 +64,8 @@ return {
                     map('n', '<leader>gp', gs.preview_hunk, { desc = 'Gitsigns Preview Hunk' })
                     map('n', '<leader>gB', function()
                         gs.blame_line({ full = true })
-                    end, { desc = 'Gitsigns Blame line full' })
-                    map(
-                        'n',
-                        '<leader>gb',
-                        gs.toggle_current_line_blame,
-                        { desc = 'Gitsigns Toggle current blame line' }
-                    )
+                    end, { desc = 'Gitsigns Blame Line Full' })
+                    map('n', '<leader>gb', gs.toggle_current_line_blame, { desc = 'Gitsigns Current Blame Line' })
                     map('n', '<leader>gd', gs.diffthis, { desc = 'Gitsigns Hunk Diffthis' })
                     map('n', '<leader>gD', function()
                         gs.diffthis('~')
