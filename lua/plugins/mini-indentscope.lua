@@ -24,6 +24,7 @@ return {
                 'toggleterm',
                 'Outline',
                 'noice',
+                'neo-tree',
             },
             callback = function()
                 vim.b.miniindentscope_disable = true
