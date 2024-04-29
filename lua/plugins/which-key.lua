@@ -1,6 +1,6 @@
 return {
     'folke/which-key.nvim',
-    event = 'BufReadPre',
+    event = { 'BufReadPre', 'BufNewFile' },
     enabled = true,
     init = function()
         vim.o.timeout = true
