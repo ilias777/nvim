@@ -175,6 +175,7 @@ return {
     --  ╰──────────────────────────────────────────────────────────╯
     {
         'numToStr/Comment.nvim',
+        event = { 'BufReadPre', 'BufNewFile' },
         keys = {
             { 'gc', mode = 'v' },
             { 'gb', mode = 'v' },
@@ -184,6 +185,7 @@ return {
             { 'gcO' },
             { 'gcA' },
         },
+        dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' },
         config = function()
             require('Comment').setup({
                 pre_hook = function()

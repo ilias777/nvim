@@ -25,7 +25,7 @@ return {
             opts = {},
         },
         -- TS context commentstring
-        { 'JoosepAlviste/nvim-ts-context-commentstring' },
+        -- { 'JoosepAlviste/nvim-ts-context-commentstring' },
         -- TS Autotag
         { 'windwp/nvim-ts-autotag' },
     },
