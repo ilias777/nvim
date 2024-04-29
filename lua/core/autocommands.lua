@@ -62,10 +62,10 @@ vim.api.nvim_create_autocmd('FileType', {
 -- })
 
 -- ╭─────────────────────────────────────────────────────────╮
--- │                QUIT SOME WINDOWS WITH Q                 │
+-- │                QUIT WINDOWS WITH Q                 │
 -- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'help', 'qf', 'checkhealth', 'man', 'oil', 'aerial-nav' },
+    pattern = { 'help', 'qf', 'checkhealth', 'man', 'oil', 'aerial-nav', 'query' },
     callback = function()
         vim.keymap.set('n', 'q', '<cmd>bd<cr>', { silent = true, buffer = true })
     end,
