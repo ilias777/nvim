@@ -111,6 +111,14 @@ return {
                     unstaged = '',
                 },
             },
+            diagnostics = {
+                symbols = {
+                    hint = '󰌶',
+                    info = '',
+                    warn = '',
+                    error = '',
+                },
+            },
         },
         event_handlers = {
             {
