@@ -62,7 +62,7 @@ vim.api.nvim_create_autocmd('FileType', {
 -- })
 
 -- ╭─────────────────────────────────────────────────────────╮
--- │                QUIT WINDOWS WITH Q                 │
+-- │                   QUIT WINDOWS WITH Q                   │
 -- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'help', 'qf', 'checkhealth', 'man', 'oil', 'aerial-nav', 'query' },
