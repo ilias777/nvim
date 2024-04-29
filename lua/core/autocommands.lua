@@ -1,4 +1,6 @@
--- Highlight selectes text
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                 HIGHLIGHT SELECTES TEXT                 │
+-- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
         vim.highlight.on_yank({
@@ -8,7 +10,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
--- Cursorline on normal mode and no cursorline on insert mode
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                    CHANGE CURSORLINE                    │
+-- ╰─────────────────────────────────────────────────────────╯
 -- vim.api.nvim_create_autocmd({ 'InsertLeave', 'WinEnter' }, {
 --     callback = function()
 --         vim.opt.cursorline = true
@@ -21,7 +25,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --     end,
 -- })
 
--- Disable inlay hints for specific filetypes
+-- ╭─────────────────────────────────────────────────────────╮
+-- │       DISABLE INLAY HINTS FOR SPECIFIC FILETYPES        │
+-- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'zsh', 'conf' },
     callback = function()
@@ -29,7 +35,9 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
--- Force treesitter to work with specific filestypes
+-- ╭─────────────────────────────────────────────────────────╮
+-- │    FORCE TREESITTER TO WORK WITH SPECIFIC FILESTYPES    │
+-- ╰─────────────────────────────────────────────────────────╯
 -- vim.api.nvim_create_autocmd('FileType', {
 --     pattern = { 'zsh', 'conf' },
 --     callback = function()
@@ -37,7 +45,9 @@ vim.api.nvim_create_autocmd('FileType', {
 --     end,
 -- })
 
--- Force treesitter to work with specific filestypes
+-- ╭─────────────────────────────────────────────────────────╮
+-- │    FORCE TREESITTER TO WORK WITH SPECIFIC FILESTYPES    │
+-- ╰─────────────────────────────────────────────────────────╯
 -- vim.filetype.add({
 --     extension = {
 --         sh = 'sh',
@@ -51,7 +61,9 @@ vim.api.nvim_create_autocmd('FileType', {
 --     },
 -- })
 
--- Quit some windows with q
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                QUIT SOME WINDOWS WITH Q                 │
+-- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'help', 'qf', 'checkhealth', 'man', 'oil', 'aerial-nav' },
     callback = function()
@@ -59,20 +71,26 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
--- Check if code actions are availeble on lsp
+-- ╭─────────────────────────────────────────────────────────╮
+-- │       CHECK IF CODE ACTIONS ARE AVAILEBLE ON LSP        │
+-- ╰─────────────────────────────────────────────────────────╯
 -- vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
 --     callback = function()
 --         require('code_action_utils').code_action_listener()
 --     end,
 -- })
 
--- Open help in a new tab
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                 OPEN HELP IN A NEW TAB                  │
+-- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'help',
     command = ':wincmd T',
 })
 
--- Change ltex language on markdown and tex files
+-- ╭─────────────────────────────────────────────────────────╮
+-- │             CHANGE LTEX LANGUAGE ON THE FLY             │
+-- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'markdown', 'tex' },
     callback = function()
@@ -123,7 +141,9 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
--- Formatoptions
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                      FORMATOPTIONS                      │
+-- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd({ 'BufEnter' }, {
     callback = function()
         vim.opt.formatoptions:remove({ 'o', 'r', 'c' })
@@ -131,7 +151,9 @@ vim.api.nvim_create_autocmd({ 'BufEnter' }, {
     end,
 })
 
--- Jump to last edit position on opening file
+-- ╭─────────────────────────────────────────────────────────╮
+-- │       JUMP TO LAST EDIT POSITION ON OPENING FILE        │
+-- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('BufReadPost', {
     desc = 'Open file at the last position it was edited earlier',
     pattern = '*',
