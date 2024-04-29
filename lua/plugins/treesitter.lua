@@ -26,6 +26,8 @@ return {
         },
         -- TS context commentstring
         { 'JoosepAlviste/nvim-ts-context-commentstring' },
+        -- TS Autotag
+        { 'windwp/nvim-ts-autotag' },
     },
     config = function()
         require('nvim-treesitter.configs').setup({
@@ -111,6 +113,10 @@ return {
                         desc = 'Select inside containers (classes, functions, etc.)',
                     },
                 },
+            },
+            -- TS Autotag
+            autotag = {
+                enable = true,
             },
         })
     end,
