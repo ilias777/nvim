@@ -181,22 +181,6 @@ vim.keymap.set('n', '<leader>h1', '<cmd>HopChar1<cr>', { desc = 'Hop 1 Char' })
 vim.keymap.set('n', '<leader>h2', '<cmd>HopChar2<cr>', { desc = 'Hop 2 Chars' })
 vim.keymap.set('n', '<leader>hc', '<cmd>HopVertical<cr>', { desc = 'Hop Vertical' })
 
--- trouble.nvim
-vim.keymap.set(
-    'n',
-    '<leader>xw',
-    '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>',
-    { desc = 'Trouble Workspace Diagnostics' }
-)
-vim.keymap.set(
-    'n',
-    '<leader>xd',
-    '<cmd>TroubleToggle lsp_document_diagnostics<cr>',
-    { desc = 'Trouble Document Diagnostics' }
-)
-vim.keymap.set('n', '<leader>xl', '<cmd>TroubleToggle loclist<cr>', { desc = 'Trouble Location List' })
-vim.keymap.set('n', '<leader>xq', '<cmd>TroubleToggle quickfix<cr>', { desc = 'Trouble Quickfix' })
-
 -- noice.nvim
 vim.keymap.set('n', '<space>nn', '<cmd>Noice<cr>', { desc = 'Noice Messages' })
 vim.keymap.set('n', '<space>nl', '<cmd>NoiceLast<cr>', { desc = 'Noice Last' })

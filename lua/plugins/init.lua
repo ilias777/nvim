@@ -50,8 +50,17 @@ return {
     {
         'folke/trouble.nvim',
         keys = {
-            { '<leader>xx', '<cmd>TroubleToggle<cr>', desc = 'Trouble Toggle' },
             { 'gr', '<cmd>TroubleToggle lsp_references<cr>' },
+            { '<leader>xx', '<cmd>TroubleToggle<cr>', desc = 'Trouble Toggle' },
+            { '<leader>xd', '<cmd>TroubleToggle lsp_document_diagnostics<cr>', desc = 'Trouble Document Diagnostics' },
+            {
+                '<leader>xw',
+                '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>',
+                desc = 'Trouble Workspace Diagnostics',
+            },
+            { '<leader>xl', '<cmd>TroubleToggle loclist<cr>', desc = 'Trouble Location List' },
+            { '<leader>xq', '<cmd>TroubleToggle quickfix<cr>', desc = 'Trouble Quickfix' },
+            { '<leader>xt', '<cmd>TodoTrouble<cr>', desc = 'Todo Trouble' },
         },
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
