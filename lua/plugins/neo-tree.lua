@@ -59,6 +59,35 @@ return {
     -- end,
     opts = {
         popup_border_style = 'rounded',
+        default_component_configs = {
+            icon = {
+                folder_closed = '',
+                folder_open = '',
+                folder_empty = '',
+            },
+            git_status = {
+                symbols = {
+                    -- Status type
+                    unstaged = '',
+                },
+            },
+            diagnostics = {
+                symbols = {
+                    hint = '󰌶',
+                    info = '',
+                    warn = '',
+                    error = '',
+                },
+            },
+        },
+        commands = {
+            image_wezterm = function(state)
+                local node = state.tree:get_node()
+                if node.type == 'file' then
+                    require('image_preview').PreviewImage(node.path)
+                end
+            end,
+        },
         window = {
             mappings = {
                 ['h'] = function(state)
@@ -97,14 +126,6 @@ return {
                 ['<leader>p'] = 'image_wezterm',
             },
         },
-        commands = {
-            image_wezterm = function(state)
-                local node = state.tree:get_node()
-                if node.type == 'file' then
-                    require('image_preview').PreviewImage(node.path)
-                end
-            end,
-        },
         filesystem = {
             filtered_items = {
                 hide_dotfiles = false,
@@ -116,27 +137,6 @@ return {
             window = {
                 mappings = {
                     ['O'] = { 'show_help', nowait = false, config = { title = 'Order by', prefix_key = 'o' } },
-                },
-            },
-        },
-        default_component_configs = {
-            icon = {
-                folder_closed = '',
-                folder_open = '',
-                folder_empty = '',
-            },
-            git_status = {
-                symbols = {
-                    -- Status type
-                    unstaged = '',
-                },
-            },
-            diagnostics = {
-                symbols = {
-                    hint = '󰌶',
-                    info = '',
-                    warn = '',
-                    error = '',
                 },
             },
         },
