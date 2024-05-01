@@ -6,6 +6,7 @@ return {
         vim.g.VM_maps = {
             ['Select l'] = '<C-Right>',
             ['Select h'] = '<C-Left>',
+            ['I BS'] = '',
         }
     end,
 }
