@@ -13,18 +13,21 @@ vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, si
 vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- Search
-vim.keymap.set('n', '<Leader>s', '/')
-vim.keymap.set('n', '<Leader>S', '?')
 vim.keymap.set('n', 'ƒ', '/')
 
 -- Search for matches within visual selection
 -- vim.keymap.set('x', '<space>/', '<Esc>/\\%V')
 
 -- Search and replace word under the cursor
-vim.keymap.set('n', '<leader>R', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
+vim.keymap.set(
+    'n',
+    '<leader>/',
+    ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>',
+    { desc = 'Search and replace word under the cursor' }
+)
 
 -- Search and replace in visual selection
-vim.keymap.set('x', '<leader>/', [[:s/\%V]])
+vim.keymap.set('x', '<leader>R', [[:s/\%V]], { desc = 'Search and replace in visual selection' })
 
 -- For correcting a word in insert mode
 vim.keymap.set('i', '<c-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
@@ -142,7 +145,7 @@ vim.keymap.set('n', '<space>b7', '<cmd>BufferLineGoToBuffer 7<cr>', { desc = 'Go
 vim.keymap.set('n', '<space>b8', '<cmd>BufferLineGoToBuffer 8<cr>', { desc = 'Go to Buffer 8' })
 vim.keymap.set('n', '<space>b9', '<cmd>BufferLineGoToBuffer 9<cr>', { desc = 'Go to Buffer 9' })
 
--- nvim-treehopper
+-- nvim-treehopper (vm<motion> or ym<motion>)
 vim.keymap.set('o', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = true, remap = true })
 vim.keymap.set('x', 'm', [[:<c-u>lua require 'tsht'.nodes()<cr>]], { silent = true })
 
