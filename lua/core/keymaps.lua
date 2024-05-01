@@ -201,8 +201,9 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 -- vim-visual-multi
 vim.keymap.set('n', 'cp', 'vip<Plug>(VM-Visual-Cursors)')
-vim.keymap.set('v', '<M-c>', '<Plug>(VM-Visual-Cursors)')
-vim.keymap.set({ 'n', 'x' }, '<M-s>', ':VMSearch ')
+vim.keymap.set('x', '<M-c>', '<Plug>(VM-Visual-Cursors)')
+vim.keymap.set('x', '<M-s>', ':VMSearch ')
+vim.keymap.set('n', '<M-s>', ':%VMSearch ')
 
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                    FOR GREEK KEYBOARD                    │
