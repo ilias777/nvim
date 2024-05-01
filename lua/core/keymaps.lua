@@ -99,10 +99,6 @@ vim.keymap.set('n', '<leader>O', 'O<Esc>')
 vim.keymap.set('i', '<C-,>', '<esc>la,', { silent = true })
 vim.keymap.set('i', '<C-b>', '<esc>la,<esc>hi', { silent = true })
 
--- Delete word with backspace
-vim.keymap.set('n', '<BS>', 'ge')
-vim.keymap.set('n', '<C-BS>', 'a<C-w>')
-
 -- Go to last change
 vim.keymap.set('n', 'g,', 'g;', { desc = 'Go to newest change' })
 vim.keymap.set('n', 'g;', 'g,', { desc = 'Go to last change' })
