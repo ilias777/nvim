@@ -8,5 +8,7 @@ return {
             ['Select h'] = '<C-Left>',
             ['I BS'] = '',
         }
+        -- Themes: 'codedark' | 'iceblue' | 'purplegray' | 'nord' | 'sand' | 'ocean' | 'olive' | 'spacesray'
+        -- vim.g.VM_theme = 'ocean'
     end,
 }
