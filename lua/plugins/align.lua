@@ -1,5 +1,6 @@
 return {
     'Vonr/align.nvim',
+    enabled = false,
     branch = 'v2',
     lazy = true,
     -- keys = {
