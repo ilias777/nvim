@@ -85,6 +85,9 @@ return {
             { '<space>o', '<cmd>Outline<cr>', desc = 'Toggle Outline' },
         },
         opts = {
+            outline_window = {
+                width = 30,
+            },
             symbols = {
                 icons = {
                     Module = { icon = '全' },
