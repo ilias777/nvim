@@ -81,6 +81,9 @@ return {
         'hedyhli/outline.nvim',
         enabled = true,
         cmd = 'Outline',
+        keys = {
+            { '<space>o', '<cmd>Outline<cr>', desc = 'Toggle Outline' },
+        },
         config = true,
     },
     {
