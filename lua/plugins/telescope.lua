@@ -67,10 +67,12 @@ return {
                 },
                 find_files = {
                     -- theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
-                    -- layout_strategy = 'vertical',
+                    layout_strategy = 'vertical',
                     -- layout_config = { height = 0.9 },
+                    previewer = false,
                     layout_config = {
                         prompt_position = 'top',
+                        width = 0.7,
                     },
                     sorting_strategy = 'ascending',
                 },
