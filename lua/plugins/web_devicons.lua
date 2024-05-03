@@ -9,6 +9,12 @@ return {
                 cterm_color = '86',
                 name = 'Toc',
             },
+            typ = {
+                icon = 't',
+                color = '#239DAD',
+                cterm_color = '45',
+                name = 'Typst',
+            },
         })
     end,
 }
