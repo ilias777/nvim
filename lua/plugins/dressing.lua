@@ -2,7 +2,6 @@ return {
     'stevearc/dressing.nvim',
     enabled = true,
     lazy = true,
-    -- event = 'BufReadPre',
     init = function()
         ---@diagnostic disable-next-line: duplicate-set-field
         vim.ui.select = function(...)
