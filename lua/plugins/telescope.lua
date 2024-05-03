@@ -99,9 +99,6 @@ return {
                 },
             },
             extensions = {
-                symbols = {
-                    theme = 'dropdown',
-                },
                 file_browser = {
                     dir_icon = '',
                     prompt_path = true,
