@@ -63,7 +63,10 @@ return {
                 buffers = {
                     theme = 'dropdown',
                     mappings = {
-                        n = { ['<C-e>'] = 'delete_buffer' },
+                        n = {
+                            ['<C-e>'] = 'delete_buffer',
+                            ['l'] = 'select_default',
+                        },
                     },
                     initial_mode = 'normal',
                 },
@@ -107,7 +110,7 @@ return {
                     initial_mode = 'normal',
                     previewer = false,
                     mappings = {
-                        ['n'] = {
+                        n = {
                             ['o'] = 'select_default',
                             ['H'] = fb_actions.toggle_hidden,
                             ['h'] = fb_actions.goto_parent_dir,
