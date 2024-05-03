@@ -46,6 +46,7 @@ return {
                     'rust',
                     'scss',
                     'toml',
+                    'typst',
                     'vim',
                     'vimdoc',
                     'vue',
