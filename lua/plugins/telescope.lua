@@ -13,6 +13,7 @@ return {
         { '<leader>fj', '<cmd>Telescope emoji<cr>', desc = 'Find emoji' },
         { '<leader>fk', '<cmd>Telescope keymaps<cr>', desc = 'Find Keymaps' },
         { '<leader>fl', '<cmd>Telescope highlights<cr>', desc = 'Find Highlights' },
+        { '<leader>fm', '<cmd>Telescope heading<cr>', desc = 'Find Heading' },
         { '<leader>fo', '<cmd>Telescope oldfiles<cr>', desc = 'Recently opened files' },
         { '<leader>fp', '<cmd>Telescope spell_suggest<cr>', desc = 'Find Spell Suggest' },
         { '<leader>fr', '<cmd>Telescope grep_string<cr>', desc = 'Find Word Under Cursor' },
@@ -31,6 +32,7 @@ return {
         'debugloop/telescope-undo.nvim',
         'jvgrootveld/telescope-zoxide',
         'piersolenski/telescope-import.nvim',
+        'crispgm/telescope-heading.nvim',
     },
     config = function()
         local trouble = require('trouble.providers.telescope')
@@ -67,7 +69,7 @@ return {
                 },
                 find_files = {
                     -- theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
-                    layout_strategy = 'vertical',
+                    -- layout_strategy = 'vertical',
                     -- layout_config = { height = 0.9 },
                     previewer = false,
                     layout_config = {
@@ -122,9 +124,9 @@ return {
                         preview_height = 0.8,
                     },
                 },
-                -- heading = {
-                --    treesitter = true,
-                -- },
+                heading = {
+                    treesitter = true,
+                },
                 advanced_git_search = {
                     diff_plugin = 'diffview',
                     git_flags = {},
@@ -140,7 +142,7 @@ return {
         require('telescope').load_extension('yank_history')
         require('telescope').load_extension('zoxide')
         require('telescope').load_extension('import')
-        -- require('telescope').load_extension('heading')
+        require('telescope').load_extension('heading')
         -- require('telescope').load_extension('neoclip')
         -- require('telescope').load_extension('noice')
     end,
