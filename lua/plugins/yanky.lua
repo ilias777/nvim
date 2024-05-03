@@ -2,7 +2,7 @@ return {
     'gbprod/yanky.nvim',
     enabled = true,
     keys = {
-        { '<leader>p', '<cmd>Telescope yank_history<cr>', desc = 'Paste from yanky' },
+        { '<leader>y', '<cmd>YankyRingHistory<cr>', desc = 'Yank Ring History' },
         { 'y', '<Plug>(YankyYank)', mode = { 'n', 'x' } },
         { 'p', '<Plug>(YankyPutAfter)', mode = { 'n', 'x' } },
         { 'P', '<Plug>(YankyPutBefore)', mode = { 'n', 'x' } },
