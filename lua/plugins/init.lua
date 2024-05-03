@@ -432,6 +432,14 @@ return {
             vim.g.vimtex_view_method = 'skim'
         end,
     },
+    {
+        'chomosuke/typst-preview.nvim',
+        ft = 'typst',
+        version = '0.1.*',
+        build = function()
+            require('typst-preview').update()
+        end,
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                          MOTION                          │
