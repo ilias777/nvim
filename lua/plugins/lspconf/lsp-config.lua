@@ -32,6 +32,7 @@ require('mason-lspconfig').setup({
         'rust_analyzer',
         'texlab',
         'tsserver',
+        'typst_lsp',
         'volar',
         'yamlls',
     },
@@ -434,5 +435,10 @@ lspconfig.yamlls.setup({
 
 -- ────────────────────── RUST ───────────────────
 lspconfig.rust_analyzer.setup({
+    handlers = handlers,
+})
+
+-- ─────────────────────────── TYPST ───────────────────────────
+lspconfig.typst_lsp.setup({
     handlers = handlers,
 })
