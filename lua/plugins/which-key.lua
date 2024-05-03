@@ -5,24 +5,6 @@ return {
     init = function()
         vim.o.timeout = true
         vim.o.timeoutlen = 500
-        local wk = require('which-key')
-        wk.register({
-            ['<leader>c'] = { name = '+Comment Frame - Box' }, -- Comment Frame & Comment Box
-            ['<leader>d'] = { name = '+Diffview / Debug' }, -- Diffview & nvim-dap
-            ['<leader>ds'] = { name = '+Dap Step' }, -- nvim-dap step
-            ['<leader>f'] = { name = '+File' }, -- Telescope
-            ['<leader>g'] = { name = '+Git' }, -- Git
-            ['<leader>h'] = { name = '+Hop Motion' }, -- Hop
-            ['<leader>l'] = { name = '+Lazy / LTeX' }, -- Lazy & LTeX
-            ['<leader>x'] = { name = '+Trouble' }, -- Trouble
-            ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
-            ['<space>c'] = { name = '+Code actions / Cheatsheet' }, -- Code Actions with LSP
-            ['<space>g'] = { name = '+Glance LSP' }, -- Glance LSP locations
-            ['<space>i'] = { name = '+IncRename / Inlay Hints' }, -- IncRename
-            ['<space>n'] = { name = '+Noice' }, -- Noice.nvim
-            ['<space>r'] = { name = '+Lsp Rename' }, -- Rename with LSP
-            ['<space>w'] = { name = '+Workspace LSP' }, -- Workspace LSP
-        })
     end,
     opts = {
         window = {
@@ -36,5 +18,27 @@ return {
             spacing = 2, -- spacing between columns
             align = 'center', -- align columns left, center or right
         },
+        defaults = {
+            ['<leader>c'] = { name = '+Comment Frame - Box' }, -- Comment Frame & Comment Box
+            ['<leader>d'] = { name = '+Diffview / Debug' }, -- Diffview & nvim-dap
+            ['<leader>ds'] = { name = '+Dap Step' }, -- nvim-dap step
+            ['<leader>f'] = { name = '+File' }, -- Telescope
+            ['<leader>g'] = { name = '+Git' }, -- Git
+            ['<leader>h'] = { name = '+Hop Motion' }, -- Hop
+            ['<leader>l'] = { name = '+Lazy / LTeX' }, -- Lazy & LTeX
+            ['<leader>x'] = { name = '+Trouble' }, -- Trouble
+            ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
+            ['<space>c'] = { name = '+Code actions / Cheatsheet' }, -- Code Actions with LSP
+            ['<space>g'] = { name = '+Glance LSP' }, -- Glance LSP locations
+            ['<space>i'] = { name = '+IncRename / Inlay Hints' }, -- IncRename
+            ['<space>n'] = { name = '+Noice' }, -- Noice.nvim
+            ['<Space>r'] = { name = '+Lsp Rename' }, -- Rename with LSP
+            ['<space>w'] = { name = '+Workspace LSP' }, -- Workspace LSP
+        },
     },
+    config = function(_, opts)
+        local wk = require('which-key')
+        wk.setup(opts)
+        wk.register(opts.defaults)
+    end,
 }
