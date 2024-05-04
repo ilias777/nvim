@@ -411,6 +411,12 @@ return {
             -- end,
         },
     },
+    {
+        'nvim-zh/colorful-winsep.nvim',
+        enabled = true,
+        event = 'BufReadPre',
+        config = true,
+    },
 
     -- ╭─────────────────────────────────────────────────────────╮
     -- │                      COLOR PICKER                       │
