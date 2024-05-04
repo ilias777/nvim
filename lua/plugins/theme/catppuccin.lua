@@ -152,6 +152,9 @@ catppuccin.setup({
             -- Dashboard.nvim
             DashboardHeader = { fg = colors.yellow, style = { 'bold', 'italic' } },
 
+            -- Treesitter Context
+            TreesitterContext = { bg = colors.mantle },
+
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.mantle), style = { 'italic' } },
 
