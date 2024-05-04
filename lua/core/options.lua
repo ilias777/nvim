@@ -22,7 +22,6 @@ vim.o.cmdheight = 0
 vim.opt.signcolumn = 'yes:1'
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 10
--- vim.opt.colorcolumn = '100'
 vim.opt.laststatus = 3
 vim.opt.list = true
 vim.opt.listchars:append({ tab = '»-' })
@@ -32,6 +31,8 @@ vim.opt.listchars:append({ precedes = '«' })
 vim.opt.fillchars:append({ eob = ' ', fold = ' ', foldsep = ' ', foldopen = '', foldclose = '' })
 vim.opt.confirm = true
 vim.opt.pumheight = 10
+vim.opt.conceallevel = 2
+-- vim.opt.colorcolumn = '100'
 
 -- Text
 vim.opt.textwidth = 100
