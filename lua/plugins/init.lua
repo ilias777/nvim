@@ -441,6 +441,7 @@ return {
     },
     {
         'chomosuke/typst-preview.nvim',
+        enabled = false,
         ft = 'typst',
         version = '0.1.*',
         build = function()
