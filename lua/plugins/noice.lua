@@ -65,12 +65,12 @@ return {
                     },
                 },
             },
-            {
-                view = 'mini',
-                filter = {
-                    event = 'msg_showcmd',
-                },
-            },
+            -- {
+            --     view = 'mini',
+            --     filter = {
+            --         event = 'msg_showcmd',
+            --     },
+            -- },
             {
                 view = 'mini',
                 filter = {
