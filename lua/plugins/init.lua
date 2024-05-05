@@ -167,7 +167,7 @@ return {
                 python = { 'black' },
                 rust = { 'rustfmt' },
                 scss = { 'prettier' },
-                typst = { 'typstfmt' },
+                -- typst = { 'typstfmt' },
                 vue = { 'prettier' },
                 yaml = { 'yamlfmt' },
             },
