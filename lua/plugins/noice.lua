@@ -3,7 +3,7 @@ return {
     event = 'VeryLazy',
     opts = {
         messages = {
-            view_history = 'popup',
+            -- view_history = 'popup',
         },
         commands = {
             history = {
@@ -63,6 +63,12 @@ return {
                         { find = 'fewer lines' },
                         { find = 'written' },
                     },
+                },
+            },
+            {
+                view = 'mini',
+                filter = {
+                    event = 'msg_showcmd',
                 },
             },
             {
