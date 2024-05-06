@@ -61,6 +61,8 @@ vim.keymap.set('v', '<c-j>', ":m '>+1<CR>gv=gv", { silent = true })
 -- Indent lines in visual selection
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('n', '<', '<<')
+vim.keymap.set('n', '>', '>>')
 
 -- Paste
 vim.keymap.set('v', 'p', '"_dP')
