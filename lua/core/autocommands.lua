@@ -159,3 +159,13 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     pattern = '*',
     command = 'silent! normal! g`"zv',
 })
+
+-- ╭─────────────────────────────────────────────────────────╮
+-- │               COMMENTS ON TYPST FILETYPE                │
+-- ╰─────────────────────────────────────────────────────────╯
+vim.api.nvim_create_autocmd('Filetype', {
+    pattern = 'typst',
+    callback = function()
+        vim.bo.commentstring = '//%s'
+    end,
+})
