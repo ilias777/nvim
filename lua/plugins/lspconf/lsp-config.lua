@@ -441,4 +441,7 @@ lspconfig.rust_analyzer.setup({
 -- ─────────────────────────── TYPST ───────────────────────────
 lspconfig.typst_lsp.setup({
     handlers = handlers,
+    settings = {
+        exportPdf = 'onSave',
+    },
 })
