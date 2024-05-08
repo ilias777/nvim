@@ -23,7 +23,6 @@ return {
         { '<leader>fy', '<cmd>Telescope yank_history<cr>', desc = 'Find yanks' },
         { '<leader>fz', '<cmd>Telescope zoxide list<cr>', desc = 'Find Directory' },
     },
-    branch = '0.1.x',
     dependencies = {
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-file-browser.nvim',
