@@ -1,7 +1,10 @@
 return {
     'akinsho/bufferline.nvim',
+    enabled = true,
     event = 'VeryLazy',
-    version = '*',
+    -- version = '*',
+    branch = 'main',
+    pin = true,
     config = function()
         local mocha = require('catppuccin.palettes').get_palette('mocha')
         require('bufferline').setup({
