@@ -343,6 +343,7 @@ return {
         event = 'BufReadPre',
         opts = {
             render = 'virtual', ---@usage 'background'|'foreground'|'virtual'
+            virtual_symbol = '',
         },
         config = true,
     },
