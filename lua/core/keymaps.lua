@@ -170,12 +170,16 @@ vim.keymap.set('n', '<leader>dr', '<cmd>DapToggleRepl<CR>', { desc = 'Dap Toggle
 
 -- diffview.nvim
 vim.keymap.set('n', '<leader>dv', function()
-    if vim.bo.ft == 'DiffviewFiles' then
-        vim.cmd('DiffviewClose')
+    local lib = require('diffview.lib')
+    local view = lib.get_current_view()
+    if view then
+        -- Current tabpage is a Diffview; close it
+        vim.cmd.DiffviewClose()
     else
-        vim.cmd('DiffviewOpen')
+        -- No open Diffview exists: open a new one
+        vim.cmd.DiffviewOpen()
     end
-end, { desc = 'Toggle Diffview' })
+end, { desc = 'Diffview Toggle' })
 
 -- hop.nvim
 vim.keymap.set('n', '<leader>hl', '<cmd>HopLine<cr>', { desc = 'Hop Line' })
