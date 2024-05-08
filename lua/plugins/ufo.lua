@@ -1,6 +1,6 @@
 return {
     'kevinhwang91/nvim-ufo',
-    event = 'BufReadPre',
+    event = 'BufRead',
     keys = {
         {
             'zR',
