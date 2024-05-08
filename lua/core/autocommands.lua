@@ -72,6 +72,16 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- ╭─────────────────────────────────────────────────────────╮
+-- │                  QUIT DIFFVIEW WITH Q                   │
+-- ╰─────────────────────────────────────────────────────────╯
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'DiffViewFiles' },
+    callback = function()
+        vim.keymap.set('n', 'q', '<cmd>tabc<cr>', { silent = true, buffer = true })
+    end,
+})
+
+-- ╭─────────────────────────────────────────────────────────╮
 -- │       CHECK IF CODE ACTIONS ARE AVAILEBLE ON LSP        │
 -- ╰─────────────────────────────────────────────────────────╯
 -- vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
