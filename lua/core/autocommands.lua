@@ -28,12 +28,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- ╭─────────────────────────────────────────────────────────╮
 -- │       DISABLE INLAY HINTS FOR SPECIFIC FILETYPES        │
 -- ╰─────────────────────────────────────────────────────────╯
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'zsh', 'conf' },
-    callback = function()
-        vim.lsp.inlay_hint.enable(0, false)
-    end,
-})
+-- vim.api.nvim_create_autocmd('FileType', {
+--     pattern = { 'zsh', 'conf' },
+--     callback = function()
+--         vim.lsp.inlay_hint.enable(0, false)
+--     end,
+-- })
 
 -- ╭─────────────────────────────────────────────────────────╮
 -- │    FORCE TREESITTER TO WORK WITH SPECIFIC FILESTYPES    │
