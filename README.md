@@ -131,6 +131,10 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 Look &rarr; [here](https://github.com/ilias777/nvim/wiki/LSP)
 
+#### How to setup or change keymaps
+
+Look &rarr; [here](https://github.com/ilias777/nvim/wiki/Set-new--or-change-keymaps)
+
 #### All keymaps
 
 Look &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
