@@ -125,7 +125,9 @@ nvim init.lua
 
 ## ⚙ Configuration
 
-### Setup a language server &rarr; [here](https://github.com/ilias777/nvim/wiki/LSP)
+### Setup a language server
+
+Look &rarr; [here](https://github.com/ilias777/nvim/wiki/LSP)
 
 How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
 
