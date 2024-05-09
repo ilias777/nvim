@@ -33,6 +33,9 @@ catppuccin.setup({
                 background = false,
             },
         },
+        navic = {
+            enabled = true,
+        },
         flash = true,
         colorful_winsep = {
             enabled = true,
