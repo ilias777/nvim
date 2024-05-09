@@ -49,8 +49,8 @@ lsp_defaults.capabilities =
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
 -- ──────────────── WINBAR WITH NAVIC ────────────────
--- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
--- local navic = require('nvim-navic')
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+local navic = require('nvim-navic')
 
 -- ───────────────────── KEYMAPS ─────────────────────
 local opts = function(desc)
@@ -99,6 +99,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.lsp.inlay_hint.enable(true)
         else
             vim.lsp.inlay_hint.enable(false)
+        end
+
+        -- nvim navic
+        if client.server_capabilities.documentSymbolProvider then
+            navic.attach(client, ev.buf)
         end
     end,
 })
