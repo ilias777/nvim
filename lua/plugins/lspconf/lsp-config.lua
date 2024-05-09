@@ -49,7 +49,6 @@ lsp_defaults.capabilities =
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
 -- ──────────────── WINBAR WITH NAVIC ────────────────
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 local navic = require('nvim-navic')
 
 -- ───────────────────── KEYMAPS ─────────────────────
@@ -103,6 +102,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         -- nvim navic
         if client.server_capabilities.documentSymbolProvider then
+            vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
             navic.attach(client, ev.buf)
         end
     end,
