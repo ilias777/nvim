@@ -37,13 +37,14 @@ return {
     },
     {
         'SmiteshP/nvim-navic',
-        enabled = false,
+        enabled = true,
         event = 'BufReadPre',
         dependencies = {
             'neovim/nvim-lspconfig',
         },
         opts = {
             highlight = true,
+            separator = '   ',
         },
     },
     {
