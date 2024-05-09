@@ -104,7 +104,7 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'markdown', 'tex' },
     callback = function()
-        vim.keymap.set('n', '<Space>ä', function()
+        vim.keymap.set('n', '<leader>ä', function()
             local options = {
                 'English',
                 'German',
@@ -132,20 +132,20 @@ vim.api.nvim_create_autocmd('FileType', {
         )
         vim.api.nvim_set_keymap(
             'n',
-            '<leader>le',
+            '<leader>öe',
             "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>",
             { desc = 'Set english ltex-ls language' }
         )
         vim.api.nvim_set_keymap(
             'n',
-            '<leader>lg',
-            "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>",
+            '<leader>ög',
+            "<cmd>lua require('core.utils').set_ltex_lang('de')<cr>",
             { desc = 'Set german ltex-ls language' }
         )
         vim.api.nvim_set_keymap(
             'n',
-            '<leader>lk',
-            "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>",
+            '<leader>ök',
+            "<cmd>lua require('core.utils').set_ltex_lang('el')<cr>",
             { desc = 'Set greek ltex-ls language' }
         )
     end,
