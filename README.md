@@ -125,15 +125,15 @@ nvim init.lua
 
 ## ⚙ Configuration
 
-### Setup a language server
+How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
+
+#### Setup a language server
 
 Look &rarr; [here](https://github.com/ilias777/nvim/wiki/LSP)
 
-### All keymaps
+#### All keymaps
 
 Look &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
-
-How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
 
 ## 🔌 Plugins
 
