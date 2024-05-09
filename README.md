@@ -129,6 +129,10 @@ nvim init.lua
 
 Look &rarr; [here](https://github.com/ilias777/nvim/wiki/LSP)
 
+### All keymaps
+
+Look &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
+
 How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
 
 ## 🔌 Plugins
