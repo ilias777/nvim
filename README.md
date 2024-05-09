@@ -14,7 +14,7 @@
   <a href="https://github.com/ilias777/nvim#-used-font">Font</a> •
   <a href="https://github.com/ilias777/nvim#%EF%B8%8F-installation">Installation</a> •
   <a href="https://github.com/ilias777/nvim/blob/main/README.md#-folder-and-file-structure">Folder structure</a> •
-  <a href="https://github.com/ilias777/nvim#%EF%B8%8F-installation">Configuration</a> •
+  <a href="https://github.com/ilias777/nvim#-configuration">Configuration</a> •
   <a href="https://github.com/ilias777/nvim#-plugins">Plugins</a> •
   <a href="https://github.com/ilias777/nvim/wiki">Wiki</a>
 </h4>
