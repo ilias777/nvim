@@ -12,7 +12,7 @@
   <a href="#-features">Features</a> •
   <a href="#%EF%B8%8F-requirements">Requirements</a> •
   <a href="#-used-font">Font</a> •
-  <a href="EF%B8%8F-installation">Installation</a> •
+  <a href="#%EF%B8%8F-installation">Installation</a> •
   <a href="#-folder-and-file-structure">Folder structure</a> •
   <a href="#-configuration">Configuration</a> •
   <a href="#-plugins">Plugins</a> •
