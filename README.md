@@ -127,7 +127,7 @@ nvim init.lua
 
 How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
 
-### How to install or uninstall a plugin
+### How to install or uninstall plugins
 
 Look &rarr; [here](https://github.com/ilias777/nvim/wiki/Plugins)
 
