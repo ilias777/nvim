@@ -53,7 +53,7 @@
 
 ## ⚡️ Requirements
 
-- Neovim >= 0.8.0
+- Neovim >= 0.10.0
 - Git >= 2.19.0
 - a [Nerd Font](https://www.nerdfonts.com/) (optional)
 
