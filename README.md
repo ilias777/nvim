@@ -213,7 +213,6 @@ Look &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
 
 #### Utils
 
-- [align.nvim](https://github.com/Vonr/align.nvim) - Aligning lines.
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - IndentLine replacement.
 - [live-command.nvim](https://github.com/smjonas/live-command.nvim) - Text editing with immediate visual feedback.
 - [noice.nvim](https://github.com/folke/noice.nvim) - Replaces the UI for messages, cmdline and the popupmenu.
@@ -239,9 +238,7 @@ Look &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
 - [nvim-treehopper](https://github.com/mfussenegger/nvim-treehopper) - Region selection using hints on the abstract syntax tree of a document.
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context) - Shows the context of the currently visible buffer contents.
 - [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) - Syntax aware text-objects, select, move, swap, and peek support.
-- [nvim-treesitter-textsubjects](https://github.com/RRethy/nvim-treesitter-textsubjects) - Location and syntax aware text objects which _do what you mean_.
 - [ts-node-action](https://github.com/ckolkey/ts-node-action) - A framework for executing functional transformations on Tree-sitter nodes.
-- [ts-playground](https://github.com/nvim-treesitter/playground) - View treesitter information directly in Neovim.
 
 #### Telescope
 
@@ -269,6 +266,7 @@ Look &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
 
 - [vimtex](https://github.com/lervag/vimtex) - A modern Vim and Neovim filetype and syntax plugin for LaTeX files.
 - [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your browser.
+- [typst.vim](https://github.com/kaarmu/typst.vim) - Vim plugin for Typst.
 
 ### Preinstalled Language Servers
 
@@ -286,5 +284,6 @@ Look &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
 | [intelephense](https://intelephense.com)                                             | PHP language server                                     | PHP                  |
 | [pyright](https://github.com/microsoft/pyright)                                      | Static Type Checker for Python                          | Python               |
 | [rust_analyzer](https://github.com/rust-lang/rust-analyzer)                          | Rust compiler                                           | Rust                 |
+| [typst-lsp](https://github.com/nvarner/typst-lsp)                                    | language server for Typs                                | Typst                |
 | [volar](https://github.com/johnsoncodehk/volar)                                      | High-performance Vue language tooling based-on Volar.js | Vue                  |
 | [yamlls](https://github.com/redhat-developer/yaml-language-server)                   | Language Server for YAML Files                          | YAML                 |
