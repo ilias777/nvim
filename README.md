@@ -20,7 +20,7 @@
 </h4>
 
 <div align="center">
-  [Features](#Features)
+  [Features](#-features)
   [Requirements](## ⚡️ Requirements)
 </div>
 
