@@ -19,9 +19,7 @@
   <a href="https://github.com/ilias777/nvim/wiki">Wiki</a>
 </h4>
 
-<h4 align="center">
-  [Features](#-features)
-</h4>
+[Features](#-features)
 
 ## 🌟 Preview
 
