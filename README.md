@@ -127,21 +127,21 @@ nvim init.lua
 
 How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
 
-### How to install or uninstall plugins
+### Plugins
 
-Look &rarr; [here](https://github.com/ilias777/nvim/wiki/Plugins)
+How to install or uninstall plugins &rarr; [look here](https://github.com/ilias777/nvim/wiki/Plugins)
 
-### Setup a language server
+### Language server
 
-Look &rarr; [here](https://github.com/ilias777/nvim/wiki/LSP)
+How to setup a language server &rarr; [look here](https://github.com/ilias777/nvim/wiki/LSP)
 
-### How to setup or change keymaps
+### Keymaps
 
-Look &rarr; [here](https://github.com/ilias777/nvim/wiki/Set-new--or-change-keymaps)
+How to setup or change keymaps &rarr; [look here](https://github.com/ilias777/nvim/wiki/Set-new--or-change-keymaps)
 
-### All keymaps
+### See all keymaps
 
-Look &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
+Keymaps are listet &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
 
 ## 🔌 Plugins
 
