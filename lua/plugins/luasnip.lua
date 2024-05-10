@@ -62,7 +62,7 @@ return {
             pattern = '*:s',
             callback = function()
                 if ls.in_snippet() then
-                    return vim.diagnostic.disable()
+                    return vim.diagnostic.enable(false)
                 end
             end,
         })
@@ -74,7 +74,7 @@ return {
             pattern = 'n',
             callback = function()
                 if ls.in_snippet() then
-                    return vim.diagnostic.enable()
+                    return vim.diagnostic.enable(true)
                 end
             end,
         })
