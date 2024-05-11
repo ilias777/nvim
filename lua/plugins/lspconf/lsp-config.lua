@@ -440,9 +440,20 @@ lspconfig.rust_analyzer.setup({
 })
 
 -- ─────────────────────────── TYPST ───────────────────────────
-lspconfig.typst_lsp.setup({
+-- lspconfig.typst_lsp.setup({
+--     handlers = handlers,
+--     settings = {
+--         exportPdf = 'onSave',
+--     },
+-- })
+
+lspconfig.tinymist.setup({
     handlers = handlers,
+    single_file_support = true,
+    root_dir = function()
+        return vim.fn.getcwd()
+    end,
     settings = {
-        exportPdf = 'onSave',
+        -- formatterMode = 'typstfmt',
     },
 })
