@@ -32,7 +32,6 @@ require('mason-lspconfig').setup({
         'rust_analyzer',
         'texlab',
         'tsserver',
-        'typst_lsp',
         'volar',
         'yamlls',
     },
