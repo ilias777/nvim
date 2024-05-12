@@ -123,6 +123,8 @@ nvim init.lua
 └── cheatsheet.txt              # File for cheatsheet.nvim
 ```
 
+Understanding the file tree &rarr; [look here](https://github.com/ilias777/nvim/wiki/Folder-and-File-Structure)
+
 ## ⚙ Configuration
 
 How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
