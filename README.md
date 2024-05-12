@@ -119,8 +119,7 @@ nvim init.lua
 │   └── lua.lua                 # Lua snippets
 ├── ftplugin
 │   └── java.lua                # Java configuration
-│── init.lua                    # Main file
-└── cheatsheet.txt              # File for cheatsheet.nvim
+└── init.lua                    # Main file
 ```
 
 Understanding the file tree &rarr; [look here](https://github.com/ilias777/nvim/wiki/Folder-and-File-Structure)
