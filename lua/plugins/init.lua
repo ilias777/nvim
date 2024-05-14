@@ -411,6 +411,11 @@ return {
             require('typst-preview').update()
         end,
     },
+    {
+        'MeanderingProgrammer/markdown.nvim',
+        ft = 'markdown',
+        config = true,
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                          MOTION                          │
