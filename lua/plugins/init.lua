@@ -413,7 +413,17 @@ return {
     },
     {
         'MeanderingProgrammer/markdown.nvim',
+        name = 'render-markdown',
         ft = 'markdown',
+        keys = {
+            {
+                '<leader>mt',
+                function()
+                    require('render-markdown').toggle()
+                end,
+                desc = 'Toogle markdown view',
+            },
+        },
         config = true,
     },
 
