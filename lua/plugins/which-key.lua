@@ -26,6 +26,7 @@ return {
             ['<leader>g'] = { name = '+Git' }, -- Git
             ['<leader>h'] = { name = '+Hop Motion' }, -- Hop
             ['<leader>l'] = { name = '+Lazy / LTeX' }, -- Lazy & LTeX
+            ['<leader>m'] = { name = '+Messages' },
             ['<leader>x'] = { name = '+Trouble' }, -- Trouble
             ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
             ['<space>c'] = { name = '+Code actions / Cheatsheet' }, -- Code Actions with LSP
