@@ -122,6 +122,9 @@ end, { expr = true, desc = 'better i' })
 -- Spelling
 vim.keymap.set('n', 'z.', '1z=', { desc = '󰓆 Fix Spelling' })
 
+-- Messages
+vim.keymap.set('n', '<leader>mm', '<cmd>messages<cr>', { desc = 'Messages' })
+
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                 PLUGINS RELATED KEYMAPS                  │
 --  ╰──────────────────────────────────────────────────────────╯
