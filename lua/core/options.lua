@@ -32,6 +32,7 @@ vim.opt.fillchars:append({ eob = ' ', fold = ' ', foldsep = ' ', foldopen = '
 vim.opt.confirm = true
 vim.opt.pumheight = 10
 vim.opt.conceallevel = 2
+vim.opt.smoothscroll = true
 -- vim.opt.colorcolumn = '100'
 
 -- Text
