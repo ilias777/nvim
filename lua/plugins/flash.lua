@@ -8,6 +8,10 @@ return {
             reuse = 'all',
         },
         modes = {
+            search = {
+                enabled = true,
+                highlight = { backdrop = true },
+            },
             char = {
                 jump_labels = true,
                 keys = { 'f', 'F', 't', 'T' },
