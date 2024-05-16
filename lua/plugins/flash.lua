@@ -24,6 +24,11 @@ return {
                     }
                 end,
             },
+            treesitter = {
+                highlight = {
+                    backdrop = true,
+                },
+            },
         },
     },
     keys = {
