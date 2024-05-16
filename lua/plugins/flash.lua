@@ -34,13 +34,13 @@ return {
                 require('flash').jump()
             end,
         },
-        -- {
-        --     'S',
-        --     mode = { 'n', 'o', 'x' },
-        --     function()
-        --         require('flash').treesitter()
-        --     end,
-        -- },
+        {
+            '<leader>s',
+            mode = { 'n', 'o', 'x' },
+            function()
+                require('flash').treesitter()
+            end,
+        },
         {
             'r',
             mode = 'o',
