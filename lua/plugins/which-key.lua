@@ -8,7 +8,7 @@ return {
     end,
     opts = {
         window = {
-            border = 'rounded', -- none, single, double, shadow
+            border = 'single', -- none, single, double, shadow
             position = 'bottom', -- bottom, top
             margin = { 0, 10, 1, 10 }, -- extra window margin [top, right, bottom, left]
         },
