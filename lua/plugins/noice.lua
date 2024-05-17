@@ -50,6 +50,9 @@ return {
                     width = '80%',
                     height = '70%',
                 },
+                border = {
+                    style = 'single',
+                },
             },
         },
         routes = {
