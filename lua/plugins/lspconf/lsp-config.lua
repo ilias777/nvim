@@ -114,10 +114,6 @@ if vim.lsp.inlay_hint then
     end, { desc = 'Toggle Inlay Hints' })
 end
 
--- ───────────── BORDERS FOR DIAGNOSTICS ─────────────
--- vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#181926]])
--- vim.cmd([[autocmd! ColorScheme * highlight NormalFloat guibg=#181926]])
-
 local border = {
     { '┌', 'FloatBorder' },
     { '─', 'FloatBorder' },
