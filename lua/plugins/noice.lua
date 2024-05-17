@@ -53,6 +53,9 @@ return {
                 border = {
                     style = 'single',
                 },
+                win_options = {
+                    wrap = true,
+                },
             },
         },
         routes = {
