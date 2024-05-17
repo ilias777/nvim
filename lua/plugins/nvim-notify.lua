@@ -10,7 +10,7 @@ return {
         },
     },
     opts = {
-        render = 'compact',
+        render = 'wrapped-compact',
         stages = 'slide',
         max_height = function()
             return math.floor(vim.o.lines * 0.75)
