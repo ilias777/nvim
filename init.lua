@@ -21,7 +21,7 @@ require('core.usercommands')
 
 local opts = {
     ui = {
-        border = 'rounded',
+        border = 'single',
         icons = {
             lazy = '💤',
         },
