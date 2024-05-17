@@ -1,11 +1,15 @@
 --  ╭──────────────────────────────────────────────────────────╮
---  │                    LSP Configuration                     │
+--  │                    LSP CONFIGURATION                     │
 --  ╰──────────────────────────────────────────────────────────╯
 
--- ───────────────────── NEODEV ──────────────────
+-- ╭────────╮
+-- │ NEODEV │
+-- ╰────────╯
 require('neodev').setup()
 
--- ────────────────────── MASON ──────────────────────
+-- ╭───────╮
+-- │ MASON │
+-- ╰───────╯
 require('mason').setup({
     ui = {
         icons = {
@@ -17,7 +21,9 @@ require('mason').setup({
     },
 })
 
--- ───────────────── MASON LSPCONFIG ─────────────────
+-- ╭─────────────────╮
+-- │ MASON LSPCONFIG │
+-- ╰─────────────────╯
 require('mason-lspconfig').setup({
     ensure_installed = {
         'cssls',
@@ -37,21 +43,31 @@ require('mason-lspconfig').setup({
     },
 })
 
--- ──────────────────── LSPCONFIG ────────────────────
+-- ╭───────────╮
+-- │ LSPCONFIG │
+-- ╰───────────╯
 local lspconfig = require('lspconfig')
 
--- ────────────── CMP LSP CAPABILITIES ───────────
+-- ╭──────────────────────╮
+-- │ CMP LSP CAPABILITIES │
+-- ╰──────────────────────╯
 local lsp_defaults = lspconfig.util.default_config
 lsp_defaults.capabilities =
     vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
 
--- ────────────── LSP BORDER FOR :LSPINFO COMMAND ──────────────
+-- ╭─────────────────────────────────╮
+-- │ LSP BORDER FOR :LSPINFO COMMAND │
+-- ╰─────────────────────────────────╯
 require('lspconfig.ui.windows').default_options.border = 'single'
 
--- ──────────────── WINBAR WITH NAVIC ────────────────
+-- ╭───────────────────╮
+-- │ WINBAR WITH NAVIC │
+-- ╰───────────────────╯
 local navic = require('nvim-navic')
 
--- ───────────────────── KEYMAPS ─────────────────────
+-- ╭─────────╮
+-- │ KEYMAPS │
+-- ╰─────────╯
 local opts = function(desc)
     return { noremap = true, silent = true, desc = desc }
 end
@@ -61,15 +77,14 @@ vim.keymap.set('n', '<space><left>', vim.diagnostic.goto_prev, opts('Previous Di
 vim.keymap.set('n', '<space><right>', vim.diagnostic.goto_next, opts('Next Diagnostic'))
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts('Send Diagnostic to Locallist'))
 
--- ────────────── LSPATTACH AUTOCOMMAND ──────────────
+-- ╭───────────────────────╮
+-- │ LSPATTACH AUTOCOMMAND │
+-- ╰───────────────────────╯
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
-        -- Enable completion triggered by <c-x><c-o>
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-        -- Buffer local mappings.
-        -- See `:help vim.lsp.*` for documentation on any of the below functions
         local bufopts = function(desc)
             return { buffer = ev.buf, desc = desc }
         end
@@ -91,15 +106,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.lsp.buf.format({ async = true })
         end, bufopts('Formatting with LSP'))
 
-        -- Inlay Hints
+        -- Get client
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
+
+        -- ╭─────────────╮
+        -- │ INLAY HINTS │
+        -- ╰─────────────╯
         if client.server_capabilities.inlayHintProvider then
             vim.lsp.inlay_hint.enable(true)
         else
             vim.lsp.inlay_hint.enable(false)
         end
 
-        -- nvim navic
+        -- ╭────────────╮
+        -- │ NVIM-NAVIC │
+        -- ╰────────────╯
         if client.server_capabilities.documentSymbolProvider then
             vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
             navic.attach(client, ev.buf)
@@ -107,13 +128,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
--- ─────────────── TOGGLE INLAY HINTS ────────────
+-- ╭────────────────────╮
+-- │ TOGGLE INLAY HINTS │
+-- ╰────────────────────╯
 if vim.lsp.inlay_hint then
     vim.keymap.set('n', '<Space>ih', function()
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
     end, { desc = 'Toggle Inlay Hints' })
 end
 
+-- ╭─────────────╮
+-- │ LSP BORDERS │
+-- ╰─────────────╯
 local border = {
     { '┌', 'FloatBorder' },
     { '─', 'FloatBorder' },
@@ -125,24 +151,30 @@ local border = {
     { '│', 'FloatBorder' },
 }
 
--- ─────────────────── LSP BORDERS ───────────────────
 local handlers = {
     ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
     ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
 }
 
--- DISABLE LSP (NOT CMP) INLINE DIAGNOSTICS ERROR MESSAGES
+-- ╭─────────────────────────────────────────╮
+-- │ DISABLE LSP INLINE DIAGNOSTICS MESSAGES │
+-- ╰─────────────────────────────────────────╯
 -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 --     virtual_text = false,
 -- })
 
--- ──────────────── DIAGNOSTICS SIGNS ────────────────
+-- ╭───────────────────╮
+-- │ DIAGNOSTICS SIGNS │
+-- ╰───────────────────╯
 local signs = { Error = ' ', Warn = ' ', Hint = '󰌶 ', Info = ' ' }
 for type, icon in pairs(signs) do
     local hl = 'DiagnosticSign' .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+-- ╭───────────────────╮
+-- │ DIAGNOSTIC CONFIG │
+-- ╰───────────────────╯
 vim.diagnostic.config({
     virtual_text = {
         prefix = '', -- Could be '●', '▎', │, 'x', '■', , 
@@ -153,15 +185,14 @@ vim.diagnostic.config({
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                         SERVERS                          │
 --  ╰──────────────────────────────────────────────────────────╯
--- ─────────────────── LUA SERVER ────────────────
+
+-- ╭────────────╮
+-- │ LUA SERVER │
+-- ╰────────────╯
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 lspconfig.lua_ls.setup({
-    -- For nvim-navic
-    -- on_attach = function(client, bufnr)
-    --     navic.attach(client, bufnr)
-    -- end,
     handlers = handlers,
     on_init = function(client)
         local path = client.workspace_folders[1].name
@@ -242,7 +273,9 @@ lspconfig.lua_ls.setup({
     -- },
 })
 
--- ──────────────── JAVASCRIPT SERVER ────────────────
+-- ╭───────────────────╮
+-- │ JAVASCRIPT SERVER │
+-- ╰───────────────────╯
 lspconfig.tsserver.setup({
     handlers = handlers,
     init_options = {
@@ -264,17 +297,23 @@ lspconfig.tsserver.setup({
     -- end,
 })
 
--- ────────────────── PYTHON SERVER ──────────────────
+-- ╭───────────────╮
+-- │ PYTHON SERVER │
+-- ╰───────────────╯
 lspconfig.pyright.setup({
     handlers = handlers,
 })
 
--- ────────────────── EMMET SERVER ───────────────
+-- ╭──────────────╮
+-- │ EMMET SERVER │
+-- ╰──────────────╯
 lspconfig.emmet_ls.setup({
     handlers = handlers,
 })
 
--- ─────────────────── CSS SERVER ────────────────
+-- ╭────────────╮
+-- │ CSS SERVER │
+-- ╰────────────╯
 lspconfig.cssls.setup({
     handlers = handlers,
     settings = {
@@ -286,12 +325,16 @@ lspconfig.cssls.setup({
     },
 })
 
--- ───────────────── TAILWIND SERVER ─────────────────
+-- ╭─────────────────╮
+-- │ TAILWIND SERVER │
+-- ╰─────────────────╯
 -- lspconfig.tailwindcss.setup({
 --     handlers = handlers,
 -- })
 
--- ──────────────── VOLAR VUE SERVER ─────────────
+-- ╭──────────────────╮
+-- │ VOLAR VUE SERVER │
+-- ╰──────────────────╯
 lspconfig.volar.setup({
     handlers = handlers,
     filetypes = {
@@ -328,7 +371,9 @@ lspconfig.volar.setup({
     },
 })
 
--- ─────────────────── JSON SERVER ───────────────────
+-- ╭─────────────╮
+-- │ JSON SERVER │
+-- ╰─────────────╯
 lspconfig.jsonls.setup({
     handlers = handlers,
     filetypes = { 'json', 'jsonc' },
@@ -337,7 +382,9 @@ lspconfig.jsonls.setup({
     },
 })
 
--- ─────────────────── HTML SERVER ───────────────────
+-- ╭─────────────╮
+-- │ HTML SERVER │
+-- ╰─────────────╯
 lspconfig.html.setup({
     handlers = handlers,
     settigns = {
@@ -349,7 +396,9 @@ lspconfig.html.setup({
     },
 })
 
--- ─────────────────── LTEX SERVER ───────────────────
+-- ╭─────────────╮
+-- │ LTEX SERVER │
+-- ╰─────────────╯
 lspconfig.ltex.setup({
     handlers = handlers,
     filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
@@ -360,7 +409,9 @@ lspconfig.ltex.setup({
     },
 })
 
--- ────────────────── TEXLAB SERVER ──────────────────
+-- ╭───────────────╮
+-- │ TEXLAB SERVER │
+-- ╰───────────────╯
 lspconfig.texlab.setup({
     handlers = handlers,
     settings = {
@@ -390,17 +441,23 @@ lspconfig.texlab.setup({
     },
 })
 
--- ─────────────────── PHP SERVER ────────────────
+-- ╭────────────╮
+-- │ PHP SERVER │
+-- ╰────────────╯
 lspconfig.intelephense.setup({
     handlers = handlers,
 })
 
--- ─────────────────── JAVA SERVER ───────────────────
+-- ╭─────────────╮
+-- │ JAVA SERVER │
+-- ╰─────────────╯
 -- lspconfig.jdtls.setup({
 --     handlers = handlers,
 -- })
 
--- ─────────────────── YAML SERVER ───────────────────
+-- ╭─────────────╮
+-- │ YAML SERVER │
+-- ╰─────────────╯
 lspconfig.yamlls.setup({
     handlers = handlers,
     settings = {
@@ -426,12 +483,16 @@ lspconfig.yamlls.setup({
     },
 })
 
--- ────────────────────── RUST ───────────────────
+-- ╭─────────────╮
+-- │ RUST SERVER │
+-- ╰─────────────╯
 lspconfig.rust_analyzer.setup({
     handlers = handlers,
 })
 
--- ─────────────────────────── TYPST ───────────────────────────
+-- ╭──────────────╮
+-- │ TYPST SERVER │
+-- ╰──────────────╯
 -- lspconfig.typst_lsp.setup({
 --     handlers = handlers,
 --     settings = {
@@ -439,6 +500,9 @@ lspconfig.rust_analyzer.setup({
 --     },
 -- })
 
+-- ╭─────────────────────────╮
+-- │ TINYMIST (TYPST) SERVER │
+-- ╰─────────────────────────╯
 lspconfig.tinymist.setup({
     handlers = handlers,
     single_file_support = true,
