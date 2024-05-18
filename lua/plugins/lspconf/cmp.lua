@@ -184,6 +184,7 @@ cmp.setup({
         { name = 'nvim_lua' },
         { name = 'treesitter' },
         { name = 'nerdfonts', max_item_count = 20 },
+        { name = 'look', keyword_length = 2, option = { convert_case = true, loud = true }, max_item_count = 10 },
         -- { name = 'spell', option = {
         --     keep_all_entries = false,
         --     enable_in_context = function()
