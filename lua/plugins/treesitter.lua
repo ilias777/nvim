@@ -12,9 +12,7 @@ return {
             -- ──────────────────────── TS CONTEXT ─────────────────────
             {
                 'nvim-treesitter/nvim-treesitter-context',
-                opts = {
-                    max_lines = 3,
-                },
+                opts = {},
             },
             -- ──────────────────────── TS AUTOTAG ─────────────────────
             { 'windwp/nvim-ts-autotag' },
