@@ -138,7 +138,6 @@ return {
             'ray-x/cmp-treesitter',
             'hrsh7th/cmp-nvim-lsp-signature-help',
             'hrsh7th/cmp-nvim-lua',
-            'f3fora/cmp-spell',
             'hrsh7th/cmp-path',
             'fazibear/cmp-nerdfonts',
             'octaltree/cmp-look',
