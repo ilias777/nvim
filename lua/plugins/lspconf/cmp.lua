@@ -188,7 +188,6 @@ cmp.setup({
                 treesitter = '( Treesitter )',
                 nerdfonts = '( Nerdfonts )',
                 look = '( Look )',
-                -- spell = '( Spell )',
             })[entry.source.name]
             return vim_item
         end,
