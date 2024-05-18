@@ -149,12 +149,12 @@ cmp.setup({
         { name = 'nerdfonts', max_item_count = 20 },
         {
             name = 'look',
-            keyword_length = 2,
+            keyword_length = 3,
             option = {
                 convert_case = true,
                 loud = true,
             },
-            max_item_count = 10,
+            max_item_count = 5,
         },
     }),
     formatting = {
