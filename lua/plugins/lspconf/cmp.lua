@@ -1,9 +1,21 @@
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                    CMP CONFIGURATION                    │
+-- ╰─────────────────────────────────────────────────────────╯
+
+-- ╭───────────────╮
+-- │ LOAD SNIPPETS │
+-- ╰───────────────╯
 require('luasnip/loaders/from_lua').load({ paths = '~/.config/nvim/snippets/' })
 require('luasnip/loaders/from_vscode').lazy_load()
 
+-- ╭────────────────╮
+-- │ COMPLETEOPTION │
+-- ╰────────────────╯
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
--- Kind icons
+-- ╭────────────╮
+-- │ KIND ICONS │
+-- ╰────────────╯
 local kind_icons = {
     Class = ' ',
     Color = ' ',
@@ -42,17 +54,27 @@ local kind_icons = {
     -- Variable = ' ',
 }
 
--- For luasnips integration
+-- ╭──────────────────────────╮
+-- │ FOR LUASNIPS INTEGRATION │
+-- ╰──────────────────────────╯
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
 end
 
+-- ╭──────────────╮
+-- │ LOAD LUASNIP │
+-- ╰──────────────╯
 local luasnip = require('luasnip')
 
--- Setup nvim-cmp
+-- ╭──────────╮
+-- │ LOAD CMP │
+-- ╰──────────╯
 local cmp = require('cmp')
 
+-- ╭───────────╮
+-- │ CMP SETUP │
+-- ╰───────────╯
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -227,7 +249,9 @@ cmp.setup({
     },
 })
 
--- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+-- ╭─────────────────────────╮
+-- │ CMP CMDLINE FOR / AND ? │
+-- ╰─────────────────────────╯
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
@@ -235,7 +259,9 @@ cmp.setup.cmdline({ '/', '?' }, {
     },
 })
 
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+-- ╭───────────────────╮
+-- │ CMP CMDLINE FOR : │
+-- ╰───────────────────╯
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     -- sources = cmp.config.sources({
@@ -250,7 +276,9 @@ cmp.setup.cmdline(':', {
     }),
 })
 
--- ultimate-autopair
+-- ╭───────────────────╮
+-- │ ULTIMATE-AUTOPAIR │
+-- ╰───────────────────╯
 -- local Kind = cmp.lsp.CompletionItemKind
 -- cmp.event:on('confirm_done', function(evt)
 --     if vim.tbl_contains({ Kind.Function, Kind.Method }, evt.entry:get_completion_item().kind) then
@@ -258,7 +286,9 @@ cmp.setup.cmdline(':', {
 --     end
 -- end)
 
--- For nvim-autopairs
+-- ╭────────────────╮
+-- │ NVIM-AUTOPAIRS │
+-- ╰────────────────╯
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local ts_utils = require('nvim-treesitter.ts_utils')
 
