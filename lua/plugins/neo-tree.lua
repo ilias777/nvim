@@ -43,22 +43,6 @@ return {
         'nvim-tree/nvim-web-devicons',
         'MunifTanjim/nui.nvim',
     },
-    -- config = function()
-    --     -- Auto-open on startup
-    --     -- vim.api.nvim_create_autocmd('VimEnter', {
-    --     --     command = 'Neotree right',
-    --     -- })
-    --
-    --     -- Open neo-tree if nvim has no arguments
-    --     -- if vim.fn.argc() == 0 then
-    --     --     vim.api.nvim_create_autocmd('UiEnter', {
-    --     --         callback = function()
-    --     --             -- vim.cmd('Neotree focus filesystem right')
-    --     --             vim.api.nvim_exec('Neotree focus filesystem right', true)
-    --     --         end,
-    --     --     })
-    --     -- end
-    -- end,
     opts = {
         popup_border_style = 'rounded',
         default_component_configs = {
