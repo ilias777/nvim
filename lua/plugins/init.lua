@@ -413,6 +413,7 @@ return {
     },
     {
         'MeanderingProgrammer/markdown.nvim',
+        enabled = false,
         name = 'render-markdown',
         ft = 'markdown',
         keys = {
