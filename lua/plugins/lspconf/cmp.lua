@@ -82,18 +82,10 @@ cmp.setup({
         end,
     },
     window = {
-        -- completion = cmp.config.window.bordered(),
         completion = {
             border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
-            -- side_padding = 1,
             winhighlight = 'Normal:CmpPmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None',
         },
-        -- completion = {
-        --     winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,Search:None',
-        --     col_offset = -3,
-        --     side_padding = 0,
-        -- },
-        -- documentation = cmp.config.window.bordered(),
         documentation = {
             border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
             winhighlight = 'Normal:CmpPmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None',
