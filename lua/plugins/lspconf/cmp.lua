@@ -44,14 +44,6 @@ local kind_icons = {
     Unit = ' ',
     Value = '󰎠 ',
     Variable = '󰀫',
-    -- Old
-    -- Constructor = ' ',
-    -- Enum = '了 ',
-    -- Function = ' ',
-    -- Interface = '󰜰 ',
-    -- Method = 'ƒ ',
-    -- Snippet = '󰘍 ',
-    -- Variable = ' ',
 }
 
 -- ╭──────────────╮
