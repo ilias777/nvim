@@ -194,6 +194,7 @@ vim.keymap.set('n', '<leader>hc', '<cmd>HopVertical<cr>', { desc = 'Hop Vertical
 vim.keymap.set('n', '<space>nn', '<cmd>Noice<cr>', { desc = 'Noice Messages' })
 vim.keymap.set('n', '<space>nl', '<cmd>NoiceLast<cr>', { desc = 'Noice Last' })
 vim.keymap.set('n', '<space>nt', '<cmd>NoiceTelescope<cr>', { desc = 'Noice Telescope' })
+vim.keymap.set('n', '<space>ne', '<cmd>NoiceErrors<cr>', { desc = 'Noice Errors' })
 
 -- toggleterm.nvim
 function _G.set_terminal_keymaps()
