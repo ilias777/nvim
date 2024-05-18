@@ -27,11 +27,11 @@ return {
             ls.expand()
         end)
 
-        vim.keymap.set({ 'i', 's' }, '<C-n>', function()
+        vim.keymap.set({ 'i', 's' }, '<C-l>', function()
             ls.jump(1)
         end)
 
-        vim.keymap.set({ 'i', 's' }, '<C-p>', function()
+        vim.keymap.set({ 'i', 's' }, '<C-h>', function()
             ls.jump(-1)
         end)
 
