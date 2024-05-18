@@ -203,6 +203,9 @@ vim.keymap.set('n', '<space>nn', '<cmd>Noice<cr>', { desc = 'Noice Messages' })
 vim.keymap.set('n', '<space>nl', '<cmd>NoiceLast<cr>', { desc = 'Noice Last' })
 vim.keymap.set('n', '<space>nt', '<cmd>NoiceTelescope<cr>', { desc = 'Noice Telescope' })
 vim.keymap.set('n', '<space>ne', '<cmd>NoiceErrors<cr>', { desc = 'Noice Errors' })
+vim.keymap.set('n', '<space>ns', function()
+    require('noice').redirect('Notifications')
+end, { desc = 'Noice Notifications' })
 
 -- toggleterm.nvim
 function _G.set_terminal_keymaps()
