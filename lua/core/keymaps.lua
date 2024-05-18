@@ -30,7 +30,7 @@ vim.keymap.set(
 vim.keymap.set('x', '<leader>R', [[:s/\%V]], { desc = 'Search and replace in visual selection' })
 
 -- For correcting a word in insert mode
-vim.keymap.set('i', '<c-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
+-- vim.keymap.set('i', '<c-l>', '<c-g>u<Esc>[s1z=`]a<c-g>u')
 
 -- Buffers
 vim.keymap.set('n', '<Space>bd', '<cmd>bd<cr>', { desc = 'Delete Buffer' })
