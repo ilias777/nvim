@@ -44,7 +44,7 @@ return {
         'MunifTanjim/nui.nvim',
     },
     opts = {
-        popup_border_style = 'rounded',
+        popup_border_style = 'single',
         default_component_configs = {
             icon = {
                 folder_closed = '',
