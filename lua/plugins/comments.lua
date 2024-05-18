@@ -56,7 +56,7 @@ return {
     -- ╰─────────────────────────────────────────────────────────╯
     {
         's1n7ax/nvim-comment-frame',
-        enabled = true,
+        enabled = false,
         keys = {
             { '<leader>cf', desc = 'Single Comment Frame' },
             { '<leader>cm', desc = 'Multi Comment Frame' },
