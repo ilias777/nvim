@@ -13,7 +13,7 @@ return {
                     position = 'right',
                 })
             end,
-            desc = 'Filesystem (root dir)',
+            desc = 'Neotree Filesystem',
         },
         {
             '<Leader>e',
@@ -24,6 +24,7 @@ return {
                     position = 'float',
                 })
             end,
+            desc = 'Neotree Float Filesystem',
         },
         {
             '<Leader>b',
@@ -34,6 +35,7 @@ return {
                     position = 'float',
                 })
             end,
+            desc = 'Neotree Float Buffers',
         },
     },
     dependencies = {
