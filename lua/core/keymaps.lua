@@ -125,6 +125,14 @@ vim.keymap.set('n', 'z.', '1z=', { desc = '󰓆 Fix Spelling' })
 -- Messages
 vim.keymap.set('n', '<leader>mm', '<cmd>messages<cr>', { desc = 'Messages' })
 
+-- Don't yank emty lines with dd
+vim.keymap.set('n', 'dd', function()
+    if vim.fn.getline('.') == '' then
+        return '"_dd'
+    end
+    return 'dd'
+end, { expr = true })
+
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                 PLUGINS RELATED KEYMAPS                  │
 --  ╰──────────────────────────────────────────────────────────╯
