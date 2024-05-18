@@ -59,6 +59,9 @@ return {
             },
         },
         routes = {
+            -- ╭───────────────────────╮
+            -- │ SEND MESSAGES TO MINI │
+            -- ╰───────────────────────╯
             {
                 view = 'mini',
                 filter = {
@@ -88,6 +91,19 @@ return {
                         { find = 'Renamed' },
                     },
                 },
+            },
+            -- ╭───────────────╮
+            -- │ SKIP MESSAGES │
+            -- ╰───────────────╯
+            {
+                filter = {
+                    event = 'msg_show',
+                    kind = '',
+                    any = {
+                        { find = 'catalog' },
+                    },
+                },
+                opts = { skip = true },
             },
         },
     },
