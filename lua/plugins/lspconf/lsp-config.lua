@@ -65,18 +65,6 @@ require('lspconfig.ui.windows').default_options.border = 'single'
 -- ╰───────────────────╯
 local navic = require('nvim-navic')
 
--- ╭─────────╮
--- │ KEYMAPS │
--- ╰─────────╯
-local opts = function(desc)
-    return { noremap = true, silent = true, desc = desc }
-end
-
-vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, opts('Open Diagnostic Window'))
-vim.keymap.set('n', '<space><left>', vim.diagnostic.goto_prev, opts('Previous Diagnostic'))
-vim.keymap.set('n', '<space><right>', vim.diagnostic.goto_next, opts('Next Diagnostic'))
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts('Send Diagnostic to Locallist'))
-
 -- ╭───────────────────────╮
 -- │ LSPATTACH AUTOCOMMAND │
 -- ╰───────────────────────╯
@@ -85,8 +73,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(ev)
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
+        -- ╭─────────╮
+        -- │ KEYMAPS │
+        -- ╰─────────╯
         local bufopts = function(desc)
-            return { buffer = ev.buf, desc = desc }
+            return { noremap = true, silent = true, buffer = ev.buf, desc = desc }
         end
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts('Go to Declaration'))
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts('Go to Definition'))
@@ -105,6 +96,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<space>f', function()
             vim.lsp.buf.format({ async = true })
         end, bufopts('Formatting with LSP'))
+
+        vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, bufopts('Open Diagnostic Window'))
+        vim.keymap.set('n', '<space><left>', vim.diagnostic.goto_prev, bufopts('Previous Diagnostic'))
+        vim.keymap.set('n', '<space><right>', vim.diagnostic.goto_next, bufopts('Next Diagnostic'))
+        vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, bufopts('Send Diagnostic to Locallist'))
 
         -- Get client
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
