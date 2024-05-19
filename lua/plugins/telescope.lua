@@ -43,6 +43,7 @@ return {
             defaults = {
                 prompt_prefix = '   ',
                 winblend = 0,
+                borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
                 mappings = {
                     i = {
                         ['<c-t>'] = trouble.open_with_trouble,
@@ -60,6 +61,7 @@ return {
             },
             pickers = {
                 buffers = {
+                    previewer = false,
                     theme = 'dropdown',
                     mappings = {
                         n = {
