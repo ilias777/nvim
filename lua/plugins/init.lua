@@ -370,7 +370,7 @@ return {
     },
     {
         'nvim-zh/colorful-winsep.nvim',
-        enabled = true,
+        enabled = false,
         event = 'BufReadPre',
         config = true,
     },
