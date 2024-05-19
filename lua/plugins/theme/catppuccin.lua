@@ -94,19 +94,19 @@ catppuccin.setup({
 
             -- Telescope
             TelescopeBorder = { fg = colors.blue },
-            TelescopeSelectionCaret = { fg = colors.flamingo },
-            TelescopeSelection = { fg = colors.text, bg = colors.surface0, style = { 'bold' } },
+            TelescopeSelectionCaret = { fg = colors.red },
+            TelescopeSelection = { fg = colors.yellow, bg = colors.surface0, style = { 'bold' } },
             TelescopeMatching = { fg = colors.blue },
             TelescopePromptPrefix = { fg = colors.yellow, bg = colors.crust },
+            TelescopePromptTitle = { fg = colors.crust, bg = colors.mauve, style = { 'bold', 'italic' } },
             TelescopePromptNormal = { bg = colors.crust },
-            TelescopeResultsNormal = { bg = colors.mantle },
-            TelescopePreviewNormal = { bg = colors.crust },
             TelescopePromptBorder = { bg = colors.crust, fg = colors.crust },
+            TelescopeResultsNormal = { bg = colors.mantle },
+            TelescopeResultsTitle = { fg = colors.crust, bg = colors.green, style = { 'bold', 'italic' } },
             TelescopeResultsBorder = { bg = colors.mantle, fg = colors.mantle },
+            TelescopePreviewNormal = { bg = colors.crust },
             TelescopePreviewBorder = { bg = colors.crust, fg = colors.crust },
-            TelescopePromptTitle = { fg = colors.crust, bg = colors.mauve },
-            TelescopeResultsTitle = { fg = colors.crust, bg = colors.mauve },
-            TelescopePreviewTitle = { fg = colors.crust, bg = colors.mauve },
+            TelescopePreviewTitle = { fg = colors.crust, bg = colors.sapphire, style = { 'bold', 'italic' } },
 
             -- Bufferline
             BufferLineIndicatorSelected = { fg = colors.pink },
