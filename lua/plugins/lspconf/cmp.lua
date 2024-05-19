@@ -146,7 +146,6 @@ cmp.setup({
         { name = 'path' },
         { name = 'nvim_lua' },
         { name = 'treesitter' },
-        { name = 'nerdfonts', max_item_count = 20 },
         {
             name = 'look',
             keyword_length = 3,
@@ -181,7 +180,6 @@ cmp.setup({
                 path = '( Path )',
                 nvim_lua = '( Lua )',
                 treesitter = '( Treesitter )',
-                nerdfonts = '( Nerdfonts )',
                 look = '( Look )',
             })[entry.source.name]
             return vim_item
