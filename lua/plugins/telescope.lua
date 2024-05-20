@@ -55,13 +55,16 @@ return {
                         ['<M-p>'] = action_layout.toggle_preview,
                     },
                 },
+                preview = {
+                    hide_on_startup = true,
+                },
                 file_ignore_patterns = {
                     'node_modules',
                 },
             },
             pickers = {
                 buffers = {
-                    previewer = false,
+                    -- previewer = false,
                     theme = 'dropdown',
                     mappings = {
                         n = {
@@ -75,7 +78,7 @@ return {
                     -- theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
                     -- layout_strategy = 'vertical',
                     -- layout_config = { height = 0.9 },
-                    previewer = false,
+                    -- previewer = false,
                     layout_config = {
                         prompt_position = 'top',
                         width = 0.7,
