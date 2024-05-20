@@ -140,6 +140,7 @@ return {
             'hrsh7th/cmp-nvim-lua',
             'hrsh7th/cmp-path',
             'octaltree/cmp-look',
+            'chrisgrieser/cmp_yanky',
         },
         config = function()
             require('plugins.lspconf.cmp')

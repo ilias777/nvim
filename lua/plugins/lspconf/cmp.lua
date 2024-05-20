@@ -144,6 +144,7 @@ cmp.setup({
         { name = 'luasnip' },
         { name = 'buffer' },
         { name = 'path' },
+        { name = 'cmp_yanky' },
         { name = 'nvim_lua' },
         { name = 'treesitter' },
         {
@@ -177,6 +178,7 @@ cmp.setup({
                 nvim_lsp_signature_help = '( Signature )',
                 luasnip = '( LuaSnip )',
                 buffer = '( Buffer )',
+                cmp_yanky = '( Yanky )',
                 path = '( Path )',
                 nvim_lua = '( Lua )',
                 treesitter = '( Treesitter )',
