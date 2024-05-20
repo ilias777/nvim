@@ -9,7 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
         lazypath,
     })
 end
-vim.opt.rtp:prepend(lazypath)
+vim.opt.runtimepath:prepend(lazypath)
 
 vim.g.mapleader = ','
 vim.g.maplocalleader = ','
