@@ -1,5 +1,5 @@
 -- ╭─────────────────────────────────────────────────────────╮
--- │                 HIGHLIGHT SELECTES TEXT                 │
+-- │                 HIGHLIGHT SELECTET TEXT                 │
 -- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function()
@@ -62,7 +62,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- })
 
 -- ╭─────────────────────────────────────────────────────────╮
--- │                   QUIT WINDOWS WITH Q                   │
+-- │                QUIT SOME WINDOWS WITH Q                 │
 -- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'help', 'qf', 'checkhealth', 'man', 'oil', 'aerial-nav', 'query' },
