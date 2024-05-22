@@ -86,6 +86,7 @@ return {
                     sorting_strategy = 'ascending',
                 },
                 help_tags = {
+                    previewer = true,
                     theme = 'ivy',
                 },
                 -- symbols = {
