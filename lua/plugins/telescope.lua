@@ -55,9 +55,9 @@ return {
                         ['<M-p>'] = action_layout.toggle_preview,
                     },
                 },
-                preview = {
-                    hide_on_startup = true,
-                },
+                -- preview = {
+                --     hide_on_startup = true,
+                -- },
                 file_ignore_patterns = {
                     'node_modules',
                 },
@@ -86,7 +86,6 @@ return {
                     sorting_strategy = 'ascending',
                 },
                 help_tags = {
-                    previewer = true,
                     theme = 'ivy',
                 },
                 -- symbols = {
