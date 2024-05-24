@@ -64,7 +64,7 @@ return {
             },
             pickers = {
                 buffers = {
-                    -- previewer = false,
+                    previewer = false,
                     theme = 'dropdown',
                     mappings = {
                         n = {
