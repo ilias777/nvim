@@ -200,6 +200,7 @@ vim.keymap.set('n', '<leader>hc', '<cmd>HopVertical<cr>', { desc = 'Hop Vertical
 
 -- noice.nvim
 vim.keymap.set('n', '<space>nn', '<cmd>Noice<cr>', { desc = 'Noice Messages' })
+vim.keymap.set('n', '<space>na', '<cmd>NoiceAll<cr>', { desc = 'Noice All Messages' })
 vim.keymap.set('n', '<space>nl', '<cmd>NoiceLast<cr>', { desc = 'Noice Last' })
 vim.keymap.set('n', '<space>nt', '<cmd>NoiceTelescope<cr>', { desc = 'Noice Telescope' })
 vim.keymap.set('n', '<space>ne', '<cmd>NoiceErrors<cr>', { desc = 'Noice Errors' })
