@@ -11,7 +11,6 @@
 <h4 align="center">
   <a href="#-features">Features</a> •
   <a href="#%EF%B8%8F-requirements">Requirements</a> •
-  <a href="#-used-font">Font</a> •
   <a href="#%EF%B8%8F-installation">Installation</a> •
   <a href="#-folder-and-file-structure">Folder structure</a> •
   <a href="#-configuration">Configuration</a> •
@@ -22,21 +21,23 @@
 ## 🌟 Preview
 
 <div align="center">
-  <img width="1472" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/07531cc1-906a-4774-b0ab-8dbb7da92c04">
+  <img width="1480" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/1dc3b5d3-7375-470a-9b14-db79f9ad81c6">
   <h6>Find files with Telescope</h6>
-  <img width="1490" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/ae7056e1-172b-4ba5-b4cb-3581556fab1a">
+  <img width="1480" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/b53bdb7a-b581-46ba-9f79-415f22363f84">
   <h6>Show keybindings with which-key</h6>
-  <img width="1528" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/f4bfaacb-7d43-4b22-ae49-ffd248d0b14f">
+  <img width="1480" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/6be27432-8004-40b9-bd15-71a65b336e76">
   <h6>File browser with Telescope</h6>
-  <img width="1490" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/f3dfde21-3c6f-43c8-b69b-0b9559d5d424">
+  <img width="1480" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/013ebe1b-35a2-4828-aa6a-fa3716650dad">
   <h6>Neo-tree file browser</h6>
-  <img width="1490" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/81820deb-26a9-445c-aa00-e7cf174c3a20">
+  <img width="1480" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/5eccf46d-f5d5-4004-8d16-2d311c30439c">
+  <h6>Neo-tree floating file browser</h6>
+  <img width="1480" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/b6c70cb4-d1d9-43c5-933d-2285e34119bd">
   <h6>Lazy.nvim</h6>
-  <img width="1490" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/242cf526-c75a-45ad-8c46-b6aa05c68ff6">
+  <img width="1480" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/99871f33-89b5-4aa3-a030-d89532e53b5e">
   <h6>Mason.nvim</h6>
-  <img width="1490" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/777f96a3-5be7-4537-84a0-7bd2da2c1388">
+  <img width="1480" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/d3b0835a-02e0-413c-bb1b-9d5ccbc29418">
   <h6>Autocompletion with nvim-cmp</h6>
-  <img width="1490" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/15a5c55d-3316-4db7-aba6-89868935214a">
+  <img width="1480" alt="p8" src="https://github.com/ilias777/nvim/assets/39212564/9724546f-f6e1-4885-853c-9f2810a5eb15">
 </div>
 
 ## ✨ Features
@@ -56,10 +57,6 @@
 - Neovim >= 0.10.0
 - Git >= 2.19.0
 - a [Nerd Font](https://www.nerdfonts.com/) (optional)
-
-## 🔠 Used Font
-
-- [Caskaydia Cove Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode) - A new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Terminal.
 
 ## 🛠️ Installation
 
@@ -149,7 +146,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - Over **90 Plugins** preinstalled
 - Startuptime **~40ms - ~59ms**
 
-<img width="1566" alt="startuptime" src="https://github.com/ilias777/nvim/assets/39212564/be49c54c-7f25-4a6c-98aa-719011e996c6">
+<img width="1480" alt="startuptime" src="https://github.com/ilias777/nvim/assets/39212564/1ab9441c-9f77-4889-865a-231f0ca967fa">
 
 ### Plugins List
 
