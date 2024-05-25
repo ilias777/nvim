@@ -230,6 +230,7 @@ cmp.setup.cmdline(':', {
         { name = 'path', group_index = 1 },
         { name = 'cmdline', group_index = 2 },
     }),
+    matching = { disallow_symbol_nonprefix_matching = false },
 })
 
 -- ╭───────────────────╮
