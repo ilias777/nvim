@@ -56,7 +56,7 @@
 
 - Neovim >= 0.10.0
 - Git >= 2.19.0
-- a [Nerd Font](https://www.nerdfonts.com/) (optional)
+- a [Nerd Font](https://www.nerdfonts.com/)
 
 ## 🛠️ Installation
 
