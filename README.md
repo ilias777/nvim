@@ -28,6 +28,8 @@
   <img width="1480" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/6be27432-8004-40b9-bd15-71a65b336e76">
   <h6>File browser with Telescope</h6>
   <img width="1480" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/013ebe1b-35a2-4828-aa6a-fa3716650dad">
+  <h6>Find help with Telescope</h6>
+  <img width="1480" alt="help" src="https://github.com/ilias777/nvim/assets/39212564/7b7fb702-b3fe-4f64-abe9-e391abeacb57">
   <h6>Neo-tree file browser</h6>
   <img width="1480" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/5eccf46d-f5d5-4004-8d16-2d311c30439c">
   <h6>Neo-tree floating file browser</h6>
