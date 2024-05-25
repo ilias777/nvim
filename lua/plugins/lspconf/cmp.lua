@@ -183,6 +183,8 @@ cmp.setup({
                 nvim_lua = '( Lua )',
                 treesitter = '( Treesitter )',
                 look = '( Look )',
+                cmdline = '(CMDLine)',
+                cmdline_history = '(CMDLine History)',
             })[entry.source.name]
             return vim_item
         end,
@@ -229,6 +231,7 @@ cmp.setup.cmdline(':', {
     sources = cmp.config.sources({
         { name = 'path', group_index = 1 },
         { name = 'cmdline', group_index = 2 },
+        { name = 'cmdline_history', group_index = 3 },
     }),
     matching = { disallow_symbol_nonprefix_matching = false },
 })

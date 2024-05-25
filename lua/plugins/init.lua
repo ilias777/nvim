@@ -141,6 +141,7 @@ return {
             'hrsh7th/cmp-path',
             'octaltree/cmp-look',
             'chrisgrieser/cmp_yanky',
+            'dmitmel/cmp-cmdline-history',
         },
         config = function()
             require('plugins.lspconf.cmp')
