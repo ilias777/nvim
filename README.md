@@ -251,7 +251,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim) - Smart and powerful comment plugin.
 - [comment-box.nvim](https://github.com/LudoPinelli/comment-box.nvim) - Clarify and beautify your comments using boxes and lines.
-- [nvim-comment-frame](https://github.com/s1n7ax/nvim-comment-frame) - Detects the language using treesitter and adds a comment block.
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) - Highlight, list and search todo comments in your projects.
 
 #### Degub Adapter Protocol
