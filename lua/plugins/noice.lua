@@ -69,7 +69,7 @@ return {
                 filter = {
                     event = 'notify',
                     any = {
-                        { find = 'hidden' },
+                        -- { find = 'hidden' },
                         { find = 'clipboard' },
                         { find = 'Deleted' },
                         { find = 'Renamed' },
@@ -85,6 +85,16 @@ return {
                     kind = '',
                     any = {
                         { find = 'catalog' },
+                    },
+                },
+                opts = { skip = true },
+            },
+            {
+                filter = {
+                    event = 'notify',
+                    kind = 'info',
+                    any = {
+                        { find = 'hidden' },
                     },
                 },
                 opts = { skip = true },
