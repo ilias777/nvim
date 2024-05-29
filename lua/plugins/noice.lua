@@ -2,6 +2,11 @@ return {
     'folke/noice.nvim',
     event = 'VeryLazy',
     opts = {
+        cmdline = {
+            format = {
+                search_replace = { kind = 'search', pattern = '^:%%s/', icon = '󰛔', lang = 'regex' },
+            },
+        },
         messages = {
             view_history = 'popup',
         },
