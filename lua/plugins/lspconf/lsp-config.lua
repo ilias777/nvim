@@ -98,8 +98,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end, bufopts('Formatting with LSP'))
 
         vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, bufopts('Open Diagnostic Window'))
-        vim.keymap.set('n', '<space><left>', vim.diagnostic.goto_prev, bufopts('Previous Diagnostic'))
-        vim.keymap.set('n', '<space><right>', vim.diagnostic.goto_next, bufopts('Next Diagnostic'))
+        vim.keymap.set('n', '<space><left>', function()
+            vim.diagnostic.jump({ count = -vim.v.count1 })
+        end, bufopts('Previous Diagnostic'))
+        vim.keymap.set('n', '<space><right>', function()
+            vim.diagnostic.jump({ count = vim.v.count1 })
+        end, bufopts('Next Diagnostic'))
         vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, bufopts('Send Diagnostic to Locallist'))
 
         -- Get client
