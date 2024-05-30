@@ -34,10 +34,10 @@ return {
         'crispgm/telescope-heading.nvim',
     },
     config = function()
-        local trouble = require('trouble.providers.telescope')
-        local fb_actions = require('telescope').extensions.file_browser.actions
         local actions = require('telescope.actions')
         local action_layout = require('telescope.actions.layout')
+        local fb_actions = require('telescope').extensions.file_browser.actions
+        local open_with_trouble = require('trouble.sources.telescope').open
 
         require('telescope').setup({
             defaults = {
@@ -46,11 +46,11 @@ return {
                 borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
                 mappings = {
                     i = {
-                        ['<c-t>'] = require('trouble.sources.telescope').open(),
+                        ['<c-t>'] = open_with_trouble,
                         ['<M-p>'] = action_layout.toggle_preview,
                     },
                     n = {
-                        ['<c-t>'] = require('trouble.sources.telescope').open(),
+                        ['<c-t>'] = open_with_trouble,
                         ['q'] = require('telescope.actions').close,
                         ['<M-p>'] = action_layout.toggle_preview,
                     },
