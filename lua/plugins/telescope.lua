@@ -46,11 +46,11 @@ return {
                 borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
                 mappings = {
                     i = {
-                        ['<c-t>'] = trouble.open_with_trouble,
+                        ['<c-t>'] = require('trouble.sources.telescope').open(),
                         ['<M-p>'] = action_layout.toggle_preview,
                     },
                     n = {
-                        ['<c-t>'] = trouble.open_with_trouble,
+                        ['<c-t>'] = require('trouble.sources.telescope').open(),
                         ['q'] = require('telescope.actions').close,
                         ['<M-p>'] = action_layout.toggle_preview,
                     },
