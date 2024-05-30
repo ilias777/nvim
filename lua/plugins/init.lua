@@ -50,22 +50,19 @@ return {
     {
         'folke/trouble.nvim',
         keys = {
-            { 'gr', '<cmd>TroubleToggle lsp_references<cr>' },
-            { '<leader>xx', '<cmd>TroubleToggle<cr>', desc = 'Trouble Toggle' },
-            { '<leader>xd', '<cmd>TroubleToggle lsp_document_diagnostics<cr>', desc = 'Trouble Document Diagnostics' },
+            { '<leader>xx', '<cmd>Trouble diagnostics toggle<cr>', desc = 'Diagnostics (Trouble)' },
+            { '<leader>xX', '<cmd>Trouble diagnostics toggle filter.buf=0<cr>', desc = 'Buffer Diagnostics (Trouble)' },
+            { '<leader>xs', '<cmd>Trouble symbols toggle focus=false<cr>', desc = 'Symbols (Trouble)' },
             {
-                '<leader>xw',
-                '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>',
-                desc = 'Trouble Workspace Diagnostics',
+                '<leader>xl',
+                '<cmd>Trouble lsp toggle focus=false win.position=right<cr>',
+                desc = 'LSP Definitions / references / ... (Trouble)',
             },
-            { '<leader>xl', '<cmd>TroubleToggle loclist<cr>', desc = 'Trouble Location List' },
-            { '<leader>xq', '<cmd>TroubleToggle quickfix<cr>', desc = 'Trouble Quickfix' },
+            { '<leader>xL', '<cmd>Trouble loclist toggle<cr>', desc = 'Location List (Trouble)' },
+            { '<leader>xq', '<cmd>Trouble qflist toggle<cr>', desc = 'Quickfix List (Trouble)' },
             { '<leader>xt', '<cmd>TodoTrouble<cr>', desc = 'Todo Trouble' },
         },
-        dependencies = 'nvim-tree/nvim-web-devicons',
-        config = function()
-            require('trouble').setup()
-        end,
+        config = true,
     },
     {
         'dnlhc/glance.nvim',
