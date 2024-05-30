@@ -76,7 +76,7 @@ return {
                 filetypes = {
                     '^packer$',
                     '^NvimTree$',
-                    '^Trouble$',
+                    '^trouble$',
                     '^Outline$',
                     '^qf$',
                     '^help$',
