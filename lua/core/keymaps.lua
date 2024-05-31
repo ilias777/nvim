@@ -228,6 +228,9 @@ vim.keymap.set('x', '<M-c>', '<Plug>(VM-Visual-Cursors)')
 vim.keymap.set('x', '<M-s>', ':VMSearch ')
 vim.keymap.set('n', '<M-s>', ':%VMSearch ')
 
+-- nvim-treesitter-context
+vim.keymap.set('n', '<leader>ct', '<cmd>TSContextToggle<cr>', { desc = 'Context Toggle' })
+
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                    FOR GREEK KEYBOARD                    │
 --  ╰──────────────────────────────────────────────────────────╯
