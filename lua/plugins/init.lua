@@ -15,30 +15,6 @@ return {
     },
 
     --  ╭──────────────────────────────────────────────────────────╮
-    --  │                           CMP                            │
-    --  ╰──────────────────────────────────────────────────────────╯
-    {
-        'hrsh7th/nvim-cmp',
-        event = { 'InsertEnter', 'CmdlineEnter' },
-        dependencies = {
-            'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-cmdline',
-            'hrsh7th/cmp-buffer',
-            'saadparwaiz1/cmp_luasnip',
-            'ray-x/cmp-treesitter',
-            'hrsh7th/cmp-nvim-lsp-signature-help',
-            'hrsh7th/cmp-nvim-lua',
-            'hrsh7th/cmp-path',
-            'octaltree/cmp-look',
-            'chrisgrieser/cmp_yanky',
-            'dmitmel/cmp-cmdline-history',
-        },
-        config = function()
-            require('plugins.lspconf.cmp')
-        end,
-    },
-
-    --  ╭──────────────────────────────────────────────────────────╮
     --  │                  FORMATING AND LINTING                   │
     --  ╰──────────────────────────────────────────────────────────╯
     {
