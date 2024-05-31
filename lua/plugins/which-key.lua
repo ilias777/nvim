@@ -19,7 +19,7 @@ return {
             align = 'center', -- align columns left, center or right
         },
         defaults = {
-            ['<leader>c'] = { name = '+Comment-Box' }, -- Comment Box
+            ['<leader>c'] = { name = '+Comment-Box / Context Treesitter' }, -- Comment Box
             ['<leader>d'] = { name = '+Diffview / Debug' }, -- Diffview & nvim-dap
             ['<leader>ds'] = { name = '+Dap Step' }, -- nvim-dap step
             ['<leader>f'] = { name = '+File' }, -- Telescope
