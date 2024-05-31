@@ -101,25 +101,27 @@ nvim init.lua
 ```shell
 ~/.config/nvim
 │
-├── lua                         # LUA FOLDER
+├── lua                                  # LUA FOLDER
 │   ├── core
-│   │   ├── autocommands.lua    # File to store all the autocommands
-│   │   ├── usercommands.lua    # File to store all the usercommands
-│   │   ├── keymaps.lua         # Keybindings
-│   │   └── options.lua         # All Neovim options
+│   │   ├── autocommands.lua             # File to store all the autocommands
+│   │   ├── usercommands.lua             # File to store all the usercommands
+│   │   ├── keymaps.lua                  # Keybindings
+│   │   └── options.lua                  # All Neovim options
 │   └── plugins
-│       ├── lsp                 # LSP Folder
-│       ├── init.lua            # Many plugins in one file
-│       ├── plugin_1.lua        # One or more plugins in one file
-│       ├── plugin_2.lua        # One or more plugins in one file
+│       ├── lsp                          # LSP RELATED PLUGINS FOLDER
+│       │   ├── lsp-config.lua           # nvim-lspconfig
+│       │   └── other-lsp-plugins.lua    # Other lsp related plugins
+│       ├── init.lua                     # Many plugins in one file
+│       ├── plugin_1.lua                 # One or more plugins in one file
+│       ├── plugin_2.lua                 # One or more plugins in one file
 │       ├── **
 │       └── plugin_xx.lua
 ├── snippets
-│   ├── javaspript.lua          # JavaScript snippets
-│   └── lua.lua                 # Lua snippets
+│   ├── javaspript.lua                   # JavaScript snippets
+│   └── lua.lua                          # Lua snippets
 ├── ftplugin
-│   └── java.lua                # Java configuration
-└── init.lua                    # Main file
+│   └── java.lua                         # Java configuration
+└── init.lua                             # Main file
 ```
 
 Understanding the file tree &rarr; [look here](https://github.com/ilias777/nvim/wiki/Folder-and-File-Structure)
