@@ -108,6 +108,7 @@ nvim init.lua
 │   │   ├── keymaps.lua         # Keybindings
 │   │   └── options.lua         # All Neovim options
 │   └── plugins
+│       ├── lsp                 # LSP Folder
 │       ├── init.lua            # Many plugins in one file
 │       ├── plugin_1.lua        # One or more plugins in one file
 │       ├── plugin_2.lua        # One or more plugins in one file
