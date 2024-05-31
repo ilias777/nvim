@@ -35,6 +35,7 @@ return {
             ['<space>n'] = { name = '+Noice' }, -- Noice.nvim
             ['<Space>r'] = { name = '+Lsp Rename' }, -- Rename with LSP
             ['<space>w'] = { name = '+Workspace LSP' }, -- Workspace LSP
+            ['<space>x'] = { name = '+Trouble' }, -- Trouble.nvim
         },
     },
     config = function(_, opts)
