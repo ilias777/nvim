@@ -47,6 +47,9 @@ catppuccin.setup({
             -- Identifier (like keyword require)
             ['@function.builtin'] = { fg = colors.flamingo },
 
+            -- Variables
+            ['@lsp.type.variable'] = { fg = colors.maroon },
+
             -- Cmp Menu
             -- Pmenu = { bg = colors.mantle },
             -- PmenuSel = { fg = colors.mantle, bg = colors.maroon, style = { 'bold' } },
