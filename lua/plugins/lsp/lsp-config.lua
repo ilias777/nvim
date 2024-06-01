@@ -110,10 +110,10 @@ return {
 
                 vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, bufopts('Open Diagnostic Window'))
                 vim.keymap.set('n', '<space><left>', function()
-                    vim.diagnostic.jump({ count = -vim.v.count1, float = true })
+                    vim.diagnostic.jump({ count = -vim.v.count1 })
                 end, bufopts('Previous Diagnostic'))
                 vim.keymap.set('n', '<space><right>', function()
-                    vim.diagnostic.jump({ count = vim.v.count1, float = true })
+                    vim.diagnostic.jump({ count = vim.v.count1 })
                 end, bufopts('Next Diagnostic'))
                 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, bufopts('Send Diagnostic to Locallist'))
 
@@ -189,6 +189,9 @@ return {
         vim.diagnostic.config({
             virtual_text = {
                 prefix = '', -- Could be '●', '▎', │, 'x', '■', , 
+            },
+            jump = {
+                float = true,
             },
             float = { border = 'single' },
         })
