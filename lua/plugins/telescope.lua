@@ -16,6 +16,7 @@ return {
         { '<leader>fm', '<cmd>Telescope heading<cr>', desc = 'Find Heading' },
         { '<leader>fo', '<cmd>Telescope oldfiles<cr>', desc = 'Recently opened files' },
         { '<leader>fp', '<cmd>Telescope spell_suggest<cr>', desc = 'Find Spell Suggest' },
+        { '<leader>fq', '<cmd>Telescope quickfix<cr>', desc = 'Find Quickix' },
         { '<leader>fr', '<cmd>Telescope grep_string<cr>', desc = 'Find Word Under Cursor' },
         { '<leader>fs', '<cmd>Telescope symbols<cr>', desc = 'Find Symbols' },
         { '<leader>ft', '<cmd>Telescope git_files<cr>', desc = 'Find Git Files' },
