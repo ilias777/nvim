@@ -30,8 +30,13 @@ return {
     {
         'folke/todo-comments.nvim',
         event = { 'BufReadPre', 'BufNewFile' },
-        dependencies = 'nvim-lua/plenary.nvim',
-        config = true,
+        keys = {
+            { '<leader>tq', '<cmd>TodoQuickFix<cr>', desc = 'Todo QuickFix' },
+            { '<leader>tl', '<cmd>TodoLocList<cr>', desc = 'Todo LocList' },
+            { '<leader>ts', '<cmd>TodoTelescope<cr>', desc = 'Todo Telescope' },
+        },
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        opts = {},
     },
 
     -- ╭─────────────────────────────────────────────────────────╮
