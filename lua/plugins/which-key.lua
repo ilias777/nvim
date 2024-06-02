@@ -27,6 +27,7 @@ return {
             ['<leader>h'] = { name = '+Hop Motion' }, -- Hop
             ['<leader>l'] = { name = '+Lazy / LTeX' }, -- Lazy & LTeX
             ['<leader>m'] = { name = '+Messages' }, -- Messages
+            ['<leader>t'] = { name = '+ToggleTerm / Todo Comments' }, -- ToggleTerm & Todo Comments
             ['<leader>x'] = { name = '+Trouble' }, -- Trouble
             ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
             ['<space>c'] = { name = '+Code actions' }, -- Code Actions with LSP
