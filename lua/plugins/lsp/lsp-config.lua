@@ -63,6 +63,22 @@ return {
         -- ╰───────────────────╯
         local navic = require('nvim-navic')
 
+        -- ╭─────────────────────────────────────────────────────────╮
+        -- │                   DIAGNOSTIC KAYMAPS                    │
+        -- ╰─────────────────────────────────────────────────────────╯
+        local opts = function(desc)
+            return { noremap = true, silent = true, desc = desc }
+        end
+
+        vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, opts('Open Diagnostic Window'))
+        vim.keymap.set('n', '<space><left>', function()
+            vim.diagnostic.jump({ count = -vim.v.count1 })
+        end, opts('Previous Diagnostic'))
+        vim.keymap.set('n', '<space><right>', function()
+            vim.diagnostic.jump({ count = vim.v.count1 })
+        end, opts('Next Diagnostic'))
+        vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts('Send Diagnostic to Locallist'))
+
         -- ╭───────────────────────╮
         -- │ LSPATTACH AUTOCOMMAND │
         -- ╰───────────────────────╯
@@ -99,15 +115,6 @@ return {
                 vim.keymap.set('n', '<space>f', function()
                     vim.lsp.buf.format({ async = true })
                 end, bufopts('Formatting with LSP'))
-
-                vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, bufopts('Open Diagnostic Window'))
-                vim.keymap.set('n', '<space><left>', function()
-                    vim.diagnostic.jump({ count = -vim.v.count1 })
-                end, bufopts('Previous Diagnostic'))
-                vim.keymap.set('n', '<space><right>', function()
-                    vim.diagnostic.jump({ count = vim.v.count1 })
-                end, bufopts('Next Diagnostic'))
-                vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, bufopts('Send Diagnostic to Locallist'))
 
                 -- Get client
                 local client = vim.lsp.get_client_by_id(ev.data.client_id)
