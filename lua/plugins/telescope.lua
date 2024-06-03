@@ -134,7 +134,6 @@ return {
                 },
                 advanced_git_search = {
                     diff_plugin = 'diffview',
-                    git_flags = {},
                 },
             },
         })
