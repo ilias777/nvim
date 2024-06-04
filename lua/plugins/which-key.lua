@@ -19,6 +19,8 @@ return {
             align = 'center', -- align columns left, center or right
         },
         defaults = {
+            ['gr'] = { name = '+LSP Functions' },
+            ['grw'] = { name = '+LSP Workspace Folders' },
             ['<leader>c'] = { name = '+Comment-Box / Context Treesitter' }, -- Comment Box
             ['<leader>d'] = { name = '+Diffview / Debug' }, -- Diffview & nvim-dap
             ['<leader>ds'] = { name = '+Dap Step' }, -- nvim-dap step
