@@ -91,30 +91,29 @@ return {
                 -- │ KEYMAPS │
                 -- ╰─────────╯
                 local bufopts = function(desc)
-                    return { noremap = true, silent = true, buffer = ev.buf, desc = desc }
+                    return { buffer = ev.buf, desc = desc }
                 end
-                vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts('Go to Declaration'))
-                vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts('Go to Definition'))
+                -- All lsp keymaps starts with gr expept K.
+                -- Default lsp keymaps. Setting the keymaps again, only to change the description.
                 vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts('Hover'))
-                vim.keymap.set('n', 'gI', vim.lsp.buf.implementation, bufopts('Go to Implementation'))
-                vim.keymap.set('n', '<leader>k', vim.lsp.buf.signature_help, bufopts('Singature Help'))
-                vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts('Add Workspace Folder'))
-                vim.keymap.set(
-                    'n',
-                    '<space>wr',
-                    vim.lsp.buf.remove_workspace_folder,
-                    bufopts('Remove Workspace Folder')
-                )
-                vim.keymap.set('n', '<space>wl', function()
-                    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-                end, bufopts('List Workspace Folder'))
-                vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts('Type Definition'))
-                vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts('Rename with LSP'))
-                vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, bufopts('Code Action'))
-                vim.keymap.set('n', 'gR', vim.lsp.buf.references, bufopts('Go to Reference'))
-                vim.keymap.set('n', '<space>f', function()
+                vim.keymap.set({ 'n', 'v' }, 'gra', vim.lsp.buf.code_action, bufopts('LSP Code Action'))
+                vim.keymap.set('n', 'grn', vim.lsp.buf.rename, bufopts('LSP Rename'))
+                vim.keymap.set('n', 'grr', vim.lsp.buf.references, bufopts('LSP References'))
+                -- Custom lsp keymaps.
+                vim.keymap.set('n', 'grd', vim.lsp.buf.definition, bufopts('LSP Go to Definition'))
+                vim.keymap.set('n', 'grD', vim.lsp.buf.declaration, bufopts('LSP Go to Declaration'))
+                vim.keymap.set('n', 'gri', vim.lsp.buf.implementation, bufopts('LSP Go to Implementation'))
+                vim.keymap.set('n', 'grf', function()
                     vim.lsp.buf.format({ async = true })
                 end, bufopts('Formatting with LSP'))
+                vim.keymap.set('n', 'grk', vim.lsp.buf.signature_help, bufopts('LSP Singature Help'))
+                vim.keymap.set('n', 'grs', vim.lsp.buf.document_symbol, bufopts('LSP Document Symbols'))
+                vim.keymap.set('n', 'grt', vim.lsp.buf.type_definition, bufopts('LSP Type Definition'))
+                vim.keymap.set('n', 'grwa', vim.lsp.buf.add_workspace_folder, bufopts('LSP Add Workspace Folder'))
+                vim.keymap.set('n', 'grwr', vim.lsp.buf.remove_workspace_folder, bufopts('LSP Remove Workspace Folder'))
+                vim.keymap.set('n', 'grwl', function()
+                    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+                end, bufopts('LSP List Workspace Folder'))
 
                 -- Get client
                 local client = vim.lsp.get_client_by_id(ev.data.client_id)
