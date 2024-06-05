@@ -1,10 +1,13 @@
 return {
+    { 'justinsgithub/wezterm-types', lazy = true },
     {
         'folke/lazydev.nvim',
         ft = 'lua',
         opts = {
             library = {
+                'lazy.nvim',
                 'luvit-meta/library',
+                { path = 'wezterm-types', mods = { 'wezterm' } },
             },
         },
     },
