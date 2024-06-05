@@ -1,5 +1,4 @@
 return {
-    { 'justinsgithub/wezterm-types', lazy = true },
     {
         'folke/lazydev.nvim',
         ft = 'lua',
@@ -11,6 +10,7 @@ return {
             },
         },
     },
+    { 'justinsgithub/wezterm-types', lazy = true },
     { 'Bilal2453/luvit-meta', lazy = true },
     {
         'hrsh7th/nvim-cmp',
