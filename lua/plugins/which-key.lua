@@ -30,14 +30,11 @@ return {
             ['<leader>l'] = { name = '+Lazy / LTeX' }, -- Lazy & LTeX
             ['<leader>m'] = { name = '+Messages' }, -- Messages
             ['<leader>t'] = { name = '+ToggleTerm / Todo Comments' }, -- ToggleTerm & Todo Comments
-            ['<leader>x'] = { name = '+Trouble' }, -- Trouble
             ['<space>b'] = { name = '+Buffer' }, -- Bufferline.nvim
-            ['<space>c'] = { name = '+Code actions' }, -- Code Actions with LSP
             ['<space>g'] = { name = '+Glance LSP' }, -- Glance LSP locations
             ['<space>i'] = { name = '+IncRename / Inlay Hints' }, -- IncRename
             ['<space>n'] = { name = '+Noice' }, -- Noice.nvim
             ['<Space>r'] = { name = '+Lsp Rename' }, -- Rename with LSP
-            ['<space>w'] = { name = '+Workspace LSP' }, -- Workspace LSP
             ['<space>x'] = { name = '+Trouble' }, -- Trouble.nvim
         },
     },
