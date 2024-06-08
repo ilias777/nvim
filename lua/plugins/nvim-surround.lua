@@ -3,5 +3,8 @@ return {
     enabled = true,
     version = '*',
     event = { 'BufReadPre', 'BufNewFile' },
-    config = true,
+    opts = {
+        move_cursor = 'sticky',
+    },
+    -- config = true,
 }
