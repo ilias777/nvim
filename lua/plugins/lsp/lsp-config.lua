@@ -105,7 +105,7 @@ return {
                 vim.keymap.set('n', 'gri', vim.lsp.buf.implementation, bufopts('LSP Go to Implementation'))
                 vim.keymap.set('n', 'grf', function()
                     vim.lsp.buf.format({ async = true })
-                end, bufopts('Formatting with LSP'))
+                end, bufopts('LSP Formatting'))
                 vim.keymap.set('n', 'grk', vim.lsp.buf.signature_help, bufopts('LSP Singature Help'))
                 vim.keymap.set('n', 'grs', vim.lsp.buf.document_symbol, bufopts('LSP Document Symbols'))
                 vim.keymap.set('n', 'grt', vim.lsp.buf.type_definition, bufopts('LSP Type Definition'))
