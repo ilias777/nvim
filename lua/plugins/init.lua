@@ -238,8 +238,8 @@ return {
     },
     {
         'nvim-zh/colorful-winsep.nvim',
-        enabled = false,
-        event = 'BufReadPre',
+        enabled = true,
+        event = { 'BufReadPre', 'BufNewFile' },
         config = true,
     },
 
