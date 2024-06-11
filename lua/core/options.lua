@@ -100,5 +100,11 @@ vim.opt.langmap = 'ΑA,ΒB,ΨC,ΔD,ΕE,ΦF,ΓG,ΗH,ΙI,ΞJ,ΚK,ΛL,ΜM,ΝN,ΟO,�
 vim.opt.updatetime = 100
 vim.g.skip_ts_context_commentstring_module = true
 
+-- Disable providers for health checks
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_node_provider = 0
+
 -- Disable depreceted messages
 vim.deprecate = function() end ---@diagnostic disable-line: duplicate-set-field
