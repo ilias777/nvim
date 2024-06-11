@@ -121,6 +121,17 @@ end, { expr = true, desc = 'better i' })
 
 -- Spelling
 vim.keymap.set('n', 'z.', '1z=', { desc = '󰓆 Fix Spelling' })
+vim.keymap.set('n', 'z=', function()
+    vim.ui.select(
+        vim.fn.spellsuggest(vim.fn.expand('<cword>')),
+        {},
+        vim.schedule_wrap(function(selected)
+            if selected then
+                vim.cmd('normal! ciw' .. selected)
+            end
+        end)
+    )
+end, { desc = 'Spelling suggestions' })
 
 -- Messages
 vim.keymap.set('n', '<leader>mm', '<cmd>messages<cr>', { desc = 'Messages' })
