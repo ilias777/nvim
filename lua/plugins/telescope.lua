@@ -84,6 +84,7 @@ return {
                     -- previewer = false,
                     layout_config = {
                         prompt_position = 'top',
+                        preview_width = 0.5,
                         -- width = 0.7,
                     },
                     sorting_strategy = 'ascending',
