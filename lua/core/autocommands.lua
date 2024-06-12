@@ -193,3 +193,15 @@ vim.api.nvim_create_autocmd('Filetype', {
 --         vim.lsp.buf.clear_references()
 --     end,
 -- })
+
+-- ╭─────────────────────────────────────────────────────────╮
+-- │               MESSAGE IF MACRO IS STOPPED               │
+-- ╰─────────────────────────────────────────────────────────╯
+local macro_group = vim.api.nvim_create_augroup('MacroRecording', { clear = true })
+vim.api.nvim_create_autocmd('RecordingLeave', {
+    group = macro_group,
+    callback = function()
+        -- Display a message when macro recording stops
+        print('Macro recording stopped')
+    end,
+})
