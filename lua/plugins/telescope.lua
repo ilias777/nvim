@@ -51,11 +51,15 @@ return {
                     i = {
                         ['<c-t>'] = open_with_trouble,
                         ['<M-p>'] = action_layout.toggle_preview,
+                        ['<S-down>'] = actions.preview_scrolling_down,
+                        ['<S-up>'] = actions.preview_scrolling_up,
                     },
                     n = {
                         ['<c-t>'] = open_with_trouble,
                         ['q'] = require('telescope.actions').close,
                         ['<M-p>'] = action_layout.toggle_preview,
+                        ['<S-down>'] = actions.preview_scrolling_down,
+                        ['<S-up>'] = actions.preview_scrolling_up,
                     },
                 },
                 -- preview = {
