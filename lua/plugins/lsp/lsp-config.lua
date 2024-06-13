@@ -522,7 +522,7 @@ return {
                 return vim.fn.getcwd()
             end,
             settings = {
-                -- formatterMode = 'typstfmt',
+                formatterMode = 'typstyle',
             },
         })
     end,

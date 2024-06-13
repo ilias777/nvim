@@ -34,7 +34,7 @@ return {
                 python = { 'black' },
                 rust = { 'rustfmt' },
                 scss = { 'prettier' },
-                typst = { 'typstyle' },
+                -- typst = { 'typstyle' },
                 vue = { 'prettier' },
                 yaml = { 'yamlfmt' },
             },
