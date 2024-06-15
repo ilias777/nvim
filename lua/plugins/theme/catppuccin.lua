@@ -168,7 +168,7 @@ catppuccin.setup({
             VM_Mono = { bg = ucolors.darken('#f38ba8', 0.15, mocha.mantle), fg = colors.red, style = { 'bold' } },
 
             -- Noice CMDLine Popup
-            NoiceCmdlinePopupBorder = { fg = colors.red },
+            -- NoiceCmdlinePopupBorder = { fg = colors.red },
         }
     end,
     highlight_overrides = {},
