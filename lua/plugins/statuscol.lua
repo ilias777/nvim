@@ -5,6 +5,7 @@ return {
         local builtin = require('statuscol.builtin')
         require('statuscol').setup({
             relculright = true,
+            ft_ignore = { 'neo-tree' },
             segments = {
                 { sign = { name = { 'Dap' }, maxwidth = 1, auto = false }, click = 'v:lua.ScSa' },
                 { sign = { name = { 'todo*' }, maxwidth = 1 } },
