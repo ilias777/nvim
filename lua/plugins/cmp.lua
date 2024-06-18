@@ -15,7 +15,6 @@ return {
         'hrsh7th/cmp-path',
         'octaltree/cmp-look',
         'chrisgrieser/cmp_yanky',
-        'dmitmel/cmp-cmdline-history',
     },
     config = function()
         -- ╭───────────────╮
@@ -199,8 +198,7 @@ return {
                         nvim_lua = '( Lua )',
                         treesitter = '( Treesitter )',
                         look = '( Look )',
-                        cmdline = '(CMDLine)',
-                        cmdline_history = '(CMDLine History)',
+                        -- cmdline = '(CMDLine)',
                     })[entry.source.name]
                     return vim_item
                 end,
@@ -247,7 +245,6 @@ return {
             sources = cmp.config.sources({
                 { name = 'path', group_index = 1 },
                 { name = 'cmdline', group_index = 2 },
-                { name = 'cmdline_history', group_index = 3 },
             }),
             matching = { disallow_symbol_nonprefix_matching = false },
         })
