@@ -81,6 +81,7 @@ return {
                         { find = 'clipboard' },
                         { find = 'Deleted' },
                         { find = 'Renamed' },
+                        { find = 'file_browser' },
                     },
                 },
             },
