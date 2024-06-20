@@ -59,57 +59,6 @@ return {
         end,
     },
     {
-        'famiu/bufdelete.nvim',
-        enabled = false,
-        cmd = 'Bdelete',
-        keys = {
-            { '<space>bd', '<cmd>Bdelete<cr>', desc = 'Delete Buffer' },
-        },
-    },
-    {
-        'utilyre/sentiment.nvim',
-        enabled = false,
-        event = 'BufReadPre',
-        version = '*',
-        opts = {
-            included_modes = {
-                i = false,
-            },
-        },
-        init = function()
-            vim.g.loaded_matchparen = 1
-        end,
-    },
-    {
-        'chrisgrieser/nvim-spider',
-        event = 'BufReadPost',
-        config = function()
-            -- Keymaps
-            vim.keymap.set({ 'n', 'o', 'x' }, 'w', function()
-                require('spider').motion('w')
-            end, { desc = 'Spider-w' })
-            vim.keymap.set({ 'n', 'o', 'x' }, 'e', function()
-                require('spider').motion('e')
-            end, { desc = 'Spider-e' })
-            vim.keymap.set({ 'n', 'o', 'x' }, 'b', function()
-                require('spider').motion('b')
-            end, { desc = 'Spider-b' })
-            vim.keymap.set({ 'n', 'o', 'x' }, 'ge', function()
-                require('spider').motion('ge')
-            end, { desc = 'Spider-ge' })
-        end,
-    },
-    {
-        'brenoprata10/nvim-highlight-colors',
-        enabled = true,
-        event = 'BufReadPre',
-        opts = {
-            render = 'virtual', ---@usage 'background'|'foreground'|'virtual'
-            virtual_symbol = '',
-        },
-        config = true,
-    },
-    {
         'chrisgrieser/nvim-alt-substitute',
         enabled = false,
         opts = true,
@@ -132,27 +81,6 @@ return {
         },
     },
     {
-        'luckasRanarison/nvim-devdocs',
-        cmd = { 'DevdocsOpen', 'DevdocsOpenFloat' },
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope.nvim',
-            'nvim-treesitter/nvim-treesitter',
-        },
-        opts = {
-            float_win = {
-                relative = 'editor',
-                height = math.floor(vim.o.lines * 0.7),
-                width = math.floor(vim.o.columns * 0.8),
-                border = 'rounded',
-            },
-            wrap = true,
-            after_open = function()
-                vim.keymap.set('n', 'q', ':close<CR>', { silent = true })
-            end,
-        },
-    },
-    {
         'ellisonleao/glow.nvim',
         cmd = 'Glow',
         config = true,
@@ -164,20 +92,6 @@ return {
         },
     },
     {
-        'yaocccc/nvim-hl-mdcodeblock.lua',
-        enabled = false,
-        ft = 'markdown',
-        dependencies = { 'nvim-treesitter' },
-        config = true,
-        opts = {
-            hl_group = 'CursorLine',
-            minumum_len = 80,
-            -- minumum_len = function()
-            --     return math.max(math.floor(vim.api.nvim_win_get_width(0) * 0.8), 100)
-            -- end,
-        },
-    },
-    {
         'nvim-zh/colorful-winsep.nvim',
         enabled = true,
         event = { 'BufReadPre', 'BufNewFile' },
@@ -185,12 +99,22 @@ return {
     },
 
     -- ╭─────────────────────────────────────────────────────────╮
-    -- │                      COLOR PICKER                       │
+    -- │                         COLORS                          │
     -- ╰─────────────────────────────────────────────────────────╯
     {
         'uga-rosa/ccc.nvim',
         keys = {
             { '<leader>cc', '<cmd>CccPick<cr>', desc = 'Color Picker' },
+        },
+        config = true,
+    },
+    {
+        'brenoprata10/nvim-highlight-colors',
+        enabled = true,
+        event = 'BufReadPre',
+        opts = {
+            render = 'virtual', ---@usage 'background'|'foreground'|'virtual'
+            virtual_symbol = '',
         },
         config = true,
     },
@@ -209,31 +133,6 @@ return {
         'kaarmu/typst.vim',
         ft = 'typst',
     },
-    {
-        'chomosuke/typst-preview.nvim',
-        enabled = false,
-        ft = 'typst',
-        version = '0.1.*',
-        build = function()
-            require('typst-preview').update()
-        end,
-    },
-    {
-        'MeanderingProgrammer/markdown.nvim',
-        enabled = false,
-        name = 'render-markdown',
-        ft = 'markdown',
-        keys = {
-            {
-                '<leader>mt',
-                function()
-                    require('render-markdown').toggle()
-                end,
-                desc = 'Toogle markdown view',
-            },
-        },
-        config = true,
-    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                          MOTION                          │
@@ -248,13 +147,6 @@ return {
         config = true,
     },
     {
-        'rlane/pounce.nvim',
-        enabled = false,
-        keys = {
-            { 'S', '<cmd>Pounce<CR>', mode = { 'n', 'v' } },
-        },
-    },
-    {
         'declancm/cinnamon.nvim',
         enabled = true,
         event = { 'BufReadPost', 'BufNewFile' },
@@ -264,6 +156,25 @@ return {
                 always_scroll = true,
                 scroll_limit = 200,
             })
+        end,
+    },
+    {
+        'chrisgrieser/nvim-spider',
+        event = 'BufReadPost',
+        config = function()
+            -- Keymaps
+            vim.keymap.set({ 'n', 'o', 'x' }, 'w', function()
+                require('spider').motion('w')
+            end, { desc = 'Spider-w' })
+            vim.keymap.set({ 'n', 'o', 'x' }, 'e', function()
+                require('spider').motion('e')
+            end, { desc = 'Spider-e' })
+            vim.keymap.set({ 'n', 'o', 'x' }, 'b', function()
+                require('spider').motion('b')
+            end, { desc = 'Spider-b' })
+            vim.keymap.set({ 'n', 'o', 'x' }, 'ge', function()
+                require('spider').motion('ge')
+            end, { desc = 'Spider-ge' })
         end,
     },
 
