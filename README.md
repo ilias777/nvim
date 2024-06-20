@@ -286,6 +286,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 | [intelephense](https://intelephense.com)                                             | PHP language server                                     | PHP                  |
 | [pyright](https://github.com/microsoft/pyright)                                      | Static Type Checker for Python                          | Python               |
 | [rust_analyzer](https://github.com/rust-lang/rust-analyzer)                          | Rust compiler                                           | Rust                 |
-| [typst-lsp](https://github.com/nvarner/typst-lsp)                                    | Language server for Typs                                | Typst                |
+| [tinymist](https://github.com/Myriad-Dreamin/tinymist)                               | Language server for Typst                               | Typst                |
 | [volar](https://github.com/johnsoncodehk/volar)                                      | High-performance Vue language tooling based-on Volar.js | Vue                  |
 | [yamlls](https://github.com/redhat-developer/yaml-language-server)                   | Language Server for YAML Files                          | YAML                 |
