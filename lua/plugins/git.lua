@@ -84,6 +84,7 @@ return {
     --  ╰──────────────────────────────────────────────────────────╯
     {
         'NeogitOrg/neogit',
+        cmd = 'Neogit',
         keys = {
             { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Neogit' },
         },
@@ -94,6 +95,10 @@ return {
         },
         config = true,
         opts = {
+            signs = {
+                item = { '', '' },
+                section = { '', '' },
+            },
             disable_commit_confirmation = true,
             integrations = {
                 telescope = true,
