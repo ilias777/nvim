@@ -59,7 +59,7 @@ return {
                 javascript = { 'eslint' },
                 json = { 'jsonlint' },
                 -- lua = { 'luacheck' },
-                python = { 'ruff' },
+                -- python = { 'ruff' },
                 vue = { 'eslint' },
                 yaml = { 'yamllint' },
             }
