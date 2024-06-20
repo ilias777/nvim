@@ -58,8 +58,6 @@ return {
             lint.linters_by_ft = {
                 javascript = { 'eslint' },
                 json = { 'jsonlint' },
-                -- lua = { 'luacheck' },
-                -- python = { 'ruff' },
                 vue = { 'eslint' },
                 yaml = { 'yamllint' },
             }
