@@ -96,9 +96,9 @@ return {
                 help_tags = {
                     theme = 'ivy',
                 },
-                -- symbols = {
-                --     theme = 'dropdown',
-                -- },
+                symbols = {
+                    theme = 'dropdown',
+                },
                 registers = {
                     theme = 'ivy',
                 },
