@@ -32,7 +32,7 @@ return {
                 'jsonls',
                 'ltex',
                 'lua_ls',
-                'pyright',
+                'ruff',
                 'rust_analyzer',
                 'texlab',
                 'tsserver',
@@ -312,7 +312,7 @@ return {
         -- ╭───────────────╮
         -- │ PYTHON SERVER │
         -- ╰───────────────╯
-        lspconfig.pyright.setup({
+        lspconfig.ruff.setup({
             handlers = handlers,
         })
 
