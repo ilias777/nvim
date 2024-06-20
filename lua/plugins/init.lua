@@ -213,9 +213,7 @@ return {
     --  ╰──────────────────────────────────────────────────────────╯
     {
         'mfussenegger/nvim-jdtls',
-        keys = {
-            { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
-        },
+        ft = 'java',
     },
 
     --  ╭──────────────────────────────────────────────────────────╮
