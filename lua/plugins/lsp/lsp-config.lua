@@ -505,16 +505,6 @@ return {
         -- ╭──────────────╮
         -- │ TYPST SERVER │
         -- ╰──────────────╯
-        -- lspconfig.typst_lsp.setup({
-        --     handlers = handlers,
-        --     settings = {
-        --         exportPdf = 'onSave',
-        --     },
-        -- })
-
-        -- ╭─────────────────────────╮
-        -- │ TINYMIST (TYPST) SERVER │
-        -- ╰─────────────────────────╯
         lspconfig.tinymist.setup({
             handlers = handlers,
             single_file_support = true,
