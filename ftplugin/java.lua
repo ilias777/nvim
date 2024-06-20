@@ -18,12 +18,11 @@ local root_dir = vim.fs.dirname(vim.fs.find(root_markers, { upward = true })[1])
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace_dir = vim.fn.stdpath('data') .. '/site/java/workspace-root/' .. project_name
 
--- local bundles = vim.fn.glob("/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar", 1)
 -- vim.list_extend(bundles, vim.split(vim.fn.glob("/Users/ilias/.config/nvim/vscode-java-test/server/*.jar", 1), "\n"))
 
 local bundles = {
     vim.fn.glob(
-        '/Users/ilias/.config/nvim/debug/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar',
+        '/Users/ilias/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar',
         1
     ),
 }
