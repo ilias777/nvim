@@ -21,7 +21,7 @@
 ## 🌟 Preview
 
 <div align="center">
-  <img width="1480" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/1dc3b5d3-7375-470a-9b14-db79f9ad81c6">
+  <img width="1480" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/4f6b437c-c97e-4f27-b7ff-697a3df53131">
   <h6>Find files with Telescope</h6>
   <img width="1480" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/b53bdb7a-b581-46ba-9f79-415f22363f84">
   <h6>Show keybindings with which-key</h6>
