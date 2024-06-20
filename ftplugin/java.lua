@@ -9,14 +9,11 @@ local jdtls_binary_path = jdtls_bin_folder .. 'jdtls'
 
 local path_to_lsp_server = jdtls_path .. '/config_mac'
 local path_to_plugins = jdtls_path .. '/plugins/'
-local path_to_jar = path_to_plugins .. 'org.eclipse.equinox.launcher_1.6.500.v20230717-2134.jar'
+local path_to_jar = path_to_plugins .. 'org.eclipse.equinox.launcher_1.6.800.v20240330-1250.jar'
 local lombok_path = jdtls_path .. '/lombok.jar'
 
 local root_markers = { '.git', 'mvnw', 'gradlew', 'pom.xml', 'build.gradle' }
-local root_dir = require('jdtls.setup').find_root(root_markers)
-if root_dir == '' then
-    return
-end
+local root_dir = vim.fs.dirname(vim.fs.find(root_markers, { upward = true })[1])
 
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace_dir = vim.fn.stdpath('data') .. '/site/java/workspace-root/' .. project_name
@@ -45,7 +42,7 @@ local config = {
         '-Dlog.protocol=true',
         '-Dlog.level=ALL',
         '-javaagent:' .. lombok_path,
-        '-Xms1g',
+        '-Xmx1g',
         '--add-modules=ALL-SYSTEM',
         '--add-opens',
         'java.base/java.util=ALL-UNNAMED',
@@ -66,7 +63,7 @@ local config = {
     ),
 
     on_attach = function(client, bufnr)
-        vim.lsp.inlay_hint.enable(bufnr, true)
+        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
     end,
 
     settings = {
@@ -87,6 +84,12 @@ local config = {
             },
             signatureHelp = {
                 enabled = true,
+            },
+            referencesCodeLens = {
+                enabled = true,
+            },
+            references = {
+                includeDecompiledSources = true,
             },
             completion = {
                 favoriteStaticMembers = {
@@ -119,12 +122,12 @@ local config = {
                 },
                 useBlocks = true,
             },
+            extendedClientCapabilities = extendedClientCapabilities,
         },
     },
 
     init_options = {
         bundles = bundles,
-        extendedClientCapabilities = extendedClientCapabilities,
     },
 
     -- init_options = {
