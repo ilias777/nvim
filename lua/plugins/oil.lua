@@ -1,6 +1,6 @@
 return {
     'stevearc/oil.nvim',
-    enabled = false,
+    enabled = true,
     keys = {
         { '<Space>o', '<cmd>Oil --float<cr>', desc = 'File browser' },
     },
