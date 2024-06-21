@@ -154,7 +154,6 @@ return {
             require('cinnamon').setup({
                 extra_keymaps = true,
                 always_scroll = true,
-                scroll_limit = 200,
             })
         end,
     },
