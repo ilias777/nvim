@@ -99,7 +99,7 @@ vim.keymap.set('n', '<Space><DOWN>', "<cmd>call append(line('.'), repeat([''], v
 -- Add komma
 -- vim.keymap.set("n", ",,", [[f'a]])
 vim.keymap.set('i', '<C-,>', '<esc>la,', { silent = true })
-vim.keymap.set('i', '<C-b>', '<esc>la,<esc>hi', { silent = true })
+vim.keymap.set('i', '<C-b>', '{},<esc>hha', { silent = true })
 
 -- Go to last change
 vim.keymap.set('n', 'g,', 'g;', { desc = 'Go to newest change' })
