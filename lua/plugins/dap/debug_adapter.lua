@@ -105,7 +105,7 @@ dap.adapters['pwa-node'] = {
     port = '${port}',
     executable = {
         command = 'node',
-        args = { '/Users/ilias/.config/nvim/debug/js-debug/src/dapDebugServer.js', '${port}' },
+        args = { '/Users/ilias/.config/js-debug/src/dapDebugServer.js', '${port}' },
     },
 }
 dap.configurations.javascript = {
