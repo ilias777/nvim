@@ -2,7 +2,7 @@ return {
     'stevearc/oil.nvim',
     enabled = true,
     keys = {
-        { '<Space>o', '<cmd>Oil --float<cr>', desc = 'File browser' },
+        { '-', '<cmd>Oil --float<cr>', desc = 'File browser' },
     },
     opts = {
         float = {
