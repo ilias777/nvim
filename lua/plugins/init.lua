@@ -188,24 +188,26 @@ return {
             { '<leader>db', '<cmd>DapToggleBreakpoint<cr>', desc = 'Add Breakpoint' },
         },
         dependencies = {
-            {
-                'rcarriga/nvim-dap-ui',
-                keys = {
-                    { '<leader>du', '<cmd>lua require("dapui").toggle()<CR>', desc = 'DAP UI Toggle' },
-                },
-                config = true,
-            },
-            {
-                'theHamsta/nvim-dap-virtual-text',
-                opts = {
-                    commented = true,
-                    virt_text_pos = 'eol',
-                },
+            'theHamsta/nvim-dap-virtual-text',
+            opts = {
+                commented = true,
+                virt_text_pos = 'eol',
             },
         },
         config = function()
             require('plugins.dap.debug_adapter')
         end,
+    },
+    {
+        'rcarriga/nvim-dap-ui',
+        keys = {
+            { '<leader>du', '<cmd>lua require("dapui").toggle()<CR>', desc = 'DAP UI Toggle' },
+        },
+        dependencies = {
+            'mfussenegger/nvim-dap',
+            'nvim-neotest/nvim-nio',
+        },
+        config = true,
     },
 
     --  ╭──────────────────────────────────────────────────────────╮
