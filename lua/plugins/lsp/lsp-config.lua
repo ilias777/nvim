@@ -16,6 +16,7 @@ return {
                     package_uninstalled = ' ',
                 },
                 border = 'single',
+                height = 0.8,
             },
         })
 
