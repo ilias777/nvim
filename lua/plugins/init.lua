@@ -143,6 +143,13 @@ return {
         keys = {
             { '<space><space>', '<cmd>HopWord<cr>', desc = 'Hop Word' },
             { '<leader>hh', '<cmd>HopAnywhere<cr>', desc = 'Hop Anywhere' },
+            { '<leader>hc', '<cmd>HopCamelCase<cr>', desc = 'Hop CamelCase' },
+            { '<leader>hl', '<cmd>HopLine<cr>', desc = 'Hop Line' },
+            { '<leader>h1', '<cmd>HopChar1<cr>', desc = 'Hop 1 Char' },
+            { '<leader>h2', '<cmd>HopChar2<cr>', desc = 'Hop 2 Chars' },
+            { '<leader>hv', '<cmd>HopVertical<cr>', desc = 'Hop Vertical' },
+            { '<leader>hn', '<cmd>HopNodes<cr>', desc = 'Hop Nodes' },
+            { '<leader>hp', '<cmd>HopPattern<cr>', desc = 'Hop Pattern' },
         },
         config = true,
     },
