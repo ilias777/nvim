@@ -27,7 +27,7 @@ return {
             desc = 'Neotree Float Filesystem',
         },
         {
-            '<Leader>b',
+            '<Space>bb',
             function()
                 require('neo-tree.command').execute({
                     toggle = true,
