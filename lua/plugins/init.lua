@@ -152,8 +152,14 @@ return {
         event = { 'BufReadPost', 'BufNewFile' },
         config = function()
             require('cinnamon').setup({
-                extra_keymaps = true,
-                always_scroll = true,
+                keymaps = {
+                    extra = true,
+                },
+                options = {
+                    max_delta = {
+                        column = 100,
+                    },
+                },
             })
         end,
     },
