@@ -203,12 +203,6 @@ vim.keymap.set('n', '<leader>dv', function()
     end
 end, { desc = 'Diffview Toggle' })
 
--- hop.nvim
-vim.keymap.set('n', '<leader>hl', '<cmd>HopLine<cr>', { desc = 'Hop Line' })
-vim.keymap.set('n', '<leader>h1', '<cmd>HopChar1<cr>', { desc = 'Hop 1 Char' })
-vim.keymap.set('n', '<leader>h2', '<cmd>HopChar2<cr>', { desc = 'Hop 2 Chars' })
-vim.keymap.set('n', '<leader>hc', '<cmd>HopVertical<cr>', { desc = 'Hop Vertical' })
-
 -- noice.nvim
 vim.keymap.set('n', '<space>nn', '<cmd>Noice<cr>', { desc = 'Noice Messages' })
 vim.keymap.set('n', '<space>na', '<cmd>NoiceAll<cr>', { desc = 'Noice All Messages' })
