@@ -284,7 +284,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 | [texlab](https://github.com/latex-lsp/texlab)                                        | Language Server Protocol for LaTeX                      | LaTex                |
 | [lua_ls](https://github.com/LuaLS/lua-language-server)                               | A language server that offers Lua language support      | Lua                  |
 | [intelephense](https://intelephense.com)                                             | PHP language server                                     | PHP                  |
-| [pyright](https://github.com/microsoft/pyright)                                      | Static Type Checker for Python                          | Python               |
+| [ruff](https://github.com/astral-sh/ruff/)                                           | Fast Python linter and code formatter, written in Rust  | Python               |
 | [rust_analyzer](https://github.com/rust-lang/rust-analyzer)                          | Rust compiler                                           | Rust                 |
 | [tinymist](https://github.com/Myriad-Dreamin/tinymist)                               | Language server for Typst                               | Typst                |
 | [volar](https://github.com/johnsoncodehk/volar)                                      | High-performance Vue language tooling based-on Volar.js | Vue                  |
