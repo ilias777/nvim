@@ -159,18 +159,16 @@ return {
         'declancm/cinnamon.nvim',
         enabled = true,
         event = { 'BufReadPost', 'BufNewFile' },
-        config = function()
-            require('cinnamon').setup({
-                keymaps = {
-                    extra = true,
+        opts = {
+            keymaps = {
+                extra = true,
+            },
+            options = {
+                max_delta = {
+                    column = 100,
                 },
-                options = {
-                    max_delta = {
-                        column = 100,
-                    },
-                },
-            })
-        end,
+            },
+        },
     },
     {
         'chrisgrieser/nvim-spider',
