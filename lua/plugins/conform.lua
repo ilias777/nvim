@@ -5,7 +5,6 @@ return {
         formatters_by_ft = {
             css = { 'prettier' },
             html = { 'prettier' },
-            java = { 'prettier' },
             javascript = { 'prettier' },
             json = { 'prettier' },
             tex = { 'latexindent' },
