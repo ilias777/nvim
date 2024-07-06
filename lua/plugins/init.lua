@@ -166,6 +166,7 @@ return {
                 extra = true,
             },
             options = {
+                delay = 5,
                 max_delta = {
                     column = 100,
                 },
