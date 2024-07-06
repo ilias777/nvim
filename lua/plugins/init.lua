@@ -95,7 +95,9 @@ return {
         'nvim-zh/colorful-winsep.nvim',
         enabled = true,
         event = { 'BufReadPre', 'BufNewFile' },
-        config = true,
+        opts = {
+            only_line_seq = false,
+        },
     },
 
     -- ╭─────────────────────────────────────────────────────────╮
