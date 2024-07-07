@@ -416,9 +416,9 @@ return {
             handlers = handlers,
             filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
             settings = {
-                ltex = {
-                    language = 'de-DE',
-                },
+                -- ltex = {
+                --     language = 'de-DE',
+                -- },
             },
         })
 
