@@ -163,6 +163,7 @@ return {
         event = { 'BufReadPost', 'BufNewFile' },
         opts = {
             keymaps = {
+                basic = true,
                 extra = true,
             },
             options = {
