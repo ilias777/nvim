@@ -169,6 +169,9 @@ catppuccin.setup({
 
             -- Noice CMDLine Popup
             -- NoiceCmdlinePopupBorder = { fg = colors.red },
+
+            -- Gitsigns
+            GitSignsStagedAdd = { fg = colors.blue },
         }
     end,
     highlight_overrides = {},
