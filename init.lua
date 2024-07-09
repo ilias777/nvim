@@ -29,6 +29,7 @@ local opts = {
     },
     checker = {
         enabled = true,
+        notify = false,
     },
 }
 
