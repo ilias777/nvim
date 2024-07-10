@@ -160,7 +160,7 @@ return {
     {
         'declancm/cinnamon.nvim',
         enabled = true,
-        event = { 'BufReadPost', 'BufNewFile' },
+        event = { 'WinNew' },
         opts = {
             keymaps = {
                 basic = true,
