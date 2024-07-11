@@ -1,8 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
   "runtime.version": "LuaJIT",
+  "runtime.path": [
+    "lua",
+    "lua/?.lua",
+    "lua/?/init.lua",
+    "?.lua",
+    "?/init.lua",
+    "$XDG_DATA_HOME/nvim/lazy"
+  ],
   "workspace.checkThirdParty": false,
-  "workspace.library": ["$VIMRUNTIME/lua", "${3rd}/luv/library"],
+  "workspace.library": [
+    "$VIMRUNTIME/lua",
+    "${3rd}/luv/library",
+    "$XDG_DATA_HOME/nvim/lazy/catppuccin/lua"
+  ],
   "hint.enable": true,
   "hint.setType": true,
   "hint.arrayIndex": "Disable",
