@@ -160,17 +160,11 @@ return {
     {
         'declancm/cinnamon.nvim',
         enabled = true,
-        event = { 'WinNew' },
+        version = '*',
         opts = {
             keymaps = {
                 basic = true,
                 extra = true,
-            },
-            options = {
-                delay = 5,
-                max_delta = {
-                    column = 100,
-                },
             },
         },
     },
