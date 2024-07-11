@@ -67,6 +67,9 @@ vim.opt.guicursor = {
     'r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100',
 }
 
+-- Path
+vim.opt.path:append('**')
+
 -- Spell
 vim.opt.spell = false
 vim.opt.spelllang = { 'de' }
