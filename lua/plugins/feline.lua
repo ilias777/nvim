@@ -29,15 +29,16 @@ return {
                     removed = '',
                 },
             },
-            -- sett = {
-            --     text = U.vary_color({ mocha = mocha.surface0 }, clrs.surface0),
-            --     bkg = U.vary_color({ mocha = 'NONE' }, clrs.surface0),
-            --     diffs = clrs.mauve,
-            --     extras = clrs.overlay1,
-            --     curr_file = clrs.maroon,
-            --     curr_dir = clrs.flamingo,
-            --     show_modified = false, -- show if the file has been modified
-            -- },
+            sett = {
+                text = U.vary_color({ mocha = mocha.crust }, clrs.surface0),
+                bkg = U.vary_color({ mocha = 'NONE' }, clrs.surface0),
+                diffs = clrs.red,
+                extras = clrs.overlay2,
+                curr_file = clrs.maroon,
+                curr_dir = clrs.flamingo,
+                show_modified = true,
+                show_lazy_updates = true,
+            },
             mode_colors = {
                 ['n'] = { 'NORMAL', clrs.teal },
                 ['no'] = { 'N-PENDING', clrs.lavender },
