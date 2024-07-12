@@ -14,7 +14,7 @@ return {
         'hrsh7th/cmp-nvim-lua',
         'hrsh7th/cmp-path',
         'octaltree/cmp-look',
-        'chrisgrieser/cmp_yanky',
+        -- 'chrisgrieser/cmp_yanky',
     },
     config = function()
         -- ╭───────────────╮
@@ -159,7 +159,7 @@ return {
                 { name = 'luasnip' },
                 { name = 'buffer' },
                 { name = 'path' },
-                { name = 'cmp_yanky' },
+                -- { name = 'cmp_yanky' },
                 { name = 'nvim_lua' },
                 { name = 'treesitter' },
                 {
@@ -193,7 +193,7 @@ return {
                         nvim_lsp_signature_help = '( Signature )',
                         luasnip = '( LuaSnip )',
                         buffer = '( Buffer )',
-                        cmp_yanky = '( Yanky )',
+                        -- cmp_yanky = '( Yanky )',
                         path = '( Path )',
                         nvim_lua = '( Lua )',
                         treesitter = '( Treesitter )',
