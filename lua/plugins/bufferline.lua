@@ -22,7 +22,7 @@ return {
                 diagnostics_indicator = function(count, level, diagnostics_dict, context)
                     local ret = (diagnostics_dict.error and ' ' .. diagnostics_dict.error .. ' ' or '')
                         .. (diagnostics_dict.warning and ' ' .. diagnostics_dict.warning or '')
-                        .. (diagnostics_dict.hint and ' ' .. diagnostics_dict.hint .. ' ' or '')
+                        .. (diagnostics_dict.hint and '  ' .. diagnostics_dict.hint .. ' ' or '')
                     return vim.trim(ret)
                 end,
                 ---@type 'thin' | 'thick' | 'slant' | 'padded_slant' | 'slope' | 'padded_slope'
