@@ -21,8 +21,8 @@ return {
         { '<leader>fs', '<cmd>Telescope symbols<cr>', desc = 'Find Symbols' },
         { '<leader>ft', '<cmd>Telescope git_files<cr>', desc = 'Find Git Files' },
         { '<leader>fu', '<cmd>Telescope undo<cr>', desc = 'Find Undo' },
+        { '<leader>fy', '<cmd>Telescope yank_history<cr>', desc = 'Find yanks' },
         { '<leader>fz', '<cmd>Telescope zoxide list<cr>', desc = 'Find Directory' },
-        -- { '<leader>fy', '<cmd>Telescope yank_history<cr>', desc = 'Find yanks' },
     },
     dependencies = {
         'nvim-lua/plenary.nvim',
@@ -153,7 +153,7 @@ return {
         require('telescope').load_extension('zoxide')
         require('telescope').load_extension('import')
         require('telescope').load_extension('heading')
-        -- require('telescope').load_extension('yank_history')
+        require('telescope').load_extension('yank_history')
         -- require('telescope').load_extension('neoclip')
         -- require('telescope').load_extension('noice')
     end,
