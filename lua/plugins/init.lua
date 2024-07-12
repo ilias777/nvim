@@ -159,7 +159,7 @@ return {
     },
     {
         'declancm/cinnamon.nvim',
-        enabled = true,
+        enabled = false,
         version = '*',
         opts = {
             keymaps = {
