@@ -8,6 +8,7 @@ return {
             border = 'single',
         },
         sort = { 'manual', 'group', 'lower' },
+        expand = 0,
         spec = {
             {
                 mode = { 'n', 'v' },
