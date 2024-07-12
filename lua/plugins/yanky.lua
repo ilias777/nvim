@@ -1,6 +1,6 @@
 return {
     'gbprod/yanky.nvim',
-    enabled = true,
+    enabled = false,
     keys = {
         { '<leader>y', '<cmd>YankyRingHistory<cr>', desc = 'Yank Ring History (Yanky)' },
         { 'y', '<Plug>(YankyYank)', mode = { 'n', 'x' }, desc = 'Yank (Yanky)' },
