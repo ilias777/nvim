@@ -6,7 +6,7 @@
 local Utils = require('core.utils')
 
 -- Exit from insert mode
-vim.keymap.set('i', 'kj', '<esc>')
+vim.keymap.set('i', 'kj', '<esc>', { desc = 'Exit insert mode' })
 
 -- Better up/down
 vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -45,18 +45,18 @@ vim.keymap.set('n', '<Space>m', function()
 end, { desc = 'Max or Equal Split' })
 
 -- Resize split panes
-vim.keymap.set('n', '<M-UP>', '<cmd>resize +2<cr>')
-vim.keymap.set('n', '<M-DOWN>', '<cmd>resize -2<cr>')
-vim.keymap.set('n', '<M-LEFT>', '<cmd>vertical resize +2<cr>')
-vim.keymap.set('n', '<M-RIGHT>', '<cmd>vertical resize -2<cr>')
+vim.keymap.set('n', '<M-UP>', '<cmd>resize +2<cr>', { desc = 'Resize pane up' })
+vim.keymap.set('n', '<M-DOWN>', '<cmd>resize -2<cr>', { desc = 'Resize pane down' })
+vim.keymap.set('n', '<M-LEFT>', '<cmd>vertical resize +2<cr>', { desc = 'Resize pane left' })
+vim.keymap.set('n', '<M-RIGHT>', '<cmd>vertical resize -2<cr>', { desc = 'Resize pane right' })
 
 -- Move lines
-vim.keymap.set('n', '<c-k>', ':m -2<CR>==', { silent = true })
-vim.keymap.set('n', '<c-j>', ':m +1<CR>==', { silent = true })
+vim.keymap.set('n', '<c-k>', ':m -2<CR>==', { silent = true, desc = 'Move line up' })
+vim.keymap.set('n', '<c-j>', ':m +1<CR>==', { silent = true, desc = 'Move line down' })
 -- vim.keymap.set('i', '<c-k>', '<esc><cmd>m .-2<cr>==gi')
 -- vim.keymap.set('i', '<c-j>', '<esc><cmd>m .+1<cr>==gi')
-vim.keymap.set('v', '<c-k>', ":m '<-2<CR>gv=gv", { silent = true })
-vim.keymap.set('v', '<c-j>', ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set('v', '<c-k>', ":m '<-2<CR>gv=gv", { silent = true, desc = 'Move line up visual' })
+vim.keymap.set('v', '<c-j>', ":m '>+1<CR>gv=gv", { silent = true, desc = 'Move line down visual' })
 
 -- Indent lines in visual selection
 vim.keymap.set('v', '<', '<gv')
@@ -87,8 +87,8 @@ vim.keymap.set({ 'o', 'x' }, "a'", "2i'", { desc = 'Around Single Quotes' })
 vim.keymap.set({ 'o', 'x' }, 'a"', '2i"', { desc = 'Around Double Quotes' })
 
 -- Inner and outer rectangle brackets []
-vim.keymap.set({ 'o', 'x' }, 'ir', 'i[')
-vim.keymap.set({ 'o', 'x' }, 'ar', 'a[')
+vim.keymap.set({ 'o', 'x' }, 'ir', 'i[', { desc = 'Inner Brackets' })
+vim.keymap.set({ 'o', 'x' }, 'ar', 'a[', { desc = 'Inner Brackets' })
 
 -- Add blank line without leaving normal mode
 vim.keymap.set(
@@ -106,8 +106,8 @@ vim.keymap.set(
 
 -- Add komma
 -- vim.keymap.set("n", ",,", [[f'a]])
-vim.keymap.set('i', '<C-,>', '<esc>la,', { silent = true })
-vim.keymap.set('i', '<C-b>', '{},<esc>hha', { silent = true })
+vim.keymap.set('i', '<C-,>', '<esc>la,', { silent = true, desc = 'Add komma after character' })
+vim.keymap.set('i', '<C-b>', '{},<esc>hha', { silent = true, desc = 'Add curly with komma {},' })
 
 -- Go to last change
 vim.keymap.set('n', 'g,', 'g;', { desc = 'Go to newest change' })
@@ -236,10 +236,10 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 -- vim-visual-multi
-vim.keymap.set('n', 'cp', 'vip<Plug>(VM-Visual-Cursors)')
-vim.keymap.set('x', '<M-c>', '<Plug>(VM-Visual-Cursors)')
-vim.keymap.set('x', '<M-s>', ':VMSearch ')
-vim.keymap.set('n', '<M-s>', ':%VMSearch ')
+vim.keymap.set('n', 'cp', 'vip<Plug>(VM-Visual-Cursors)', { desc = 'Create multicursors inner paragraph' })
+vim.keymap.set('x', '<M-c>', '<Plug>(VM-Visual-Cursors)', { desc = 'Create multicursors in visual mode' })
+vim.keymap.set('x', '<M-s>', ':VMSearch ', { desc = 'Search & create multicursors in visual mode' })
+vim.keymap.set('n', '<M-s>', ':%VMSearch ', { desc = 'Search & create multicursors' })
 
 -- nvim-treesitter-context
 vim.keymap.set('n', '<leader>ct', '<cmd>TSContextToggle<cr>', { desc = 'Context Toggle' })
