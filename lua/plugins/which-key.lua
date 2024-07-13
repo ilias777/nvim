@@ -5,7 +5,6 @@ return {
     opts = {
         preset = 'helix',
         dynamic_height = false,
-        sort = { 'manual', 'group', 'lower' },
         expand = 0,
         spec = {
             {
@@ -29,6 +28,14 @@ return {
                 { '<space>x', group = '+Trouble' }, -- Trouble.nvim
             },
         },
+        modes = {
+            x = false,
+        },
+        win = {
+            no_overlap = false,
+            title_pos = 'center',
+        },
+        sort = { 'manual', 'group', 'lower' },
     },
     config = function(_, opts)
         local wk = require('which-key')
