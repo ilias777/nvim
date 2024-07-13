@@ -242,7 +242,7 @@ vim.keymap.set('x', '<M-s>', ':VMSearch ', { desc = 'Search & create multicursor
 vim.keymap.set('n', '<M-s>', ':%VMSearch ', { desc = 'Search & create multicursors' })
 
 -- nvim-treesitter-context
-vim.keymap.set('n', '<leader>ct', '<cmd>TSContextToggle<cr>', { desc = 'Context Toggle' })
+vim.keymap.set('n', '<leader>ct', '<cmd>TSContextToggle<cr>', { desc = 'Toggle TS Context' })
 
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                    FOR GREEK KEYBOARD                    │
