@@ -91,8 +91,18 @@ vim.keymap.set({ 'o', 'x' }, 'ir', 'i[')
 vim.keymap.set({ 'o', 'x' }, 'ar', 'a[')
 
 -- Add blank line without leaving normal mode
-vim.keymap.set('n', '<Space><UP>', "<cmd>call append(line('.') - 1, repeat([''], v:count1))<cr>")
-vim.keymap.set('n', '<Space><DOWN>', "<cmd>call append(line('.'), repeat([''], v:count1))<cr>")
+vim.keymap.set(
+    'n',
+    '<Space><UP>',
+    "<cmd>call append(line('.') - 1, repeat([''], v:count1))<cr>",
+    { desc = 'Add blank line below' }
+)
+vim.keymap.set(
+    'n',
+    '<Space><DOWN>',
+    "<cmd>call append(line('.'), repeat([''], v:count1))<cr>",
+    { desc = 'Add blank line below' }
+)
 
 -- Add komma
 -- vim.keymap.set("n", ",,", [[f'a]])
