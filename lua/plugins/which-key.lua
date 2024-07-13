@@ -4,9 +4,6 @@ return {
     enabled = true,
     opts = {
         preset = 'helix',
-        win = {
-            border = 'single',
-        },
         sort = { 'manual', 'group', 'lower' },
         expand = 0,
         spec = {
