@@ -4,6 +4,7 @@ return {
     enabled = true,
     opts = {
         preset = 'helix',
+        dynamic_height = false,
         sort = { 'manual', 'group', 'lower' },
         expand = 0,
         spec = {
