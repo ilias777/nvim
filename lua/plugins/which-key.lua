@@ -17,7 +17,7 @@ return {
                 { '<leader>f', group = '+File' }, -- Telescope
                 { '<leader>g', group = '+Git' }, -- Git
                 { '<leader>h', group = '+Hop Motion' }, -- Hop
-                { '<leader>l', group = '+Lazy / LTeX' }, -- Lazy & LTeX
+                { '<leader>l', group = '+Lazy', icon = '💤' }, -- Lazy & LTeX
                 { '<leader>m', group = '+Show Messages' }, -- Messages
                 { '<leader>t', group = '+ToggleTerm / Todo Comments' }, -- ToggleTerm & Todo Comments
                 { '<space>b', group = '+Buffer' }, -- Bufferline.nvim
