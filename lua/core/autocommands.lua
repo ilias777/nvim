@@ -220,3 +220,22 @@ vim.api.nvim_create_autocmd('RecordingLeave', {
         print('Macro recording stopped')
     end,
 })
+
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                    VIM-VISUAL-MULTI                     │
+-- ╰─────────────────────────────────────────────────────────╯
+local visual_multi_group = vim.api.nvim_create_augroup('VisualMulti', { clear = true })
+vim.api.nvim_create_autocmd('User', {
+    pattern = 'visual_multi_start',
+    callback = function()
+        vim.cmd('NoiceDisable')
+    end,
+    group = visual_multi_group,
+})
+vim.api.nvim_create_autocmd('User', {
+    pattern = 'visual_multi_exit',
+    callback = function()
+        vim.cmd('NoiceEnable')
+    end,
+    group = visual_multi_group,
+})
