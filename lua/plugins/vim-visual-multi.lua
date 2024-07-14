@@ -1,6 +1,11 @@
 return {
     'mg979/vim-visual-multi',
-    event = { 'BufReadPre', 'BufNewFile' },
+    keys = {
+        { '<C-Up>' },
+        { '<C-Down>' },
+        { '<C-Left>' },
+        { '<C-Right>' },
+    },
     branch = 'master',
     init = function()
         vim.g.VM_maps = {
