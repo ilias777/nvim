@@ -110,4 +110,4 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_node_provider = 0
 
 -- Disable depreceted messages
-vim.deprecate = function() end ---@diagnostic disable-line: duplicate-set-field
+-- vim.deprecate = function() end ---@diagnostic disable-line: duplicate-set-field
