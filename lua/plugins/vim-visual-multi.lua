@@ -1,12 +1,16 @@
 return {
     'mg979/vim-visual-multi',
+    branch = 'master',
     keys = {
         { '<C-Up>' },
         { '<C-Down>' },
         { '<C-Left>' },
         { '<C-Right>' },
+        { 'cp', 'vip<Plug>(VM-Visual-Cursors)', desc = 'Create multicursors inner paragraph' },
+        { '<M-s>', ':VMSearch', mode = 'x', desc = 'Search & create multicursors in visual mode' },
+        { '<M-s>', ':%VMSearch', desc = 'Search & create multicursors' },
+        { '<M-c>', '<Plug>(VM-Visual-Cursors)', mode = 'x', desc = 'Create multicursors in visual mode' },
     },
-    branch = 'master',
     init = function()
         vim.g.VM_maps = {
             ['Select l'] = '<C-Right>',

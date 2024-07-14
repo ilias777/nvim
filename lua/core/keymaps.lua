@@ -232,14 +232,7 @@ function _G.set_terminal_keymaps()
     vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
     vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 end
-
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-
--- vim-visual-multi
-vim.keymap.set('n', 'cp', 'vip<Plug>(VM-Visual-Cursors)', { desc = 'Create multicursors inner paragraph' })
-vim.keymap.set('x', '<M-c>', '<Plug>(VM-Visual-Cursors)', { desc = 'Create multicursors in visual mode' })
-vim.keymap.set('x', '<M-s>', ':VMSearch ', { desc = 'Search & create multicursors in visual mode' })
-vim.keymap.set('n', '<M-s>', ':%VMSearch ', { desc = 'Search & create multicursors' })
 
 -- nvim-treesitter-context
 vim.keymap.set('n', '<leader>ct', '<cmd>TSContextToggle<cr>', { desc = 'Toggle TS Context' })
