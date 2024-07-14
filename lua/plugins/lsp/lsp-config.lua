@@ -174,15 +174,6 @@ return {
         -- })
 
         -- ╭───────────────────╮
-        -- │ DIAGNOSTICS SIGNS │
-        -- ╰───────────────────╯
-        local signs = { Error = ' ', Warn = ' ', Hint = '󰌶 ', Info = ' ' }
-        for type, icon in pairs(signs) do
-            local hl = 'DiagnosticSign' .. type
-            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-        end
-
-        -- ╭───────────────────╮
         -- │ DIAGNOSTIC CONFIG │
         -- ╰───────────────────╯
         vim.diagnostic.config({
@@ -193,6 +184,20 @@ return {
                 float = true,
             },
             float = { border = 'single' },
+            signs = {
+                text = {
+                    [vim.diagnostic.severity.ERROR] = ' ',
+                    [vim.diagnostic.severity.WARN] = ' ',
+                    [vim.diagnostic.severity.HINT] = '󰌶 ',
+                    [vim.diagnostic.severity.INFO] = ' ',
+                },
+                numhl = {
+                    [vim.diagnostic.severity.ERROR] = 'DiagnosticSignError',
+                    [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarn',
+                    [vim.diagnostic.severity.HINT] = 'DiagnosticSignHint',
+                    [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfo',
+                },
+            },
         })
 
         --  ╭──────────────────────────────────────────────────────────╮
