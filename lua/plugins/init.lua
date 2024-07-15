@@ -160,6 +160,7 @@ return {
     {
         'declancm/cinnamon.nvim',
         event = 'VeryLazy',
+        version = '*',
         enabled = true,
         opts = {
             keymaps = {
