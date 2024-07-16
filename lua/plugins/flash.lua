@@ -44,6 +44,7 @@ return {
             function()
                 require('flash').jump()
             end,
+            desc = 'Flash',
         },
         {
             '<leader>s',
@@ -51,6 +52,7 @@ return {
             function()
                 require('flash').treesitter()
             end,
+            desc = 'Flash Treesitter',
         },
         {
             'r',
@@ -66,7 +68,7 @@ return {
             function()
                 require('flash').treesitter_search()
             end,
-            desc = 'Treesitter Search',
+            desc = 'Treesitter Flash Search',
         },
         {
             '<c-s>',
