@@ -160,7 +160,12 @@ catppuccin.setup({
             DashboardHeader = { fg = colors.yellow, style = { 'bold', 'italic' } },
 
             -- Treesitter Context
-            TreesitterContext = { bg = colors.mantle },
+            TreesitterContext = { bg = ucolors.darken(colors.base, 0.55, colors.mantle) },
+            TreesitterContextBottom = { sp = colors.surface1 },
+            TreesitterContextLineNumber = {
+                fg = colors.rosewater,
+                bg = ucolors.darken(colors.base, 0.55, colors.mantle),
+            },
 
             -- Visual Mode
             Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.mantle), style = { 'italic' } },
