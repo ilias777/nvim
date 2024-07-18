@@ -16,10 +16,10 @@ return {
                 file = '󰈙 ',
                 lsp = {
                     server = '󰒋 ',
-                    error = '',
-                    warning = '',
-                    info = '',
-                    hint = '',
+                    error = '',
+                    warning = '',
+                    info = '',
+                    hint = '󰌵',
                 },
                 git = {
                     -- icons:   
