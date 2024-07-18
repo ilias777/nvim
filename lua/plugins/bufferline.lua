@@ -37,22 +37,22 @@ return {
                 },
             },
             highlights = require('catppuccin.groups.integrations.bufferline').get({
-                custom = {
-                    all = {
-                        -- ---@diagnostic disable: need-check-nil
-                        -- info = { fg = mocha.surface2 },
-                        -- info_diagnostic = { fg = mocha.surface2 },
-                        -- hint = { fg = mocha.surface2 },
-                        -- hint_diagnostic = { fg = mocha.surface2 },
-                        -- warning = { fg = mocha.surface2 },
-                        -- warning_diagnostic = { fg = mocha.surface2 },
-                        -- error = { fg = mocha.surface2 },
-                        -- error_diagnostic = { fg = mocha.surface2 },
-                        -- separator = { fg = mocha.base, bg = mocha.base },
-                        -- separator_visible = { fg = mocha.base, bg = mocha.base },
-                        -- separator_selected = { fg = mocha.base, bg = mocha.base },
-                    },
-                },
+                -- custom = {
+                --     all = {
+                --         ---@diagnostic disable: need-check-nil
+                --         info = { fg = mocha.surface2 },
+                --         info_diagnostic = { fg = mocha.surface2 },
+                --         hint = { fg = mocha.surface2 },
+                --         hint_diagnostic = { fg = mocha.surface2 },
+                --         warning = { fg = mocha.surface2 },
+                --         warning_diagnostic = { fg = mocha.surface2 },
+                --         error = { fg = mocha.surface2 },
+                --         error_diagnostic = { fg = mocha.surface2 },
+                --         separator = { fg = mocha.base, bg = mocha.base },
+                --         separator_visible = { fg = mocha.base, bg = mocha.base },
+                --         separator_selected = { fg = mocha.base, bg = mocha.base },
+                --     },
+                -- },
             }),
             -- highlights = require('rose-pine.plugins.bufferline'),
         })
