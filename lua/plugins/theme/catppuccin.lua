@@ -147,6 +147,10 @@ catppuccin.setup({
 
             -- Inlay hints
             -- LspInlayHint = { bg = colors.mantle },
+            DiagnosticVirtualTextError = { bg = ucolors.darken(colors.red, 0.095, colors.base) },
+            DiagnosticVirtualTextWarn = { bg = ucolors.darken(colors.yellow, 0.095, colors.base) },
+            DiagnosticVirtualTextHint = { bg = ucolors.darken(colors.teal, 0.095, colors.base) },
+            DiagnosticVirtualTextInfo = { bg = ucolors.darken(colors.sky, 0.095, colors.base) },
 
             -- Neotree
             NeoTreeRootName = { fg = colors.pink, style = { 'bold', 'italic' } },
