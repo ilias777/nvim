@@ -28,9 +28,6 @@ return {
                 { '<space>x', group = '+Trouble' }, -- Trouble.nvim
             },
         },
-        modes = {
-            x = false,
-        },
         win = {
             no_overlap = false,
             title_pos = 'center',
