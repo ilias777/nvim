@@ -138,7 +138,7 @@ catppuccin.setup({
 
             -- Folds
             -- Folded = { bg = colors.mantle },
-            Folded = { bg = ucolors.darken('#f9e2af', 0.1, mocha.mantle) },
+            Folded = { bg = ucolors.darken(colors.peach, 0.1, colors.base) },
 
             -- Matching Parenthesis
             -- MatchParen = { style = { 'underline' } },
