@@ -112,6 +112,17 @@ catppuccin.setup({
             TelescopePreviewTitle = { fg = colors.crust, bg = colors.sapphire, style = { 'bold', 'italic' } },
 
             -- Bufferline
+            BufferLineInfo = { fg = colors.surface0 },
+            BufferLineInfoDiagnostic = { fg = mocha.surface2 },
+            BufferLineHint = { fg = mocha.surface2 },
+            BufferLineHintDiagnostic = { fg = mocha.surface2 },
+            BufferLineWarning = { fg = mocha.surface2 },
+            BufferLineWarningDiagnostic = { fg = mocha.surface2 },
+            BufferLineError = { fg = mocha.surface2 },
+            BufferLineErrorDiagnostic = { fg = mocha.surface2 },
+            BufferLineSeparator = { fg = mocha.base, bg = mocha.base },
+            BufferLineSeparatorVisible = { fg = mocha.base, bg = mocha.base },
+            BufferLineSeparatorSelected = { fg = mocha.base, bg = mocha.base },
             BufferLineIndicatorSelected = { fg = colors.pink },
             BufferLineIndicator = { fg = colors.base },
             TabLineSel = { bg = colors.pink },
