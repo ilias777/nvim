@@ -99,13 +99,13 @@ return {
                     end
                 end,
                 ['E'] = function()
-                    vim.api.nvim_exec('Neotree focus filesystem right', true)
+                    vim.api.nvim_exec2('Neotree focus filesystem right', { output = true })
                 end,
                 ['B'] = function()
-                    vim.api.nvim_exec('Neotree focus buffers right', true)
+                    vim.api.nvim_exec2('Neotree focus buffers right', { output = true })
                 end,
                 ['G'] = function()
-                    vim.api.nvim_exec('Neotree focus git_status right', true)
+                    vim.api.nvim_exec2('Neotree focus git_status right', { output = true })
                 end,
                 ['O'] = { 'show_help', nowait = false, config = { title = 'Order by', prefix_key = 'o' } },
                 ['o'] = 'open',
