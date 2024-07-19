@@ -199,6 +199,9 @@ catppuccin.setup({
 
             -- Gitsigns
             GitSignsStagedAdd = { fg = colors.blue },
+
+            -- Search
+            CurSearch = { bg = ucolors.darken(colors.pink, 0.65, colors.base) },
         }
     end,
     highlight_overrides = {},
