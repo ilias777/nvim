@@ -133,7 +133,7 @@ catppuccin.setup({
             -- BufferLineModifiedSelected = { fg = colors.teal },
 
             -- Cursorline & Linenumbers
-            CursorLine = { bg = colors.mantle },
+            -- CursorLine = { bg = colors.mantle },
             Cursor = { bg = colors.red },
 
             -- Folds
