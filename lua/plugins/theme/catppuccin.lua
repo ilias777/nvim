@@ -202,6 +202,9 @@ catppuccin.setup({
 
             -- Search
             CurSearch = { bg = ucolors.darken(colors.pink, 0.65, colors.base) },
+
+            -- Lazy.nvim
+            LazyButton = { bg = colors.mantle },
         }
     end,
     highlight_overrides = {},
