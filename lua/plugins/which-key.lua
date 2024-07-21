@@ -4,7 +4,6 @@ return {
     enabled = true,
     opts = {
         preset = 'helix',
-        dynamic_height = false,
         expand = 0,
         spec = {
             {
@@ -24,7 +23,6 @@ return {
                 { '<space>g', group = '+Glance LSP' }, -- Glance LSP locations
                 { '<space>i', group = '+IncRename / Inlay Hints' }, -- IncRename
                 { '<space>n', group = '+Noice' }, -- Noice.nvim
-                { '<Space>r', group = '+Lsp Rename' }, -- Rename with LSP
                 { '<space>x', group = '+Trouble' }, -- Trouble.nvim
             },
         },
@@ -34,9 +32,4 @@ return {
         },
         sort = { 'manual', 'group', 'lower' },
     },
-    config = function(_, opts)
-        local wk = require('which-key')
-        wk.setup(opts)
-        wk.add(opts.spec)
-    end,
 }
