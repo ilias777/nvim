@@ -27,6 +27,7 @@ return {
             },
         },
         win = {
+            border = 'single',
             no_overlap = false,
             title_pos = 'center',
         },
