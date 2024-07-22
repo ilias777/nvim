@@ -16,7 +16,6 @@ vim.opt.expandtab = true
 vim.opt.background = 'dark'
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.termguicolors = true
 vim.opt.showcmd = true
 vim.o.cmdheight = 0
 vim.opt.signcolumn = 'yes'
