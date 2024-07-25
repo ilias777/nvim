@@ -159,7 +159,7 @@ return {
     },
     {
         'declancm/cinnamon.nvim',
-        enabled = false,
+        enabled = true,
         event = 'VeryLazy',
         version = '*',
         opts = {
