@@ -48,7 +48,7 @@
 - Autocompletion with [CMP](https://github.com/hrsh7th/nvim-cmp)
 - Git integration with [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [Neogit](https://github.com/NeogitOrg/neogit)
 - Fuzzy finding with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- Formatting  with [conform.nvim](https://github.com/stevearc/conform.nvim) and Linting [nvim-lint](https://github.com/mfussenegger/nvim-lint)
+- Formatting with [conform.nvim](https://github.com/stevearc/conform.nvim) and Linting [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
 - Debug Adapter Protocol with [Nvim DAP](https://github.com/mfussenegger/nvim-dap)
 - Beautiful UI with [Catppuccin](https://github.com/catppuccin/nvim) and [Noice.nvim](https://github.com/folke/noice.nvim)
@@ -132,19 +132,19 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 ### Plugins
 
-* How to install or uninstall plugins &rarr; [look here](https://github.com/ilias777/nvim/wiki/Plugins)
+- How to install or uninstall plugins &rarr; [look here](https://github.com/ilias777/nvim/wiki/Plugins)
 
 ### Language server
 
-* How to setup a language server &rarr; [look here](https://github.com/ilias777/nvim/wiki/LSP)
+- How to setup a language server &rarr; [look here](https://github.com/ilias777/nvim/wiki/LSP)
 
 ### Keymaps
 
-* How to setup or change keymaps &rarr; [look here](https://github.com/ilias777/nvim/wiki/Set-new--or-change-keymaps)
+- How to setup or change keymaps &rarr; [look here](https://github.com/ilias777/nvim/wiki/Set-new--or-change-keymaps)
 
 ### See all keymaps
 
-* Keymaps are listet &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
+- Keymaps are listet &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
 
 ## 🔌 Plugins
 
