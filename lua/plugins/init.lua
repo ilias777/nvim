@@ -135,6 +135,30 @@ return {
         'kaarmu/typst.vim',
         ft = 'typst',
     },
+    {
+        'iamcco/markdown-preview.nvim',
+        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+        ft = 'markdown',
+        build = function()
+            vim.fn['mkdp#util#install']()
+        end,
+    },
+    {
+        'Myzel394/easytables.nvim',
+        ft = 'markdown',
+        config = true,
+    },
+    {
+        'Kicamon/markdown-table-mode.nvim',
+        ft = 'markdown',
+        config = true,
+    },
+    {
+        'OXY2DEV/markview.nvim',
+        enabled = false,
+        ft = 'markdown',
+        opts = {},
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                          MOTION                          │
