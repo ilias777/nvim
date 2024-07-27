@@ -30,12 +30,12 @@ return {
                 },
             },
         },
-        action = function(match, state)
-            require('cinnamon').scroll(function()
-                require('flash.jump').jump(match, state)
-                require('flash.jump').on_jump(state)
-            end)
-        end,
+        -- action = function(match, state)
+        --     require('cinnamon').scroll(function()
+        --         require('flash.jump').jump(match, state)
+        --         require('flash.jump').on_jump(state)
+        --     end)
+        -- end,
     },
     keys = {
         {
