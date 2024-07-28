@@ -18,6 +18,10 @@
   <a href="https://github.com/ilias777/nvim/wiki">Wiki</a>
 </h4>
 
+<div align="center">
+  [![Static Badge](https://img.shields.io/badge/See_LSP_Configuration_File-cyan?style=for-the-badge&label=LSP&labelColor=blue)](https://github.com/ilias777/nvim/blob/main/lua/plugins/lsp/lsp-config.lua)
+</div>
+
 ## 🌟 Preview
 
 <div align="center">
