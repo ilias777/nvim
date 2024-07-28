@@ -37,6 +37,7 @@ return {
     },
     {
         'smjonas/live-command.nvim',
+        enabled = false,
         event = 'CmdlineEnter',
         config = function()
             require('live-command').setup({
