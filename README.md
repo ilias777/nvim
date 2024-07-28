@@ -157,6 +157,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 - Over **90 Plugins** preinstalled
 - Startuptime **~40ms - ~59ms**
+- Testet on MacOS 14.5 - M1 Pro
 
 <img width="1480" alt="startuptime" src="https://github.com/ilias777/nvim/assets/39212564/1ab9441c-9f77-4889-865a-231f0ca967fa">
 
