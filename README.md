@@ -19,7 +19,7 @@
 </h4>
 
 <div align="center">
-  <a href="https://github.com/ilias777/nvim/blob/main/lua/plugins/lsp/lsp-config.lua"
+  <a href="https://github.com/ilias777/nvim/blob/main/lua/plugins/lsp/lsp-config.lua">
     ![Static Badge](https://img.shields.io/badge/See_LSP_Configuration_File-cyan?style=for-the-badge&label=LSP&labelColor=blue)
   </a>
 </div>
