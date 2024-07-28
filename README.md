@@ -20,7 +20,7 @@
 
 <h5 align="center">
   <a href="https://github.com/ilias777/nvim/blob/main/lua/plugins/lsp/lsp-config.lua">
-    See LSP Configuration file
+    &rarr; See LSP Configuration file &larr;
   </a>
 </h5>
 
