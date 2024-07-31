@@ -43,6 +43,7 @@ return {
                     'regex',
                     'rust',
                     'scss',
+                    'sql',
                     'toml',
                     'typescript',
                     'typst',
