@@ -469,9 +469,9 @@ return {
         -- ╭─────────────╮
         -- │ JAVA SERVER │
         -- ╰─────────────╯
-        -- lspconfig.jdtls.setup({
-        --     handlers = handlers,
-        -- })
+        lspconfig.jdtls.setup({
+            handlers = handlers,
+        })
 
         -- ╭─────────────╮
         -- │ YAML SERVER │
