@@ -294,7 +294,7 @@ return {
         -- ╭───────────────────╮
         -- │ JAVASCRIPT SERVER │
         -- ╰───────────────────╯
-        lspconfig.tsserver.setup({
+        lspconfig.ts_ls.setup({
             handlers = handlers,
             init_options = {
                 preferences = {
