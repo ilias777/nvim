@@ -86,6 +86,7 @@ return {
                     -- layout_strategy = 'vertical',
                     -- layout_config = { height = 0.9 },
                     -- previewer = false,
+                    path_display = { 'smart' },
                     layout_config = {
                         prompt_position = 'top',
                         preview_width = 0.5,
