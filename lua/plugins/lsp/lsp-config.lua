@@ -36,7 +36,7 @@ return {
                 'ruff',
                 'rust_analyzer',
                 'texlab',
-                'tsserver',
+                'ts_ls',
                 'volar',
                 'yamlls',
             },
