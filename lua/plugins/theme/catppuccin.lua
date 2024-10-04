@@ -1,7 +1,4 @@
 local ucolors = require('catppuccin.utils.colors')
-local mocha = require('catppuccin.palettes').get_palette('mocha')
-
--- vim.g.catppuccin_flavour = 'mocha'
 
 local catppuccin = require('catppuccin')
 
@@ -46,10 +43,10 @@ catppuccin.setup({
     custom_highlights = function(colors)
         return {
             -- Identifier (like keyword require)
-            ['@function.builtin'] = { fg = colors.flamingo },
+            -- ['@function.builtin'] = { fg = colors.flamingo },
 
             -- Variables
-            ['@lsp.mod.global.lua'] = { fg = colors.red },
+            -- ['@lsp.mod.global.lua'] = { fg = colors.red },
 
             -- Cmp Menu
             -- Pmenu = { bg = colors.mantle },
@@ -134,7 +131,7 @@ catppuccin.setup({
 
             -- Cursorline & Linenumbers
             -- CursorLine = { bg = colors.mantle },
-            Cursor = { bg = colors.red },
+            -- Cursor = { bg = colors.red },
 
             -- Folds
             -- Folded = { bg = colors.mantle },
@@ -144,7 +141,7 @@ catppuccin.setup({
             -- MatchParen = { style = { 'underline' } },
             -- MatchParen = { bg = colors.none },
             -- MatchParen = { fg = colors.base, bg = colors.red },
-            -- MatchParen = { fg = colors.base, bg = ucolors.darken(colors.red, 0.65, mocha.rosewater) },
+            -- MatchParen = { fg = colors.base, bg = ucolors.darken(colors.red, 0.65, colors.rosewater) },
 
             -- Inlay hints
             -- LspInlayHint = { bg = colors.mantle },
@@ -189,10 +186,10 @@ catppuccin.setup({
             },
 
             -- Visual Mode
-            Visual = { bg = ucolors.darken('#9745be', 0.25, mocha.base) },
+            -- Visual = { bg = ucolors.darken('#9745be', 0.25, colors.base) },
 
             -- Vim Visual Multi
-            VM_Mono = { bg = ucolors.darken('#f38ba8', 0.15, mocha.mantle), fg = colors.red, style = { 'bold' } },
+            VM_Mono = { bg = ucolors.darken('#f38ba8', 0.15, colors.mantle), fg = colors.red, style = { 'bold' } },
 
             -- Noice CMDLine Popup
             -- NoiceCmdlinePopupBorder = { fg = colors.red },
@@ -210,5 +207,3 @@ catppuccin.setup({
     highlight_overrides = {},
     color_overrides = {},
 })
-
--- vim.cmd.colorscheme('catppuccin')
