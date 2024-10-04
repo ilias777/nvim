@@ -2,9 +2,8 @@ return {
     'freddiehaddad/feline.nvim',
     event = 'VeryLazy',
     config = function()
-        local mocha = require('catppuccin.palettes').get_palette('mocha')
-        local ctp_feline = require('catppuccin.groups.integrations.feline')
         local clrs = require('catppuccin.palettes').get_palette()
+        local ctp_feline = require('catppuccin.groups.integrations.feline')
         local U = require('catppuccin.utils.colors')
 
         ctp_feline.setup({
@@ -30,9 +29,9 @@ return {
                 },
             },
             sett = {
-                text = U.vary_color({ mocha = mocha.crust }, clrs.surface0),
-                bkg = U.vary_color({ mocha = 'NONE' }, clrs.surface0),
-                diffs = clrs.red,
+                text = U.vary_color({ latte = clrs.crust, mocha = clrs.crust }, clrs.surface0),
+                bkg = U.vary_color({ latte = 'NONE', mocha = 'NONE' }, clrs.surface0),
+                diffs = clrs.mauve,
                 extras = clrs.overlay2,
                 curr_file = clrs.maroon,
                 curr_dir = clrs.flamingo,
