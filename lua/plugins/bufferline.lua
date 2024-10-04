@@ -4,19 +4,12 @@ return {
     event = 'VeryLazy',
     version = '*',
     config = function()
-        local mocha = require('catppuccin.palettes').get_palette('mocha')
         require('bufferline').setup({
             options = {
                 indicator = {
                     -- icon = '▎',
                     style = 'underline', -- 'icon' | 'underline' | 'none'
                 },
-                -- name_formatter = function(buf) -- buf contains a "name", "path" and "bufnr"
-                --     -- remove extension from markdown files for example
-                --     if buf.name:match('%.md') then
-                --         return vim.fn.fnamemodify(buf.name, ':t:r')
-                --     end
-                -- end,
                 tab_size = 20,
                 diagnostics = 'nvim_lsp',
                 diagnostics_indicator = function(count, level, diagnostics_dict, context)
@@ -36,25 +29,7 @@ return {
                     },
                 },
             },
-            highlights = require('catppuccin.groups.integrations.bufferline').get({
-                -- custom = {
-                --     all = {
-                --         ---@diagnostic disable: need-check-nil
-                --         info = { fg = mocha.surface2 },
-                --         info_diagnostic = { fg = mocha.surface2 },
-                --         hint = { fg = mocha.surface2 },
-                --         hint_diagnostic = { fg = mocha.surface2 },
-                --         warning = { fg = mocha.surface2 },
-                --         warning_diagnostic = { fg = mocha.surface2 },
-                --         error = { fg = mocha.surface2 },
-                --         error_diagnostic = { fg = mocha.surface2 },
-                --         separator = { fg = mocha.base, bg = mocha.base },
-                --         separator_visible = { fg = mocha.base, bg = mocha.base },
-                --         separator_selected = { fg = mocha.base, bg = mocha.base },
-                --     },
-                -- },
-            }),
-            -- highlights = require('rose-pine.plugins.bufferline'),
+            highlights = require('catppuccin.groups.integrations.bufferline').get(),
         })
     end,
 }
