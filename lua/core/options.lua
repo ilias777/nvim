@@ -13,7 +13,7 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 -- UI
-vim.opt.background = 'dark'
+-- vim.opt.background = 'dark'
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.showcmd = true
