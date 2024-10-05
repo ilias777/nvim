@@ -189,7 +189,7 @@ catppuccin.setup({
             -- Visual = { bg = ucolors.darken('#9745be', 0.25, colors.base) },
 
             -- Vim Visual Multi
-            VM_Mono = { bg = ucolors.darken('#f38ba8', 0.15, colors.mantle), fg = colors.red, style = { 'bold' } },
+            -- VM_Mono = { bg = ucolors.darken('#f38ba8', 0.15, colors.mantle), fg = colors.red, style = { 'bold' } },
 
             -- Noice CMDLine Popup
             -- NoiceCmdlinePopupBorder = { fg = colors.red },
