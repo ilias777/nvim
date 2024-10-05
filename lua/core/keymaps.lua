@@ -114,7 +114,7 @@ vim.keymap.set('n', 'g,', 'g;', { desc = 'Go to newest change' })
 vim.keymap.set('n', 'g;', 'g,', { desc = 'Go to last change' })
 
 -- Clear search with <esc>
-vim.keymap.set({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and clear hlsearch' })
+-- vim.keymap.set({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and clear hlsearch' })
 
 -- Add new file
 vim.keymap.set('n', '<leader>fn', '<cmd>enew<cr>', { desc = 'New File' })
