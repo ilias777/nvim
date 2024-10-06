@@ -40,12 +40,12 @@ return {
         set({ 'n', 'v' }, '<leader>A', mc.matchAllAddCursors)
 
         -- You can also add cursors with any motion you prefer:
-        -- set("n", "<right>", function()
-        --     mc.addCursor("w")
-        -- end)
-        -- set("n", "<leader><right>", function()
-        --     mc.skipCursor("w")
-        -- end)
+        set('n', '<c-right>', function()
+            mc.addCursor('w')
+        end)
+        set('n', '<leader><right>', function()
+            mc.skipCursor('w')
+        end)
 
         -- Rotate the main cursor.
         set({ 'n', 'v' }, '<right>', mc.nextCursor)
@@ -80,7 +80,7 @@ return {
         set('v', '<leader>a', mc.alignCursors)
 
         -- Split visual selections by regex.
-        set('v', '<leader-S>', mc.splitCursors)
+        set('v', 'L', mc.splitCursors)
 
         -- Append/insert for each line of visual selections.
         set('v', 'I', mc.insertVisual)
