@@ -97,6 +97,10 @@ return {
             mc.transposeCursors(-1)
         end)
 
+        -- Jumplist support
+        set({ 'v', 'n' }, '<c-i>', mc.jumpForward)
+        set({ 'v', 'n' }, '<c-o>', mc.jumpBackward)
+
         -- Customize how cursors look.
         local hl = vim.api.nvim_set_hl
         hl(0, 'MultiCursorCursor', { link = 'Cursor' })
