@@ -27,6 +27,7 @@ return {
                 'neo-tree',
                 'fzf',
                 'checkhealth',
+                'grug-far-help',
             },
             callback = function()
                 vim.b.miniindentscope_disable = true
