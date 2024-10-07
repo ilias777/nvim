@@ -39,6 +39,7 @@ catppuccin.setup({
             color = 'red',
         },
         nvim_surround = true,
+        grug_far = true,
     },
     custom_highlights = function(colors)
         return {
