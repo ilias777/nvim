@@ -211,7 +211,7 @@ catppuccin.setup({
             rosewater = '#cc5151',
             flamingo = '#c64444',
             pink = '#d3008b',
-            mauve = '#7b00f9',
+            mauve = '#8839EF',
             red = '#c10000',
             maroon = '#550000',
             peach = '#975151',
