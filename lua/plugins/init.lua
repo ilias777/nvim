@@ -109,7 +109,11 @@ return {
         keys = {
             { '<leader>cc', '<cmd>CccPick<cr>', desc = 'Color Picker' },
         },
-        config = true,
+        opts = {
+            win_opts = {
+                border = 'single',
+            },
+        },
     },
     {
         'brenoprata10/nvim-highlight-colors',
