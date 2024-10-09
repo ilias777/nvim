@@ -95,11 +95,11 @@ catppuccin.setup({
             -- CmpItemKindTypeParameter = { fg = colors.surface0, bg = colors.peach },
 
             -- Telescope
-            TelescopeBorder = { fg = colors.blue },
+            -- TelescopeBorder = { fg = colors.blue },
             TelescopeSelectionCaret = { fg = colors.red },
-            TelescopeSelection = { fg = colors.yellow, bg = colors.surface0, style = { 'bold' } },
-            TelescopeMatching = { fg = colors.blue },
-            TelescopePromptPrefix = { fg = colors.yellow, bg = colors.crust },
+            TelescopeSelection = { fg = colors.text, bg = colors.crust, style = { 'bold' } },
+            TelescopeMatching = { fg = colors.red },
+            TelescopePromptPrefix = { fg = colors.red, bg = colors.crust },
             TelescopePromptTitle = { fg = colors.crust, bg = colors.mauve, style = { 'bold', 'italic' } },
             TelescopePromptNormal = { bg = colors.crust },
             TelescopePromptBorder = { bg = colors.crust, fg = colors.crust },
