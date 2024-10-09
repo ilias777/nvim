@@ -208,7 +208,7 @@ catppuccin.setup({
     highlight_overrides = {},
     color_overrides = {
         latte = {
-            rosewater = '#cc5151',
+            rosewater = '#B5485E',
             flamingo = '#c64444',
             pink = '#d3008b',
             mauve = '#8839EF',
