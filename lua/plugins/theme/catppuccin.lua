@@ -203,6 +203,11 @@ catppuccin.setup({
 
             -- Lazy.nvim
             LazyButton = { bg = colors.mantle },
+
+            -- Mason
+            MasonHeader = { bg = colors.mauve, fg = colors.mantle },
+            MasonHighlightBlockBold = { bg = colors.blue, fg = colors.mantle },
+            MasonMutedBlock = { bg = colors.surface0, fg = colors.text },
         }
     end,
     highlight_overrides = {},
