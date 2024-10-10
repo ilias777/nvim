@@ -95,6 +95,10 @@ return {
         },
         config = true,
         opts = {
+            commit_editor = {
+                staged_diff_split_kind = 'vsplit',
+                spell_check = false,
+            },
             signs = {
                 item = { '', '' },
                 section = { '', '' },
