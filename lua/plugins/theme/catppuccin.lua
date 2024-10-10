@@ -188,6 +188,7 @@ catppuccin.setup({
 
             -- Visual Mode
             -- Visual = { bg = ucolors.darken('#9745be', 0.25, colors.base) },
+            Visual = { bg = ucolors.darken(colors.mauve, 0.15, colors.base) },
 
             -- Vim Visual Multi
             -- VM_Mono = { bg = ucolors.darken('#f38ba8', 0.15, colors.mantle), fg = colors.red, style = { 'bold' } },
