@@ -21,7 +21,7 @@ vim.keymap.set('n', 'ƒ', '/')
 -- Search and replace word under the cursor
 vim.keymap.set(
     'n',
-    '<leader>/',
+    '<leader>R',
     ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>',
     { desc = 'Search and replace word under the cursor' }
 )
