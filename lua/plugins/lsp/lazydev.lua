@@ -2,6 +2,10 @@ return {
     {
         'folke/lazydev.nvim',
         ft = 'lua',
+        dependencies = {
+            { 'justinsgithub/wezterm-types', lazy = true },
+            { 'Bilal2453/luvit-meta', lazy = true },
+        },
         opts = {
             library = {
                 'lazy.nvim',
@@ -10,8 +14,6 @@ return {
             },
         },
     },
-    { 'justinsgithub/wezterm-types', lazy = true },
-    { 'Bilal2453/luvit-meta', lazy = true },
     {
         'hrsh7th/nvim-cmp',
         opts = function(_, opts)
