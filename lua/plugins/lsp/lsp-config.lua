@@ -297,6 +297,13 @@ return {
         lspconfig.ts_ls.setup({
             handlers = handlers,
             init_options = {
+                plugins = {
+                    {
+                        name = '@/vue/typescript-plugin',
+                        location = '/Users/ilias/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                        languages = { 'vue' },
+                    },
+                },
                 preferences = {
                     includeInlayParameterNameHints = 'all',
                     includeInlayParameterNameHintsWhenArgumentMatchesName = true,
@@ -359,9 +366,12 @@ return {
                 'vue', --[[ 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'json' ]]
             },
             init_options = {
-                typescript = {
-                    tsdk = '/Users/ilias/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
+                vue = {
+                    hybridMode = false,
                 },
+                -- typescript = {
+                --     tsdk = '/Users/ilias/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
+                -- },
                 preferences = {
                     disableSuggestions = true,
                 },
