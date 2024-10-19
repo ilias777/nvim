@@ -65,7 +65,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- │                QUIT SOME WINDOWS WITH Q                 │
 -- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'help', 'qf', 'checkhealth', 'man', 'oil', 'aerial-nav', 'query' },
+    pattern = { 'help', 'qf', 'man', 'oil', 'aerial-nav', 'query' },
     callback = function()
         vim.keymap.set('n', 'q', '<cmd>bd<cr>', { silent = true, buffer = true })
     end,
@@ -75,7 +75,7 @@ vim.api.nvim_create_autocmd('FileType', {
 -- │                  QUIT DIFFVIEW WITH Q                   │
 -- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'DiffViewFiles' },
+    pattern = { 'DiffViewFiles', 'checkhealth' },
     callback = function()
         vim.keymap.set('n', 'q', '<cmd>tabc<cr>', { silent = true, buffer = true })
     end,
