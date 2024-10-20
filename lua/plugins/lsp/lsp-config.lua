@@ -322,6 +322,13 @@ return {
             -- end,
         })
 
+        -- ╭──────────────────╮
+        -- │ VOLAR VUE SERVER │
+        -- ╰──────────────────╯
+        lspconfig.volar.setup({
+            handlers = handlers,
+        })
+
         -- ╭───────────────╮
         -- │ PYTHON SERVER │
         -- ╰───────────────╯
@@ -356,48 +363,6 @@ return {
         -- lspconfig.tailwindcss.setup({
         --     handlers = handlers,
         -- })
-
-        -- ╭──────────────────╮
-        -- │ VOLAR VUE SERVER │
-        -- ╰──────────────────╯
-        lspconfig.volar.setup({
-            handlers = handlers,
-            filetypes = {
-                'vue', --[[ 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'json' ]]
-            },
-            init_options = {
-                vue = {
-                    hybridMode = false,
-                },
-                -- typescript = {
-                --     tsdk = '/Users/ilias/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
-                -- },
-                preferences = {
-                    disableSuggestions = true,
-                },
-                languageFeatures = {
-                    implementation = true,
-                    references = true,
-                    definition = true,
-                    typeDefinition = true,
-                    callHierarchy = true,
-                    hover = true,
-                    rename = true,
-                    renameFileRefactoring = true,
-                    signatureHelp = true,
-                    codeAction = true,
-                    workspaceSymbol = true,
-                    diagnostics = true,
-                    semanticTokens = true,
-                    completion = {
-                        defaultTagNameCase = 'both',
-                        defaultAttrNameCase = 'kebabCase',
-                        getDocumentNameCasesRequest = false,
-                        getDocumentSelectionRequest = false,
-                    },
-                },
-            },
-        })
 
         -- ╭─────────────╮
         -- │ JSON SERVER │
