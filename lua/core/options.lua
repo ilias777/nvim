@@ -29,8 +29,8 @@ vim.opt.listchars:append({ extends = '»' })
 vim.opt.listchars:append({ precedes = '«' })
 vim.opt.fillchars:append({ eob = ' ', fold = ' ', foldsep = ' ', foldopen = '', foldclose = '' })
 vim.opt.confirm = true
-vim.opt.conceallevel = 2
 vim.opt.smoothscroll = true
+-- vim.opt.conceallevel = 2
 -- vim.opt.pumheight = 10
 -- vim.opt.colorcolumn = '100'
 
