@@ -360,9 +360,9 @@ return {
         -- ╭─────────────────╮
         -- │ TAILWIND SERVER │
         -- ╰─────────────────╯
-        -- lspconfig.tailwindcss.setup({
-        --     handlers = handlers,
-        -- })
+        lspconfig.tailwindcss.setup({
+            handlers = handlers,
+        })
 
         -- ╭─────────────╮
         -- │ JSON SERVER │
