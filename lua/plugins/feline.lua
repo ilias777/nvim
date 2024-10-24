@@ -95,6 +95,7 @@ return {
                     '^Codewindow$',
                     '^JABSwindow$',
                     '^neo%-tree$',
+                    '^snipe%-menu$',
                 },
                 buftypes = {
                     'terminal',
