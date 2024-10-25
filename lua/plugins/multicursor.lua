@@ -1,18 +1,6 @@
 return {
     'jake-stewart/multicursor.nvim',
     branch = '1.0',
-    keys = {
-        { '<c-n>' },
-        { '<c-p>' },
-        { '<c-up>' },
-        { '<c-down>' },
-        { '<leader>A' },
-        { 'M' },
-        { 'L' },
-        { 'I' },
-        { 'A' },
-        { '<c-leftmouse>' },
-    },
     config = function()
         local mc = require('multicursor-nvim')
 
