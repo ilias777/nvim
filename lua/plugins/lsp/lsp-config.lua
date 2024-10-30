@@ -315,6 +315,7 @@ return {
                     importModuleSpecifierPreference = 'non-relative',
                 },
             },
+            -- filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
             -- on_attach = function(client, bufnr)
             --     client.server_capabilities.document_formatting = false
             --     client.server_capabilities.document_range_formatting = false
@@ -327,6 +328,14 @@ return {
         -- ╰──────────────────╯
         lspconfig.volar.setup({
             handlers = handlers,
+            init_options = {
+                typescript = {
+                    tsdk = '/Users/ilias/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
+                },
+                vue = {
+                    hybridMode = false,
+                },
+            },
         })
 
         -- ╭───────────────╮
