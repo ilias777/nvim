@@ -14,8 +14,6 @@ return {
                 'nvim-treesitter/nvim-treesitter-context',
                 opts = {},
             },
-            -- ──────────────────────── TS AUTOTAG ─────────────────────
-            { 'windwp/nvim-ts-autotag' },
         },
         config = function()
             require('nvim-treesitter.configs').setup({
@@ -92,12 +90,14 @@ return {
                         },
                     },
                 },
-                -- TS Autotag
-                autotag = {
-                    enable = true,
-                },
             })
         end,
+    },
+    -- ──────────────────────── TS AUTOTAG ─────────────────────
+    {
+        'windwp/nvim-ts-autotag',
+        event = { 'BufReadPre', 'BufNewFile' },
+        opts = {},
     },
     -- ────────────────────── TS NODE ACTION ───────────────────
     {
