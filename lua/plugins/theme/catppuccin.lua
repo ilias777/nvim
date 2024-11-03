@@ -221,7 +221,7 @@ catppuccin.setup({
             red = '#c10000',
             maroon = '#550000',
             peach = '#975151',
-            yellow = '#a98600',
+            yellow = '#7b6200',
             green = '#005a32',
             teal = '#008080',
             sky = '#1987b2',
