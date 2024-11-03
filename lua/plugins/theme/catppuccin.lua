@@ -13,6 +13,7 @@ catppuccin.setup({
     -- Integrations
     integrations = {
         hop = true,
+        blink_cmp = true,
         lsp_trouble = true,
         mason = true,
         noice = true,
