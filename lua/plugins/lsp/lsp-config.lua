@@ -4,6 +4,7 @@
 return {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufReadPost', 'BufNewFile' },
+    -- depedencies = { 'saghen/blink.cmp' },
     config = function()
         -- ╭───────╮
         -- │ MASON │
@@ -51,8 +52,13 @@ return {
         -- │ CMP LSP CAPABILITIES │
         -- ╰──────────────────────╯
         local lsp_defaults = lspconfig.util.default_config
-        lsp_defaults.capabilities =
-            vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
+        -- lsp_defaults.capabilities =
+        --     vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
+        lsp_defaults.capabilities = vim.tbl_deep_extend(
+            'force',
+            lsp_defaults.capabilities,
+            require('blink.cmp').get_lsp_capabilities(lsp_defaults.capabilities)
+        )
 
         -- ╭─────────────────────────────────╮
         -- │ LSP BORDER FOR :LSPINFO COMMAND │
