@@ -12,13 +12,16 @@ catppuccin.setup({
     },
     -- Integrations
     integrations = {
-        hop = true,
         blink_cmp = true,
+        colorful_winsep = {
+            enabled = true,
+            color = 'red',
+        },
+        flash = true,
+        grug_far = true,
+        hop = true,
         lsp_trouble = true,
         mason = true,
-        noice = true,
-        notify = true,
-        nvimtree = false,
         native_lsp = {
             enabled = true,
             underlines = {
@@ -34,13 +37,10 @@ catppuccin.setup({
         navic = {
             enabled = true,
         },
-        flash = true,
-        colorful_winsep = {
-            enabled = true,
-            color = 'red',
-        },
+        noice = true,
+        notify = true,
         nvim_surround = true,
-        grug_far = true,
+        nvimtree = false,
     },
     custom_highlights = function(colors)
         return {
@@ -50,11 +50,11 @@ catppuccin.setup({
             -- Variables
             -- ['@lsp.mod.global.lua'] = { fg = colors.red },
 
-            -- Cmp Menu
+            -- Completion Menu
             -- Pmenu = { bg = colors.mantle },
             -- PmenuSel = { fg = colors.mantle, bg = colors.maroon, style = { 'bold' } },
             -- Pmenu = { bg = colors.base },
-            PmenuSel = { fg = colors.base, bg = colors.maroon, style = { 'bold' } },
+            PmenuSel = { fg = colors.base, bg = colors.lavender, style = { 'bold', 'italic' } },
 
             -- Cmp Item Kind
             -- CmpItemAbbrDeprecated = { fg = colors.overlay1, bg = 'NONE', strikethrough = true },
@@ -165,17 +165,6 @@ catppuccin.setup({
             NeoTreeGitUntracked = { fg = colors.teal, style = { 'italic' } },
             NeoTreeGitStaged = { fg = colors.green, style = { 'italic' } },
 
-            -- Nvimtree
-            -- NvimTreeRootFolder = { fg = colors.pink, style = { 'bold', 'italic' } },
-            -- NvimTreeGitNew = { fg = colors.green, style = { 'italic' } },
-            -- NvimTreeGitIgnored = { fg = colors.overlay0, style = { 'italic' } },
-            -- NvimTreeGitStaged = { fg = colors.teal, style = { 'italic' } },
-            -- NvimTreeGitDirty = { fg = colors.maroon, style = { 'italic' } },
-            -- NvimTreeGitDeleted = { fg = colors.red, style = { 'italic' } },
-            -- NvimTreeGitMerge = { fg = colors.peach, style = { 'italic' } },
-            -- NvimTreeGitMerged = { fg = colors.pink, style = { 'italic' } },
-            -- NvimTreeGitRenamed = { fg = colors.yellow, style = { 'italic' } },
-
             -- Dashboard.nvim
             DashboardHeader = { fg = colors.yellow, style = { 'bold', 'italic' } },
 
@@ -188,7 +177,6 @@ catppuccin.setup({
             },
 
             -- Visual Mode
-            -- Visual = { bg = ucolors.darken('#9745be', 0.25, colors.base) },
             Visual = { bg = ucolors.darken(colors.mauve, 0.15, colors.base) },
 
             -- Vim Visual Multi
