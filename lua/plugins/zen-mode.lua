@@ -24,22 +24,22 @@ return {
         on_open = function(win)
             vim.o.cmdheight = 1
             vim.b.miniindentscope_disable = true
-            -- require('ibl').setup({
-            --     enabled = false,
-            -- })
+            require('ibl').setup({
+                enabled = false,
+            })
         end,
         on_close = function()
             vim.o.cmdheight = 0
             vim.b.miniindentscope_disable = false
-            -- require('ibl').setup({
-            --     indent = {
-            --         char = '│',
-            --         repeat_linebreak = false,
-            --     },
-            --     scope = {
-            --         enabled = false,
-            --     },
-            -- })
+            require('ibl').setup({
+                indent = {
+                    char = '│',
+                    repeat_linebreak = false,
+                },
+                scope = {
+                    enabled = false,
+                },
+            })
         end,
     },
 }
