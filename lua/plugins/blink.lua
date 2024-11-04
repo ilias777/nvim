@@ -50,6 +50,9 @@ return {
                 border = 'single',
                 auto_show = true,
             },
+            signature_help = {
+                border = 'single',
+            },
             ghost_text = {
                 enabled = true,
             },
