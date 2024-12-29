@@ -1,89 +1,138 @@
 return {
     'saghen/blink.cmp',
-    enabled = false,
-    lazy = false,
+    enabled = true,
     dependencies = 'rafamadriz/friendly-snippets',
-    version = 'v0.*',
+    version = '*',
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
     opts = {
+        appearance = {
+            use_nvim_cmp_as_default = false,
+            nerd_font_variant = 'mono',
+        },
+        completion = {
+            menu = {
+                border = 'single',
+            },
+            documentation = {
+                auto_show = true,
+                auto_show_delay_ms = 250,
+                window = { border = 'single' },
+            },
+            accept = {
+                auto_brackets = {
+                    enabled = true,
+                },
+            },
+            ghost_text = {
+                enabled = true,
+            },
+            list = {
+                selection = function(ctx)
+                    return ctx.mode == 'cmdline' and 'auto_insert' or 'preselect'
+                end,
+            },
+        },
+        signature = {
+            enabled = true,
+            window = {
+                border = 'single',
+            },
+        },
         keymap = {
             ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
             ['<C-e>'] = { 'hide', 'fallback' },
             ['<CR>'] = { 'accept', 'fallback' },
-
             ['<Up>'] = { 'select_prev', 'fallback' },
             ['<Down>'] = { 'select_next', 'fallback' },
             ['<C-p>'] = { 'select_prev', 'fallback' },
             ['<C-n>'] = { 'select_next', 'fallback' },
-            ['<S-Tab>'] = { 'select_prev', 'fallback' },
-            ['<Tab>'] = { 'select_next', 'fallback' },
-            ['<C-l>'] = { 'snippet_forward', 'fallback' },
+            ['<Tab>'] = {
+                function(cmp)
+                    if cmp.snippet_active() then
+                        return cmp.accept()
+                    else
+                        return cmp.select_and_accept()
+                    end
+                end,
+                'snippet_forward',
+                'fallback',
+            },
+            ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
+            ['<C-l>'] = {
+                function(cmp)
+                    if cmp.snippet_active() then
+                        return cmp.accept()
+                    else
+                        return cmp.select_and_accept()
+                    end
+                end,
+                'snippet_forward',
+                'fallback',
+            },
             ['<C-h>'] = { 'snippet_backward', 'fallback' },
 
             ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
             ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
         },
-        accept = {
-            auto_brackets = {
-                enabled = true,
-            },
-        },
-        trigger = {
-            signature_help = {
-                enabled = true,
-            },
-        },
         sources = {
-            completion = {
-                enabled_providers = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev' },
-            },
+            default = { 'lsp', 'path', 'snippets', 'buffer' },
+            cmdline = function()
+                local type = vim.fn.getcmdtype()
+                -- Search forward and backward
+                if type == '/' or type == '?' then
+                    return { 'buffer' }
+                end
+                -- Commands
+                if type == ':' then
+                    return { 'cmdline' }
+                end
+                return {}
+            end,
             providers = {
-                -- dont show LuaLS require statements when lazydev has items
-                lsp = { fallback_for = { 'lazydev' } },
-                lazydev = { name = 'LazyDev', module = 'lazydev.integrations.blink' },
+                lsp = {
+                    min_keyword_length = 2, -- Number of characters to trigger porvider
+                    score_offset = 0, -- Boost/penalize the score of the items
+                },
+                path = {
+                    min_keyword_length = 0,
+                },
+                snippets = {
+                    min_keyword_length = 2,
+                },
+                buffer = {
+                    min_keyword_length = 5,
+                    max_items = 5,
+                },
             },
         },
-        windows = {
-            autocomplete = {
-                border = 'single',
-            },
-            documentation = {
-                border = 'single',
-                auto_show = true,
-            },
-            signature_help = {
-                border = 'single',
-            },
-            ghost_text = {
-                enabled = true,
-            },
-        },
-        nerd_font_variant = 'normal',
-        kind_icons = {
-            Class = '',
-            Color = '󰏘',
-            Constant = '',
-            Constructor = '',
-            Enum = '',
-            EnumMember = '',
-            Event = '',
-            Field = '󰜢',
-            File = '󰈔',
-            Folder = '',
-            Function = '󰊕',
-            Interface = '',
-            Keyword = '󰌆',
-            Method = '',
-            Module = '󰏗',
-            Operator = '󰆕',
-            Property = '󰖷',
-            Reference = '',
-            Snippet = '',
-            Struct = '',
-            Text = '',
-            TypeParameter = '󰅲',
-            Unit = '󰪚',
-            Value = '󰎠',
-            Variable = '󰆦',
-        },
+        -- kind_icons = {
+        --     Class = '',
+        --     Color = '󰏘',
+        --     Constant = '',
+        --     Constructor = '',
+        --     Enum = '',
+        --     EnumMember = '',
+        --     Event = '',
+        --     Field = '󰜢',
+        --     File = '󰈔',
+        --     Folder = '',
+        --     Function = '󰊕',
+        --     Interface = '',
+        --     Keyword = '󰌆',
+        --     Method = '',
+        --     Module = '󰏗',
+        --     Operator = '󰆕',
+        --     Property = '󰖷',
+        --     Reference = '',
+        --     Snippet = '',
+        --     Struct = '',
+        --     Text = '',
+        --     TypeParameter = '󰅲',
+        --     Unit = '󰪚',
+        --     Value = '󰎠',
+        --     Variable = '󰆦',
+        -- },
     },
+    opts_extend = { 'sources.default' },
 }
