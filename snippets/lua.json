@@ -1,0 +1,7 @@
+{
+  "foo": {
+    "prefix": "conff",
+    "body": ["config = function()", "\t$0", "end"],
+    "description": "Config function"
+  }
+}
