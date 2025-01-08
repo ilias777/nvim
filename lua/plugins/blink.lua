@@ -3,8 +3,6 @@ return {
     enabled = true,
     dependencies = 'rafamadriz/friendly-snippets',
     version = '*',
-    ---@module 'blink.cmp'
-    ---@type blink.cmp.Config
     opts = {
         appearance = {
             use_nvim_cmp_as_default = false,
@@ -80,6 +78,8 @@ return {
 
             ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
             ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+            ['<C-u>'] = { 'scroll_documentation_up', 'fallback' },
+            ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
         },
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer' },
