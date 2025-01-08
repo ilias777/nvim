@@ -52,48 +52,7 @@ catppuccin.setup({
 
             -- Completion Menu
             -- Pmenu = { bg = colors.mantle },
-            -- PmenuSel = { fg = colors.mantle, bg = colors.maroon, style = { 'bold' } },
-            -- Pmenu = { bg = colors.base },
             PmenuSel = { fg = colors.base, bg = colors.lavender, style = { 'bold', 'italic' } },
-
-            -- Cmp Item Kind
-            -- CmpItemAbbrDeprecated = { fg = colors.overlay1, bg = 'NONE', strikethrough = true },
-            -- CmpItemAbbrMatch = { fg = colors.blue, bg = 'NONE', bold = true },
-            -- CmpItemAbbrMatchFuzzy = { fg = colors.blue, bg = 'NONE', bold = true },
-            -- CmpItemMenu = { fg = colors.pink, bg = 'NONE', italic = true },
-            --
-            -- CmpItemKindField = { fg = colors.surface1, bg = colors.red },
-            -- CmpItemKindProperty = { fg = colors.surface1, bg = colors.red },
-            -- CmpItemKindEvent = { fg = colors.surface1, bg = colors.red },
-            --
-            -- CmpItemKindText = { fg = colors.mantle, bg = colors.green },
-            -- CmpItemKindEnum = { fg = colors.mantle, bg = colors.green },
-            -- CmpItemKindKeyword = { fg = colors.mantle, bg = colors.green },
-            --
-            -- CmpItemKindConstant = { fg = colors.mantle, bg = colors.yellow },
-            -- CmpItemKindConstructor = { fg = colors.mantle, bg = colors.yellow },
-            -- CmpItemKindReference = { fg = colors.mantle, bg = colors.yellow },
-            --
-            -- CmpItemKindFunction = { fg = colors.mantle, bg = colors.pink },
-            -- CmpItemKindStruct = { fg = colors.mantle, bg = colors.pink },
-            -- CmpItemKindClass = { fg = colors.mantle, bg = colors.pink },
-            -- CmpItemKindModule = { fg = colors.mantle, bg = colors.pink },
-            -- CmpItemKindOperator = { fg = colors.mantle, bg = colors.pink },
-            --
-            -- CmpItemKindVariable = { fg = colors.subtext1, bg = colors.surface0 },
-            -- CmpItemKindFile = { fg = colors.subtext1, bg = colors.surface0 },
-            --
-            -- CmpItemKindUnit = { fg = colors.mantle, bg = colors.maroon },
-            -- CmpItemKindSnippet = { fg = colors.mantle, bg = colors.maroon },
-            -- CmpItemKindFolder = { fg = colors.mantle, bg = colors.maroon },
-            --
-            -- CmpItemKindMethod = { fg = colors.mantle, bg = colors.sapphire },
-            -- CmpItemKindValue = { fg = colors.mantle, bg = colors.sapphire },
-            -- CmpItemKindEnumMember = { fg = colors.mantle, bg = colors.sapphire },
-            --
-            -- CmpItemKindInterface = { fg = colors.surface0, bg = colors.peach },
-            -- CmpItemKindColor = { fg = colors.surface0, bg = colors.peach },
-            -- CmpItemKindTypeParameter = { fg = colors.surface0, bg = colors.peach },
 
             -- Telescope
             -- TelescopeBorder = { fg = colors.blue },
@@ -130,10 +89,6 @@ catppuccin.setup({
             BufferLineIndicator = { fg = colors.base },
             TabLineSel = { bg = colors.pink },
             -- BufferLineModifiedSelected = { fg = colors.teal },
-
-            -- Cursorline & Linenumbers
-            -- CursorLine = { bg = colors.mantle },
-            -- Cursor = { bg = colors.red },
 
             -- Folds
             -- Folded = { bg = colors.mantle },
