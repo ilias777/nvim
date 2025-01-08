@@ -144,7 +144,7 @@ catppuccin.setup({
             GitSignsStagedAdd = { fg = colors.blue },
 
             -- Search
-            -- CurSearch = { bg = ucolors.darken(colors.pink, 0.65, colors.base) },
+            CurSearch = { bg = ucolors.darken(colors.pink, 0.65, colors.base), fg = colors.text },
 
             -- Lazy.nvim
             LazyButton = { bg = colors.mantle },
