@@ -82,7 +82,7 @@ return {
             ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
         },
         sources = {
-            default = { 'lsp', 'path', 'snippets', 'buffer' },
+            default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
             cmdline = function()
                 local type = vim.fn.getcmdtype()
                 -- Search forward and backward
@@ -109,6 +109,11 @@ return {
                 buffer = {
                     min_keyword_length = 5,
                     max_items = 5,
+                },
+                lazydev = {
+                    name = 'LazyDev',
+                    module = 'lazydev.integrations.blink',
+                    score_offset = 100,
                 },
             },
         },
