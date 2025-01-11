@@ -108,7 +108,7 @@ return {
                 },
                 buffer = {
                     min_keyword_length = 5,
-                    max_items = 5,
+                    max_items = 3,
                 },
                 lazydev = {
                     name = 'LazyDev',
