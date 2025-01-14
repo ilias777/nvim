@@ -153,6 +153,11 @@ catppuccin.setup({
             MasonHeader = { bg = colors.mauve, fg = colors.mantle },
             MasonHighlightBlockBold = { bg = colors.blue, fg = colors.mantle },
             MasonMutedBlock = { bg = colors.surface0, fg = colors.text },
+
+            -- blink.cmp
+            BlinkCmpMenuBorder = { fg = colors.blue },
+            BlinkCmpDocBorder = { fg = colors.sapphire },
+            BlinkCmpSignatureHelpBorder = { fg = colors.yellow },
         }
     end,
     highlight_overrides = {},
