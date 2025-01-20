@@ -4,7 +4,7 @@
 return {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufReadPost', 'BufNewFile' },
-    -- depedencies = { 'saghen/blink.cmp' },
+    depedencies = { 'saghen/blink.cmp' },
     config = function()
         -- ╭───────╮
         -- │ MASON │
