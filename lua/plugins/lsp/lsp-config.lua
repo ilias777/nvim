@@ -48,19 +48,14 @@ return {
         -- ╰───────────╯
         local lspconfig = require('lspconfig')
 
-        -- ╭──────────────────────╮
-        -- │ CMP LSP CAPABILITIES │
-        -- ╰──────────────────────╯
+        -- ╭──────────────────╮
+        -- │ LSP CAPABILITIES │
+        -- ╰──────────────────╯
         local lsp_defaults = lspconfig.util.default_config
         -- lsp_defaults.capabilities =
         --     vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
         lsp_defaults.capabilities =
             vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('blink.cmp').get_lsp_capabilities())
-
-        -- ╭─────────────────────────────────╮
-        -- │ LSP BORDER FOR :LSPINFO COMMAND │
-        -- ╰─────────────────────────────────╯
-        require('lspconfig.ui.windows').default_options.border = 'single'
 
         -- ╭───────────────────╮
         -- │ WINBAR WITH NAVIC │
@@ -99,7 +94,9 @@ return {
                 end
                 -- All lsp keymaps starts with gr expept K.
                 -- Default lsp keymaps. Setting the keymaps again, only to change the description.
-                vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts('Hover'))
+                vim.keymap.set('n', 'K', function()
+                    vim.lsp.buf.hover({ border = 'single' })
+                end, bufopts('Hover'))
                 vim.keymap.set({ 'n', 'v' }, 'gra', vim.lsp.buf.code_action, bufopts('LSP Code Action'))
                 vim.keymap.set('n', 'grn', vim.lsp.buf.rename, bufopts('LSP Rename'))
                 vim.keymap.set('n', 'grr', vim.lsp.buf.references, bufopts('LSP References'))
@@ -110,7 +107,9 @@ return {
                 vim.keymap.set('n', 'grf', function()
                     vim.lsp.buf.format({ async = true })
                 end, bufopts('LSP Formatting'))
-                vim.keymap.set('n', 'grk', vim.lsp.buf.signature_help, bufopts('LSP Singature Help'))
+                vim.keymap.set('n', 'grk', function()
+                    vim.lsp.buf.signature_help({ border = 'single' })
+                end, bufopts('LSP Singature Help'))
                 vim.keymap.set('n', 'grs', vim.lsp.buf.document_symbol, bufopts('LSP Document Symbols'))
                 vim.keymap.set('n', 'grt', vim.lsp.buf.type_definition, bufopts('LSP Type Definition'))
                 vim.keymap.set('n', 'grwa', vim.lsp.buf.add_workspace_folder, bufopts('LSP Add Workspace Folder'))
@@ -149,25 +148,6 @@ return {
                 vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
             end, { desc = 'Toggle Inlay Hints' })
         end
-
-        -- ╭─────────────╮
-        -- │ LSP BORDERS │
-        -- ╰─────────────╯
-        local border = {
-            { '┌', 'FloatBorder' },
-            { '─', 'FloatBorder' },
-            { '┐', 'FloatBorder' },
-            { '│', 'FloatBorder' },
-            { '┘', 'FloatBorder' },
-            { '─', 'FloatBorder' },
-            { '└', 'FloatBorder' },
-            { '│', 'FloatBorder' },
-        }
-
-        local handlers = {
-            ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-            ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
-        }
 
         -- ╭─────────────────────────────────────────╮
         -- │ DISABLE LSP INLINE DIAGNOSTICS MESSAGES │
@@ -214,7 +194,6 @@ return {
         table.insert(runtime_path, 'lua/?.lua')
         table.insert(runtime_path, 'lua/?/init.lua')
         lspconfig.lua_ls.setup({
-            handlers = handlers,
             on_init = function(client)
                 local path = client.workspace_folders[1].name
                 if vim.loop.fs_stat(path .. '/.luarc.json') or vim.loop.fs_stat(path .. '/.luarc.jsonc') then
@@ -298,7 +277,6 @@ return {
         -- │ JAVASCRIPT SERVER │
         -- ╰───────────────────╯
         lspconfig.ts_ls.setup({
-            handlers = handlers,
             init_options = {
                 plugins = {
                     {
@@ -330,7 +308,6 @@ return {
         -- │ VOLAR VUE SERVER │
         -- ╰──────────────────╯
         lspconfig.volar.setup({
-            handlers = handlers,
             init_options = {
                 typescript = {
                     tsdk = '/Users/ilias/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib',
@@ -344,22 +321,17 @@ return {
         -- ╭───────────────╮
         -- │ PYTHON SERVER │
         -- ╰───────────────╯
-        lspconfig.ruff.setup({
-            handlers = handlers,
-        })
+        lspconfig.ruff.setup({})
 
         -- ╭──────────────╮
         -- │ EMMET SERVER │
         -- ╰──────────────╯
-        lspconfig.emmet_ls.setup({
-            handlers = handlers,
-        })
+        lspconfig.emmet_ls.setup({})
 
         -- ╭────────────╮
         -- │ CSS SERVER │
         -- ╰────────────╯
         lspconfig.cssls.setup({
-            handlers = handlers,
             settings = {
                 css = {
                     lint = {
@@ -373,7 +345,6 @@ return {
         -- │ TAILWIND SERVER │
         -- ╰─────────────────╯
         lspconfig.tailwindcss.setup({
-            handlers = handlers,
             settings = {
                 tailwindCSS = {
                     classAttributes = { 'class', 'className', 'class:list', 'classList', 'ngClass' },
@@ -401,7 +372,6 @@ return {
         -- │ JSON SERVER │
         -- ╰─────────────╯
         lspconfig.jsonls.setup({
-            handlers = handlers,
             filetypes = { 'json', 'jsonc' },
             init_options = {
                 provideFormatter = true,
@@ -412,7 +382,6 @@ return {
         -- │ HTML SERVER │
         -- ╰─────────────╯
         lspconfig.html.setup({
-            handlers = handlers,
             settigns = {
                 css = {
                     lint = {
@@ -426,7 +395,6 @@ return {
         -- │ LTEX SERVER │
         -- ╰─────────────╯
         lspconfig.ltex.setup({
-            handlers = handlers,
             filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
             settings = {
                 -- ltex = {
@@ -439,7 +407,6 @@ return {
         -- │ TEXLAB SERVER │
         -- ╰───────────────╯
         lspconfig.texlab.setup({
-            handlers = handlers,
             settings = {
                 texlab = {
                     auxDirectory = '.',
@@ -470,22 +437,17 @@ return {
         -- ╭────────────╮
         -- │ PHP SERVER │
         -- ╰────────────╯
-        lspconfig.intelephense.setup({
-            handlers = handlers,
-        })
+        lspconfig.intelephense.setup({})
 
         -- ╭─────────────╮
         -- │ JAVA SERVER │
         -- ╰─────────────╯
-        lspconfig.jdtls.setup({
-            handlers = handlers,
-        })
+        lspconfig.jdtls.setup({})
 
         -- ╭─────────────╮
         -- │ YAML SERVER │
         -- ╰─────────────╯
         lspconfig.yamlls.setup({
-            handlers = handlers,
             settings = {
                 yaml = {
                     validate = true,
@@ -512,15 +474,12 @@ return {
         -- ╭─────────────╮
         -- │ RUST SERVER │
         -- ╰─────────────╯
-        lspconfig.rust_analyzer.setup({
-            handlers = handlers,
-        })
+        lspconfig.rust_analyzer.setup({})
 
         -- ╭──────────────╮
         -- │ TYPST SERVER │
         -- ╰──────────────╯
         lspconfig.tinymist.setup({
-            handlers = handlers,
             single_file_support = true,
             root_dir = function()
                 return vim.fn.getcwd()
