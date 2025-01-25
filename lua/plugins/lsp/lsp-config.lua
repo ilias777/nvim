@@ -326,7 +326,12 @@ return {
         -- ╭──────────────╮
         -- │ EMMET SERVER │
         -- ╰──────────────╯
-        lspconfig.emmet_ls.setup({})
+        -- lspconfig.emmet_ls.setup({})
+
+        -- ╭───────────────────────╮
+        -- │ EMMET LANGUAGE SERVER │
+        -- ╰───────────────────────╯
+        lspconfig.emmet_language_server.setup({})
 
         -- ╭────────────╮
         -- │ CSS SERVER │
