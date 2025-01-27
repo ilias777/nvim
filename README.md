@@ -52,7 +52,7 @@
 ## ✨ Features
 
 - File explorer with [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- Autocompletion with [CMP](https://github.com/hrsh7th/nvim-cmp)
+- Autocompletion with [blink.cmp](https://github.com/Saghen/blink.cmp)
 - Git integration with [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [Neogit](https://github.com/NeogitOrg/neogit)
 - Fuzzy finding with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - Formatting with [conform.nvim](https://github.com/stevearc/conform.nvim) and Linting [nvim-lint](https://github.com/mfussenegger/nvim-lint)
@@ -283,7 +283,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 | Language Server                                                                      | Description                                             | Programming Language |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------- | -------------------- |
 | [cssls](https://github.com/microsoft/vscode-css-languageservice)                     | Language services for CSS, LESS and SCSS                | CSS                  |
-| [emmet_ls](https://github.com/aca/emmet-ls)                                          | Emmet support based on LSP                              | HMLT - CSS           |
+| [emmet-language-server](https://github.com/olrtg/emmet-language-server)              | A language server for emmet.io                          | HMLT - CSS           |
 | [html](https://github.com/microsoft/vscode-html-languageservice)                     | Language services for HTML                              | HTML                 |
 | [jsonls](https://github.com/microsoft/vscode-json-languageservice)                   | JSON language service                                   | JSON                 |
 | [jdtls](https://github.com/eclipse/eclipse.jdt.ls)                                   | Java language server                                    | Java                 |
