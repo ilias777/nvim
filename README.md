@@ -184,7 +184,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 #### Autocompletion
 
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Completion plugin.
+- [blink.cmp](https://github.com/Saghen/blink.cmp) - Completion plugin.
 
 #### Formatter
 
@@ -198,9 +198,8 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 - [Catppuccin](https://github.com/catppuccin/nvim) - Warm mid-tone dark theme.
 
-#### Snippet Engine
+#### Snippets
 
-- [Luasnip](https://github.com/L3MON4D3/LuaSnip) - A snippet engine.
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) - Snippets collection for a set of different programming languages.
 
 #### Tabline and Statusline
@@ -210,7 +209,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 #### Motion
 
-- [cinnamon.nvim](https://github.com/declancm/cinnamon.nvim) - Smooth scrolling for any movement command.
 - [flash.nvim](https://github.com/folke/flash.nvim) - Navigate your code with search labels.
 - [hop.nvim](https://github.com/smoka7/hop.nvim) - Jump anywhere in a document.
 - [nvim-spider](https://github.com/chrisgrieser/nvim-spider) - Use the w, e, b motions like a spider.
@@ -225,7 +223,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 #### Utils
 
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - IndentLine replacement.
-- [live-command.nvim](https://github.com/smjonas/live-command.nvim) - Text editing with immediate visual feedback.
 - [noice.nvim](https://github.com/folke/noice.nvim) - Replaces the UI for messages, cmdline and the popupmenu.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - A minimalist autopairs.
 - [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua) - A high-performance color highlighter.
@@ -238,7 +235,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [ssr.nvim](https://github.com/cshuaimin/ssr.nvim) - Treesitter based structural search and replace plugin.
 - [statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim) - Configurable 'statuscolumn' with builtin segments and click handlers.
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) - A neovim lua plugin to help easily manage multiple terminal windows.
-- [vim-visual-multi](https://github.com/mg979/vim-visual-multi) - Multiple cursors.
+- [multicursor.nvim](https://github.com/jake-stewart/multicursor.nvim) - Multiple cursors.
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Popup of keybindings.
 - [yanky.nvim](https://github.com/gbprod/yanky.nvim) - Improved Yank and Put functionalities.
 - [zen-mode.nvim](https://github.com/folke/zen-mode.nvim) - Distraction-free coding.
@@ -250,6 +247,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context) - Shows the context of the currently visible buffer contents.
 - [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) - Syntax aware text-objects, select, move, swap, and peek support.
 - [ts-node-action](https://github.com/ckolkey/ts-node-action) - A framework for executing functional transformations on Tree-sitter nodes.
+- [treewalker.nvim](https://github.com/aaronik/Treewalker.nvim?tab=readme-ov-file) - Moving around code in a syntax tree.
 
 #### Telescope
 
