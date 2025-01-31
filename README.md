@@ -205,7 +205,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 #### Tabline and Statusline
 
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - A snazzy buffer line.
-- [feline.nvim](https://github.com/freddiehaddad/feline.nvim) - A minimal, stylish and customizable statusline.
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast statusline.
 
 #### Motion
 
