@@ -163,6 +163,9 @@ return {
         local lazy_updates = {
             require('lazy.status').updates,
             cond = require('lazy.status').has_updates,
+            on_click = function()
+                vim.cmd('Lazy')
+            end,
             color = { fg = colors.pink, bg = colors.crust },
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
