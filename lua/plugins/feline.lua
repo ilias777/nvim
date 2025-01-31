@@ -1,5 +1,6 @@
 return {
     'freddiehaddad/feline.nvim',
+    enabled = false,
     event = 'VeryLazy',
     config = function()
         local clrs = require('catppuccin.palettes').get_palette()
