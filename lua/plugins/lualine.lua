@@ -231,7 +231,7 @@ return {
         require('lualine').setup({
             options = {
                 disabled_filetypes = {
-                    statusline = { 'dashboard', 'lazy', 'TelescopePrompt', 'mason' },
+                    statusline = { 'dashboard', 'lazy', 'TelescopePrompt', 'mason', 'neo-tree' },
                 },
                 icons_enabled = true,
                 theme = theme,
