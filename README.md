@@ -28,25 +28,25 @@
 ## 🌟 Preview
 
 <div align="center">
-  <img width="1480" alt="startup" src="https://github.com/ilias777/nvim/assets/39212564/4f6b437c-c97e-4f27-b7ff-697a3df53131">
+  <img width="1732" alt="startup" src="https://github.com/user-attachments/assets/25de3edb-4205-49ee-aaf3-c8693816acd5" />
   <h6>Find files with Telescope</h6>
-  <img width="1480" alt="p1" src="https://github.com/ilias777/nvim/assets/39212564/b53bdb7a-b581-46ba-9f79-415f22363f84">
+  <img width="1732" alt="p1" src="https://github.com/user-attachments/assets/6a6507fd-84ba-4640-9558-57fa5833c854" />
   <h6>Show keybindings with which-key</h6>
-  <img width="1480" alt="p2" src="https://github.com/ilias777/nvim/assets/39212564/6be27432-8004-40b9-bd15-71a65b336e76">
+  <img width="1732" alt="p2" src="https://github.com/user-attachments/assets/8fab17ea-ba05-4165-8494-2c8c0cb02a5a" />
   <h6>File browser with Telescope</h6>
-  <img width="1480" alt="p3" src="https://github.com/ilias777/nvim/assets/39212564/013ebe1b-35a2-4828-aa6a-fa3716650dad">
+  <img width="1732" alt="p3" src="https://github.com/user-attachments/assets/ae108b6c-9991-4c2e-a547-aac3cf25ec4a" />
   <h6>Find help with Telescope</h6>
-  <img width="1480" alt="help" src="https://github.com/ilias777/nvim/assets/39212564/7b7fb702-b3fe-4f64-abe9-e391abeacb57">
+  <img width="1732" alt="p4" src="https://github.com/user-attachments/assets/4ac2b257-a87a-4b46-b8a8-8f4ee77b6be7" />
   <h6>Neo-tree file browser</h6>
-  <img width="1480" alt="p4" src="https://github.com/ilias777/nvim/assets/39212564/5eccf46d-f5d5-4004-8d16-2d311c30439c">
+  <img width="1732" alt="p5" src="https://github.com/user-attachments/assets/b5bd5077-68d1-4d37-a6a5-c237e9e129a0" />
   <h6>Neo-tree floating file browser</h6>
-  <img width="1480" alt="p5" src="https://github.com/ilias777/nvim/assets/39212564/b6c70cb4-d1d9-43c5-933d-2285e34119bd">
+  <img width="1732" alt="p6" src="https://github.com/user-attachments/assets/73b38070-7669-47dd-b4fb-eb40eef64ae4" />
   <h6>Lazy.nvim</h6>
-  <img width="1480" alt="p6" src="https://github.com/ilias777/nvim/assets/39212564/99871f33-89b5-4aa3-a030-d89532e53b5e">
+  <img width="1732" alt="p7" src="https://github.com/user-attachments/assets/8aa0f446-a368-4ca6-ba2a-0541d87869d7" />
   <h6>Mason.nvim</h6>
-  <img width="1480" alt="p7" src="https://github.com/ilias777/nvim/assets/39212564/d3b0835a-02e0-413c-bb1b-9d5ccbc29418">
-  <h6>Autocompletion with nvim-cmp</h6>
-  <img width="1480" alt="p8" src="https://github.com/ilias777/nvim/assets/39212564/9724546f-f6e1-4885-853c-9f2810a5eb15">
+  <img width="1732" alt="p8" src="https://github.com/user-attachments/assets/f392e6e3-9d1b-45a0-ac57-76d80c2606f3" />
+  <h6>Autocompletion with blink.cmp</h6>
+  <img width="1732" alt="p9" src="https://github.com/user-attachments/assets/242d43ae-fd69-4593-bb97-6ae6ed7f5805" />
 </div>
 
 ## ✨ Features
