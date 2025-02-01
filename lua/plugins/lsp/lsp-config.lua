@@ -77,6 +77,10 @@ return {
             vim.diagnostic.jump({ count = vim.v.count1 })
         end, opts('Next Diagnostic'))
         vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts('Send Diagnostic to Locallist'))
+        vim.keymap.set('n', 'gK', function()
+            local new_config = not vim.diagnostic.config().virtual_lines
+            vim.diagnostic.config({ virtual_lines = new_config })
+        end, { desc = 'Toggle diagnostic virtual_lines' })
 
         -- ╭───────────────────────╮
         -- │ LSPATTACH AUTOCOMMAND │
