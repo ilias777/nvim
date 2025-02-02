@@ -232,16 +232,11 @@ return {
             options = {
                 disabled_filetypes = {
                     statusline = {
-                        'checkhealth',
-                        'dashboard',
                         'lazy',
                         'mason',
+                        'checkhealth',
+                        'dashboard',
                         'TelescopePrompt',
-                        'neo-tree',
-                        'Outline',
-                        'SymbolsSidebar',
-                        'qf',
-                        'trouble',
                         'snipe-menu',
                     },
                 },
@@ -249,7 +244,13 @@ return {
                 theme = theme,
                 component_separators = { left = '', right = '' },
                 section_separators = { left = '', right = '' },
-                ignore_focus = {},
+                ignore_focus = {
+                    'neo-tree',
+                    'Outline',
+                    'SymbolsSidebar',
+                    'qf',
+                    'trouble',
+                },
                 always_divide_middle = true,
                 globalstatus = true,
             },
