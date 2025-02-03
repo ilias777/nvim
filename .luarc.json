@@ -7,13 +7,14 @@
     "lua/?/init.lua",
     "?.lua",
     "?/init.lua",
-    "$XDG_DATA_HOME/nvim/lazy"
+    "$XDG_DATA_HOME/nvim/lazy",
+    "$XDG_DATA_HOME/nvim/lazy/catppuccin/lua/catppuccin"
   ],
   "workspace.checkThirdParty": false,
   "workspace.library": [
     "$VIMRUNTIME/lua",
     "${3rd}/luv/library",
-    "$XDG_DATA_HOME/nvim/lazy/catppuccin/lua"
+    "lua/lib/icons.lua"
   ],
   "hint.enable": true,
   "hint.setType": true,
