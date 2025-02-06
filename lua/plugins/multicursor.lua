@@ -43,7 +43,7 @@ return {
         set('n', '<c-right>', function()
             mc.addCursor('w')
         end)
-        set('n', '<leader><right>', function()
+        set('n', '<c-right>', function()
             mc.skipCursor('w')
         end)
 
