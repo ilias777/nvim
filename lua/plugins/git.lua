@@ -102,7 +102,7 @@ return {
         opts = {
             graph_style = 'kitty',
             process_spinner = true,
-            notification_icon = "󰊢",
+            notification_icon = '',
             commit_editor = {
                 staged_diff_split_kind = 'vsplit',
                 spell_check = false,
