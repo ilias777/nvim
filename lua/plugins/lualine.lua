@@ -154,9 +154,25 @@ return {
             return '  ' .. language_servers
         end
 
-        local macro = {
+        local modes_noice = {
             require('noice').api.status.mode.get,
             cond = require('noice').api.status.mode.has,
+            color = { fg = colors.red, bg = colors.base, gui = 'italic,bold' },
+        }
+
+        local function check_macro()
+            local recording_register = vim.fn.reg_recording()
+            if recording_register == '' then
+                return ''
+            else
+                return 'recording @' .. recording_register
+            end
+        end
+
+        local macro = {
+            function()
+                return check_macro()
+            end,
             color = { fg = colors.red, bg = colors.base, gui = 'italic,bold' },
         }
 
