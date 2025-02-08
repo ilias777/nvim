@@ -75,6 +75,17 @@
     <img width="1732" alt="p9-l" src="https://github.com/user-attachments/assets/58678bb7-4dbe-425c-ad34-5071617a87e4" />
   </div>
 </details>
+<details>
+  <summary>Modified light colors</summary>
+  <div align="center">
+    <h4>All light colors for catppuccin latte are modified with more contrast for better readability.</h4>
+    See the difference:
+    <h6>Original catppuccin latte colors</h6>
+    <img width="1208" alt="origin" src="https://github.com/user-attachments/assets/92e35d2b-c318-4042-907f-8668dae09b14" />
+    <h6>Modified catppuccin latte colors</h6>
+    <img width="1208" alt="modified" src="https://github.com/user-attachments/assets/fccdf775-2886-455b-b61d-9286eefa880e" />
+  </div>
+</details>
 
 ## ✨ Features
 
