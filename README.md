@@ -29,7 +29,7 @@
 
 <details>
   <summary>Dark mode</summary>
-  <div aligh="center">
+  <div align="center">
     <img width="1732" alt="startup" src="https://github.com/user-attachments/assets/25de3edb-4205-49ee-aaf3-c8693816acd5" />
     <h6>Find files with Telescope</h6>
     <img width="1732" alt="p1" src="https://github.com/user-attachments/assets/6a6507fd-84ba-4640-9558-57fa5833c854" />
