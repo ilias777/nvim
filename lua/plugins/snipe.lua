@@ -12,7 +12,7 @@ return {
     opts = {
         ui = {
             --- @type "topleft" | "bottomleft" | "topright" | "bottomright" | "center" | "cursor"
-            position = 'cursor',
+            position = 'center',
             preselect_current = true,
             text_align = 'file-first',
         },
