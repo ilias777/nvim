@@ -12,7 +12,14 @@ return {
     opts = {
         ui = {
             --- @type "topleft" | "bottomleft" | "topright" | "bottomright" | "center" | "cursor"
-            position = 'center',
+            position = 'cursor',
+            preselect_current = true,
+            text_align = 'file-first',
         },
+        navigate = {
+            under_cursor = 'l',
+            open_split = 'S',
+        },
+        sort = 'first',
     },
 }
