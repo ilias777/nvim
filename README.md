@@ -27,7 +27,8 @@
 
 ## 🌟 Preview
 
-<div align="center">
+<details>
+  <summary>Dark mode</summary>
   <img width="1732" alt="startup" src="https://github.com/user-attachments/assets/25de3edb-4205-49ee-aaf3-c8693816acd5" />
   <h6>Find files with Telescope</h6>
   <img width="1732" alt="p1" src="https://github.com/user-attachments/assets/6a6507fd-84ba-4640-9558-57fa5833c854" />
@@ -47,7 +48,10 @@
   <img width="1732" alt="p8" src="https://github.com/user-attachments/assets/f392e6e3-9d1b-45a0-ac57-76d80c2606f3" />
   <h6>Autocompletion with blink.cmp</h6>
   <img width="1732" alt="p9" src="https://github.com/user-attachments/assets/242d43ae-fd69-4593-bb97-6ae6ed7f5805" />
-</div>
+</details>
+<details>
+  <summary>Light mode</summary>
+</details>
 
 ## ✨ Features
 
