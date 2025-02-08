@@ -53,6 +53,27 @@
 </details>
 <details>
   <summary>Light mode</summary>
+  <div align="center">
+    <img width="1732" alt="startup-l" src="https://github.com/user-attachments/assets/c7da7245-744f-4496-ad2b-5740426a5ad4" />
+    <h6>Find files with Telescope</h6>
+    <img width="1732" alt="p1-l" src="https://github.com/user-attachments/assets/ce243b8e-77e2-47ed-83d5-1d065e609c9d" />
+    <h6>Show keybindings with which-key</h6>
+    <img width="1732" alt="p2-l" src="https://github.com/user-attachments/assets/e771bd21-9f77-4ff3-9ed0-ce8853d280a3" />
+    <h6>File browser with Telescope</h6>
+    <img width="1732" alt="p3-l" src="https://github.com/user-attachments/assets/3de86af8-5196-493a-b934-1c854a2e41f1" />
+    <h6>Find help with Telescope</h6>
+    <img width="1732" alt="p4-l" src="https://github.com/user-attachments/assets/5db46cca-ca95-49a3-8f1a-f150994719df" />
+    <h6>Neo-tree file browser</h6>
+    <img width="1732" alt="p5-l" src="https://github.com/user-attachments/assets/f7ee43a9-e1e9-4c15-9d39-18c3498a5437" />
+    <h6>Neo-tree floating file browser</h6>
+    <img width="1732" alt="p6-l" src="https://github.com/user-attachments/assets/34802054-7e7d-472a-a843-d533b2ed0c18" />
+    <h6>Lazy.nvim</h6>
+    <img width="1732" alt="p7-l" src="https://github.com/user-attachments/assets/2ab29724-1c1a-4117-a94a-2b703e0eef26" />
+    <h6>Mason.nvim</h6>
+    <img width="1732" alt="p8-l" src="https://github.com/user-attachments/assets/e7373f79-2875-4d1a-8a6f-74a0283585ba" />
+    <h6>Autocompletion with blink.cmp</h6>
+    <img width="1732" alt="p9-l" src="https://github.com/user-attachments/assets/58678bb7-4dbe-425c-ad34-5071617a87e4" />
+  </div>
 </details>
 
 ## ✨ Features
