@@ -252,7 +252,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) - IndentLine replacement.
 - [noice.nvim](https://github.com/folke/noice.nvim) - Replaces the UI for messages, cmdline and the popupmenu.
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - A minimalist autopairs.
-- [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua) - A high-performance color highlighter.
+- [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) - The fastest Neovim colorizer.
 - [nvim-notify](https://github.com/rcarriga/nvim-notify) - A fancy, configurable, notification manager.
 - [nvim-surround](https://github.com/kylechui/nvim-surround) - A plugin for adding/changing/deleting surrounding delimiter pairs.
 - [nvim-toggler](https://github.com/nguyenvukhang/nvim-toggler) - Invert text.
@@ -260,6 +260,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Show dev icons.
 - [rainbow-delimiters](https://github.com/HiPhish/rainbow-delimiters.nvim) - Rainbow delimiters for Neovim with Treesitter.
 - [ssr.nvim](https://github.com/cshuaimin/ssr.nvim) - Treesitter based structural search and replace plugin.
+- [grug-far.nvim](https://github.com/MagicDuck/grug-far.nvim) - Find And Replace plugin for neovim.
 - [statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim) - Configurable 'statuscolumn' with builtin segments and click handlers.
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) - A neovim lua plugin to help easily manage multiple terminal windows.
 - [multicursor.nvim](https://github.com/jake-stewart/multicursor.nvim) - Multiple cursors.
