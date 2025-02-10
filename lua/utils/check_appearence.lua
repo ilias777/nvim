@@ -35,10 +35,10 @@ function M.toggle_theme()
 
     if M.manual_override then
         vim.o.background = 'dark'
-        vim.cmd('colorscheme ' .. M.dark_theme)
+        vim.cmd('Catppuccin mocha')
     else
         vim.o.background = 'light'
-        vim.cmd('colorscheme ' .. M.light_theme)
+        vim.cmd('Catppuccin latte')
     end
 end
 
