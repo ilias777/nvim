@@ -120,6 +120,13 @@ return {
                 end
                 return {}
             end,
+            completion = {
+                menu = {
+                    draw = {
+                        columns = { { 'kind_icon', 'label', 'label_description' } },
+                    },
+                },
+            },
         },
     },
     opts_extend = { 'sources.default' },
