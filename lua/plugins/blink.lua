@@ -27,16 +27,6 @@ return {
             ghost_text = {
                 enabled = true,
             },
-            list = {
-                selection = {
-                    preselect = function(ctx)
-                        return ctx.mode ~= 'cmdline' and not require('blink.cmp').snippet_active({ direction = 1 })
-                    end,
-                    auto_insert = function(ctx)
-                        return ctx.mode ~= 'cmdline'
-                    end,
-                },
-            },
         },
         signature = {
             enabled = true,
@@ -108,24 +98,17 @@ return {
             },
         },
         cmdline = {
-            sources = function()
-                local type = vim.fn.getcmdtype()
-                -- Search forward and backward
-                if type == '/' or type == '?' then
-                    return { 'buffer' }
-                end
-                -- Commands
-                if type == ':' then
-                    return { 'cmdline' }
-                end
-                return {}
-            end,
-            completion = {
-                menu = {
-                    draw = {
-                        columns = { { 'kind_icon', 'label', 'label_description' } },
-                    },
+            keymap = {
+                ['<C-n>'] = {
+                    function(cmp)
+                        if cmp.is_ghost_text_visible() and not cmp.is_menu_visible() then
+                            return cmp.accept()
+                        end
+                    end,
+                    'show_and_insert',
+                    'select_next',
                 },
+                ['<C-p>'] = { 'show_and_insert', 'select_prev' },
             },
         },
     },
