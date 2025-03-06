@@ -14,7 +14,9 @@
   "workspace.library": [
     "$VIMRUNTIME/lua",
     "${3rd}/luv/library",
-    "lua/lib/icons.lua"
+    "lua/lib/icons.lua",
+        "$XDG_DATA_HOME/nvim/lazy/catppuccin/lua/catppuccin"
+
   ],
   "hint.enable": true,
   "hint.setType": true,
