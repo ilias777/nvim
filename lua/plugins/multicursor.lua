@@ -48,7 +48,7 @@ return {
         set({ 'n', 'x' }, 'g<c-x>', mc.sequenceDecrement, { desc = 'Decrement sequence multicursor' })
 
         -- ADD A CURSOR TO EVERY SEARCH RESULT IN THE BUFFER.
-        set('n', '\\/A', mc.searchAllAddCursors, { desc = 'Add multicursor to every search result' })
+        set('n', '\\\\A', mc.searchAllAddCursors, { desc = 'Add multicursor to every search result' })
 
         -- ADD A CURSOR AND JUMP TO THE NEXT/PREVIOUS SEARCH RESULT.
         set('n', '\\\\n', function() mc.searchAddCursor(1) end, { desc = 'Add multicursor and jump to next search' })
