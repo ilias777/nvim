@@ -16,7 +16,7 @@
     "${3rd}/luv/library",
     "lua/lib/icons.lua",
     "$XDG_DATA_HOME/nvim/lazy/catppuccin/lua/catppuccin",
-    "$XDG_DATA_HOME/nvim/lazy/multicursor.nvim "
+    "$XDG_DATA_HOME/nvim/lazy/multicursor.nvim/lua/multicursor-nvim"
   ],
   "hint.enable": true,
   "hint.setType": true,
