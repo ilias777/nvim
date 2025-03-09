@@ -150,12 +150,12 @@ return {
                     vim.api.nvim_create_user_command('PinMain', function()
                         client:exec_cmd({
                             command = 'tinymist.pinMain',
-                            arguments = { vim.api.nvim_buf_get_name(ev.buf) },
-                        })
+                            arguments = { vim.api.nvim_buf_get_name(0) },
+                        }, { bufnr = ev.buf })
                     end, {})
                     -- Unpin main file user command
                     vim.api.nvim_create_user_command('UnpinMain', function()
-                        client:exec_cmd({ command = 'tinymist.pinMain', arguments = { nil } })
+                        client:exec_cmd({ command = 'tinymist.pinMain', arguments = { nil } }, { bufnr = ev.buf })
                     end, {})
                 end
             end,
