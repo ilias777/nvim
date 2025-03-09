@@ -163,7 +163,7 @@ return {
     {
         'OXY2DEV/markview.nvim',
         enabled = true,
-        ft = 'markdown',
+        event = { 'BufReadPre', 'BufNewFile' },
         opts = {},
     },
 
