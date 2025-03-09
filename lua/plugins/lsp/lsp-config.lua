@@ -141,6 +141,20 @@ return {
                     vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
                     navic.attach(client, ev.buf)
                 end
+
+                if client.name == 'tinymist' then
+                    -- Pin main file user command
+                    vim.api.nvim_create_user_command('PinMain', function()
+                        client:exec_cmd({
+                            command = 'tinymist.pinMain',
+                            arguments = { vim.api.nvim_buf_get_name(ev.buf) },
+                        })
+                    end, {})
+                    -- Unpin main file user command
+                    vim.api.nvim_create_user_command('UnpinMain', function()
+                        client:exec_cmd({ command = 'tinymist.pinMain', arguments = { nil } })
+                    end, {})
+                end
             end,
         })
 

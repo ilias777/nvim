@@ -173,27 +173,27 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 -- ╭─────────────────────────────────────────────────────────╮
 -- │        COMMENTS AND USERCOMMANDS FOR TYPST FILES        │
 -- ╰─────────────────────────────────────────────────────────╯
-vim.api.nvim_create_autocmd('Filetype', {
-    pattern = 'typst',
-    callback = function()
-        -- Commentstring
-        vim.bo.commentstring = '//%s'
-        -- Pin main file user command
-        vim.api.nvim_create_user_command('PinMain', function()
-            vim.lsp.buf.execute_command({
-                command = 'tinymist.pinMain',
-                arguments = { vim.api.nvim_buf_get_name(0) },
-            })
-        end, {})
-        -- Unpin main file user command
-        vim.api.nvim_create_user_command('UnpinMain', function()
-            vim.lsp.buf.execute_command({
-                command = 'tinymist.pinMain',
-                arguments = { nil },
-            })
-        end, {})
-    end,
-})
+-- vim.api.nvim_create_autocmd('Filetype', {
+--     pattern = 'typst',
+--     callback = function()
+--         -- Commentstring
+--         vim.bo.commentstring = '//%s'
+--         -- Pin main file user command
+--         vim.api.nvim_create_user_command('PinMain', function()
+--             vim.lsp.buf.execute_command({
+--                 command = 'tinymist.pinMain',
+--                 arguments = { vim.api.nvim_buf_get_name(0) },
+--             })
+--         end, {})
+--         -- Unpin main file user command
+--         vim.api.nvim_create_user_command('UnpinMain', function()
+--             vim.lsp.buf.execute_command({
+--                 command = 'tinymist.pinMain',
+--                 arguments = { nil },
+--             })
+--         end, {})
+--     end,
+-- })
 
 -- ╭─────────────────────────────────────────────────────────╮
 -- │            DOCUMENT HIGHLIGHT ON CURSORHOLD             │

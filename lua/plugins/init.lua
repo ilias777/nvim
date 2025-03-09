@@ -137,8 +137,10 @@ return {
         end,
     },
     {
-        'kaarmu/typst.vim',
+        'chomosuke/typst-preview.nvim',
         ft = 'typst',
+        version = '1.*',
+        opts = {},
     },
     {
         'iamcco/markdown-preview.nvim',
