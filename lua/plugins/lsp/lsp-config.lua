@@ -506,12 +506,9 @@ return {
         -- │ TYPST SERVER │
         -- ╰──────────────╯
         lspconfig.tinymist.setup({
-            single_file_support = true,
-            root_dir = function()
-                return vim.fn.getcwd()
-            end,
             settings = {
                 formatterMode = 'typstyle',
+                exportPdf = 'onSave',
             },
         })
     end,
