@@ -24,7 +24,6 @@
   </a>
 </h5>
 
-
 ## 🌟 Preview
 
 <details>
@@ -313,7 +312,7 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 
 - [vimtex](https://github.com/lervag/vimtex) - A modern Vim and Neovim filetype and syntax plugin for LaTeX files.
 - [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - Preview markdown on your browser.
-- [typst.vim](https://github.com/kaarmu/typst.vim) - Vim plugin for Typst.
+- [typst-preview.nvim](https://github.com/chomosuke/typst-preview.nvim) - markdown, Typst, latex, html(inline) & YAML previewer.
 
 ### Preinstalled Language Servers
 
