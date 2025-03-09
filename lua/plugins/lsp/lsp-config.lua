@@ -142,6 +142,9 @@ return {
                     navic.attach(client, ev.buf)
                 end
 
+                -- ╭──────────╮
+                -- │ TINYMIST │
+                -- ╰──────────╯
                 if client and client.name == 'tinymist' then
                     -- Pin main file user command
                     vim.api.nvim_create_user_command('PinMain', function()
