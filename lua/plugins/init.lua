@@ -164,7 +164,14 @@ return {
         'OXY2DEV/markview.nvim',
         enabled = true,
         event = { 'BufReadPre', 'BufNewFile' },
-        opts = {},
+        config = function()
+            local presets = require('markview.presets').headings
+            require('markview').setup({
+                markdown = {
+                    headings = presets.glow,
+                },
+            })
+        end,
     },
 
     --  ╭──────────────────────────────────────────────────────────╮
