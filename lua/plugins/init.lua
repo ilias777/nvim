@@ -170,6 +170,9 @@ return {
                 markdown = {
                     headings = presets.glow,
                 },
+                typst = {
+                    enable = false,
+                },
             })
         end,
     },
