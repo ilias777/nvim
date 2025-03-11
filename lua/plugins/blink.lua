@@ -109,6 +109,19 @@ return {
                     'select_next',
                 },
                 ['<C-p>'] = { 'show_and_insert', 'select_prev' },
+                ['<CR>'] = { 'accept_and_enter', 'fallback' },
+            },
+            completion = {
+                list = {
+                    selection = {
+                        preselect = false,
+                        auto_insert = true,
+                    },
+                },
+                menu = {
+                    auto_show = true,
+                },
+                ghost_text = { enabled = true },
             },
         },
     },
