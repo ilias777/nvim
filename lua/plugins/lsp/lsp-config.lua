@@ -157,6 +157,13 @@ return {
                     vim.api.nvim_create_user_command('UnpinMain', function()
                         client:exec_cmd({ command = 'tinymist.pinMain', arguments = { nil } }, { bufnr = ev.buf })
                     end, {})
+                    -- Use buildin preview command
+                    vim.api.nvim_create_user_command('TypstBuildInPreview', function()
+                        client:exec_cmd(
+                            { command = 'tinymist.startDefaultPreview', arguments = { nil } },
+                            { bufnr = ev.buf }
+                        )
+                    end, {})
                 end
             end,
         })
