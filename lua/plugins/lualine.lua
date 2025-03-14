@@ -34,7 +34,7 @@ return {
             rm = colors.sapphire,
             ['r?'] = colors.sapphire,
             ['!'] = colors.red,
-            t = colors.bright_red,
+            t = colors.red,
         }
 
         local theme = {
@@ -93,7 +93,7 @@ return {
             'mode',
             color = function()
                 local mode_color = modecolor
-                return { bg = mode_color[vim.fn.mode()], fg = colors.bg_dark, gui = 'bold' }
+                return { bg = mode_color[vim.fn.mode()], fg = colors.mantle, gui = 'bold' }
             end,
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
@@ -229,7 +229,7 @@ return {
             diagnostics_color = {
                 error = { fg = colors.red },
                 warn = { fg = colors.yellow },
-                info = { fg = colors.purple },
+                info = { fg = colors.maroon },
                 hint = { fg = colors.sapphire },
             },
             color = { bg = colors.crust, fg = colors.blue, gui = 'bold' },
