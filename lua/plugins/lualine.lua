@@ -77,6 +77,7 @@ return {
             color = { bg = colors.crust, fg = colors.yellow, gui = 'bold' },
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
+
         local diff = {
             'diff',
             color = { bg = colors.crust, fg = colors.green, gui = 'bold' },
@@ -153,6 +154,59 @@ return {
 
             return '  ' .. language_servers
         end
+
+        local function getFormatterAndLinter()
+            local buf_ft = vim.bo.filetype
+            local buf_client_names = {}
+
+            local lint_s, lint = pcall(require, 'lint')
+            if lint_s then
+                for ft_k, ft_v in pairs(lint.linters_by_ft) do
+                    if type(ft_v) == 'table' then
+                        for _, linter in ipairs(ft_v) do
+                            if buf_ft == ft_k then
+                                table.insert(buf_client_names, linter)
+                            end
+                        end
+                    elseif type(ft_v) == 'string' then
+                        if buf_ft == ft_k then
+                            table.insert(buf_client_names, ft_v)
+                        end
+                    end
+                end
+            end
+
+            local ok, conform = pcall(require, 'conform')
+            local formatters = table.concat(conform.list_formatters_for_buffer(), ' ')
+            if ok then
+                for formatter in formatters:gmatch('%w+') do
+                    if formatter then
+                        table.insert(buf_client_names, formatter)
+                    end
+                end
+            end
+
+            local hash = {}
+            local unique_client_names = {}
+
+            for _, v in ipairs(buf_client_names) do
+                if not hash[v] then
+                    unique_client_names[#unique_client_names + 1] = v
+                    hash[v] = true
+                end
+            end
+            local formatters_linters = table.concat(unique_client_names, ', ')
+
+            return '  ' .. formatters_linters
+        end
+
+        local formatters_linters = {
+            function()
+                return getFormatterAndLinter()
+            end,
+            color = { bg = colors.crust, fg = colors.yellow, gui = 'italic,bold' },
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+        }
 
         local modes_noice = {
             require('noice').api.status.mode.get,
@@ -236,6 +290,12 @@ return {
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
+        local lsp_status = {
+            'lsp_status',
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
+        }
+
         local lsp = {
             function()
                 return getLspName()
@@ -300,7 +360,9 @@ return {
                     space,
                     mason_updates,
                     space,
-                    lsp,
+                    -- lsp,
+                    lsp_status,
+                    formatters_linters,
                 },
             },
             inactive_sections = {
