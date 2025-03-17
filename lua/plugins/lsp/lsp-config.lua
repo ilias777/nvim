@@ -523,6 +523,7 @@ return {
             settings = {
                 formatterMode = 'typstyle',
                 exportPdf = 'onSave',
+                invert_colors = 'auto',
             },
         })
     end,

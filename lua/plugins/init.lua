@@ -140,7 +140,9 @@ return {
         'chomosuke/typst-preview.nvim',
         ft = 'typst',
         version = '1.*',
-        opts = {},
+        opts = {
+            invert_colors = 'auto',
+        },
     },
     {
         'iamcco/markdown-preview.nvim',
