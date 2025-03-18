@@ -112,9 +112,6 @@ return {
         },
         sources = {
             default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
-            per_filetype = {
-                markdown = { 'markview' },
-            },
             providers = {
                 lsp = {
                     min_keyword_length = 0,
