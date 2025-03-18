@@ -164,7 +164,7 @@ return {
     },
     {
         'OXY2DEV/markview.nvim',
-        enabled = false,
+        enabled = true,
         event = { 'BufReadPre', 'BufNewFile' },
         config = function()
             local presets = require('markview.presets').headings
