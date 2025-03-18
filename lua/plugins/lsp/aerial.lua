@@ -1,6 +1,6 @@
 return {
     'stevearc/aerial.nvim',
-    enabled = true,
+    enabled = false,
     cmd = 'AerialToggle',
     dependencies = {
         'nvim-treesitter/nvim-treesitter',
