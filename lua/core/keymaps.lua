@@ -73,7 +73,10 @@ vim.keymap.set('n', 'dD', '"_dd')
 -- Not yanking with 'c' and 'x'
 vim.keymap.set({ 'n', 'v' }, 'c', '"_c')
 vim.keymap.set('n', 'C', '"_C')
--- vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', 'x', '"_x')
+
+-- Undo
+vim.keymap.set('n', 'U', '<C-r>', { desc = 'Redo' })
 
 -- Jump to BoL and EoL without living instert mode
 vim.keymap.set('i', '<M-i>', '<Esc>I', { desc = 'Jump to Beginn of Line in insert mode' })
