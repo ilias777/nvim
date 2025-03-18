@@ -37,6 +37,7 @@ return {
             t = colors.red,
         }
 
+        -- ─[ THEME ]────────────────────────────────────────────────
         local theme = {
             normal = {
                 a = { fg = colors.base, bg = colors.blue },
@@ -49,35 +50,45 @@ return {
             replace = { a = { fg = colors.base, bg = colors.green } },
         }
 
+        -- ─[ SPACE ]────────────────────────────────────────────────
         local space = {
             function()
                 return ' '
             end,
             color = { bg = colors.base, fg = colors.blue },
         }
+
+        -- ─[ FILENAME ]─────────────────────────────────────────────
         local filename = {
             'filename',
             color = { bg = colors.blue, fg = colors.base, gui = 'bold' },
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
+
+        -- ─[ FILETYPE ]─────────────────────────────────────────────
         local filetype = {
             'filetype',
             icons_enabled = false,
             color = { bg = colors.crust, fg = colors.blue, gui = 'italic,bold' },
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
+
+        -- ─[ BRANCH ]───────────────────────────────────────────────
         local branch = {
             'branch',
             icon = '',
             color = { bg = colors.teal, fg = colors.base, gui = 'bold' },
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
+
+        -- ─[ LOCATION ]─────────────────────────────────────────────
         local location = {
             'location',
             color = { bg = colors.crust, fg = colors.yellow, gui = 'bold' },
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
+        -- ─[ DIFF ]─────────────────────────────────────────────────
         local diff = {
             'diff',
             color = { bg = colors.crust, fg = colors.green, gui = 'bold' },
@@ -90,6 +101,8 @@ return {
                 removed = { fg = colors.red },
             },
         }
+
+        -- ─[ MODES ]────────────────────────────────────────────────
         local modes = {
             'mode',
             color = function()
@@ -99,6 +112,27 @@ return {
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
+        -- ─[ LSP ]──────────────────────────────────────────────────
+        local lsp_status = {
+            'lsp_status',
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
+        }
+
+        local no_servers = {
+            function()
+                return '  No servers'
+            end,
+            cond = function()
+                local bufnr = vim.api.nvim_get_current_buf()
+                local buf_clients = vim.lsp.get_clients({ bufnr = bufnr })
+                return next(buf_clients) == nil
+            end,
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
+        }
+
+        -- ─[ LSP & FORMATTERS & LINTERS ]───────────────────────────
         local function getLspName()
             local bufnr = vim.api.nvim_get_current_buf()
             local buf_clients = vim.lsp.get_clients({ bufnr = bufnr })
@@ -155,6 +189,15 @@ return {
             return '  ' .. language_servers
         end
 
+        local lsp = {
+            function()
+                return getLspName()
+            end,
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
+        }
+
+        -- ─[ FORMATTERS & LINTERS ]─────────────────────────────────
         local function getFormatterAndLinter()
             local buf_ft = vim.bo.filetype
             local buf_client_names = {}
@@ -197,7 +240,11 @@ return {
             end
             local formatters_linters = table.concat(unique_client_names, ', ')
 
-            return '  ' .. formatters_linters
+            if formatters_linters == '' then
+                return ''
+            else
+                return '  ' .. formatters_linters
+            end
         end
 
         local formatters_linters = {
@@ -208,12 +255,14 @@ return {
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
+        -- ─[ MODES NOICE ]──────────────────────────────────────────
         local modes_noice = {
             require('noice').api.status.mode.get,
             cond = require('noice').api.status.mode.has,
             color = { fg = colors.red, bg = colors.base, gui = 'italic,bold' },
         }
 
+        -- ─[ MACRO ]────────────────────────────────────────────────
         local function check_macro()
             local recording_register = vim.fn.reg_recording()
             if recording_register == '' then
@@ -230,6 +279,7 @@ return {
             color = { fg = colors.red, bg = colors.base, gui = 'italic,bold' },
         }
 
+        -- ─[ LAZY UPDATES ]─────────────────────────────────────────
         local lazy_updates = {
             require('lazy.status').updates,
             cond = require('lazy.status').has_updates,
@@ -240,6 +290,7 @@ return {
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
+        -- ─[ MASON ]────────────────────────────────────────────────
         local function lualine_mason_updates()
             local registry = require('mason-registry')
             local installed_packages = registry.get_installed_package_names()
@@ -276,6 +327,7 @@ return {
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
+        -- ─[ DIAGNOSTICS ]──────────────────────────────────────────
         local dia = {
             'diagnostics',
             sources = { 'nvim_diagnostic' },
@@ -288,20 +340,6 @@ return {
             },
             color = { bg = colors.crust, fg = colors.blue, gui = 'bold' },
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
-        }
-
-        local lsp_status = {
-            'lsp_status',
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
-            color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
-        }
-
-        local lsp = {
-            function()
-                return getLspName()
-            end,
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
-            color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
         }
 
         require('lualine').setup({
@@ -362,6 +400,7 @@ return {
                     space,
                     -- lsp,
                     lsp_status,
+                    no_servers,
                     formatters_linters,
                 },
             },
