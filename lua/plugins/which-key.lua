@@ -17,7 +17,7 @@ return {
                 { '<leader>g', group = '+Git' }, -- Git
                 { '<leader>h', group = '+Hop Motion' }, -- Hop
                 { '<leader>l', group = '+Lazy', icon = '💤' }, -- Lazy & LTeX
-                { '<leader>m', group = '+Show Messages' }, -- Messages
+                { '<leader>m', group = '+Show Minimap' }, -- Codewindow.nvim
                 { '<leader>t', group = '+ToggleTerm / Todo Comments' }, -- ToggleTerm & Todo Comments
                 { '<space>b', group = '+Buffer' }, -- Bufferline.nvim
                 { '<space>g', group = '+Glance LSP' }, -- Glance LSP locations

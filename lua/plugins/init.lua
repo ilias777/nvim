@@ -100,6 +100,21 @@ return {
             only_line_seq = false,
         },
     },
+    {
+        'gorbit99/codewindow.nvim',
+        enabled = true,
+        keys = {
+            { '<leader>mm' },
+            { '<leader>mc' },
+            { '<leader>mf' },
+            { '<leader>mo' },
+        },
+        config = function()
+            local codewindow = require('codewindow')
+            codewindow.setup()
+            codewindow.apply_default_keybinds()
+        end,
+    },
 
     -- ╭─────────────────────────────────────────────────────────╮
     -- │                         COLORS                          │
