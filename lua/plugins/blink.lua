@@ -119,6 +119,14 @@ return {
                 },
                 path = {
                     min_keyword_length = 0,
+                    opts = {
+                        trailing_slash = true,
+                        label_trailing_slash = true,
+                        get_cwd = function(context)
+                            return vim.fn.expand(('#%d:p:h'):format(context.bufnr))
+                        end,
+                        show_hidden_files_by_default = true,
+                    },
                 },
                 snippets = {
                     min_keyword_length = 2,
