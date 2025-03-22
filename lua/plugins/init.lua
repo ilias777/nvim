@@ -82,17 +82,6 @@ return {
         },
     },
     {
-        'ellisonleao/glow.nvim',
-        cmd = 'Glow',
-        config = true,
-        opts = {
-            border = 'single',
-            style = 'dracula',
-            width = 120,
-            width_ratio = 0.8,
-        },
-    },
-    {
         'nvim-zh/colorful-winsep.nvim',
         enabled = true,
         event = { 'BufReadPre', 'BufNewFile' },
