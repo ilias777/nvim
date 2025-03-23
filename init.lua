@@ -36,4 +36,5 @@ local opts = {
 
 require('lazy').setup({ { import = 'plugins' }, { import = 'plugins.lsp' } }, opts)
 require('utils.check_appearence')
+require('utils.spelling')
 require('core.cursorStyle.cursor')
