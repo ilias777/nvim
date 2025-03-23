@@ -2,8 +2,8 @@ local M = {}
 
 local spell_options = {
     { label = '🇩🇪 German', langs = { 'de' } },
-    { label = '🇬🇧 English', langs = { 'en_us' } },
-    { label = '🇩🇪 + 🇬🇧 German + English', langs = { 'de', 'en_us' } },
+    { label = '🇬🇧 English', langs = { 'en' } },
+    { label = '🇩🇪 + 🇬🇧 German + English', langs = { 'de', 'en' } },
     { label = '🇬🇷 Greek', langs = { 'el' } },
 }
 
