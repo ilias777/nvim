@@ -28,6 +28,7 @@ return {
                 'fzf',
                 'checkhealth',
                 'grug-far-help',
+                'typst',
             },
             callback = function()
                 vim.b.miniindentscope_disable = true
