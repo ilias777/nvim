@@ -19,3 +19,7 @@ debug/
 vscode-java-test/
 java-debug/
 js-debug/
+
+# Spell files
+*.add
+*add.spl
