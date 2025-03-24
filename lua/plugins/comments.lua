@@ -60,6 +60,7 @@ return {
             { '<leader>cd', '<cmd>CBd<cr>', desc = 'Comment Box Delete' },
             { '<leader>ca', '<cmd>CBalbox<cr>', desc = 'Comment Box Auto' },
             { '<leader>cl', '<cmd>CBcatalog<cr>', desc = 'Comment Box Catalog' },
+            { '<leader>cy', '<cmd>CBy<cr>', desc = 'Comment Box Yank Comment' },
         },
         opts = {
             line_width = 60,
