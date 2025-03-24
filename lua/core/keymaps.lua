@@ -3,7 +3,7 @@
 --  ╰──────────────────────────────────────────────────────────╯
 
 -- Function helpers
-local Utils = require('core.utils')
+local Utils = require('utils.split')
 
 -- Exit from insert mode
 vim.keymap.set('i', 'kj', '<esc>', { desc = 'Exit insert mode' })

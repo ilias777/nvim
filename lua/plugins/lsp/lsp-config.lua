@@ -36,7 +36,7 @@ return {
                 'intelephense',
                 'jdtls',
                 'jsonls',
-                'ltex',
+                -- 'ltex',
                 'lua_ls',
                 'ruff',
                 'rust_analyzer',
@@ -438,12 +438,20 @@ return {
         -- ╭─────────────╮
         -- │ LTEX SERVER │
         -- ╰─────────────╯
-        lspconfig.ltex.setup({
-            filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
+        -- lspconfig.ltex.setup({
+        --     filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
+        --     settings = {
+        --         -- ltex = {
+        --         --     language = 'de-DE',
+        --         -- },
+        --     },
+        -- })
+
+        lspconfig.ltex_plus.setup({
             settings = {
-                -- ltex = {
-                --     language = 'de-DE',
-                -- },
+                ltex = {
+                    language = 'de-DE',
+                },
             },
         })
 

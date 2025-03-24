@@ -82,73 +82,11 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- ╭─────────────────────────────────────────────────────────╮
--- │       CHECK IF CODE ACTIONS ARE AVAILEBLE ON LSP        │
--- ╰─────────────────────────────────────────────────────────╯
--- vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
---     callback = function()
---         require('code_action_utils').code_action_listener()
---     end,
--- })
-
--- ╭─────────────────────────────────────────────────────────╮
 -- │                 OPEN HELP IN A NEW TAB                  │
 -- ╰─────────────────────────────────────────────────────────╯
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'help',
     command = ':wincmd T',
-})
-
--- ╭─────────────────────────────────────────────────────────╮
--- │             CHANGE LTEX LANGUAGE ON THE FLY             │
--- ╰─────────────────────────────────────────────────────────╯
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'markdown', 'tex' },
-    callback = function()
-        vim.keymap.set('n', '<leader>ä', function()
-            local options = {
-                'English',
-                'German',
-                'Greek',
-            }
-            vim.ui.select(options, {
-                prompt = 'Select language for ltex',
-                -- format_item = function(item)
-                --     return 'Set language to: ' .. item
-                -- end,
-            }, function(choice)
-                if choice == 'English' then
-                    vim.cmd('LtexLang en')
-                elseif choice == 'German' then
-                    vim.cmd('LtexLang de')
-                elseif choice == 'Greek' then
-                    vim.cmd('LtexLang el')
-                end
-            end)
-        end, { desc = 'Change language for ltex' })
-        vim.api.nvim_create_user_command(
-            'LtexLang',
-            "lua require('core.utils').set_ltex_lang(<q-args>)",
-            { nargs = 1, desc = 'Set ltex-ls language' }
-        )
-        vim.api.nvim_set_keymap(
-            'n',
-            '<leader>öe',
-            "<cmd>lua require('core.utils').set_ltex_lang('en')<cr>",
-            { desc = 'Set english ltex-ls language' }
-        )
-        vim.api.nvim_set_keymap(
-            'n',
-            '<leader>ög',
-            "<cmd>lua require('core.utils').set_ltex_lang('de')<cr>",
-            { desc = 'Set german ltex-ls language' }
-        )
-        vim.api.nvim_set_keymap(
-            'n',
-            '<leader>ök',
-            "<cmd>lua require('core.utils').set_ltex_lang('el')<cr>",
-            { desc = 'Set greek ltex-ls language' }
-        )
-    end,
 })
 
 -- ╭─────────────────────────────────────────────────────────╮
@@ -169,31 +107,6 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     pattern = '*',
     command = 'silent! normal! g`"zv',
 })
-
--- ╭─────────────────────────────────────────────────────────╮
--- │        COMMENTS AND USERCOMMANDS FOR TYPST FILES        │
--- ╰─────────────────────────────────────────────────────────╯
--- vim.api.nvim_create_autocmd('Filetype', {
---     pattern = 'typst',
---     callback = function()
---         -- Commentstring
---         vim.bo.commentstring = '//%s'
---         -- Pin main file user command
---         vim.api.nvim_create_user_command('PinMain', function()
---             vim.lsp.buf.execute_command({
---                 command = 'tinymist.pinMain',
---                 arguments = { vim.api.nvim_buf_get_name(0) },
---             })
---         end, {})
---         -- Unpin main file user command
---         vim.api.nvim_create_user_command('UnpinMain', function()
---             vim.lsp.buf.execute_command({
---                 command = 'tinymist.pinMain',
---                 arguments = { nil },
---             })
---         end, {})
---     end,
--- })
 
 -- ╭─────────────────────────────────────────────────────────╮
 -- │            DOCUMENT HIGHLIGHT ON CURSORHOLD             │
