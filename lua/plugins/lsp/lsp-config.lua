@@ -10,6 +10,10 @@ return {
         -- │ MASON │
         -- ╰───────╯
         require('mason').setup({
+            registries = {
+                'github:mason-org/mason-registry',
+                'github:visimp/mason-registry',
+            },
             ui = {
                 icons = {
                     package_installed = ' ',
