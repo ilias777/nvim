@@ -447,13 +447,16 @@ return {
         --     },
         -- })
 
-        lspconfig.ltex_plus.setup({
-            settings = {
-                ltex = {
-                    language = 'de-DE',
-                },
-            },
-        })
+        -- lspconfig.ltex_plus.setup({
+        --     on_attach = function(client, bufnr)
+        --         require('ltex_extra').setup({})
+        --     end,
+        --     settings = {
+        --         ltex = {
+        --             language = 'de-DE',
+        --         },
+        --     },
+        -- })
 
         -- ╭───────────────╮
         -- │ TEXLAB SERVER │
