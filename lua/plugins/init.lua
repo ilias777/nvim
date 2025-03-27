@@ -185,6 +185,10 @@ return {
             })
         end,
     },
+    {
+        'barreiroleo/ltex-extra.nvim',
+        event = 'VeryLazy',
+    },
 
     --  ╭──────────────────────────────────────────────────────────╮
     --  │                          MOTION                          │
