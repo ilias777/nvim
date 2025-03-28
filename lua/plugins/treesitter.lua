@@ -23,6 +23,7 @@ return {
                     'comment',
                     'cpp',
                     'css',
+                    'csv',
                     'html',
                     'http',
                     'java',
