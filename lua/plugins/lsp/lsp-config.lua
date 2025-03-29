@@ -438,14 +438,14 @@ return {
         -- ╭─────────────╮
         -- │ LTEX SERVER │
         -- ╰─────────────╯
-        -- lspconfig.ltex.setup({
-        --     filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
-        --     settings = {
-        --         -- ltex = {
-        --         --     language = 'de-DE',
-        --         -- },
-        --     },
-        -- })
+        lspconfig.ltex.setup({
+            -- filetypes = { 'bibtex', 'markdown', 'latex', 'tex' },
+            settings = {
+                -- ltex = {
+                --     language = 'de-DE',
+                -- },
+            },
+        })
 
         -- lspconfig.ltex_plus.setup({
         --     on_attach = function(client, bufnr)

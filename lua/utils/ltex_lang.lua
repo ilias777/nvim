@@ -3,7 +3,7 @@ local M = {}
 function M.set_ltex_lang(lang)
     local clients = vim.lsp.get_clients({ bufnr = 0 })
     for _, client in ipairs(clients) do
-        if client.name == 'ltex_plus' then
+        if client.name == 'ltex_plus' or 'ltex' then
             vim.notify('LTeX-Language: ' .. lang, vim.log.levels.INFO, {
                 title = 'LTeX Language',
                 timeout = 2000,
