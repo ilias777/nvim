@@ -129,7 +129,7 @@ return {
                     },
                 },
                 snippets = {
-                    min_keyword_length = 2,
+                    min_keyword_length = 0,
                 },
                 buffer = {
                     min_keyword_length = 2,
