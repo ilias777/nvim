@@ -3,9 +3,9 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     opts = {
         formatters_by_ft = {
-            css = { 'css_beautify' },
-            html = { 'html_beautify' },
-            javascript = { 'js_beautify' },
+            css = { 'prettier' },
+            html = { 'prettier' },
+            javascript = { 'prettier' },
             json = { 'prettier' },
             tex = { 'latexindent' },
             lua = { 'stylua' },
