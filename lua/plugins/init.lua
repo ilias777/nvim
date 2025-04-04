@@ -182,6 +182,9 @@ return {
                 typst = {
                     enable = false,
                 },
+                preview = {
+                    icon_provider = 'devicons', -- "mini" or "devicons" or "internal"
+                },
             })
         end,
     },
