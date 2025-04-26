@@ -4,7 +4,6 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
         -- stylua: ignore start
-        local clr = require('catppuccin.palettes').get_palette()
         local mc = require('multicursor-nvim')
 
         mc.setup()
