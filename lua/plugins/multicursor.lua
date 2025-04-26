@@ -1,6 +1,7 @@
 return {
     'jake-stewart/multicursor.nvim',
     branch = '1.0',
+    event = { 'BufReadPre', 'BufNewFile' },
     config = function()
         -- stylua: ignore start
         local clr = require('catppuccin.palettes').get_palette()
@@ -112,7 +113,7 @@ return {
 
         -- CUSTOMIZE HOW CURSORS LOOK.
         local hl = vim.api.nvim_set_hl
-        hl(0, 'MultiCursorCursor', { bg = clr.red, fg = clr.mantle })
+        hl(0, "MultiCursorCursor", { reverse = true })
         hl(0, 'MultiCursorVisual', { link = 'Visual' })
         hl(0, 'MultiCursorSign', { link = 'SignColumn' })
         hl(0, 'MultiCursorDisabledCursor', { link = 'Visual' })
