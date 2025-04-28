@@ -190,7 +190,7 @@ return {
     },
     {
         'barreiroleo/ltex-extra.nvim',
-        enabled = false,
+        enabled = true,
         event = 'VeryLazy',
     },
 
