@@ -37,6 +37,9 @@ return {
                     row = 3,
                     col = '50%',
                 },
+                border = {
+                    style = 'single',
+                },
             },
             popup = {
                 size = {
