@@ -19,6 +19,9 @@ return {
         dependencies = 'nvim-lua/plenary.nvim',
         config = function()
             require('gitsigns').setup({
+                preview_config = {
+                    border = 'single',
+                },
                 attach_to_untracked = true,
                 on_attach = function(bufnr)
                     local gitsigns = require('gitsigns')
