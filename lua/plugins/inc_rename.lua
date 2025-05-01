@@ -4,5 +4,5 @@ return {
     keys = {
         { '<space>ir', ':IncRename ', desc = 'IncRename' },
     },
-    config = true,
+    opts = {},
 }
