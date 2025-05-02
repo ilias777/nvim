@@ -452,11 +452,11 @@ return {
             on_attach = function(client, bufnr)
                 require('ltex_extra').setup({})
             end,
-            settings = {
-                ltex = {
-                    language = 'de-DE',
-                },
-            },
+            -- settings = {
+            --     ltex = {
+            --         language = 'de-DE',
+            --     },
+            -- },
         })
 
         -- ╭───────────────╮
