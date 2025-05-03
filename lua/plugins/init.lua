@@ -191,7 +191,7 @@ return {
     {
         'barreiroleo/ltex-extra.nvim',
         enabled = true,
-        ft = { 'markdown', 'tex', 'typst' },
+        ft = { 'markdown', 'tex' },
         config = true,
     },
 
