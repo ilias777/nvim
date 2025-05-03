@@ -4,71 +4,28 @@
 return {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufReadPost', 'BufNewFile' },
-    depedencies = { 'saghen/blink.cmp' },
+    depedencies = {
+        { 'williamboman/mason.nvim' },
+        { 'williamboman/mason-lspconfig.nvim' },
+        { 'saghen/blink.cmp' },
+    },
     config = function()
-        -- ╭───────╮
-        -- │ MASON │
-        -- ╰───────╯
-        require('mason').setup({
-            registries = {
-                'github:mason-org/mason-registry',
-                'github:visimp/mason-registry',
-            },
-            ui = {
-                icons = {
-                    package_installed = ' ',
-                    package_pending = ' ',
-                    package_uninstalled = ' ',
-                },
-                border = 'single',
-                height = 0.8,
-            },
-        })
+        -- ── MASON ─────────────────────────────────────────────────
+        require('mason').setup()
+        require('mason-lspconfig').setup()
 
-        -- ╭─────────────────╮
-        -- │ MASON LSPCONFIG │
-        -- ╰─────────────────╯
-        require('mason-lspconfig').setup({
-            ensure_installed = {
-                'cssls',
-                'emmet_ls',
-                'html',
-                'intelephense',
-                'jdtls',
-                'jsonls',
-                -- 'ltex',
-                'lua_ls',
-                'ruff',
-                'rust_analyzer',
-                'texlab',
-                'ts_ls',
-                'volar',
-                'yamlls',
-            },
-        })
-
-        -- ╭───────────╮
-        -- │ LSPCONFIG │
-        -- ╰───────────╯
+        -- ── LSPCONFIG ─────────────────────────────────────────────
         local lspconfig = require('lspconfig')
 
-        -- ╭──────────────────╮
-        -- │ LSP CAPABILITIES │
-        -- ╰──────────────────╯
+        -- ── LSP CAPABILITIES ──────────────────────────────────────
         local lsp_defaults = lspconfig.util.default_config
-        -- lsp_defaults.capabilities =
-        --     vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('cmp_nvim_lsp').default_capabilities())
         lsp_defaults.capabilities =
             vim.tbl_deep_extend('force', lsp_defaults.capabilities, require('blink.cmp').get_lsp_capabilities())
 
-        -- ╭───────────────────╮
-        -- │ WINBAR WITH NAVIC │
-        -- ╰───────────────────╯
+        -- ── WINBAR WITH NAVIC ─────────────────────────────────────
         local navic = require('nvim-navic')
 
-        -- ╭─────────────────────────────────────────────────────────╮
-        -- │                   DIAGNOSTIC KAYMAPS                    │
-        -- ╰─────────────────────────────────────────────────────────╯
+        -- ── DIAGNOSTIC KAYMAPS ────────────────────────────────────
         local opts = function(desc)
             return { noremap = true, silent = true, desc = desc }
         end
@@ -86,17 +43,13 @@ return {
             vim.diagnostic.config({ virtual_lines = new_config })
         end, { desc = 'Toggle diagnostic virtual_lines' })
 
-        -- ╭───────────────────────╮
-        -- │ LSPATTACH AUTOCOMMAND │
-        -- ╰───────────────────────╯
+        -- ── LSPATTACH AUTOCOMMAND ─────────────────────────────────
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
             callback = function(ev)
                 vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-                -- ╭─────────╮
-                -- │ KEYMAPS │
-                -- ╰─────────╯
+                -- ── KEYMAPS ───────────────────────────────────────────────
                 local bufopts = function(desc)
                     return { buffer = ev.buf, desc = desc }
                 end
@@ -129,75 +82,34 @@ return {
                 -- Get client
                 local client = vim.lsp.get_client_by_id(ev.data.client_id)
 
-                -- ╭─────────────╮
-                -- │ INLAY HINTS │
-                -- ╰─────────────╯
+                -- ── INLAY HINTS ───────────────────────────────────────────
                 if client and client.server_capabilities.inlayHintProvider then
                     vim.lsp.inlay_hint.enable(true)
                 else
                     vim.lsp.inlay_hint.enable(false)
                 end
 
-                -- ╭────────────╮
-                -- │ NVIM-NAVIC │
-                -- ╰────────────╯
+                -- ── NVIM-NAVIC ────────────────────────────────────────────
                 if client and client.server_capabilities.documentSymbolProvider then
                     vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
                     navic.attach(client, ev.buf)
                 end
-
-                -- ╭──────────╮
-                -- │ TINYMIST │
-                -- ╰──────────╯
-                if client and client.name == 'tinymist' then
-                    -- Pin main file user command
-                    vim.api.nvim_create_user_command('PinMain', function()
-                        client:exec_cmd({
-                            command = 'tinymist.pinMain',
-                            arguments = { vim.api.nvim_buf_get_name(0) },
-                        }, { bufnr = ev.buf })
-                    end, {})
-                    -- Unpin main file user command
-                    vim.api.nvim_create_user_command('UnpinMain', function()
-                        client:exec_cmd({ command = 'tinymist.pinMain', arguments = { nil } }, { bufnr = ev.buf })
-                    end, {})
-                    -- Use buildin preview command
-                    vim.api.nvim_create_user_command('TypstBuildInPreview', function()
-                        client:exec_cmd(
-                            { command = 'tinymist.startDefaultPreview', arguments = { nil } },
-                            { bufnr = ev.buf }
-                        )
-                    end, {})
-                    -- Open PDF
-                    vim.api.nvim_create_user_command('OpenPdf', function()
-                        local filepath = vim.api.nvim_buf_get_name(0)
-                        if filepath:match('%.typ$') then
-                            os.execute('open ' .. vim.fn.shellescape(filepath:gsub('%.typ$', '.pdf')))
-                        end
-                    end, {})
-                end
             end,
         })
 
-        -- ╭────────────────────╮
-        -- │ TOGGLE INLAY HINTS │
-        -- ╰────────────────────╯
+        -- ── TOGGLE INLAY HINTS ────────────────────────────────────
         if vim.lsp.inlay_hint then
             vim.keymap.set('n', '<Space>ih', function()
                 vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
             end, { desc = 'Toggle Inlay Hints' })
         end
 
-        -- ╭─────────────────────────────────────────╮
-        -- │ DISABLE LSP INLINE DIAGNOSTICS MESSAGES │
-        -- ╰─────────────────────────────────────────╯
+        -- ── DISABLE LSP INLINE DIAGNOSTICS MESSAGES ───────────────
         -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
         --     virtual_text = false,
         -- })
 
-        -- ╭───────────────────╮
-        -- │ DIAGNOSTIC CONFIG │
-        -- ╰───────────────────╯
+        -- ── DIAGNOSTIC CONFIG ─────────────────────────────────────
         vim.diagnostic.config({
             virtual_text = {
                 current_line = true,
@@ -264,53 +176,6 @@ return {
             settings = {
                 Lua = {},
             },
-
-            -- OLD CONFIGURATION FOR ON_ATTACH FUNCTION
-            -- settings = {
-            --     Lua = {
-            --         runtime = {
-            --             version = 'LuaJIT',
-            --             path = runtime_path,
-            --         },
-            --         diagnostics = {
-            --             -- enable = true,
-            --             globals = { 'vim', 'use', 'winid' },
-            --             disable = { 'undefined-field', 'undefined-doc-name' },
-            --         },
-            --         workspace = {
-            --             library = {
-            --                 vim.env.VIMRUNTIME,
-            --                 -- [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-            --                 -- [vim.fn.stdpath('config') .. '/lua'] = true,
-            --                 -- [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-            --                 '${3rd}/luv/library',
-            --                 -- [vim.fn.stdpath('data') .. '/mason/packages/lua-language-server/libexec/meta/3rd/luv/library'] = true,
-            --                 [vim.fn.expand('%:p:h')] = true,
-            --             },
-            --             -- library = vim.api.nvim_get_runtime_file('', true),
-            --             -- library = ${workspace}/**/init.lua,
-            --         },
-            --         completion = {
-            --             enable = true,
-            --             callSnippet = 'Both',
-            --         },
-            --         format = {
-            --             enable = true,
-            --             defaultConfig = {
-            --                 indent_style = 'space',
-            --                 indent_size = '4',
-            --                 quote_style = 'single',
-            --             },
-            --         },
-            --         hint = {
-            --             enable = true,
-            --             arrayIndex = 'Disable',
-            --         },
-            --         telemetry = {
-            --             enable = false,
-            --         },
-            --     },
-            -- },
         })
 
         -- ╭───────────────────╮
@@ -536,10 +401,43 @@ return {
         -- │ TYPST SERVER │
         -- ╰──────────────╯
         lspconfig.tinymist.setup({
+            on_attach = function(client, bufnr)
+                -- Pin main file user command
+                vim.api.nvim_create_user_command('PinMain', function()
+                    client:exec_cmd({
+                        title = 'Pin',
+                        command = 'tinymist.pinMain',
+                        arguments = { vim.api.nvim_buf_get_name(0) },
+                    }, { bufnr = bufnr })
+                end, {})
+                -- Unpin main file user command
+                vim.api.nvim_create_user_command('UnpinMain', function()
+                    client:exec_cmd({
+                        title = 'Unpin',
+                        command = 'tinymist.pinMain',
+                        arguments = { vim.v.null },
+                    }, { bufnr = bufnr })
+                end, {})
+                -- Use buildin preview command
+                vim.api.nvim_create_user_command('TypstBuildInPreview', function()
+                    client:exec_cmd(
+                        { command = 'tinymist.startDefaultPreview', arguments = { nil } },
+                        { bufnr = bufnr }
+                    )
+                end, {})
+                -- Open PDF
+                vim.api.nvim_create_user_command('OpenPdf', function()
+                    local filepath = vim.api.nvim_buf_get_name(0)
+                    if filepath:match('%.typ$') then
+                        os.execute('open ' .. vim.fn.shellescape(filepath:gsub('%.typ$', '.pdf')))
+                    end
+                end, {})
+            end,
             settings = {
                 formatterMode = 'typstyle',
                 exportPdf = 'onSave',
                 invert_colors = 'auto',
+                lint = 'enable',
             },
         })
     end,
