@@ -146,7 +146,7 @@ return {
         Rocket = ' ',
         Save = '󰆓 ',
         Search = ' ',
-        Separator = '▊ ',
+        Separator = '▊',
         SeparatorLight = '▍',
         SeparatorDashed = '┆',
         SignIn = ' ',
