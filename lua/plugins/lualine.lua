@@ -15,7 +15,7 @@ return {
         local icon = require('lib.icons')
 
         local modecolor = {
-            n = colors.red,
+            n = colors.peach,
             i = colors.sapphire,
             v = colors.maroon,
             [''] = colors.maroon,
@@ -58,6 +58,20 @@ return {
             color = { bg = colors.base, fg = colors.blue },
         }
 
+        -- ╓      ╖
+        -- ║ LEFT ║
+        -- ╙      ╜
+
+        -- ─[ MODES ]────────────────────────────────────────────────
+        local modes = {
+            'mode',
+            color = function()
+                local mode_color = modecolor
+                return { bg = mode_color[vim.fn.mode()], fg = colors.mantle, gui = 'bold' }
+            end,
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+        }
+
         -- ─[ FILENAME ]─────────────────────────────────────────────
         local filename = {
             'filename',
@@ -81,13 +95,6 @@ return {
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
-        -- ─[ LOCATION ]─────────────────────────────────────────────
-        local location = {
-            'location',
-            color = { bg = colors.crust, fg = colors.yellow, gui = 'bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
-        }
-
         -- ─[ DIFF ]─────────────────────────────────────────────────
         local diff = {
             'diff',
@@ -102,13 +109,101 @@ return {
             },
         }
 
-        -- ─[ MODES ]────────────────────────────────────────────────
-        local modes = {
-            'mode',
-            color = function()
-                local mode_color = modecolor
-                return { bg = mode_color[vim.fn.mode()], fg = colors.mantle, gui = 'bold' }
+        -- ─[ LOCATION ]─────────────────────────────────────────────
+        local location = {
+            'location',
+            color = { bg = colors.crust, fg = colors.yellow, gui = 'bold' },
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+        }
+
+        -- ╓       ╖
+        -- ║ RIGHT ║
+        -- ╙       ╜
+
+        -- ─[ MACRO ]────────────────────────────────────────────────
+        local function check_macro()
+            local recording_register = vim.fn.reg_recording()
+            if recording_register == '' then
+                return ''
+            else
+                return 'recording @' .. recording_register
+            end
+        end
+
+        local macro = {
+            function()
+                return check_macro()
             end,
+            color = { fg = colors.red, bg = colors.base, gui = 'italic,bold' },
+        }
+
+        -- ─[ MODES NOICE ]──────────────────────────────────────────
+        -- local modes_noice = {
+        --     require('noice').api.status.mode.get,
+        --     cond = require('noice').api.status.mode.has,
+        --     color = { fg = colors.red, bg = colors.base, gui = 'italic,bold' },
+        -- }
+
+        -- ─[ DIAGNOSTICS ]──────────────────────────────────────────
+        local dia = {
+            'diagnostics',
+            sources = { 'nvim_diagnostic' },
+            symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
+            diagnostics_color = {
+                error = { fg = colors.red },
+                warn = { fg = colors.yellow },
+                info = { fg = colors.maroon },
+                hint = { fg = colors.sapphire },
+            },
+            color = { bg = colors.crust, fg = colors.blue, gui = 'bold' },
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+        }
+
+        -- ─[ LAZY UPDATES ]─────────────────────────────────────────
+        local lazy_updates = {
+            require('lazy.status').updates,
+            cond = require('lazy.status').has_updates,
+            on_click = function()
+                vim.cmd('Lazy')
+            end,
+            color = { fg = colors.pink, bg = colors.crust },
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+        }
+
+        -- ─[ MASON ]────────────────────────────────────────────────
+        local function lualine_mason_updates()
+            local registry = require('mason-registry')
+            local installed_packages = registry.get_installed_package_names()
+            local upgrades_available = false
+            local packages_outdated = 0
+            function myCallback(success, result_or_err)
+                if success then
+                    upgrades_available = true
+                    packages_outdated = packages_outdated + 1
+                end
+            end
+
+            for _, pkg in pairs(installed_packages) do
+                local p = registry.get_package(pkg)
+                if p then
+                    p:check_new_version(myCallback)
+                end
+            end
+
+            if upgrades_available then
+                return packages_outdated
+            else
+                return ''
+            end
+        end
+
+        local mason_updates = {
+            lualine_mason_updates,
+            icon = ' ',
+            on_click = function()
+                vim.cmd('Mason')
+            end,
+            color = { fg = colors.green, bg = colors.crust },
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
@@ -127,71 +222,6 @@ return {
                 local bufnr = vim.api.nvim_get_current_buf()
                 local buf_clients = vim.lsp.get_clients({ bufnr = bufnr })
                 return next(buf_clients) == nil
-            end,
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
-            color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
-        }
-
-        -- ─[ LSP & FORMATTERS & LINTERS ]───────────────────────────
-        local function getLspName()
-            local bufnr = vim.api.nvim_get_current_buf()
-            local buf_clients = vim.lsp.get_clients({ bufnr = bufnr })
-            local buf_ft = vim.bo.filetype
-            if next(buf_clients) == nil then
-                return '  No servers'
-            end
-            local buf_client_names = {}
-
-            for _, client in pairs(buf_clients) do
-                if client.name ~= 'null-ls' then
-                    table.insert(buf_client_names, client.name)
-                end
-            end
-
-            local lint_s, lint = pcall(require, 'lint')
-            if lint_s then
-                for ft_k, ft_v in pairs(lint.linters_by_ft) do
-                    if type(ft_v) == 'table' then
-                        for _, linter in ipairs(ft_v) do
-                            if buf_ft == ft_k then
-                                table.insert(buf_client_names, linter)
-                            end
-                        end
-                    elseif type(ft_v) == 'string' then
-                        if buf_ft == ft_k then
-                            table.insert(buf_client_names, ft_v)
-                        end
-                    end
-                end
-            end
-
-            local ok, conform = pcall(require, 'conform')
-            local formatters = table.concat(conform.list_formatters_for_buffer(), ' ')
-            if ok then
-                for formatter in formatters:gmatch('%w+') do
-                    if formatter then
-                        table.insert(buf_client_names, formatter)
-                    end
-                end
-            end
-
-            local hash = {}
-            local unique_client_names = {}
-
-            for _, v in ipairs(buf_client_names) do
-                if not hash[v] then
-                    unique_client_names[#unique_client_names + 1] = v
-                    hash[v] = true
-                end
-            end
-            local language_servers = table.concat(unique_client_names, ', ')
-
-            return '  ' .. language_servers
-        end
-
-        local lsp = {
-            function()
-                return getLspName()
             end,
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
             color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
@@ -255,93 +285,7 @@ return {
             separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
-        -- ─[ MODES NOICE ]──────────────────────────────────────────
-        local modes_noice = {
-            require('noice').api.status.mode.get,
-            cond = require('noice').api.status.mode.has,
-            color = { fg = colors.red, bg = colors.base, gui = 'italic,bold' },
-        }
-
-        -- ─[ MACRO ]────────────────────────────────────────────────
-        local function check_macro()
-            local recording_register = vim.fn.reg_recording()
-            if recording_register == '' then
-                return ''
-            else
-                return 'recording @' .. recording_register
-            end
-        end
-
-        local macro = {
-            function()
-                return check_macro()
-            end,
-            color = { fg = colors.red, bg = colors.base, gui = 'italic,bold' },
-        }
-
-        -- ─[ LAZY UPDATES ]─────────────────────────────────────────
-        local lazy_updates = {
-            require('lazy.status').updates,
-            cond = require('lazy.status').has_updates,
-            on_click = function()
-                vim.cmd('Lazy')
-            end,
-            color = { fg = colors.pink, bg = colors.crust },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
-        }
-
-        -- ─[ MASON ]────────────────────────────────────────────────
-        local function lualine_mason_updates()
-            local registry = require('mason-registry')
-            local installed_packages = registry.get_installed_package_names()
-            local upgrades_available = false
-            local packages_outdated = 0
-            function myCallback(success, result_or_err)
-                if success then
-                    upgrades_available = true
-                    packages_outdated = packages_outdated + 1
-                end
-            end
-
-            for _, pkg in pairs(installed_packages) do
-                local p = registry.get_package(pkg)
-                if p then
-                    p:check_new_version(myCallback)
-                end
-            end
-
-            if upgrades_available then
-                return packages_outdated
-            else
-                return ''
-            end
-        end
-
-        local mason_updates = {
-            lualine_mason_updates,
-            icon = ' ',
-            on_click = function()
-                vim.cmd('Mason')
-            end,
-            color = { fg = colors.green, bg = colors.crust },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
-        }
-
-        -- ─[ DIAGNOSTICS ]──────────────────────────────────────────
-        local dia = {
-            'diagnostics',
-            sources = { 'nvim_diagnostic' },
-            symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
-            diagnostics_color = {
-                error = { fg = colors.red },
-                warn = { fg = colors.yellow },
-                info = { fg = colors.maroon },
-                hint = { fg = colors.sapphire },
-            },
-            color = { bg = colors.crust, fg = colors.blue, gui = 'bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
-        }
-
+        -- ─[ SETUP ]────────────────────────────────────────────────
         require('lualine').setup({
             options = {
                 disabled_filetypes = {
@@ -398,7 +342,6 @@ return {
                     space,
                     mason_updates,
                     space,
-                    -- lsp,
                     lsp_status,
                     no_servers,
                     formatters_linters,
