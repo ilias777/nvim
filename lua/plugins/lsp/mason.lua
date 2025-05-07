@@ -1,12 +1,8 @@
 return {
-    'williamboman/mason.nvim',
+    'mason-org/mason.nvim',
     build = ':MasonUpdate',
     lazy = true,
     opts = {
-        registries = {
-            'github:mason-org/mason-registry',
-            'github:visimp/mason-registry',
-        },
         ui = {
             icons = {
                 package_installed = ' ',
@@ -14,7 +10,7 @@ return {
                 package_uninstalled = ' ',
             },
             border = 'single',
-            -- height = 0.8,
+            height = 0.8,
         },
     },
 }
