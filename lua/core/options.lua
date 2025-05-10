@@ -77,6 +77,10 @@ vim.opt.spelllang = { 'de' }
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+-- Undo
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.expand('~/.undodir')
+
 -- Other
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
