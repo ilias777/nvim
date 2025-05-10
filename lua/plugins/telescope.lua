@@ -130,11 +130,10 @@ return {
                 },
                 undo = {
                     initial_mode = 'normal',
-                    use_delta = true,
                     side_by_side = true,
-                    layout_strategy = 'vertical',
+                    theme = 'ivy',
                     layout_config = {
-                        preview_height = 0.8,
+                        preview_width = 0.7,
                     },
                 },
                 heading = {
