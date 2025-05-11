@@ -18,7 +18,7 @@ return {
         },
         hints = {
             ---@type string
-            dictionary = 'sadfwecmpghio',
+            dictionary = 'asdfwecmpghio',
         },
         navigate = {
             under_cursor = 'l',
