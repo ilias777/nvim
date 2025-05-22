@@ -173,8 +173,6 @@ nvim init.lua
 └── init.lua                            # Main File
 ```
 
-Understanding the file tree &rarr; [look here](https://github.com/ilias777/nvim/wiki/Folder-and-File-Structure)
-
 ## 🔌 Plugins
 
 - Over **90 Plugins** preinstalled
