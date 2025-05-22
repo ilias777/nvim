@@ -143,29 +143,41 @@ nvim init.lua
 ## 📁 Folder and File Structure
 
 ```shell
-~/.config/nvim
-│
-├── lua                                  # LUA FOLDER
-│   ├── core
-│   │   ├── autocommands.lua             # File to store all the autocommands
-│   │   ├── usercommands.lua             # File to store all the usercommands
-│   │   ├── keymaps.lua                  # Keybindings
-│   │   └── options.lua                  # All Neovim options
-│   └── plugins
-│       ├── lsp                          # LSP RELATED PLUGINS FOLDER
-│       │   ├── lsp-config.lua           # nvim-lspconfig
-│       │   └── other-lsp-plugins.lua    # Other lsp related plugins
-│       ├── init.lua                     # Many plugins in one file
-│       ├── plugin_1.lua                 # One or more plugins in one file
-│       ├── plugin_2.lua                 # One or more plugins in one file
-│       ├── **
-│       └── plugin_xx.lua
-├── snippets
-│   ├── javaspript.lua                   # JavaScript snippets
-│   └── lua.lua                          # Lua snippets
-├── ftplugin
-│   └── java.lua                         # Java configuration
-└── init.lua                             # Main file
+~/.config/nvim/
+├── lua/                                # Lua Folder
+│   ├── config/                         # Configuration
+│   │   ├── lsp/                        # LSP Configuration Folder
+│   │   │   ├── servers/                # All LSP Servers
+│   │   │   │   ├── <servername_1>.lua
+│   │   │   │   ├── <servername_2>.lua
+│   │   │   │   └── **
+│   │   │   ├── diagnostic_config.lua
+│   │   │   ├── diagnostic_keymaps.lua
+│   │   │   ├── global.lua              # Main LSP Configuration File
+│   │   │   └── lsp_keymaps.lua
+│   │   ├── autocommands.lua
+│   │   ├── cursor.lua
+│   │   ├── keymaps.lua
+│   │   ├── lazy.lua
+│   │   ├── options.lua
+│   │   └── usercommands.lua
+│   ├── lib/
+│   │   └── icons.lua
+│   ├── plugins/                        # All Plugins
+│   │   ├── <plugin-name_1>.lua
+│   │   ├── <plugin-name_2>.lua
+│   │   └── **
+│   └── utils/                          # Utility Files
+│       ├── <utility-file_1>.lua
+│       ├── <utility-file_2>.lua
+│       └── **
+├── snippets/
+│   └── lua.json
+├── spell/
+│   ├── en.utf-8.spl
+│   └── **
+├── .luarc.json
+└── init.lua                            # Main File
 ```
 
 Understanding the file tree &rarr; [look here](https://github.com/ilias777/nvim/wiki/Folder-and-File-Structure)
