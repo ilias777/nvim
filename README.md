@@ -13,16 +13,9 @@
   <a href="#%EF%B8%8F-requirements">Requirements</a> •
   <a href="#%EF%B8%8F-installation">Installation</a> •
   <a href="#-folder-and-file-structure">Folder structure</a> •
-  <a href="#-configuration">Configuration</a> •
   <a href="#-plugins">Plugins</a> •
   <a href="https://github.com/ilias777/nvim/wiki">Wiki</a>
 </h4>
-
-<h5 align="center">
-  <a href="https://github.com/ilias777/nvim/blob/main/lua/plugins/lsp/lsp-config.lua">
-    &rarr; SEE LSP CONFIGURATION FILE &larr;
-  </a>
-</h5>
 
 ## 🌟 Preview
 
@@ -93,7 +86,7 @@
 - Git integration with [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) and [Neogit](https://github.com/NeogitOrg/neogit)
 - Fuzzy finding with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - Formatting with [conform.nvim](https://github.com/stevearc/conform.nvim) and Linting [nvim-lint](https://github.com/mfussenegger/nvim-lint)
-- Language Server Protocol with [Native LSP](https://github.com/neovim/nvim-lspconfig)
+- Language Server Protocol
 - Debug Adapter Protocol with [Nvim DAP](https://github.com/mfussenegger/nvim-dap)
 - Beautiful UI with [Catppuccin](https://github.com/catppuccin/nvim) and [Noice.nvim](https://github.com/folke/noice.nvim)
 - Fast code navigation with [flash.nvim](https://github.com/folke/flash.nvim)
@@ -181,26 +174,6 @@ nvim init.lua
 ```
 
 Understanding the file tree &rarr; [look here](https://github.com/ilias777/nvim/wiki/Folder-and-File-Structure)
-
-## ⚙ Configuration
-
-How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/nvim/wiki)
-
-### Plugins
-
-- How to install or uninstall plugins &rarr; [look here](https://github.com/ilias777/nvim/wiki/Plugins)
-
-### Language server
-
-- How to setup a language server &rarr; [look here](https://github.com/ilias777/nvim/wiki/LSP)
-
-### Keymaps
-
-- How to setup or change keymaps &rarr; [look here](https://github.com/ilias777/nvim/wiki/Set-new--or-change-keymaps)
-
-### See all keymaps
-
-- Keymaps are listet &rarr; [here](https://github.com/ilias777/nvim/wiki/All-Keymaps)
 
 ## 🔌 Plugins
 
@@ -339,7 +312,6 @@ How to configure Neovim is explained in the [Wiki](https://github.com/ilias777/n
 | [ltex](https://valentjn.github.io/ltex/)                                             | Grammar checking of various markup languages            | LaTex, Markdown      |
 | [texlab](https://github.com/latex-lsp/texlab)                                        | Language Server Protocol for LaTeX                      | LaTex                |
 | [lua_ls](https://github.com/LuaLS/lua-language-server)                               | A language server that offers Lua language support      | Lua                  |
-| [intelephense](https://intelephense.com)                                             | PHP language server                                     | PHP                  |
 | [ruff](https://github.com/astral-sh/ruff/)                                           | Fast Python linter and code formatter, written in Rust  | Python               |
 | [rust_analyzer](https://github.com/rust-lang/rust-analyzer)                          | Rust compiler                                           | Rust                 |
 | [tinymist](https://github.com/Myriad-Dreamin/tinymist)                               | Language server for Typst                               | Typst                |
