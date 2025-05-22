@@ -1,38 +1,18 @@
-local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-    local out = vim.fn.system({ 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath })
-    if vim.v.shell_error ~= 0 then
-        vim.api.nvim_echo({
-            { 'Failed to clone lazy.nvim:\n', 'ErrorMsg' },
-            { out, 'WarningMsg' },
-            { '\nPress any key to exit...' },
-        }, true, {})
-        vim.fn.getchar()
-        os.exit(1)
+require('config.lazy')
+require('config.options')
+require('config.keymaps')
+require('config.autocommands')
+require('config.usercommands')
+require('utils.init')
+require('config.cursor')
+
+require('config.lsp.global')
+
+local lsp_path = vim.fn.stdpath('config') .. '/lua/config/lsp/servers'
+
+for _, file in ipairs(vim.fn.readdir(lsp_path)) do
+    if file:match('%.lua$') and file ~= 'global.lua' then
+        local module_name = 'config.lsp.servers.' .. file:gsub('%.lua$', '')
+        require(module_name)
     end
 end
-vim.opt.runtimepath:prepend(lazypath)
-
-vim.g.mapleader = ','
-vim.g.maplocalleader = ','
-
-require('core.options')
-require('core.keymaps')
-require('core.autocommands')
-require('core.usercommands')
-
-local opts = {
-    ui = {
-        border = 'single',
-        icons = {
-            lazy = '💤',
-        },
-    },
-    checker = {
-        enabled = true,
-    },
-}
-
-require('lazy').setup({ { import = 'plugins' }, { import = 'plugins.lsp' } }, opts)
-require('utils')
