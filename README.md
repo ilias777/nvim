@@ -306,12 +306,12 @@ nvim init.lua
 | [html](https://github.com/microsoft/vscode-html-languageservice)                     | Language services for HTML                              | HTML                 |
 | [jsonls](https://github.com/microsoft/vscode-json-languageservice)                   | JSON language service                                   | JSON                 |
 | [jdtls](https://github.com/eclipse/eclipse.jdt.ls)                                   | Java language server                                    | Java                 |
-| [tsserver](https://github.com/typescript-language-server/typescript-language-server) | TypeScript & JavaScript Language Server                 | JavaScript           |
+| [ts_ls](https://github.com/typescript-language-server/typescript-language-server)    | TypeScript & JavaScript Language Server                 | JavaScript           |
 | [ltex](https://valentjn.github.io/ltex/)                                             | Grammar checking of various markup languages            | LaTex, Markdown      |
 | [texlab](https://github.com/latex-lsp/texlab)                                        | Language Server Protocol for LaTeX                      | LaTex                |
 | [lua_ls](https://github.com/LuaLS/lua-language-server)                               | A language server that offers Lua language support      | Lua                  |
 | [ruff](https://github.com/astral-sh/ruff/)                                           | Fast Python linter and code formatter, written in Rust  | Python               |
 | [rust_analyzer](https://github.com/rust-lang/rust-analyzer)                          | Rust compiler                                           | Rust                 |
 | [tinymist](https://github.com/Myriad-Dreamin/tinymist)                               | Language server for Typst                               | Typst                |
-| [volar](https://github.com/johnsoncodehk/volar)                                      | High-performance Vue language tooling based-on Volar.js | Vue                  |
+| [vue_ls](https://github.com/vuejs/language-tools)                                    | High-performance Vue language tooling based-on Volar.js | Vue                  |
 | [yamlls](https://github.com/redhat-developer/yaml-language-server)                   | Language Server for YAML Files                          | YAML                 |
