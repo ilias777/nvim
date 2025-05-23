@@ -73,20 +73,6 @@ local inlayHints = {
 }
 
 vim.lsp.config.ts_ls = {
-    init_options = {
-        plugins = {
-            {
-                name = '@/vue/typescript-plugin',
-                location = '/Users/ilias/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server',
-                languages = { 'javascript', 'typescript', 'vue' },
-            },
-        },
-    },
-    filetypes = {
-        'javascript',
-        'typescript',
-        'vue',
-    },
     settings = {
         typescript = {
             inlayHints = inlayHints,
