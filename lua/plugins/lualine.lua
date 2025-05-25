@@ -1,6 +1,6 @@
 return {
     'nvim-lualine/lualine.nvim',
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = 'VeryLazy',
     config = function()
         local function get_colors()
             local background = vim.o.background
