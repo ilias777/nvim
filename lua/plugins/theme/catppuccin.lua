@@ -160,7 +160,7 @@ catppuccin.setup({
             BlinkCmpSignatureHelpBorder = { fg = colors.yellow },
 
             -- mini.indentscope
-            MiniIndentscopeSymbol = { fg = colors.sapphire },
+            MiniIndentscopeSymbol = { fg = colors.blue },
         }
     end,
     highlight_overrides = {},
