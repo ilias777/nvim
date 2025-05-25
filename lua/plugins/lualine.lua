@@ -15,7 +15,7 @@ return {
         local icon = require('lib.icons')
 
         local modecolor = {
-            n = colors.peach,
+            n = colors.mauve,
             i = colors.sapphire,
             v = colors.maroon,
             [''] = colors.maroon,
