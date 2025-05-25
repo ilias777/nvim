@@ -154,3 +154,16 @@ vim.api.nvim_create_autocmd('RecordingLeave', {
 --     end,
 --     group = visual_multi_group,
 -- })
+
+-- ╭─────────────────────────────────────────────────────────╮
+-- │                    GITCOMMIT MESSAGE                    │
+-- ╰─────────────────────────────────────────────────────────╯
+local commit = vim.api.nvim_create_augroup('CommitMessage', { clear = true })
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'gitcommit',
+    group = commit,
+    callback = function()
+        vim.opt_local.spell = true
+        vim.opt_local.textwidth = 72
+    end,
+})
