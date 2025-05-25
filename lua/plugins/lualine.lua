@@ -69,14 +69,14 @@ return {
                 local mode_color = modecolor
                 return { bg = mode_color[vim.fn.mode()], fg = colors.mantle, gui = 'bold' }
             end,
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ─[ FILENAME ]─────────────────────────────────────────────
         local filename = {
             'filename',
             color = { bg = colors.blue, fg = colors.base, gui = 'bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ─[ FILETYPE ]─────────────────────────────────────────────
@@ -84,7 +84,7 @@ return {
             'filetype',
             icons_enabled = false,
             color = { bg = colors.crust, fg = colors.blue, gui = 'italic,bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ─[ BRANCH ]───────────────────────────────────────────────
@@ -92,14 +92,14 @@ return {
             'branch',
             icon = '',
             color = { bg = colors.teal, fg = colors.base, gui = 'bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ─[ DIFF ]─────────────────────────────────────────────────
         local diff = {
             'diff',
             color = { bg = colors.crust, fg = colors.green, gui = 'bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
             symbols = { added = icon.git.Add, modified = icon.git.Mod, removed = icon.git.Remove },
 
             diff_color = {
@@ -113,7 +113,7 @@ return {
         local location = {
             'location',
             color = { bg = colors.crust, fg = colors.yellow, gui = 'bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ╓       ╖
@@ -156,7 +156,7 @@ return {
                 hint = { fg = colors.sapphire },
             },
             color = { bg = colors.crust, fg = colors.blue, gui = 'bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ─[ LAZY UPDATES ]─────────────────────────────────────────
@@ -167,7 +167,7 @@ return {
                 vim.cmd('Lazy')
             end,
             color = { fg = colors.pink, bg = colors.crust },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ─[ MASON ]────────────────────────────────────────────────
@@ -204,13 +204,13 @@ return {
                 vim.cmd('Mason')
             end,
             color = { fg = colors.green, bg = colors.crust },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ─[ LSP ]──────────────────────────────────────────────────
         local lsp_status = {
             'lsp_status',
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
             color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
         }
 
@@ -223,7 +223,7 @@ return {
                 local buf_clients = vim.lsp.get_clients({ bufnr = bufnr })
                 return next(buf_clients) == nil
             end,
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
             color = { bg = colors.peach, fg = colors.base, gui = 'italic,bold' },
         }
 
@@ -282,7 +282,7 @@ return {
                 return getFormatterAndLinter()
             end,
             color = { bg = colors.crust, fg = colors.yellow, gui = 'italic,bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
+            separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
 
         -- ─[ SETUP ]────────────────────────────────────────────────
