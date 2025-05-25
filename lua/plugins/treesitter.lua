@@ -20,6 +20,7 @@ return {
                 ensure_installed = {
                     'bash',
                     'bibtex',
+                    'gitcommit',
                     'comment',
                     'cpp',
                     'css',
