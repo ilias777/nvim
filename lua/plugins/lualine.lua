@@ -303,10 +303,11 @@ return {
                 component_separators = { left = '', right = '' },
                 section_separators = { left = '', right = '' },
                 ignore_focus = {
+                    'git',
                     'neo-tree',
                     'Outline',
-                    'SymbolsSidebar',
                     'qf',
+                    'SymbolsSidebar',
                     'trouble',
                 },
                 always_divide_middle = true,
