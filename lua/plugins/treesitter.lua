@@ -12,7 +12,9 @@ return {
             -- ──────────────────────── TS CONTEXT ─────────────────────
             {
                 'nvim-treesitter/nvim-treesitter-context',
-                opts = {},
+                opts = {
+                    max_lines = '10%',
+                },
             },
         },
         config = function()
