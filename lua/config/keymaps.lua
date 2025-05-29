@@ -242,7 +242,7 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 -- nvim-treesitter-context
-vim.keymap.set('n', '<leader>ct', '<cmd>TSContextToggle<cr>', { desc = 'Toggle TS Context' })
+vim.keymap.set('n', '<leader>ct', '<cmd>TSContext toggle<cr>', { desc = 'Toggle TS Context' })
 
 --  ╭──────────────────────────────────────────────────────────╮
 --  │                    FOR GREEK KEYBOARD                    │
