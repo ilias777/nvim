@@ -57,7 +57,9 @@ catppuccin.setup({
 
             -- Completion Menu
             -- Pmenu = { bg = colors.mantle },
-            PmenuSel = { fg = colors.base, bg = colors.lavender, style = { 'bold', 'italic' } },
+            -- PmenuSel = { fg = colors.base, bg = colors.lavender, style = { 'bold', 'italic' } },
+
+            -- blink.cmp
 
             -- Telescope
             -- TelescopeBorder = { fg = colors.blue },
@@ -160,6 +162,8 @@ catppuccin.setup({
             MasonMutedBlock = { bg = colors.surface0, fg = colors.text },
 
             -- blink.cmp
+            BlinkCmpMenuSelection = { fg = colors.base, bg = colors.lavender, style = { 'bold', 'italic' } },
+
             BlinkCmpMenuBorder = { fg = colors.blue },
             BlinkCmpDocBorder = { fg = colors.sapphire },
             BlinkCmpSignatureHelpBorder = { fg = colors.yellow },
