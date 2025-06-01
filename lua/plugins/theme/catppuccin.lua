@@ -44,6 +44,11 @@ catppuccin.setup({
     },
     custom_highlights = function(colors)
         return {
+            -- Cursor
+            Cursor = { fg = colors.base, bg = colors.text },
+            lCursor = { fg = colors.base, bg = colors.text },
+            CursorIM = { fg = colors.base, bg = colors.text },
+
             -- Identifier (like keyword require)
             -- ['@function.builtin'] = { fg = colors.flamingo },
 
