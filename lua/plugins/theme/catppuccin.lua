@@ -59,8 +59,6 @@ catppuccin.setup({
             -- Pmenu = { bg = colors.mantle },
             -- PmenuSel = { fg = colors.base, bg = colors.lavender, style = { 'bold', 'italic' } },
 
-            -- blink.cmp
-
             -- Telescope
             -- TelescopeBorder = { fg = colors.blue },
             TelescopeSelectionCaret = { fg = colors.red },
@@ -163,7 +161,6 @@ catppuccin.setup({
 
             -- blink.cmp
             BlinkCmpMenuSelection = { fg = colors.base, bg = colors.lavender, style = { 'bold', 'italic' } },
-
             BlinkCmpMenuBorder = { fg = colors.blue },
             BlinkCmpDocBorder = { fg = colors.sapphire },
             BlinkCmpSignatureHelpBorder = { fg = colors.yellow },
