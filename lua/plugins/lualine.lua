@@ -174,27 +174,20 @@ return {
         local function lualine_mason_updates()
             local registry = require('mason-registry')
             local installed_packages = registry.get_installed_package_names()
-            local upgrades_available = false
             local packages_outdated = 0
-            function myCallback(success, result_or_err)
-                if success then
-                    upgrades_available = true
-                    packages_outdated = packages_outdated + 1
+
+            for _, pkg_name in ipairs(installed_packages) do
+                local pkg = registry.get_package(pkg_name)
+                if pkg then
+                    local ok_installed, installed_version = pcall(pkg.get_installed_version, pkg)
+                    local ok_latest, latest_version = pcall(pkg.get_latest_version, pkg)
+                    if ok_installed and ok_latest and installed_version ~= latest_version then
+                        packages_outdated = packages_outdated + 1
+                    end
                 end
             end
 
-            for _, pkg in pairs(installed_packages) do
-                local p = registry.get_package(pkg)
-                if p then
-                    p:check_new_version(myCallback)
-                end
-            end
-
-            if upgrades_available then
-                return packages_outdated
-            else
-                return ''
-            end
+            return packages_outdated > 0 and tostring(packages_outdated) or ''
         end
 
         local mason_updates = {
