@@ -8,6 +8,9 @@ local Utils = require('utils.split')
 -- Exit from insert mode
 vim.keymap.set('i', 'kj', '<esc>', { desc = 'Exit insert mode' })
 
+-- Map Ö to :
+vim.keymap.set('n', 'Ö', ':')
+
 -- Better up/down
 vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
