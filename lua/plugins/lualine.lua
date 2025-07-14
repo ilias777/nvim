@@ -275,7 +275,7 @@ return {
                 return getFormatterAndLinter()
             end,
             color = { bg = colors.crust, fg = colors.yellow, gui = 'italic,bold' },
-            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineLeftRounded },
+            separator = { left = icon.ui.PowerlineLeftRounded, right = icon.ui.PowerlineRightRounded },
         }
 
         -- ─[ SETUP ]────────────────────────────────────────────────
