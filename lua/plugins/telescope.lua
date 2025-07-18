@@ -31,7 +31,7 @@ return {
         'xiyaowong/telescope-emoji.nvim',
         'debugloop/telescope-undo.nvim',
         'jvgrootveld/telescope-zoxide',
-        'piersolenski/telescope-import.nvim',
+        'piersolenski/import.nvim',
         'crispgm/telescope-heading.nvim',
     },
     config = function()
