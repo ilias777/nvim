@@ -13,6 +13,7 @@ return {
             php = { 'prettier' },
             python = { 'black' },
             rust = { 'rustfmt' },
+            typst = { 'typstyle' },
             scss = { 'prettier' },
             vue = { 'prettier' },
             yaml = { 'yamlfmt' },
