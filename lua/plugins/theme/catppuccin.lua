@@ -12,15 +12,14 @@ catppuccin.setup({
     },
     -- Integrations
     integrations = {
-        blink_cmp = true,
         colorful_winsep = {
             enabled = true,
             color = 'red',
         },
-        flash = true,
         grug_far = true,
         hop = true,
         lsp_trouble = true,
+        markview = true,
         mason = true,
         native_lsp = {
             enabled = true,
@@ -40,7 +39,6 @@ catppuccin.setup({
         noice = true,
         notify = true,
         nvim_surround = true,
-        nvimtree = false,
     },
     custom_highlights = function(colors)
         return {
