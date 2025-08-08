@@ -14,6 +14,7 @@ catppuccin.setup({
         properties = { 'italic' },
     },
     -- Integrations
+    auto_integrations = true,
     integrations = {
         colorful_winsep = {
             enabled = true,
