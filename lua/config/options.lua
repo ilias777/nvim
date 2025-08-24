@@ -23,11 +23,20 @@ vim.opt.scrolloff = 4
 vim.opt.sidescrolloff = 10
 vim.opt.laststatus = 3
 vim.opt.list = true
-vim.opt.listchars:append({ tab = '»-' })
-vim.opt.listchars:append({ trail = '·' })
-vim.opt.listchars:append({ extends = '»' })
-vim.opt.listchars:append({ precedes = '«' })
-vim.opt.fillchars:append({ eob = ' ', fold = ' ', foldsep = ' ', foldopen = '', foldclose = '' })
+vim.opt.listchars:append({
+    tab = '»-',
+    trail = '·',
+    extends = '»',
+    precedes = '«',
+})
+vim.opt.fillchars:append({
+    eob = ' ',
+    fold = ' ',
+    foldsep = ' ',
+    foldopen = '',
+    foldclose = '',
+    diff = '╱',
+})
 vim.opt.confirm = true
 vim.opt.smoothscroll = true
 -- vim.opt.conceallevel = 2
