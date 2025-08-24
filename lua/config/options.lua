@@ -81,6 +81,9 @@ vim.opt.splitbelow = true
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand('~/.undodir')
 
+-- diff
+vim.opt.diffopt = { 'internal', 'filler', 'closeoff', 'linematch:40' }
+
 -- Other
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
