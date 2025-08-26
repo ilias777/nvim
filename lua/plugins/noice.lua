@@ -86,6 +86,7 @@ return {
                         { find = 'Deleted' },
                         { find = 'Renamed' },
                         { find = 'file_browser' },
+                        { find = 'navic' },
                     },
                 },
             },
