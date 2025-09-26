@@ -4,7 +4,7 @@ return {
     event = 'VeryLazy',
     config = function()
         local clrs = require('catppuccin.palettes').get_palette()
-        local ctp_feline = require('catppuccin.groups.integrations.feline')
+        local ctp_feline = require('catppuccin.special.feline')
         local U = require('catppuccin.utils.colors')
 
         ctp_feline.setup({
