@@ -13,7 +13,18 @@ catppuccin.setup({
         booleans = { 'italic' },
         properties = { 'italic' },
     },
-    -- Integrations
+    lsp_styles = {
+        underlines = {
+            errors = { 'undercurl' },
+            hints = { 'undercurl' },
+            warnings = { 'undercurl' },
+            information = { 'undercurl' },
+            ok = { 'undercurl' },
+        },
+        inlay_hints = {
+            background = false,
+        },
+    },
     auto_integrations = true,
     integrations = {
         colorful_winsep = {
@@ -25,18 +36,6 @@ catppuccin.setup({
         lsp_trouble = true,
         markview = true,
         mason = true,
-        native_lsp = {
-            enabled = true,
-            underlines = {
-                errors = { 'undercurl' },
-                hints = { 'undercurl' },
-                warnings = { 'undercurl' },
-                information = { 'undercurl' },
-            },
-            inlay_hints = {
-                background = false,
-            },
-        },
         navic = {
             enabled = true,
         },
