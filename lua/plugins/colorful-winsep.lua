@@ -1,8 +1,10 @@
 return {
     'nvim-zh/colorful-winsep.nvim',
     enabled = true,
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = { 'WinLeave' },
     opts = {
-        only_line_seq = false,
+        indicator_for_2wins = {
+            position = 'center', -- false | "center" | "start" | "end" | "both"
+        },
     },
 }
