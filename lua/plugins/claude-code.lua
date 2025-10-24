@@ -3,7 +3,7 @@ return {
     enabled = true,
     dependencies = { 'nvim-lua/plenary.nvim' },
     keys = {
-        { '<leader>a', '<cmd>ClaudeCode<cr>', desc = 'Toggle Claude Code' },
+        { '<leader>a', '<cmd>ClaudeCode<cr>', mode = { 'n', 'x' }, desc = 'Toggle Claude Code' },
     },
     config = function()
         require('claude-code').setup({
