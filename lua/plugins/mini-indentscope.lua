@@ -6,7 +6,7 @@ return {
     init = function()
         local colors = require('catppuccin.palettes').get_palette('mocha')
         vim.api.nvim_set_hl(0, 'MiniIndentscopeSymbol', { fg = colors.sapphire })
-        vim.api.nvim_create_autocmd('Filetype', {
+        vim.api.nvim_create_autocmd('FileType', {
             pattern = {
                 'checkhealth',
                 'comment-box',
@@ -23,7 +23,6 @@ return {
                 'NeogitStatus',
                 'noice',
                 'notify',
-                'NvimTree',
                 'oil',
                 'oil_preview',
                 'Outline',
