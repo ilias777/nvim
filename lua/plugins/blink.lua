@@ -164,7 +164,9 @@ return {
                     },
                 },
                 menu = {
-                    auto_show = true,
+                    auto_show = function(ctx)
+                        return vim.fn.getcmdtype() == ':'
+                    end,
                 },
                 ghost_text = { enabled = true },
             },
