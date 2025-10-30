@@ -96,7 +96,6 @@ return {
             {
                 filter = {
                     event = 'msg_show',
-                    kind = '',
                     any = {
                         { find = 'catalog' },
                     },
