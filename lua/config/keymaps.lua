@@ -8,6 +8,12 @@ local Utils = require('utils.split')
 -- Exit from insert mode
 vim.keymap.set('i', 'kj', '<esc>', { desc = 'Exit insert mode' })
 
+-- Map :Q and :W for :q and :w
+vim.api.nvim_create_user_command('W', 'w', {})
+vim.api.nvim_create_user_command('Wq', 'wq', {})
+vim.api.nvim_create_user_command('Wa', 'wa', {})
+vim.api.nvim_create_user_command('Q', 'q', {})
+
 -- Map Ö to :
 vim.keymap.set('n', 'Ö', ':')
 
