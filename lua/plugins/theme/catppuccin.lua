@@ -62,7 +62,7 @@ catppuccin.setup({
 
             -- Telescope
             -- TelescopeBorder = { fg = colors.blue },
-            TelescopeSelectionCaret = { fg = colors.red },
+            TelescopeSelectionCaret = { fg = colors.red, bg = colors.crust },
             TelescopeSelection = { fg = colors.text, bg = colors.crust, style = { 'bold' } },
             TelescopeMatching = { fg = colors.red },
             TelescopePromptPrefix = { fg = colors.red, bg = colors.crust },
