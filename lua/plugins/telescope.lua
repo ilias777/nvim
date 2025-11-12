@@ -1,5 +1,6 @@
 return {
     'nvim-telescope/telescope.nvim',
+    tag = 'v0.1.9',
     cmd = { 'Telescope' },
     keys = {
         { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
