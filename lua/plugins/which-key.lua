@@ -31,6 +31,5 @@ return {
             no_overlap = false,
             title_pos = 'center',
         },
-        sort = { 'manual', 'group', 'lower' },
     },
 }
