@@ -4,4 +4,4 @@ vim.lsp.config.ltex_plus = {
     end,
 }
 
-vim.lsp.enable('ltex_plus')
+-- vim.lsp.enable('ltex_plus')
