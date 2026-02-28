@@ -1,8 +1,11 @@
 return {
-    'iamcco/markdown-preview.nvim',
-    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
-    ft = 'markdown',
-    build = function()
-        vim.fn['mkdp#util#install']()
+    'selimacerbas/markdown-preview.nvim',
+    enabled = true,
+    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview' },
+    dependencies = { 'selimacerbas/live-server.nvim' },
+    config = function()
+        require('markdown_preview').setup({
+            mermaid_renderer = 'js',
+        })
     end,
 }
