@@ -14,9 +14,6 @@ vim.api.nvim_create_user_command('Wq', 'wq', {})
 vim.api.nvim_create_user_command('Wa', 'wa', {})
 vim.api.nvim_create_user_command('Q', 'q', {})
 
--- Map Ö to :
-vim.keymap.set('n', 'Ö', ':')
-
 -- Better up/down
 vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
