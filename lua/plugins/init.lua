@@ -6,7 +6,7 @@ return {
         priority = 1000,
         config = function()
             require('plugins.theme.catppuccin')
-            vim.cmd('colorscheme catppuccin')
+            vim.cmd('colorscheme catppuccin-nvim')
         end,
     },
 }
