@@ -1,5 +1,6 @@
 return {
     'dnlhc/glance.nvim',
+    enabled = false,
     keys = {
         { '<space>gr', '<cmd>Glance references<cr>', desc = 'Glance references' },
         { '<space>gd', '<cmd>Glance definitions<cr>', desc = 'Glance definitions' },
