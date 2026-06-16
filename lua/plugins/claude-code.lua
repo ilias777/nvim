@@ -1,6 +1,6 @@
 return {
     'greggh/claude-code.nvim',
-    enabled = true,
+    enabled = false,
     dependencies = { 'nvim-lua/plenary.nvim' },
     keys = {
         { '<leader>aa', '<cmd>ClaudeCode<cr>', mode = { 'n', 'x' }, desc = 'Toggle Claude Code' },
