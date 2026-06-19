@@ -12,6 +12,7 @@ return {
                 'cpp',
                 'css',
                 'csv',
+                'diff',
                 'ecma',
                 'dockerfile',
                 'dtd',
