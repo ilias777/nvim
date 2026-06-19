@@ -98,9 +98,11 @@ vim.keymap.set({ 'o', 'x' }, 'aQ', '2i"', { desc = 'Around Double Quotes' })
 vim.keymap.set({ 'o', 'x' }, "a'", "2i'", { desc = 'Around Single Quotes' })
 vim.keymap.set({ 'o', 'x' }, 'a"', '2i"', { desc = 'Around Double Quotes' })
 
--- Inner and outer rectangle brackets []
+-- Inner and outer rectangle brackets [] & angle brackets <>
 vim.keymap.set({ 'o', 'x' }, 'ir', 'i[', { desc = 'Inner Brackets' })
 vim.keymap.set({ 'o', 'x' }, 'ar', 'a[', { desc = 'Inner Brackets' })
+vim.keymap.set({ 'o', 'x' }, 'ia', 'i<', { desc = 'Inner Angle Brackets' })
+vim.keymap.set({ 'o', 'x' }, 'aa', 'a>', { desc = 'Inner Angle Brackets' })
 
 -- Add blank line without leaving normal mode
 vim.keymap.set(
