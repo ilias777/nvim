@@ -1,6 +1,8 @@
 return {
     'nvim-telescope/telescope.nvim',
-    tag = 'v0.1.9',
+    enabled = true,
+    -- tag = 'v0.1.9',
+    version = '*',
     cmd = { 'Telescope' },
     keys = {
         { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
@@ -34,6 +36,10 @@ return {
         'jvgrootveld/telescope-zoxide',
         'piersolenski/import.nvim',
         'crispgm/telescope-heading.nvim',
+        {
+            'nvim-telescope/telescope-fzf-native.nvim',
+            build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release --target install',
+        },
     },
     config = function()
         local actions = require('telescope.actions')
@@ -143,6 +149,12 @@ return {
                 advanced_git_search = {
                     diff_plugin = 'diffview',
                 },
+                fzf = {
+                    fuzzy = true, -- false will only do exact matching
+                    override_generic_sorter = true, -- override the generic sorter
+                    override_file_sorter = true, -- override the file sorter
+                    case_mode = 'smart_case', -- or "ignore_case" or "respect_case"
+                },
             },
         })
 
@@ -155,6 +167,7 @@ return {
         require('telescope').load_extension('import')
         require('telescope').load_extension('heading')
         require('telescope').load_extension('yank_history')
+        require('telescope').load_extension('fzf')
         -- require('telescope').load_extension('neoclip')
         -- require('telescope').load_extension('noice')
     end,
