@@ -42,6 +42,7 @@ catppuccin.setup({
         noice = true,
         notify = true,
         nvim_surround = true,
+        telescope = false,
     },
     custom_highlights = function(colors)
         return {
@@ -63,7 +64,7 @@ catppuccin.setup({
             -- Telescope
             -- TelescopeBorder = { fg = colors.blue },
             TelescopeSelectionCaret = { fg = colors.red, bg = colors.crust },
-            TelescopeSelection = { fg = colors.text, bg = colors.crust, style = { 'bold' } },
+            TelescopeSelection = { bg = colors.crust, style = { 'bold' } },
             TelescopeMatching = { fg = colors.red },
             TelescopePromptPrefix = { fg = colors.red, bg = colors.crust },
             TelescopePromptTitle = { fg = colors.crust, bg = colors.mauve, style = { 'bold', 'italic' } },
