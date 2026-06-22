@@ -74,7 +74,25 @@ return {
                 -- },
                 file_ignore_patterns = {
                     'node_modules',
+                    '%.git/',
+                    '%.DS_Store',
                 },
+                -- ripgrep statt grep für live_grep
+                vimgrep_arguments = {
+                    'rg',
+                    '--color=never',
+                    '--no-heading',
+                    '--with-filename',
+                    '--line-number',
+                    '--column',
+                    '--smart-case',
+                    '--trim',
+                    '--glob',
+                    '!.git',
+                    '--max-columns',
+                    '150',
+                },
+                cache_picker = { num_pickers = 1 },
             },
             pickers = {
                 buffers = {
@@ -93,6 +111,7 @@ return {
                     -- layout_strategy = 'vertical',
                     -- layout_config = { height = 0.9 },
                     -- previewer = false,
+                    find_command = { 'fd', '--type', 'f', '--hidden', '--strip-cwd-prefix', '--exclude', '.git' },
                     path_display = { 'smart' },
                     layout_config = {
                         prompt_position = 'top',
