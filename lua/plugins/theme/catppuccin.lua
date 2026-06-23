@@ -31,6 +31,7 @@ catppuccin.setup({
             enabled = true,
             color = 'red',
         },
+        flash = false,
         grug_far = true,
         hop = true,
         lsp_trouble = true,
