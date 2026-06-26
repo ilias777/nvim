@@ -77,7 +77,6 @@ return {
                     '%.git/',
                     '%.DS_Store',
                 },
-                -- ripgrep statt grep für live_grep
                 vimgrep_arguments = {
                     'rg',
                     '--color=never',
