@@ -111,7 +111,7 @@ return {
                     -- layout_config = { height = 0.9 },
                     -- previewer = false,
                     find_command = { 'fd', '--type', 'f', '--hidden', '--strip-cwd-prefix', '--exclude', '.git' },
-                    path_display = { 'smart' },
+                    path_display = { 'filename_first' },
                     layout_config = {
                         prompt_position = 'top',
                         preview_width = 0.5,
