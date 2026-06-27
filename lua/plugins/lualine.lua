@@ -120,6 +120,22 @@ return {
         -- ║ RIGHT ║
         -- ╙       ╜
 
+        -- ─[ MULTICURSOR ]──────────────────────────────────────────
+        local multicursor = {
+            function()
+                local ok, mc = pcall(require, 'multicursor-nvim')
+                if not ok or not mc.hasCursors() then
+                    return ''
+                end
+                return ' ' .. mc.numCursors() .. ' cursors'
+            end,
+            cond = function()
+                local ok, mc = pcall(require, 'multicursor-nvim')
+                return ok and mc.hasCursors()
+            end,
+            color = { fg = colors.green, bg = colors.base, gui = 'italic,bold' },
+        }
+
         -- ─[ MACRO ]────────────────────────────────────────────────
         local function check_macro()
             local recording_register = vim.fn.reg_recording()
@@ -326,6 +342,8 @@ return {
                     space,
                 },
                 lualine_y = {
+                    multicursor,
+                    space,
                     macro,
                     space,
                 },
