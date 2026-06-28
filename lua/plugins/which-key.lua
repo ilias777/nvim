@@ -24,6 +24,7 @@ return {
                 { '<space>i', group = '+IncRename / Inlay Hints' }, -- IncRename
                 { '<space>n', group = '+Noice' }, -- Noice.nvim
                 { '<space>x', group = '+Trouble' }, -- Trouble.nvim
+                { '<leader><tab>', group = '+Notes' }, -- nvim-notes.nvim
             },
         },
         win = {
