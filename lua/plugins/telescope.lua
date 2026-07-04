@@ -6,7 +6,7 @@ return {
     cmd = { 'Telescope' },
     keys = {
         { '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find Buffers' },
-        { '<leader>fc', ":lua require'telescope.builtin'.commands{}<cr>", desc = 'List Commands' },
+        { '<leader>fc', '<cmd>Telescope git_commits<cr>', desc = 'List Commands' },
         { '<leader>fd', '<cmd>Telescope diagnostics<cr>', desc = 'Find Diagnostics' },
         { '<leader>fe', '<cmd>Telescope file_browser<cr>', desc = 'File Browser' },
         { '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },
@@ -104,6 +104,25 @@ return {
                         },
                     },
                     initial_mode = 'normal',
+                },
+                git_commits = {
+                    theme = 'ivy',
+                    mappings = {
+                        i = {
+                            ['<CR>'] = function(prompt_bufnr)
+                                local entry = require('telescope.actions.state').get_selected_entry()
+                                require('telescope.actions').close(prompt_bufnr)
+                                vim.cmd('DiffviewOpen ' .. entry.value .. '^!')
+                            end,
+                        },
+                        n = {
+                            ['<CR>'] = function(prompt_bufnr)
+                                local entry = require('telescope.actions.state').get_selected_entry()
+                                require('telescope.actions').close(prompt_bufnr)
+                                vim.cmd('DiffviewOpen ' .. entry.value .. '^!')
+                            end,
+                        },
+                    },
                 },
                 find_files = {
                     -- theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
