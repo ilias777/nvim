@@ -75,6 +75,10 @@ return {
         -- ─[ FILENAME ]─────────────────────────────────────────────
         local filename = {
             'filename',
+            fmt = function(s) return #s > 20 and s:sub(1, 17) .. '...' or s end,
+            on_click = function()
+                vim.notify(vim.fn.expand('%:p'), vim.log.levels.INFO)
+            end,
             color = { bg = colors.blue, fg = colors.base, gui = 'bold' },
             separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
@@ -91,6 +95,11 @@ return {
         local branch = {
             'branch',
             icon = '',
+            fmt = function(s) return #s > 20 and s:sub(1, 17) .. "..." or s end,
+            on_click = function()
+                local branch = vim.fn.system('git branch --show-current 2>/dev/null'):gsub('\n', '')
+                if branch ~= '' then vim.notify(branch, vim.log.levels.INFO) end
+            end,
             color = { bg = colors.teal, fg = colors.base, gui = 'bold' },
             separator = { left = icon.ui.PowerlineSlantLeft, right = icon.ui.PowerlineSlantRight },
         }
