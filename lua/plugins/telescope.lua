@@ -123,6 +123,9 @@ return {
                             end,
                         },
                     },
+                    layout_config = {
+                        preview_width = 0.6,
+                    },
                 },
                 find_files = {
                     -- theme = 'ivy', -- 'ivy', 'dropdown', 'cursor'
